@@ -7,8 +7,65 @@
 # Reference documentation: https://github.com/cncf/landscape2/blob/main/docs/config/data.yml
 
 categories:
-  - name: Cluster
+  - name: Infrastructure Provider / Cluster
     subcategories:
+      - name: Infrastructure Provider Level
+        items:
+          - item:
+            name: Cloud Carbon Footprint
+            description: An open source tool that provides visibility and tooling to measure, monitor, and reduce your cloud carbon emissions.
+            homepage_url: https://www.cloudcarbonfootprint.org/
+            docs: https://www.cloudcarbonfootprint.org/docs/
+            repo_url: https://github.com/cloud-carbon-footprint/cloud-carbon-footprint
+            blog: https://www.cloudcarbonfootprint.org/blog
+            logo: cloudcarbonfootprint.png
+            project: "proved+tested"
+          - item:
+            name: Azure Emission Impact Dashboard
+            description: Power BI App that provides emissions for azure cloud resource usage.
+            homepage_url: https://appsource.microsoft.com/en-us/product/power-bi/coi-sustainability.emissions_impact_dashboard
+            docs: https://appsource.microsoft.com/en-us/product/power-bi/coi-sustainability.emissions_impact_dashboard
+            logo: azure-impact-dashboard.png
+          - item:
+            name: Azure Cloud for Sustainability API
+            description: Microsoft Cloud for Sustainability provides APIs to access emissions data related to your Azure and Microsoft 365 usage.
+            homepage_url: https://learn.microsoft.com/en-us/industry/sustainability/api-overview
+            docs: https://learn.microsoft.com/en-us/industry/sustainability/api-reference
+            logo: azure.svg
+          - item:
+            name: Google Carbon Footprint
+            description: The Carbon Footprint dashboard displays estimated greenhouse gas emissions associated with the usage of covered Google Cloud services for the selected billing account.
+            homepage_url: https://cloud.google.com/carbon-footprint
+            docs: https://cloud.google.com/carbon-footprint#documentation
+            logo: google-cloud.svg
+          - item:
+            name: AWS Customer Carbon Footprint Tool
+            description: The AWS Customer Carbon Footprint Tool provides estimates of the carbon emissions associated with AWS products and services. Data is updated with a delay of three months.
+            homepage_url: https://cloud.google.com/carbon-footprint
+            docs: https://cloud.google.com/carbon-footprint#documentation
+            logo: aws.svg
+          - item:
+            name: Li10 for AWS
+            description: Measures the emissions for AWS resources with Software Carbon Intensity methodology defined by the Green Software Foundation.
+            homepage_url: https://www.li10.com/
+            docs: https://www.li10.com/#docs
+            logo: li10.svg
+            project: "proved+tested"
+          - item:
+            name: Green Cost Explorer for AWS
+            description: The Green Cost Explorer is a tool by The Green Web Foundation that helps visualize AWS cloud spending alongside carbon emissions data to support more sustainable cloud infrastructure decisions.
+            homepage_url: https://github.com/thegreenwebfoundation/green-cost-explorer
+            repo_url: https://github.com/thegreenwebfoundation/green-cost-explorer
+            logo: green-cost-explorer.png
+            project: "archived"
+          - item:
+            name: Boavizta Cloud-Scanner for AWS
+            description: Boavizta Cloud-Scanner calculates environmental impacts of your cloud compute and storage instances. It combines real time inventory and usage data from your cloud account with Boavizta API to offer a view of your impacts on a given region.
+            homepage_url: https://github.com/Boavizta/cloud-scanner
+            docs: https://boavizta.github.io/cloud-scanner/
+            repo_url: https://github.com/Boavizta/cloud-scanner
+            logo: cloudscanner.svg
+
       - name: Kubernetes
         items:
           - item:
@@ -32,46 +89,22 @@ categories:
             logo: unofficial/KEIT.svg
             project: "proved+tested"
 
-      - name: General
+          - item:
+            name: aether
+            description: A tool for measuring and analyzing the carbon footprint in Kubernetes clusters.
+            homepage_url: https://aether.green/
+            repo_url: https://github.com/re-cinq/aether
+            logo: aether.svg
+            project: "archived"
+
+      - name: Other
         items:
-          - item:
-            name: Cloud Carbon Footprint
-            description: An open source tool that provides visibility and tooling to measure, monitor, and reduce your cloud carbon emissions.
-            homepage_url: https://www.cloudcarbonfootprint.org/
-            docs: https://www.cloudcarbonfootprint.org/docs/
-            repo_url: https://github.com/cloud-carbon-footprint/cloud-carbon-footprint
-            blog: https://www.cloudcarbonfootprint.org/blog
-            logo: cloudcarbonfootprint.png
-            project: "proved+tested"
-
-          - item:
-            name: Boavizta Cloud-Scanner
-            description: Boavizta Cloud-Scanner calculates environmental impacts of your cloud compute and storage instances. It combines real time inventory and usage data from your cloud account with Boavizta API to offer a view of your impacts on a given region.
-            homepage_url: https://github.com/Boavizta/cloud-scanner
-            docs: https://boavizta.github.io/cloud-scanner/
-            repo_url: https://github.com/Boavizta/cloud-scanner
-            logo: cloudscanner.svg
-
           - item:
             name: OpenTelemetry Java Agent Extension (RETIT)
             description: An extension for the OpenTelemetry Java Agent that provides energy consumption metrics for Java applications.
             homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             logo: organization/retit.png
-
-          - item:
-            name: ResilioDB
-            description: A database solution designed to optimize energy efficiency and carbon footprint of data storage and processing.
-            homepage_url: https://resilio-solutions.com/en
-            logo: resilio.svg
-
-          - item:
-            name: aether
-            description: A tool for measuring and analyzing the carbon footprint of cloud applications and infrastructure.
-            homepage_url: https://aether.green/
-            repo_url: https://github.com/re-cinq/aether
-            logo: aether.svg
-            project: "archived"
 
           - item:
             name: Dynatrace Carbon Impact
@@ -86,6 +119,7 @@ categories:
             homepage_url: https://www.elastic.co/observability/universal-profiling
             docs: https://www.elastic.co/guide/en/observability/current/universal-profiling.html
             logo: elastic.svg
+
   - name: Component
     subcategories:
       - name: Containerized Applications
@@ -301,6 +335,34 @@ categories:
             repo_url: https://github.com/thegreenwebfoundation/co2.js
             logo: unofficial/CO2.js.svg
             project: "proved+tested"
+          - item:
+            name: Website Carbon Calculator
+            description: Website Carbon Calculator estimates the carbon emissions of a website by analyzing factors like data transfer size and energy source of the hosting provider. A badge is provided that can be added to the footer of websites.
+            homepage_url: https://www.websitecarbon.com/
+            logo: WebsiteCarbon.jpg
+            project: "proved+tested"
+          - item:
+            name: Ecograder
+            description: Ecograder analyzes websites for environmental impact by evaluating performance, design, development practices, and hosting, offering insights and recommendations to improve digital sustainability. A badge is provided that can be added to the footer of websites.
+            homepage_url: https://ecograder.com/
+            logo: ecograder.svg
+            project: "proved+tested"
+          - item:
+            name: eco Index
+            description: EcoIndex evaluates the environmental impact of web pages by analyzing technical performance, complexity, and resource usage, providing a sustainability score along with actionable recommendations for optimization.
+            homepage_url: https://www.ecoindex.fr/en/
+            logo: ecoindex.png
+          - item:
+            name: Ecometer
+            description: Ecometer is a tool that assesses the environmental impact of websites by analyzing their technical structure, performance, and hosting, offering a clear eco-score and suggestions to reduce digital carbon emissions.
+            homepage_url: http://www.ecometer.org/
+            logo: ecometer.png
+          - item:
+            name: Kastor
+            description: Kastor estimates the carbon emissions of a website and analyzes it according to eco design and accessibility guidelines.
+            homepage_url: https://kastor.green/
+            logo: kastor.png
+
 
   - name: Emission Factor & Inventory
     subcategories:
@@ -350,10 +412,16 @@ categories:
             docs: https://www.climatiq.io/docs
             logo: climatiq.png
 
+          - item:
+            name: ResilioDB
+            description: A database solution designed to optimize energy efficiency and carbon footprint of data storage and processing.
+            homepage_url: https://resilio-solutions.com/en
+            logo: resilio.svg
+
   - name: Measurement Toolbox
     subcategories:
 
-      - name: Browser Plugins
+      - name: Browser Extensions
         items:
           - item:
             name: GreenIT-Analysis

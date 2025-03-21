@@ -10,6 +10,13 @@ foundation: Bundesverband Green Software
 
 url: http://127.0.0.1:8000 # TODO
 
+#categories:
+#  - name: Infrastructure Provider / Cluster
+#    subcategories:
+#      - Infrastructure Provider
+#      - Kubernetes
+#      - Other
+
 colors:
   color1: "rgba(37, 58, 1, 1)" # Buttons, groups, links
   color2: "rgba(176, 201, 94, 1)" # Some highlighted items like filters button, search icon
@@ -40,7 +47,7 @@ grid_items_size: large
 groups:
   - name: Measurement
     categories:
-      - Cluster
+      - Infrastructure Provider / Cluster
       - Component
       - Code
       - Application Specific
