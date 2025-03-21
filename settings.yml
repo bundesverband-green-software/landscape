@@ -25,10 +25,6 @@ featured_items: # TODO
       - value: proved+tested
         order: 1
         label: BVGS Proved & Tested
-  - field: subcategory
-    options:
-      - value: <VALUE 1>
-      - value: <VALUE 2>
 
 footer:
   links:
@@ -41,11 +37,21 @@ footer:
 
 grid_items_size: large
 
-# groups: # TODO
-#   - name: Tools
-#     categories:
-#       - Cloud
-
+groups:
+  - name: Measurement
+    categories:
+      - Cluster
+      - Component
+      - Code
+      - Application Specific
+      - Emission Factor & Inventory
+      - Measurement Toolbox
+  - name: Optimization
+    categories:
+      - Optimization
+  - name: Data Management
+    categories:
+      - Data Management
 header:
   # links:
   #   github: <GITHUB_URL>
@@ -54,4 +60,4 @@ header:
 images:
   favicon: https://www.bundesverband-green-software.de/images/BVGS_Icon_32x32.ico
 
-screenshot_width: 1500
+screenshot_width: 1600

@@ -7,88 +7,9 @@
 # Reference documentation: https://github.com/cncf/landscape2/blob/main/docs/config/data.yml
 
 categories:
-  - name: Measurement
+  - name: Cluster
     subcategories:
-      - name: Cloud Application
-        items:
-          - item:
-            name: Cloud Carbon Footprint
-            description: An open source tool that provides visibility and tooling to measure, monitor, and reduce your cloud carbon emissions.
-            homepage_url: https://www.cloudcarbonfootprint.org/
-            docs: https://www.cloudcarbonfootprint.org/docs/
-            repo_url: https://github.com/cloud-carbon-footprint/cloud-carbon-footprint
-            blog: https://www.cloudcarbonfootprint.org/blog
-            logo: cloudcarbonfootprint.png
-            project: "proved+tested"
-          
-          - item:
-            name: BoaviztAPI
-            description: An open source API that provides environmental impact data for IT equipment, including carbon footprint, energy consumption, and resource depletion.
-            homepage_url: https://github.com/Boavizta/boaviztapi
-            docs: https://doc.api.boavizta.org/
-            repo_url: https://github.com/Boavizta/boaviztapi
-            logo: boaviztapi.svg
-            project: "proved+tested"
-          
-          - item:
-            name: climatiq
-            description: A proprietary API that provides carbon emissions data for various activities, including cloud computing, to help organizations measure and reduce their carbon footprint.
-            homepage_url: https://www.climatiq.io/
-            docs: https://www.climatiq.io/docs
-            logo: climatiq.png
-          
-          - item:
-            name: Cloud Energy
-            description: A tool that measures and analyzes energy consumption and carbon emissions of cloud resources to help organizations optimize their cloud infrastructure.
-            homepage_url: https://www.green-coding.io/products/cloud-energy/
-            repo_url: https://github.com/green-coding-solutions/cloud-energy
-            logo: cloud-energy.png
-            project: "proved+tested"
-
-          - item:
-            name: Boavizta Cloud-Scanner
-            description: Boavizta Cloud-Scanner calculates environmental impacts of your cloud compute and storage instances. It combines real time inventory and usage data from your cloud account with Boavizta API to offer a view of your impacts on a given region.
-            homepage_url: https://github.com/Boavizta/cloud-scanner
-            docs: https://boavizta.github.io/cloud-scanner/
-            repo_url: https://github.com/Boavizta/cloud-scanner
-            logo: cloudscanner.svg
-
-          - item:
-            name: OpenTelemetry Java Agent Extension (RETIT)
-            description: An extension for the OpenTelemetry Java Agent that provides energy consumption metrics for Java applications.
-            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            logo: organization/retit.png
-          
-          - item:
-            name: ResilioDB
-            description: A database solution designed to optimize energy efficiency and carbon footprint of data storage and processing.
-            homepage_url: https://resilio-solutions.com/en
-            logo: resilio.svg
-          
-          - item:
-            name: aether
-            description: A tool for measuring and analyzing the carbon footprint of cloud applications and infrastructure.
-            homepage_url: https://aether.green/
-            repo_url: https://github.com/re-cinq/aether
-            logo: aether.svg
-            project: "archived"
-          
-          - item:
-            name: Dynatrace Carbon Impact
-            description: A solution that provides insights into the carbon footprint of cloud applications and infrastructure, helping organizations reduce their environmental impact.
-            homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
-            docs: https://docs.dynatrace.com/docs/observe/business-analytics/apps/cost-and-carbon-optimization
-            logo: organization/dynatrace.svg
-          
-          - item:
-            name: Elastic Universal Profiling
-            description: A profiling solution that helps identify energy-intensive code paths and optimize application performance and energy efficiency.
-            homepage_url: https://www.elastic.co/observability/universal-profiling
-            docs: https://www.elastic.co/guide/en/observability/current/universal-profiling.html
-            logo: elastic.svg
-
-      - name: Kubernetes Workload
+      - name: Kubernetes
         items:
           - item:
             name: Kepler
@@ -110,7 +31,183 @@ categories:
             repo_url: https://github.com/aknostic/keit/
             logo: unofficial/KEIT.svg
             project: "proved+tested"
-      
+
+      - name: General
+        items:
+          - item:
+            name: Cloud Carbon Footprint
+            description: An open source tool that provides visibility and tooling to measure, monitor, and reduce your cloud carbon emissions.
+            homepage_url: https://www.cloudcarbonfootprint.org/
+            docs: https://www.cloudcarbonfootprint.org/docs/
+            repo_url: https://github.com/cloud-carbon-footprint/cloud-carbon-footprint
+            blog: https://www.cloudcarbonfootprint.org/blog
+            logo: cloudcarbonfootprint.png
+            project: "proved+tested"
+
+          - item:
+            name: Boavizta Cloud-Scanner
+            description: Boavizta Cloud-Scanner calculates environmental impacts of your cloud compute and storage instances. It combines real time inventory and usage data from your cloud account with Boavizta API to offer a view of your impacts on a given region.
+            homepage_url: https://github.com/Boavizta/cloud-scanner
+            docs: https://boavizta.github.io/cloud-scanner/
+            repo_url: https://github.com/Boavizta/cloud-scanner
+            logo: cloudscanner.svg
+
+          - item:
+            name: OpenTelemetry Java Agent Extension (RETIT)
+            description: An extension for the OpenTelemetry Java Agent that provides energy consumption metrics for Java applications.
+            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            logo: organization/retit.png
+
+          - item:
+            name: ResilioDB
+            description: A database solution designed to optimize energy efficiency and carbon footprint of data storage and processing.
+            homepage_url: https://resilio-solutions.com/en
+            logo: resilio.svg
+
+          - item:
+            name: aether
+            description: A tool for measuring and analyzing the carbon footprint of cloud applications and infrastructure.
+            homepage_url: https://aether.green/
+            repo_url: https://github.com/re-cinq/aether
+            logo: aether.svg
+            project: "archived"
+
+          - item:
+            name: Dynatrace Carbon Impact
+            description: A solution that provides insights into the carbon footprint of cloud applications and infrastructure, helping organizations reduce their environmental impact.
+            homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
+            docs: https://docs.dynatrace.com/docs/observe/business-analytics/apps/cost-and-carbon-optimization
+            logo: organization/dynatrace.svg
+
+          - item:
+            name: Elastic Universal Profiling
+            description: A profiling solution that helps identify energy-intensive code paths and optimize application performance and energy efficiency.
+            homepage_url: https://www.elastic.co/observability/universal-profiling
+            docs: https://www.elastic.co/guide/en/observability/current/universal-profiling.html
+            logo: elastic.svg
+  - name: Component
+    subcategories:
+      - name: Containerized Applications
+        items:
+          - item:
+            name: Green Metrics Tool
+            description: The Green Metrics Tool is a free open-source (FOSS) tool to measure the energy / CO2 consumption of container-based software applications.
+            homepage_url: https://www.green-coding.io/products/green-metrics-tool/
+            docs: https://docs.green-coding.io
+            blog: https://www.green-coding.io/blog/
+            repo_url: https://github.com/green-coding-solutions/green-metrics-tool
+            logo: green-metrics-tool.png
+            project: "proved+tested"
+
+          - item:
+            name: GreenFrame
+            description: A tool for measuring and analyzing the carbon footprint of web applications.
+            homepage_url: https://greenframe.io/
+            blog: https://marmelab.com/en/blog/#greenframe
+            docs: https://docs.greenframe.io/
+            repo_url: https://github.com/marmelab/greenframe-cli
+            logo: greenframe.svg
+
+          - item:
+            name: Cardamon
+            description: A tool for measuring the energy consumption and carbon footprint of software applications.
+            homepage_url: https://cardamon.io/
+            repo_url: https://github.com/Root-Branch/cardamon
+            logo: cardamon.svg
+
+          - item:
+            name: LIMo
+            description: A lightweight monitoring tool for measuring the energy consumption of microservices.
+            homepage_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/README.md
+            repo_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/
+            logo: unofficial/LIMo.svg
+
+      - name: Framework
+        items:
+          - item:
+            name: Impact Framework
+            description: A framework for modeling and analyzing the environmental impact of software systems.
+            homepage_url: https://if.greensoftware.foundation/
+            docs: https://if.greensoftware.foundation/intro
+            repo_url: https://github.com/Green-Software-Foundation/if
+            logo: impact-framework.svg
+            project: "proved+tested"
+      - name: CI Pipeline
+        items:
+          - item:
+            name: Eco CI
+            description: A tool for measuring and optimizing the carbon footprint of CI pipelines.
+            homepage_url: https://www.green-coding.io/products/eco-ci/
+            repo_url: https://github.com/green-coding-solutions/eco-ci-energy-estimation
+            logo: eco-ci.png
+            project: "proved+tested"
+  - name: Code
+    subcategories:
+      - name: Enterprise Languages
+        items:
+          - item:
+            name: JoularJX
+            description: A tool for measuring the energy consumption of Java applications at the method level.
+            homepage_url: https://github.com/joular/joularjx
+            docs: https://joular.github.io/joularjx/
+            repo_url: https://github.com/joular/joularjx
+            logo: joularjx.png
+
+          - item:
+            name: jPowerMonitor
+            description: A tool for monitoring the power consumption of Java applications.
+            homepage_url: https://github.com/msg-systems/jpowermonitor
+            repo_url: https://github.com/msg-systems/jpowermonitor
+            logo: unofficial/jPowerMonitor.svg
+
+          - item:
+            name: DotNet-Counters
+            description: A performance monitoring tool for .NET applications that includes energy consumption metrics.
+            homepage_url: https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-counters
+            logo: dotnet.svg
+
+      - name: Modern Languages
+        items:
+          - item:
+            name: PyRAPL
+            description: A Python toolkit for measuring the energy consumption of Python code using Intel's Running Average Power Limit (RAPL).
+            homepage_url: https://github.com/powerapi-ng/pyRAPL
+            repo_url: https://github.com/powerapi-ng/pyRAPL
+            logo: pyrapl.png
+
+          - item:
+            name: CodeCarbon
+            description: A Python package for tracking the carbon emissions of compute-intensive code.
+            homepage_url: https://codecarbon.io/
+            repo_url: https://github.com/mlco2/codecarbon
+            logo: codecarbon.jpg
+
+          - item:
+            name: Tracarbon
+            description: A tool for tracking the carbon footprint of software applications.
+            homepage_url: https://github.com/fvaleye/tracarbon
+            docs: https://fvaleye.github.io/tracarbon/documentation/
+            repo_url: https://github.com/fvaleye/tracarbon
+            logo: tracarbon.png
+
+          - item:
+            name: oaklean
+            description: A tool for analyzing and optimizing the energy efficiency of Node.js applications.
+            homepage_url: https://www.oaklean.io/
+            repo_url: https://github.com/hitabisgmbh/oaklean
+            logo: oaklean.svg
+            project: "proved+tested"
+
+          - item:
+            name: Coppers
+            description: A Rust tool for measuring the energy consumption of code.
+            homepage_url: https://github.com/ThijsRay/coppers
+            repo_url: https://github.com/ThijsRay/coppers
+            logo: coppers.svg
+
+  - name: Application Specific
+    subcategories:
       - name: AI Model
         items:
           - item:
@@ -121,28 +218,28 @@ categories:
             repo_url: https://github.com/genai-impact/ecologits
             logo: ecologits.png
             project: "proved+tested"
-          
+
           - item:
             name: Carbontracker
             description: A tool for tracking and predicting the energy consumption and carbon footprint of training deep learning models.
             homepage_url: https://carbontracker.info/
             repo_url: https://github.com/lfwa/carbontracker
             logo: unofficial/carbontracker.svg
-          
+
           - item:
             name: ZEUS
             description: A framework for measuring and optimizing the energy efficiency of AI models and systems.
             homepage_url: https://ml.energy/zeus/
             repo_url: https://github.com/ml-energy/zeus
             logo: zeus.svg
-          
+
           - item:
             name: Green Algorithms Calculator
             description: A tool for estimating the carbon footprint of computational tasks, including AI model training and inference.
             homepage_url: https://www.green-algorithms.org/
             repo_url: https://github.com/GreenAlgorithms/green-algorithms-tool
             logo: unofficial/Green_Algorithms_Calculator.svg
-          
+
           - item:
             name: ML CO2 Impact
             description: A tool for estimating the carbon footprint of machine learning computations.
@@ -164,17 +261,6 @@ categories:
             homepage_url: https://green-coding.ai
             logo: organization/green-coding.webp
 
-      - name: Desktop Application
-        items:
-          - item:
-            name: Power Hog
-            description: A tool for monitoring the power consumption of desktop applications.
-            homepage_url: https://www.green-coding.io/products/power-hog/
-            docs: https://github.com/green-coding-solutions/hog/blob/main/README.md#the-power-hog
-            repo_url: https://github.com/green-coding-solutions/hog/
-            logo: power-hog.png
-            project: "proved+tested"
-      
       - name: Mobile App
         items:
           - item:
@@ -182,7 +268,7 @@ categories:
             description: A tool for profiling the power consumption of Android applications.
             homepage_url: https://developer.android.com/studio/profile/energy-profiler
             logo: android.svg
-          
+
           - item:
             name: Greenspector Studio
             description: A solution for measuring and optimizing the energy efficiency and carbon footprint of mobile applications.
@@ -191,7 +277,7 @@ categories:
             project: "proved+tested"
             second_path:
               - "Measurement / Website"
-          
+
           - item:
             name: PowDroid
             description: An open-source tool for measuring the power consumption of Android applications.
@@ -205,132 +291,69 @@ categories:
             homepage_url: https://github.com/S2-group/android-runner/
             repo_url: https://github.com/S2-group/android-runner/
             logo: unofficial/Android_Runner.svg
-      
-      - name: CI Pipeline
+
+      - name: Website
         items:
           - item:
-            name: Eco CI
-            description: A tool for measuring and optimizing the carbon footprint of CI pipelines.
-            homepage_url: https://www.green-coding.io/products/eco-ci/
-            repo_url: https://github.com/green-coding-solutions/eco-ci-energy-estimation
-            logo: eco-ci.png
+            name: CO2.js
+            description: A JavaScript library for estimating the carbon emissions of websites and web applications.
+            homepage_url: https://github.com/thegreenwebfoundation/co2.js
+            repo_url: https://github.com/thegreenwebfoundation/co2.js
+            logo: unofficial/CO2.js.svg
             project: "proved+tested"
-      
-      - name: Component (Test Environment)
+
+  - name: Emission Factor & Inventory
+    subcategories:
+      - name: Carbon Intensity
         items:
           - item:
-            name: Green Metrics Tool
-            description: The Green Metrics Tool is a free open-source (FOSS) tool to measure the energy / CO2 consumption of container-based software applications.
-            homepage_url: https://www.green-coding.io/products/green-metrics-tool/
-            docs: https://docs.green-coding.io
-            blog: https://www.green-coding.io/blog/
-            repo_url: https://github.com/green-coding-solutions/green-metrics-tool
-            logo: green-metrics-tool.png
-            project: "proved+tested"
-          
-          - item:
-            name: GreenFrame
-            description: A tool for measuring and analyzing the carbon footprint of web applications.
-            homepage_url: https://greenframe.io/
-            blog: https://marmelab.com/en/blog/#greenframe
-            docs: https://docs.greenframe.io/
-            repo_url: https://github.com/marmelab/greenframe-cli
-            logo: greenframe.svg
-          
-          - item:
-            name: Cardamon
-            description: A tool for measuring the energy consumption and carbon footprint of software applications.
-            homepage_url: https://cardamon.io/
-            repo_url: https://github.com/Root-Branch/cardamon
-            logo: cardamon.svg
-          
-          - item:
-            name: LIMo
-            description: A lightweight monitoring tool for measuring the energy consumption of microservices.
-            homepage_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/README.md
-            repo_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/
-            logo: unofficial/LIMo.svg
-      
-      - name: Arbitrary Software (Modeling)
-        items:
-          - item:
-            name: Impact Framework
-            description: A framework for modeling and analyzing the environmental impact of software systems.
-            homepage_url: https://if.greensoftware.foundation/
-            docs: https://if.greensoftware.foundation/intro
-            repo_url: https://github.com/Green-Software-Foundation/if
-            logo: impact-framework.svg
-            project: "proved+tested"
-      
-      - name: Unix System
-        items:
-        
-          - item:
-            name: Powerstat
-            description: A tool for measuring the power consumption of a system over time.
-            homepage_url: https://github.com/ColinIanKing/powerstat
-            repo_url: https://github.com/ColinIanKing/powerstat
-            logo: powerstat.png
-          
-          - item:
-            name: Perf
-            description: A performance analysis tool for Linux that can be used to measure energy consumption.
-            homepage_url: https://perf.wiki.kernel.org/index.php/Main_Page
-            repo_url: https://web.git.kernel.org/pub/scm/linux/kernel/git/perf/perf-tools-next.git/
-            logo: unofficial/perf.svg
-          
-          - item:
-            name: Turbostat
-            description: A tool for reporting processor frequency and idle statistics.
-            homepage_url: https://www.linux.org/docs/man8/turbostat.html
-            logo: unofficial/turbostat.svg
-          
-          - item:
-            name: NVIDIA SMI
-            description: A tool for monitoring and managing NVIDIA GPUs, including power consumption.
-            homepage_url: https://developer.nvidia.com/nvidia-system-management-interface
-            docs: https://docs.nvidia.com/deploy/nvidia-smi/index.html
-            logo: organization/nvidia.png
-          
-          - item:
-            name: Intel PCM
-            description: A tool for monitoring performance and energy metrics for Intel processors.
-            homepage_url: https://www.intel.com/content/www/us/en/developer/articles/tool/performance-counter-monitor.html?wapkw=pcm
-            repo_url: https://github.com/intel/pcm
-            logo: organization/intel.png
-          
-          - item:
-            name: PowerTOP
-            description: A tool for diagnosing issues with power consumption and power management.
-            homepage_url: https://github.com/fenrus75/powertop
-            repo_url: https://github.com/fenrus75/powertop
-            logo: unofficial/PowerTOP.svg
-          
-          - item:
-            name: Scaphandre
-            description: A monitoring agent dedicated to energy consumption metrics.
-            homepage_url: https://github.com/hubblo-org/scaphandre
-            docs: https://hubblo-org.github.io/scaphandre-documentation/index.html
-            repo_url: https://github.com/hubblo-org/scaphandre
-            logo: scaphandre.svg
-            project: "proved+tested"
-          
-          - item:
-            name: Tracarbon
-            description: A tool for tracking the carbon footprint of software applications.
-            homepage_url: https://github.com/fvaleye/tracarbon
-            docs: https://fvaleye.github.io/tracarbon/documentation/
-            repo_url: https://github.com/fvaleye/tracarbon
-            logo: tracarbon.png
+            name: Electricity Maps
+            description: An API that provides real-time carbon intensity data for electricity grids around the world.
+            homepage_url: https://www.electricitymaps.com/
+            docs: https://portal.electricitymaps.com/docs/getting-started
+            logo: electricity-maps.svg
 
           - item:
-            name: CPU Energy Meter
-            description: CPU Energy Meter is a Linux tool that allows to monitor power consumption of Intel CPUs at fine time granularities (few tens of milliseconds).
-            homepage_url: https://github.com/sosy-lab/cpu-energy-meter
-            repo_url: https://github.com/sosy-lab/cpu-energy-meter
-            logo: unofficial/CPU_Energy_Meter.svg
-      
-      - name: Website
+            name: WattTime
+            description: An API that provides real-time and forecast marginal carbon emissions data for electricity grids.
+            homepage_url: https://www.watttime.org/
+            docs: https://docs.watttime.org/
+            logo: WattTime.png
+
+          - item:
+            name: Energy-Charts
+            description: A service that provides data on electricity generation, consumption, and carbon intensity for various countries.
+            homepage_url: https://energy-charts.info/
+            logo: energy-charts.svg
+
+          - item:
+            name: Carbon-Intensity UK
+            description: An API that provides carbon intensity data for the UK electricity grid.
+            homepage_url: https://carbonintensity.org.uk/
+            docs: https://carbon-intensity.github.io/api-definitions/
+            logo: unofficial/Carbon-Intensity_UK.svg
+      - name: Emission Inventory
+        items:
+          - item:
+            name: BoaviztAPI
+            description: An open source API that provides environmental impact data for IT equipment, including carbon footprint, energy consumption, and resource depletion.
+            homepage_url: https://github.com/Boavizta/boaviztapi
+            docs: https://doc.api.boavizta.org/
+            repo_url: https://github.com/Boavizta/boaviztapi
+            logo: boaviztapi.svg
+            project: "proved+tested"
+
+          - item:
+            name: climatiq
+            description: A proprietary API that provides carbon emissions data for various activities, including cloud computing, to help organizations measure and reduce their carbon footprint.
+            homepage_url: https://www.climatiq.io/
+            docs: https://www.climatiq.io/docs
+            logo: climatiq.png
+
+  - name: Measurement Toolbox
+    subcategories:
+
+      - name: Browser Plugins
         items:
           - item:
             name: GreenIT-Analysis
@@ -339,15 +362,7 @@ categories:
             repo_url: https://github.com/cnumr/GreenIT-Analysis
             logo: greenit-analysis.png
             project: "proved+tested"
-          
-          - item:
-            name: CO2.js
-            description: A JavaScript library for estimating the carbon emissions of websites and web applications.
-            homepage_url: https://github.com/thegreenwebfoundation/co2.js
-            repo_url: https://github.com/thegreenwebfoundation/co2.js
-            logo: unofficial/CO2.js.svg
-            project: "proved+tested"
-          
+
           - item:
             name: Firefox Power Profiler
             description: A tool for profiling the power consumption of websites in Firefox.
@@ -355,66 +370,89 @@ categories:
             docs: https://profiler.firefox.com/docs/
             repo_url: https://github.com/firefox-devtools/profiler
             logo: firefox-developer.svg
-          
+
           - item:
             name: Safari Web Inspector
             description: A tool for inspecting and profiling websites in Safari, including energy impact.
             homepage_url: https://developer.apple.com/safari/tools/
             docs: https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/Introduction/Introduction.html
             logo: safari.svg
-      
-      - name: Code (Development Environment)
+
+      - name: Shell Tools
         items:
+          - item:
+            name: Powerstat
+            description: A tool for measuring the power consumption of a system over time.
+            homepage_url: https://github.com/ColinIanKing/powerstat
+            repo_url: https://github.com/ColinIanKing/powerstat
+            logo: powerstat.png
 
           - item:
-            name: PyRAPL
-            description: A Python toolkit for measuring the energy consumption of Python code using Intel's Running Average Power Limit (RAPL).
-            homepage_url: https://github.com/powerapi-ng/pyRAPL
-            repo_url: https://github.com/powerapi-ng/pyRAPL
-            logo: pyrapl.png
+            name: Perf
+            description: A performance analysis tool for Linux that can be used to measure energy consumption.
+            homepage_url: https://perf.wiki.kernel.org/index.php/Main_Page
+            repo_url: https://web.git.kernel.org/pub/scm/linux/kernel/git/perf/perf-tools-next.git/
+            logo: unofficial/perf.svg
 
           - item:
-            name: JoularJX
-            description: A tool for measuring the energy consumption of Java applications at the method level.
-            homepage_url: https://github.com/joular/joularjx
-            docs: https://joular.github.io/joularjx/
-            repo_url: https://github.com/joular/joularjx
-            logo: joularjx.png
-          
+            name: Turbostat
+            description: A tool for reporting processor frequency and idle statistics.
+            homepage_url: https://www.linux.org/docs/man8/turbostat.html
+            logo: unofficial/turbostat.svg
+
           - item:
-            name: CodeCarbon
-            description: A Python package for tracking the carbon emissions of compute-intensive code.
-            homepage_url: https://codecarbon.io/
-            repo_url: https://github.com/mlco2/codecarbon
-            logo: codecarbon.jpg
-          
+            name: NVIDIA SMI
+            description: A tool for monitoring and managing NVIDIA GPUs, including power consumption.
+            homepage_url: https://developer.nvidia.com/nvidia-system-management-interface
+            docs: https://docs.nvidia.com/deploy/nvidia-smi/index.html
+            logo: organization/nvidia.png
+
           - item:
-            name: oaklean
-            description: A tool for analyzing and optimizing the energy efficiency of Node.js applications.
-            homepage_url: https://www.oaklean.io/
-            repo_url: https://github.com/hitabisgmbh/oaklean
-            logo: oaklean.svg
+            name: Intel PCM
+            description: A tool for monitoring performance and energy metrics for Intel processors.
+            homepage_url: https://www.intel.com/content/www/us/en/developer/articles/tool/performance-counter-monitor.html?wapkw=pcm
+            repo_url: https://github.com/intel/pcm
+            logo: organization/intel.png
+
+          - item:
+            name: PowerTOP
+            description: A tool for diagnosing issues with power consumption and power management.
+            homepage_url: https://github.com/fenrus75/powertop
+            repo_url: https://github.com/fenrus75/powertop
+            logo: unofficial/PowerTOP.svg
+
+          - item:
+            name: Scaphandre
+            description: A monitoring agent dedicated to energy consumption metrics.
+            homepage_url: https://github.com/hubblo-org/scaphandre
+            docs: https://hubblo-org.github.io/scaphandre-documentation/index.html
+            repo_url: https://github.com/hubblo-org/scaphandre
+            logo: scaphandre.svg
             project: "proved+tested"
 
           - item:
-            name: jPowerMonitor
-            description: A tool for monitoring the power consumption of Java applications.
-            homepage_url: https://github.com/msg-systems/jpowermonitor
-            repo_url: https://github.com/msg-systems/jpowermonitor
-            logo: unofficial/jPowerMonitor.svg
-          
+            name: CPU Energy Meter
+            description: CPU Energy Meter is a Linux tool that allows to monitor power consumption of Intel CPUs at fine time granularities (few tens of milliseconds).
+            homepage_url: https://github.com/sosy-lab/cpu-energy-meter
+            repo_url: https://github.com/sosy-lab/cpu-energy-meter
+            logo: unofficial/CPU_Energy_Meter.svg
+
           - item:
-            name: DotNet-Counters
-            description: A performance monitoring tool for .NET applications that includes energy consumption metrics.
-            homepage_url: https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-counters
-            logo: dotnet.svg
-          
+            name: Power Hog
+            description: A tool for monitoring the power consumption of desktop applications.
+            homepage_url: https://www.green-coding.io/products/power-hog/
+            docs: https://github.com/green-coding-solutions/hog/blob/main/README.md#the-power-hog
+            repo_url: https://github.com/green-coding-solutions/hog/
+            logo: power-hog.png
+            project: "proved+tested"
+
           - item:
-            name: Coppers
-            description: A Rust tool for measuring the energy consumption of code.
-            homepage_url: https://github.com/ThijsRay/coppers
-            repo_url: https://github.com/ThijsRay/coppers
-            logo: coppers.svg
+            name: Cloud Energy
+            description: A tool that measures and analyzes energy consumption and carbon emissions of cloud resources to help organizations optimize their cloud infrastructure.
+            homepage_url: https://www.green-coding.io/products/cloud-energy/
+            repo_url: https://github.com/green-coding-solutions/cloud-energy
+            logo: cloud-energy.png
+            project: "proved+tested"
 
   - name: Optimization
     subcategories:
@@ -425,31 +463,31 @@ categories:
             description: A platform for optimizing cloud resources to reduce costs and carbon emissions.
             homepage_url: https://www.ibm.com/products/turbonomic
             logo: IBM-Turbonomics.png
-          
+
           - item:
             name: Greenpixie GPX Data
             description: A solution for optimizing cloud infrastructure to reduce carbon emissions.
             homepage_url: https://greenpixie.com/
             logo: greenpixie.svg
-          
+
           - item:
             name: txture
             description: A platform for analyzing and optimizing cloud infrastructure for cost and sustainability.
             homepage_url: https://txture.io/
             logo: txture.png
-          
+
           - item:
             name: OxygenIT
             description: A solution for optimizing IT infrastructure to reduce energy consumption and carbon emissions.
             homepage_url: https://www.oxygenit.io/
             logo: oxygenit.png
-          
+
           - item:
             name: Cycloid
             description: A platform for managing and optimizing cloud infrastructure with sustainability in mind.
             homepage_url: https://www.cycloid.io/
             logo: cycloid.png
-      
+
       - name: Kubernetes Optimization
         items:
           - item:
@@ -466,7 +504,7 @@ categories:
             homepage_url: https://github.com/sustainable-computing-io/clever
             repo_url: https://github.com/sustainable-computing-io/clever
             logo: unofficial/CLEVER.svg
-          
+
           - item:
             name: Goldilocks
             description: A tool for identifying and setting resource requests and limits for Kubernetes workloads.
@@ -474,7 +512,7 @@ categories:
             docs: https://goldilocks.docs.fairwinds.com/
             repo_url: https://github.com/FairwindsOps/goldilocks
             logo: goldilocks.svg
-          
+
           - item:
             name: Karpenter
             description: A Kubernetes node autoscaler that helps improve application availability and cluster efficiency.
@@ -483,7 +521,7 @@ categories:
             repo_url: https://github.com/aws/karpenter
             logo: karpenter.svg
             project: "proved+tested"
-          
+
           - item:
             name: kube-green
             description: A Kubernetes operator to reduce CO2 footprint by shutting down idle resources.
@@ -505,36 +543,7 @@ categories:
             homepage_url: https://github.com/Azure/carbon-aware-keda-operator
             repo_url: https://github.com/Azure/carbon-aware-keda-operator
             logo: unofficial/Carbon_Aware_KEDA_Operator.svg
-      
-      - name: CO2 Awareness API Services
-        items:
-          - item:
-            name: Electricity Maps
-            description: An API that provides real-time carbon intensity data for electricity grids around the world.
-            homepage_url: https://www.electricitymaps.com/
-            docs: https://portal.electricitymaps.com/docs/getting-started
-            logo: electricity-maps.svg
-          
-          - item:
-            name: WattTime
-            description: An API that provides real-time and forecast marginal carbon emissions data for electricity grids.
-            homepage_url: https://www.watttime.org/
-            docs: https://docs.watttime.org/
-            logo: WattTime.png
-          
-          - item:
-            name: Energy-Charts
-            description: A service that provides data on electricity generation, consumption, and carbon intensity for various countries.
-            homepage_url: https://energy-charts.info/
-            logo: energy-charts.svg
-          
-          - item:
-            name: Carbon-Intensity UK
-            description: An API that provides carbon intensity data for the UK electricity grid.
-            homepage_url: https://carbonintensity.org.uk/
-            docs: https://carbon-intensity.github.io/api-definitions/
-            logo: unofficial/Carbon-Intensity_UK.svg
-      
+
       - name: CO2 Awareness Tools
         items:
           - item:
@@ -544,14 +553,14 @@ categories:
             repo_url: https://github.com/Green-Software-Foundation/carbon-aware-sdk
             logo: carbon-aware-sdk.png
             project: "proved+tested"
-          
+
           - item:
             name: grid-intensity-go
             description: A command-line tool, go library and Prometheus exporter for accessing carbon intensity data from various sources.
             homepage_url: https://github.com/thegreenwebfoundation/grid-intensity-go
             repo_url: https://github.com/thegreenwebfoundation/grid-intensity-go
             logo: unofficial/grid-intensity-go.svg
-          
+
           - item:
             name: Carbon-Aware-Computing.com
             description: A platform for carbon-aware computing that uses data from Energy-Charts.
@@ -559,7 +568,7 @@ categories:
             repo_url: https://github.com/bluehands/Carbon-Aware-Computing
             logo: unofficial/Carbon-Aware-Computing.com.svg
             project: "proved+tested"
-          
+
           - item:
             name: Camunda Carbon Reductor
             description: A tool for optimizing business processes to reduce carbon emissions.
@@ -567,14 +576,14 @@ categories:
             repo_url: https://github.com/envite-consulting/camunda-carbon-reductor
             logo: camunda-carbon-reductor.svg
             project: "proved+tested"
-          
+
           - item:
             name: Grid-aware Websites
             description: A library for making websites carbon-aware by adapting to the carbon intensity of the electricity grid.
             homepage_url: https://www.thegreenwebfoundation.org/tools/grid-aware-websites/
             repo_url: https://github.com/thegreenwebfoundation/grid-aware-websites
             logo: unofficial/Grid-aware_Websites.svg
-      
+
       - name: Static Code Analysis
         items:
           - item:
@@ -584,14 +593,14 @@ categories:
             repo_url: https://github.com/sesalab/aDoctor
             logo: unofficial/aDoctor.svg
             project: "archived"
-          
+
           - item:
             name: Creedengo
             description: A static code analysis tool for identifying energy inefficiencies in code.
             homepage_url: https://green-code-initiative.org
             repo_url: https://github.com/green-code-initiative/creedengo-rules-specifications
             logo: creedengo.png
-          
+
           - item:
             name: CAST
             description: A software intelligence platform that includes analysis of energy efficiency and carbon footprint.
@@ -607,7 +616,7 @@ categories:
             description: A platform for managing IT inventory and analyzing its environmental impact.
             homepage_url: https://www.fruggr.io/
             logo: fruggr.svg
-      
+
       - name: Usage Data
         items:
           - item:
@@ -615,7 +624,7 @@ categories:
             description: A database for storing and analyzing carbon emissions data from IT infrastructure.
             homepage_url: https://www.green-coding.io/products/carbondb/
             logo: carbondb.png
-          
+
           - item:
             name: InfluxData Telegraf
             description: A plugin-driven server agent for collecting and reporting metrics, including energy consumption and carbon emissions.
