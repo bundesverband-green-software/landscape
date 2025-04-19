@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="11.014605mm"
+   height="11.618929mm"
+   viewBox="0 0 11.014605 11.618929"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20ef0f, 2023-11-25)"
+   sodipodi:docname="wattwise.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="false"
+     inkscape:zoom="3.9338694"
+     inkscape:cx="296.52738"
+     inkscape:cy="713.67392"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g9-7-7-6">
+    <sodipodi:guide
+       position="-54.803111,414.72569"
+       orientation="1,0"
+       id="guide7"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="18.944397,391.43554"
+       orientation="1,0"
+       id="guide9"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="36.40388,412.83957"
+       orientation="0,-1"
+       id="guide11"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="83.214145,372.67276"
+       orientation="1,0"
+       id="guide12"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Bg copy"
+     id="g9-7-7-6"
+     style="display:inline;stroke:none"
+     transform="translate(-8.0663805,-153.01351)">
+    <g
+       id="g28-5"
+       transform="matrix(1.2429079,0,0,1.2429079,12.100871,-70.1892)"
+       style="display:inline;fill:#11c000;fill-opacity:1;stroke:none;stroke-opacity:1"
+       inkscape:export-filename="wattwise-w.png"
+       inkscape:export-xdpi="230.60291"
+       inkscape:export-ydpi="230.60291">
+      <path
+         style="fill:#11c000;fill-opacity:1;stroke:none;stroke-width:0.307077;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m -3.2460104,179.59103 2.88212657,4.27724 1.53564773,-2.85668 2.9966178,7.91765 -2.9602172,-3.21995 -2.2314809,2.30686 z"
+         id="path28-35"
+         sodipodi:nodetypes="ccccccc" />
+      <path
+         style="display:inline;fill:#11c000;fill-opacity:1;stroke:none;stroke-width:0.307077;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+         d="m 5.6159541,179.58105 -3.0075401,4.32087 1.0406428,2.81298 z"
+         id="path28-4-6"
+         sodipodi:nodetypes="cccc" />
+    </g>
+  </g>
+</svg>

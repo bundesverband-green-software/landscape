@@ -446,8 +446,33 @@ categories:
             docs: https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/Introduction/Introduction.html
             logo: safari.svg
 
+      - name: Desktop Tools
+        items:
+          - item:
+            name: Power Hog
+            description: A tool for monitoring the power consumption of desktop applications.
+            homepage_url: https://www.green-coding.io/products/power-hog/
+            docs: https://github.com/green-coding-solutions/hog/blob/main/README.md#the-power-hog
+            repo_url: https://github.com/green-coding-solutions/hog/
+            logo: power-hog.png
+            project: "proved+tested"
+
+          - item:
+            name: Watt Wiser
+            description: A desktop software energy consumption estimation tool built as part of the [Watt-Wise Game Jam](https://wattwise.games/). Usable for simple energy estimation and benchmarking on Linux, macOS, and Windows.
+            homepage_url: https://github.com/wattwisegames/watt-wiser
+            repo_url: https://github.com/wattwisegames/watt-wiser
+            logo: watt-wiser.svg
+
       - name: Shell Tools
         items:
+          - item:
+            name: powerletrics
+            description: PowerLetrics is an open-source framework designed to monitor and analyze power consumption metrics at the process level on Linux. Similar to how top displays memory or CPU time, PowerLetrics provides the "Energy Footprint" of each process in real-time.
+            homepage_url: https://github.com/green-kernel/powerletrics
+            repo_url: https://github.com/green-kernel/powerletrics
+            logo: powerletrics.png
+
           - item:
             name: Powerstat
             description: A tool for measuring the power consumption of a system over time.
@@ -504,15 +529,6 @@ categories:
             homepage_url: https://github.com/sosy-lab/cpu-energy-meter
             repo_url: https://github.com/sosy-lab/cpu-energy-meter
             logo: unofficial/CPU_Energy_Meter.svg
-
-          - item:
-            name: Power Hog
-            description: A tool for monitoring the power consumption of desktop applications.
-            homepage_url: https://www.green-coding.io/products/power-hog/
-            docs: https://github.com/green-coding-solutions/hog/blob/main/README.md#the-power-hog
-            repo_url: https://github.com/green-coding-solutions/hog/
-            logo: power-hog.png
-            project: "proved+tested"
 
           - item:
             name: Cloud Energy
