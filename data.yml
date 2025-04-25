@@ -243,6 +243,7 @@ categories:
             homepage_url: https://codecarbon.io/
             repo_url: https://github.com/mlco2/codecarbon
             logo: codecarbon.jpg
+            project: "proved+tested"
             second_path:
               - "Artificial Intelligence / AI Model Training"
 
