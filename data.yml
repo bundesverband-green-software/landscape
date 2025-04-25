@@ -134,7 +134,7 @@ categories:
             logo: green-metrics-tool.png
             project: "proved+tested"
             second_path:
-              - "Website / Measurement"
+              - "Website / Website Energy Measurement"
 
           - item:
             name: GreenFrame
@@ -145,7 +145,7 @@ categories:
             repo_url: https://github.com/marmelab/greenframe-cli
             logo: greenframe.svg
             second_path:
-              - "Website / Estimation"
+              - "Website / Website Carbon Estimation"
 
           - item:
             name: Cardamon
@@ -187,7 +187,7 @@ categories:
             logo: greenspector.png
             project: "proved+tested"
             second_path:
-              - "Website / Measurement"
+              - "Website / Website Energy Measurement"
 
           - item:
             name: PowDroid
@@ -494,7 +494,7 @@ categories:
   - name: Website
     subcategories:
 
-      - name: Estimation
+      - name: Website Carbon Estimation
         items:
           - item:
             name: CO2.js
@@ -531,6 +531,9 @@ categories:
             homepage_url: https://kastor.green/
             logo: kastor-without-text.svg
 
+      - name: Website Energy Measurement
+        items: [] # is used as a second path
+
       - name: Browser Extensions
         items:
           - item:
@@ -555,9 +558,6 @@ categories:
             homepage_url: https://developer.apple.com/safari/tools/
             docs: https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/Introduction/Introduction.html
             logo: safari.svg
-
-      - name: Measurement
-        items: []
 
   - name: Optimization
     subcategories:
