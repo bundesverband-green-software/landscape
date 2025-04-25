@@ -51,6 +51,7 @@ groups:
       - Component
       - Code
       - Application Specific
+      - Website
       - Emission Factor & Inventory
       - Measurement Toolbox
   - name: Optimization

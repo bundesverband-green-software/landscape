@@ -133,6 +133,8 @@ categories:
             repo_url: https://github.com/green-coding-solutions/green-metrics-tool
             logo: green-metrics-tool.png
             project: "proved+tested"
+            second_path:
+              - "Website / Measurement"
 
           - item:
             name: GreenFrame
@@ -142,6 +144,8 @@ categories:
             docs: https://docs.greenframe.io/
             repo_url: https://github.com/marmelab/greenframe-cli
             logo: greenframe.svg
+            second_path:
+              - "Website / Estimation"
 
           - item:
             name: Cardamon
@@ -310,7 +314,7 @@ categories:
             logo: greenspector.png
             project: "proved+tested"
             second_path:
-              - "Measurement / Website"
+              - "Website / Measurement"
 
           - item:
             name: PowDroid
@@ -325,43 +329,6 @@ categories:
             homepage_url: https://github.com/S2-group/android-runner/
             repo_url: https://github.com/S2-group/android-runner/
             logo: unofficial/Android_Runner.svg
-
-      - name: Website
-        items:
-          - item:
-            name: CO2.js
-            description: A JavaScript library for estimating the carbon emissions of websites and web applications.
-            homepage_url: https://github.com/thegreenwebfoundation/co2.js
-            repo_url: https://github.com/thegreenwebfoundation/co2.js
-            logo: unofficial/CO2.js.svg
-            project: "proved+tested"
-          - item:
-            name: Website Carbon Calculator
-            description: Website Carbon Calculator estimates the carbon emissions of a website by analyzing factors like data transfer size and energy source of the hosting provider. A badge is provided that can be added to the footer of websites.
-            homepage_url: https://www.websitecarbon.com/
-            logo: WebsiteCarbon.jpg
-            project: "proved+tested"
-          - item:
-            name: Ecograder
-            description: Ecograder analyzes websites for environmental impact by evaluating performance, design, development practices, and hosting, offering insights and recommendations to improve digital sustainability. A badge is provided that can be added to the footer of websites.
-            homepage_url: https://ecograder.com/
-            logo: ecograder.svg
-            project: "proved+tested"
-          - item:
-            name: eco Index
-            description: EcoIndex evaluates the environmental impact of web pages by analyzing technical performance, complexity, and resource usage, providing a sustainability score along with actionable recommendations for optimization.
-            homepage_url: https://www.ecoindex.fr/en/
-            logo: ecoindex.png
-          - item:
-            name: Ecometer
-            description: Ecometer is a tool that assesses the environmental impact of websites by analyzing their technical structure, performance, and hosting, offering a clear eco-score and suggestions to reduce digital carbon emissions.
-            homepage_url: http://www.ecometer.org/
-            logo: ecometer.png
-          - item:
-            name: Kastor
-            description: Kastor estimates the carbon emissions of a website and analyzes it according to eco design and accessibility guidelines.
-            homepage_url: https://kastor.green/
-            logo: kastor.png
 
 
   - name: Emission Factor & Inventory
@@ -420,31 +387,6 @@ categories:
 
   - name: Measurement Toolbox
     subcategories:
-
-      - name: Browser Extensions
-        items:
-          - item:
-            name: GreenIT-Analysis
-            description: A browser extension for analyzing the environmental impact of websites.
-            homepage_url: https://github.com/cnumr/GreenIT-Analysis
-            repo_url: https://github.com/cnumr/GreenIT-Analysis
-            logo: greenit-analysis.png
-            project: "proved+tested"
-
-          - item:
-            name: Firefox Power Profiler
-            description: A tool for profiling the power consumption of websites in Firefox.
-            homepage_url: https://profiler.firefox.com/
-            docs: https://profiler.firefox.com/docs/
-            repo_url: https://github.com/firefox-devtools/profiler
-            logo: firefox-developer.svg
-
-          - item:
-            name: Safari Web Inspector
-            description: A tool for inspecting and profiling websites in Safari, including energy impact.
-            homepage_url: https://developer.apple.com/safari/tools/
-            docs: https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/Introduction/Introduction.html
-            logo: safari.svg
 
       - name: Desktop Tools
         items:
@@ -537,6 +479,74 @@ categories:
             repo_url: https://github.com/green-coding-solutions/cloud-energy
             logo: cloud-energy.png
             project: "proved+tested"
+
+  - name: Website
+    subcategories:
+
+      - name: Estimation
+        items:
+          - item:
+            name: CO2.js
+            description: A JavaScript library for estimating the carbon emissions of websites and web applications.
+            homepage_url: https://github.com/thegreenwebfoundation/co2.js
+            repo_url: https://github.com/thegreenwebfoundation/co2.js
+            logo: unofficial/CO2.js.svg
+            project: "proved+tested"
+          - item:
+            name: Website Carbon Calculator
+            description: Website Carbon Calculator estimates the carbon emissions of a website by analyzing factors like data transfer size and energy source of the hosting provider. A badge is provided that can be added to the footer of websites.
+            homepage_url: https://www.websitecarbon.com/
+            logo: WebsiteCarbon.jpg
+            project: "proved+tested"
+          - item:
+            name: Ecograder
+            description: Ecograder analyzes websites for environmental impact by evaluating performance, design, development practices, and hosting, offering insights and recommendations to improve digital sustainability. A badge is provided that can be added to the footer of websites.
+            homepage_url: https://ecograder.com/
+            logo: ecograder.svg
+            project: "proved+tested"
+          - item:
+            name: eco Index
+            description: EcoIndex evaluates the environmental impact of web pages by analyzing technical performance, complexity, and resource usage, providing a sustainability score along with actionable recommendations for optimization.
+            homepage_url: https://www.ecoindex.fr/en/
+            logo: ecoindex.png
+          - item:
+            name: Ecometer
+            description: Ecometer is a tool that assesses the environmental impact of websites by analyzing their technical structure, performance, and hosting, offering a clear eco-score and suggestions to reduce digital carbon emissions.
+            homepage_url: http://www.ecometer.org/
+            logo: ecometer.png
+          - item:
+            name: Kastor
+            description: Kastor estimates the carbon emissions of a website and analyzes it according to eco design and accessibility guidelines.
+            homepage_url: https://kastor.green/
+            logo: kastor.png
+
+      - name: Browser Extensions
+        items:
+          - item:
+            name: GreenIT-Analysis
+            description: A browser extension for analyzing the environmental impact of websites.
+            homepage_url: https://github.com/cnumr/GreenIT-Analysis
+            repo_url: https://github.com/cnumr/GreenIT-Analysis
+            logo: greenit-analysis.png
+            project: "proved+tested"
+
+          - item:
+            name: Firefox Power Profiler
+            description: A tool for profiling the power consumption of websites in Firefox.
+            homepage_url: https://profiler.firefox.com/
+            docs: https://profiler.firefox.com/docs/
+            repo_url: https://github.com/firefox-devtools/profiler
+            logo: firefox-developer.svg
+
+          - item:
+            name: Safari Web Inspector
+            description: A tool for inspecting and profiling websites in Safari, including energy impact.
+            homepage_url: https://developer.apple.com/safari/tools/
+            docs: https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/Introduction/Introduction.html
+            logo: safari.svg
+
+      - name: Measurement
+        items: []
 
   - name: Optimization
     subcategories:
