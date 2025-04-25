@@ -524,12 +524,12 @@ categories:
             name: Ecometer
             description: Ecometer is a tool that assesses the environmental impact of websites by analyzing their technical structure, performance, and hosting, offering a clear eco-score and suggestions to reduce digital carbon emissions.
             homepage_url: http://www.ecometer.org/
-            logo: ecometer.png
+            logo: ecometer-with-bg.png
           - item:
             name: Kastor
             description: Kastor estimates the carbon emissions of a website and analyzes it according to eco design and accessibility guidelines.
             homepage_url: https://kastor.green/
-            logo: kastor.png
+            logo: kastor-without-text.svg
 
       - name: Browser Extensions
         items:
