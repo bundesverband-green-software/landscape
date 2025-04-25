@@ -171,15 +171,38 @@ categories:
             repo_url: https://github.com/Green-Software-Foundation/if
             logo: impact-framework.svg
             project: "proved+tested"
-      - name: CI Pipeline
+
+      - name: Mobile App
         items:
           - item:
-            name: Eco CI
-            description: A tool for measuring and optimizing the carbon footprint of CI pipelines.
-            homepage_url: https://www.green-coding.io/products/eco-ci/
-            repo_url: https://github.com/green-coding-solutions/eco-ci-energy-estimation
-            logo: eco-ci.png
+            name: Android Power Profiler
+            description: A tool for profiling the power consumption of Android applications.
+            homepage_url: https://developer.android.com/studio/profile/energy-profiler
+            logo: android.svg
+
+          - item:
+            name: Greenspector Studio
+            description: A solution for measuring and optimizing the energy efficiency and carbon footprint of mobile applications.
+            homepage_url: https://greenspector.com/en/greenspector-studio-it-environmental-footprint-websites-applications/
+            logo: greenspector.png
             project: "proved+tested"
+            second_path:
+              - "Website / Measurement"
+
+          - item:
+            name: PowDroid
+            description: An open-source tool for measuring the power consumption of Android applications.
+            homepage_url: https://www.noureddine.org/research/powdroid
+            repo_url: https://github.com/powdroid-project/powdroid
+            logo: powdroid.png
+
+          - item:
+            name: Android Runner
+            description: Android Runner (AR) is a tool for automatically executing measurement-based experiments on native and web apps running on Android devices.
+            homepage_url: https://github.com/S2-group/android-runner/
+            repo_url: https://github.com/S2-group/android-runner/
+            logo: unofficial/Android_Runner.svg
+
   - name: Code
     subcategories:
       - name: Enterprise Languages
@@ -220,6 +243,8 @@ categories:
             homepage_url: https://codecarbon.io/
             repo_url: https://github.com/mlco2/codecarbon
             logo: codecarbon.jpg
+            second_path:
+              - "Artificial Intelligence / AI Model Training"
 
           - item:
             name: Tracarbon
@@ -244,47 +269,13 @@ categories:
             repo_url: https://github.com/ThijsRay/coppers
             logo: coppers.svg
 
-  - name: Application Specific
+
+  - name: Artificial Intelligence
     subcategories:
-      - name: AI Model
+
+      - name: AI Model Training
         items:
-          - item:
-            name: EcoLogits
-            description: A tool for measuring and optimizing the energy consumption and carbon footprint of AI models during training and inference.
-            homepage_url: https://huggingface.co/spaces/genai-impact/ecologits-calculator
-            docs: https://ecologits.ai
-            repo_url: https://github.com/genai-impact/ecologits
-            logo: ecologits.png
-            project: "proved+tested"
-
-          - item:
-            name: Carbontracker
-            description: A tool for tracking and predicting the energy consumption and carbon footprint of training deep learning models.
-            homepage_url: https://carbontracker.info/
-            repo_url: https://github.com/lfwa/carbontracker
-            logo: unofficial/carbontracker.svg
-
-          - item:
-            name: ZEUS
-            description: A framework for measuring and optimizing the energy efficiency of AI models and systems.
-            homepage_url: https://ml.energy/zeus/
-            repo_url: https://github.com/ml-energy/zeus
-            logo: zeus.svg
-
-          - item:
-            name: Green Algorithms Calculator
-            description: A tool for estimating the carbon footprint of computational tasks, including AI model training and inference.
-            homepage_url: https://www.green-algorithms.org/
-            repo_url: https://github.com/GreenAlgorithms/green-algorithms-tool
-            logo: unofficial/Green_Algorithms_Calculator.svg
-
-          - item:
-            name: ML CO2 Impact
-            description: A tool for estimating the carbon footprint of machine learning computations.
-            homepage_url: https://mlco2.github.io/impact/
-            repo_url: https://github.com/mlco2/impact
-            logo: mlco2impact.png
-
+        
           - item:
             name: AI Power Meter
             description: A tool for estimating the carbon footprint of machine learning computations.
@@ -294,42 +285,52 @@ categories:
             logo: unofficial/AI_Power_Meter.svg
 
           - item:
+            name: Carbontracker
+            description: A tool for tracking and predicting the energy consumption and carbon footprint of training deep learning models.
+            homepage_url: https://carbontracker.info/
+            repo_url: https://github.com/lfwa/carbontracker
+            logo: unofficial/carbontracker.svg
+          
+          - item:
+            name: ZEUS
+            description: A framework for measuring and optimizing the energy efficiency of Artificial Intelligences and systems.
+            homepage_url: https://ml.energy/zeus/
+            repo_url: https://github.com/ml-energy/zeus
+            logo: zeus.svg
+
+          - item:
+            name: ML CO2 Impact
+            description: A tool for estimating the carbon footprint of machine learning computations.
+            homepage_url: https://mlco2.github.io/impact/
+            repo_url: https://github.com/mlco2/impact
+            logo: mlco2impact.png
+
+          - item:
+            name: Green Algorithms Calculator
+            description: A tool for estimating the carbon footprint of computational tasks, including AI Model Training and inference.
+            homepage_url: https://www.green-algorithms.org/
+            repo_url: https://github.com/GreenAlgorithms/green-algorithms-tool
+            logo: unofficial/Green_Algorithms_Calculator.svg
+            second_path:
+              - "Artificial Intelligence / AI Inference"
+
+      - name: AI Inference
+        items:
+
+          - item:
             name: Green Coding AI
             description: This project aims to show how much asking an GPT uses in resources.
             homepage_url: https://green-coding.ai
             logo: organization/green-coding.webp
 
-      - name: Mobile App
-        items:
           - item:
-            name: Android Power Profiler
-            description: A tool for profiling the power consumption of Android applications.
-            homepage_url: https://developer.android.com/studio/profile/energy-profiler
-            logo: android.svg
-
-          - item:
-            name: Greenspector Studio
-            description: A solution for measuring and optimizing the energy efficiency and carbon footprint of mobile applications.
-            homepage_url: https://greenspector.com/en/greenspector-studio-it-environmental-footprint-websites-applications/
-            logo: greenspector.png
+            name: EcoLogits
+            description: A tool for measuring and optimizing the energy consumption and carbon footprint of Artificial Intelligences during training and inference.
+            homepage_url: https://huggingface.co/spaces/genai-impact/ecologits-calculator
+            docs: https://ecologits.ai
+            repo_url: https://github.com/genai-impact/ecologits
+            logo: ecologits.png
             project: "proved+tested"
-            second_path:
-              - "Website / Measurement"
-
-          - item:
-            name: PowDroid
-            description: An open-source tool for measuring the power consumption of Android applications.
-            homepage_url: https://www.noureddine.org/research/powdroid
-            repo_url: https://github.com/powdroid-project/powdroid
-            logo: powdroid.png
-
-          - item:
-            name: Android Runner
-            description: Android Runner (AR) is a tool for automatically executing measurement-based experiments on native and web apps running on Android devices.
-            homepage_url: https://github.com/S2-group/android-runner/
-            repo_url: https://github.com/S2-group/android-runner/
-            logo: unofficial/Android_Runner.svg
-
 
   - name: Emission Factor & Inventory
     subcategories:
@@ -478,6 +479,16 @@ categories:
             homepage_url: https://www.green-coding.io/products/cloud-energy/
             repo_url: https://github.com/green-coding-solutions/cloud-energy
             logo: cloud-energy.png
+            project: "proved+tested"
+
+      - name: CI Pipeline
+        items:
+          - item:
+            name: Eco CI
+            description: A tool for measuring and optimizing the carbon footprint of CI pipelines.
+            homepage_url: https://www.green-coding.io/products/eco-ci/
+            repo_url: https://github.com/green-coding-solutions/eco-ci-energy-estimation
+            logo: eco-ci.png
             project: "proved+tested"
 
   - name: Website

@@ -49,9 +49,9 @@ groups:
     categories:
       - Infrastructure Provider / Cluster
       - Component
-      - Code
-      - Application Specific
       - Website
+      - Artificial Intelligence
+      - Code
       - Emission Factor & Inventory
       - Measurement Toolbox
   - name: Optimization
