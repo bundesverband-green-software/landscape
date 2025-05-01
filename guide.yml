@@ -19,16 +19,7 @@ categories:
         content: |
 
           Die Green Software Tool-Landkarte vom Bundesverband Green Software gibt einen Überblick über das aktuelle Tool-Ökosystem. Die Landkarte enthält sowohl Werkzeuge zum Messen als auch zum Optimieren.
-          Sie ist inspiriert von der [CNCF Landscape](https://landscape.cncf.io/) und verwendet das gleiche Werkzeug, um sie zu erstellen.
-
-      - subcategory: "Gruppen"
-        content: |
-          
-          Die Landkarte ist in zwei Gruppen aufgeteilt:
-          - "Measurement"
-          - "Optimization"
-          
-          Beim ersten Aufruf der Landkarte wird die Gruppe "Measurement" angezeigt. Um die Tools der Gruppe "Optimization" anzuzeigen, klicke oben auf die Schaltfläche "Optimization".
+          Sie ist inspiriert von der [CNCF Landscape](https://landscape.cncf.io/) und verwendet den gleichen Static-Site-Generator, um sie zu erstellen.
 
       - subcategory: "Was bedeutet 'BVGS Proved & Tested'?"
         content: |
