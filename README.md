@@ -19,6 +19,7 @@ landscape2 build \
 --settings-file settings.yml \
 --guide-file guide.yml \
 --logos-path logos \
+--cache-dir cache \
 --output-dir build
 ```
 
