@@ -53,7 +53,7 @@ jobs:
           git branch --set-upstream-to=origin/build build
           git pull
           # Remove all except the CNAME file
-          find . ! -name 'CNAME' -exec rm -rf {} +
+          find . ! -name 'CNAME' ! -path '.' -exec rm -rf {} +
           cp -R /tmp/landscape/* .
           cp index.html 404.html
           git add .
