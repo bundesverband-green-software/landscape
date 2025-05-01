@@ -26,7 +26,7 @@ colors:
   color6: "rgba(0, 150, 79, 1)" # Categories and subcategories frames (even)
   color7: "rgba(0, 150, 79, 1)" # Borders, shadows and options boxes in games
 
-featured_items: # TODO
+featured_items:
   - field: maturity
     options:
       - value: proved+tested
@@ -57,9 +57,6 @@ groups:
   - name: Optimization
     categories:
       - Optimization
-  - name: Data Management
-    categories:
-      - Data Management
 header:
   # links:
   #   github: <GITHUB_URL>
