@@ -10,25 +10,28 @@ foundation: Bundesverband Green Software
 
 url: http://127.0.0.1:8000 # TODO
 
-colors:
-  color1: "rgba(37, 58, 1, 1)" # Buttons, groups, links
-  color2: "rgba(176, 201, 94, 1)" # Some highlighted items like filters button, search icon
-  color3: "rgba(176, 201, 94, 1)" # Participation stats bars, spinners, modal titles
-  color4: "rgba(37, 58, 1, 1)" # Categories titles in filters, fieldset in filters modal
-  color5: "rgba(26, 108, 104, 1)" # Categories and subcategories frames (odd)
-  color6: "rgba(26, 108, 104, 1)" # Categories and subcategories frames (even)
-  color7: "rgba(26, 108, 104, 1)" # Borders, shadows and options boxes in games
+# BVGS Colors:
+# - green:      rgba(0, 150, 79, 1)
+# - dark green: rgba(0, 112, 58, 1)
+# - yellow:     rgba(255, 206, 68, 1)
+# - red:        rgba(227, 6, 19, 1)
+# - black:      rgba(29, 29, 27, 1)
 
-featured_items: # TODO
+colors:
+  color1: "rgba(0, 150, 79, 1)" # Buttons, groups, links
+  color2: "rgba(227, 6, 19, 1)" # Some highlighted items like filters button, search icon
+  color3: "rgba(255, 206, 68, 1)" # Participation stats bars, spinners, modal titles
+  color4: "rgba(29, 29, 27, 1)" # Categories titles in filters, fieldset in filters modal
+  color5: "rgba(0, 112, 58, 1)" # Categories and subcategories frames (odd)
+  color6: "rgba(0, 150, 79, 1)" # Categories and subcategories frames (even)
+  color7: "rgba(0, 150, 79, 1)" # Borders, shadows and options boxes in games
+
+featured_items:
   - field: maturity
     options:
       - value: proved+tested
         order: 1
         label: BVGS Proved & Tested
-  - field: subcategory
-    options:
-      - value: <VALUE 1>
-      - value: <VALUE 2>
 
 footer:
   links:
@@ -41,11 +44,19 @@ footer:
 
 grid_items_size: large
 
-# groups: # TODO
-#   - name: Tools
-#     categories:
-#       - Cloud
-
+groups:
+  - name: Measurement
+    categories:
+      - Infrastructure Provider / Cluster
+      - Component
+      - Website
+      - Artificial Intelligence
+      - Code
+      - Emission Factor & Inventory
+      - Measurement Toolbox
+  - name: Optimization
+    categories:
+      - Optimization
 header:
   # links:
   #   github: <GITHUB_URL>
@@ -54,4 +65,4 @@ header:
 images:
   favicon: https://www.bundesverband-green-software.de/favicon.ico
 
-screenshot_width: 1500
+screenshot_width: 1600

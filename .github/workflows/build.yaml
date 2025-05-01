@@ -20,20 +20,34 @@ jobs:
       - name: Checkout this repository
         uses: actions/checkout@v4
 
+      - name: Install tar in container (needed for the cache)
+        run: apk add --update --no-progress tar
+
+      - name: Setup cache
+        uses: actions/cache@v4
+        with:
+          path: /tmp/landscape-cache
+          key: landscape-cache-${{ github.sha }}-${{ github.run_id }}
+          restore-keys: |
+            landscape-cache-
+
       - name: Build landscape
+        env:
+          GITHUB_TOKENS: ${{ secrets.GH_TOKENS }}
         run: |
           landscape2 build \
             --settings-file ./settings.yml \
             --guide-file ./guide.yml \
             --data-file ./data.yml \
             --logos-path ./logos \
+            --cache-dir /tmp/landscape-cache \
             --output-dir /tmp/landscape
 
       - name: Commit built landscape to build branch
         run: |
           git config --global safe.directory `pwd`
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "no-reply@sample-domain.io"
+          git config --global user.name "GitHub Action"
+          git config --global user.email "github-action@users.noreply.github.com"
           git fetch origin build:build
           git checkout build
           git branch --set-upstream-to=origin/build build
