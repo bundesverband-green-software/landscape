@@ -17,13 +17,30 @@ categories:
     subcategories:
       - subcategory: "Was ist die Green Software Tool-Landkarte?"
         content: |
-          Das Ziel der Green Software Tool-Landkarte ist es, einen Überblick über das aktuelle Ökosystem zu geben und auch Empfehlungen auszusprechen.
+
+          Die Green Software Tool-Landkarte vom Bundesverband Green Software gibt einen Überblick über das aktuelle Tool-Ökosystem. Die Landkarte enthält sowohl Werkzeuge zum Messen als auch zum Optimieren.
           Sie ist inspiriert von der [CNCF Landscape](https://landscape.cncf.io/) und verwendet das gleiche Werkzeug, um sie zu erstellen.
-          Fehlende Tools können gerne über einen PR einreicht werden, um dessen Aufnahme in die Landschaft zu beantragen.
+
+      - subcategory: "Gruppen"
+        content: |
+          
+          Die Landkarte ist in zwei Gruppen aufgeteilt:
+          - "Measurement"
+          - "Optimization"
+          
+          Beim ersten Aufruf der Landkarte wird die Gruppe "Measurement" angezeigt. Um die Tools der Gruppe "Optimization" anzuzeigen, klicke oben auf die Schaltfläche "Optimization".
 
       - subcategory: "Was bedeutet 'BVGS Proved & Tested'?"
         content: |
-          Der BVGS-Arbeitskreis "Tools & Messverfahren" hat das Tool erfolgreich im praktischen Einsatz erprobt und getested.
-          Damit werden die Tools hervorgehoben, die unserer Erfahrung nach für einen praktischen Einsatz geeignet sind. Dies heißt jedoch nicht, dass andere Tools automatisch ungeeignet sind.
-          Möglicherweise haben wir das Tool einfach noch nicht getestet.
-          Falls Ihrer Meinung nach ein Tool es verdient hat, hervorgeben zu werden, würden wir uns über eine Nachricht freuen!
+
+          Einzelne Tools werden mit der Kennzeichnung 'BVGS Proved & Tested' hervorgehoben, die unserer Erfahrung nach für einen praktischen Einsatz geeignet sind. Ob ein Tool die Kennzeichnung erhält entscheidet der BVGS-Arbeitskreis "Tools & Messverfahren". Das wesentliche Kriterium hierfür ist, ob mindestens ein Mitglied im Bundesverband das Tool erfolgreich im praktischen Einsatz erprobt und getested hat und für hilfreich befunden hat.
+          
+      - subcategory: "Was bedeutet 'Archived'?"
+        content: |
+
+          Manche Tools sind in der Landkarte ausgegraut und mit der Kennzeichnung "Archived" versehen. Dies bedeutet, dass das Tool entweder offiziell nicht mehr weiterentwickelt wird oder das Repository den Eindruck erweckt, dass das Projekt inaktiv ist.
+        
+      - subcategory: "Änderung/Ergänzung vorschlagen"
+        content: |
+
+          Wir freuen uns über jegliche Verbesserungs- und Ergänzungsvorschläge via Pull Requests! Du findest weitere Informationen in der Datei README.md im GitHub-Repository.
