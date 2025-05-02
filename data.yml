@@ -580,6 +580,13 @@ categories:
             homepage_url: https://kastor.green/
             logo: kastor-without-text.svg
 
+          - item:
+            name: Website Carbon Meter
+            description: Tracks the carbon emissions of a website as live metrics. Based on CO2.js and and the actual grid carbon intensity, provided by the Carbon-Aware-Computing project.
+            homepage_url: https://github.com/bluehands/Website-Carbon-Meter
+            repo_url: https://github.com/bluehands/Website-Carbon-Meter
+            logo: unofficial/website-carbon-meter.svg
+
       - name: Website Energy Measurement
         items: [] # is used as a second path
 
