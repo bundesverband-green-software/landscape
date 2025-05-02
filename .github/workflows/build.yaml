@@ -13,6 +13,8 @@ jobs:
     container:
       image: public.ecr.aws/g6m3a0y9/landscape2
       options: --user root
+    permissions:
+      contents: write
     steps:
       - name: Install git
         run: apk add git
