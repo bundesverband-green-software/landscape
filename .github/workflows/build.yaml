@@ -33,7 +33,7 @@ jobs:
 
       - name: Build landscape
         env:
-          GITHUB_TOKENS: ${{ secrets.GH_TOKENS }}
+          GITHUB_TOKENS: ${{ secrets.GITHUB_TOKEN }} # 'GITHUB_TOKENS' is used by landscape2
         run: |
           landscape2 build \
             --settings-file ./settings.yml \
