@@ -7,31 +7,39 @@
 # Reference documentation: https://github.com/cncf/landscape2/blob/main/docs/config/guide.yml
 
 categories:
-  - category: "Einleitung"
-    keywords: []
+
+  - category: "Einführung"
     content: |
       
-      Es gibt eine zunehmende Anzahl an Werkzeugen, die sich als "Green Software" bezeichnen lassen.
-      Diese Landkarte wurde vom Arbeitskreis "Tools & Messverfahren" des [Bundesverbands Green Software](https://www.bundesverband-green-software.de/) kreiert, mit dem Ziel, einen Überblick über das Green Software-Ökosystem zu geben und basierend auf eigenen Praxiserfahrungen konkrete Empfehlungen aussprechen zu können.
+          Diese Seite gibt eine kurze Einführung in die Tool-Landkarte, dessen Ziele, den Aufbau und den wesentlichen Merkmalen.
 
     subcategories:
-      - subcategory: "Was ist die Green Software Tool-Landkarte?"
+
+      - subcategory: "Hintergrund"
         content: |
 
-          Die Green Software Tool-Landkarte vom Bundesverband Green Software gibt einen Überblick über das aktuelle Tool-Ökosystem. Die Landkarte enthält sowohl Werkzeuge zum Messen als auch zum Optimieren.
-          Sie ist inspiriert von der [CNCF Landscape](https://landscape.cncf.io/) und verwendet den gleichen Static-Site-Generator, um sie zu erstellen.
+          Diese Landkarte wurde vom Arbeitskreis "Tools & Messverfahren" der deutschen Organisation [Bundesverbands Green Software e.V.](https://www.bundesverband-green-software.de/) kreiert, mit dem Ziel, einen Überblick über das stetig wachsende Green Software-Ökosystem zu geben und basierend auf eigenen Praxiserfahrungen konkrete Empfehlungen aussprechen zu können.
+          Die Landkarte enthält sowohl Werkzeuge zum Messen als auch zum Optimieren, da beides essentiell für die Erreichung der Ziele von Green Software ist.
+          Sie wurde inspiriert von der [CNCF Landscape](https://landscape.cncf.io/) und verwendet den gleichen Static-Site-Generator, um sie zu erstellen.
 
-      - subcategory: "Was bedeutet 'BVGS Proved & Tested'?"
+      - subcategory: "Aufbau"
+        content: |
+
+          Die Landkarte ist in mehrere Kategorien (links) sowie Unter-Kategorien (mittig) eingeteilt. Die Kategorisierung erfolgte im Wesentlichen nach dem "Was?", also welche Art von System/Software wird gemessen bzw. optimiert.
+          Wenn ein Tool in mehrere Kategorien passt, wird es entsprechend mehrfach dargestellt.
+          Mittels der Filter-Funktion links oben können Kategorien gefiltert werden.
+
+      - subcategory: "Kennzeichnung 'BVGS Proved & Tested'"
         content: |
 
           Einzelne Tools werden mit der Kennzeichnung 'BVGS Proved & Tested' hervorgehoben, die unserer Erfahrung nach für einen praktischen Einsatz geeignet sind. Ob ein Tool die Kennzeichnung erhält entscheidet der BVGS-Arbeitskreis "Tools & Messverfahren". Das wesentliche Kriterium hierfür ist, ob mindestens ein Mitglied im Bundesverband das Tool erfolgreich im praktischen Einsatz erprobt und getested hat und für hilfreich befunden hat.
           
-      - subcategory: "Was bedeutet 'Archived'?"
+      - subcategory: "Kennzeichnung 'Archived'"
         content: |
 
           Manche Tools sind in der Landkarte ausgegraut und mit der Kennzeichnung "Archived" versehen. Dies bedeutet, dass das Tool entweder offiziell nicht mehr weiterentwickelt wird oder das Repository den Eindruck erweckt, dass das Projekt inaktiv ist.
-        
+
       - subcategory: "Änderung/Ergänzung vorschlagen"
         content: |
 
-          Wir freuen uns über jegliche Verbesserungs- und Ergänzungsvorschläge via Pull Requests! Du findest weitere Informationen in der Datei README.md im GitHub-Repository.
+          Wir freuen uns über jegliche Verbesserungs- und Ergänzungsvorschläge via Pull Requests! Du findest weitere Informationen in der Datei [README.md](https://github.com/bundesverband-green-software/landscape/?tab=readme-ov-file#green-software-landscape) im GitHub-Repository.

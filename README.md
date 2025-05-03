@@ -31,9 +31,9 @@ landscape2 serve --landscape-dir build
 
 ## Add new tool
 
-Add the tool to `data.yml` in the correct category / subcategory.
+Add the tool to the correct category/subcategory in `data.yml`. If it belongs to more than one category, you can use the `second_path` field to add it to more than one category.
 
-Possible fields are explained [here](https://github.com/cncf/landscape2/blob/main/docs/config/data.yml).
+The possible fields are explained [here](https://github.com/cncf/landscape2/blob/main/docs/config/data.yml).
 
 Note: we use the field `project` not to specify the maturity in the sense of the CNCF, but if we, the Bundesverband Green Software, have successfully field-tested the tool/project. If that is the case, you can add `project: "proved+tested"`.
 
