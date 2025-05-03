@@ -8,7 +8,7 @@
 
 categories:
 
-  - category: "Einführung"
+  - category: "Einführung 🇩🇪"
     content: |
       
           Diese Seite gibt eine kurze Einführung in die Tool-Landkarte, dessen Ziele, den Aufbau und den wesentlichen Merkmalen.
@@ -18,7 +18,7 @@ categories:
       - subcategory: "Hintergrund"
         content: |
 
-          Diese Landkarte wurde vom Arbeitskreis "Tools & Messverfahren" der deutschen Organisation [Bundesverbands Green Software e.V.](https://www.bundesverband-green-software.de/) kreiert, mit dem Ziel, einen Überblick über das stetig wachsende Green Software-Ökosystem zu geben und basierend auf eigenen Praxiserfahrungen konkrete Empfehlungen aussprechen zu können.
+          Diese Landkarte wurde vom Arbeitskreis "Tools & Messverfahren" der deutschen Organisation [Bundesverbands Green Software e.V.](https://www.bundesverband-green-software.de/) (BVGS) kreiert, mit dem Ziel, einen Überblick über das stetig wachsende Green Software-Ökosystem zu geben und basierend auf eigenen Praxiserfahrungen konkrete Empfehlungen aussprechen zu können.
           Die Landkarte enthält sowohl Werkzeuge zum Messen als auch zum Optimieren, da beides essentiell für die Erreichung der Ziele von Green Software ist.
           Sie wurde inspiriert von der [CNCF Landscape](https://landscape.cncf.io/) und verwendet den gleichen Static-Site-Generator, um sie zu erstellen.
 
@@ -37,9 +37,45 @@ categories:
       - subcategory: "Kennzeichnung 'Archived'"
         content: |
 
-          Manche Tools sind in der Landkarte ausgegraut und mit der Kennzeichnung "Archived" versehen. Dies bedeutet, dass das Tool entweder offiziell nicht mehr weiterentwickelt wird oder das Repository den Eindruck erweckt, dass das Projekt inaktiv ist.
+          Manche Tools sind in der Landkarte ausgegraut und mit der Kennzeichnung 'Archived' versehen. Dies bedeutet, dass das Tool entweder offiziell nicht mehr weiterentwickelt wird oder das Repository den Eindruck erweckt, dass das Projekt inaktiv ist.
 
       - subcategory: "Änderung/Ergänzung vorschlagen"
         content: |
 
           Wir freuen uns über jegliche Verbesserungs- und Ergänzungsvorschläge via Pull Requests! Du findest weitere Informationen in der Datei [README.md](https://github.com/bundesverband-green-software/landscape/?tab=readme-ov-file#green-software-landscape) im GitHub-Repository.
+
+  - category: "Introduction 🇬🇧/🇺🇸"
+    content: |
+      
+          This page provides a brief introduction to the tool landscape, its objectives, structure and key features.
+
+    subcategories:
+
+      - subcategory: "Background"
+        content: |
+
+          This landscape was created by the "Tools & Measurement" working group of the German organization [Bundesverband Green Software e.V.](https://www.bundesverband-green-software.de/) (BVGS) with the aim of providing an overview of the constantly growing green software ecosystem and making concrete recommendations based on its own practical experience.
+          The landscape contains both measurement and optimization tools, as both are essential for achieving the goals of Green Software.
+          It was inspired by the [CNCF Landscape](https://landscape.cncf.io/) and uses the same static site generator to create it.
+
+      - subcategory: "Structure"
+        content: |
+
+          The landscape is divided into several categories (left) and sub-categories (center). The categorization was essentially based on "What?"", i.e. what type of system/software is being measured or optimized.
+          If a tool fits into several categories, it is displayed several times.
+          Categories can be filtered using the filter function at the top left.
+
+      - subcategory: "Label 'BVGS Proved & Tested'"
+        content: |
+
+          Individual tools are highlighted with the 'BVGS Proved & Tested' label, which in our experience are suitable for practical use. The BVGS working group "Tools & Measurement Methods" decides whether a tool receives the label. The main criterion for this is whether at least one member of the association has successfully tried and tested the tool in practical use and found it to be helpful.
+          
+      - subcategory: "Label 'Archived'"
+        content: |
+
+          Some tools are grayed out in the landscape and marked 'Archived'. This means that the tool is either no longer being officially developed or the repository gives the impression that the project is inactive.
+
+      - subcategory: "Propose change/addition"
+        content: |
+
+          We welcome any suggestions for improvements and additions via pull requests! You can find more information in the file [README.md](https://github.com/bundesverband-green-software/landscape/?tab=readme-ov-file#green-software-landscape) in the GitHub repository.
