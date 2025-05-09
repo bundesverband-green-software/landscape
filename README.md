@@ -2,7 +2,9 @@
 
 This is the tool landscape for **Green Software** provided by the German organization [Bundesverband Green Software](https://www.bundesverband-green-software.de/).
 
-The tool [landscape2](https://github.com/cncf/landscape2/) by the CNCF is used to generate the landscape website.
+URL: <https://landscape.bundesverband-green-software.de>
+
+The CNCF tool [landscape2](https://github.com/cncf/landscape2/) is used to generate the landscape website.
 
 ## Usage
 
