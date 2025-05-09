@@ -8,7 +8,7 @@
 
 foundation: Bundesverband Green Software
 
-url: http://127.0.0.1:8000 # TODO
+url: https://landscape.bundesverband-green-software.de
 
 # BVGS Colors:
 # - green:      rgba(0, 150, 79, 1)
