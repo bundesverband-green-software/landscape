@@ -342,6 +342,15 @@ categories:
             second_path:
               - "Artificial Intelligence / AI Inference"
 
+          - item:
+            name: experiment-impact-tracker
+            description: The experiment-impact-tracker is meant to be a simple drop-in method to track energy usage, carbon emissions, and compute utilization of your system.
+            homepage_url: https://github.com/Breakend/experiment-impact-tracker
+            repo_url: https://github.com/Breakend/experiment-impact-tracker
+            docs: https://breakend.github.io/experiment-impact-tracker/
+            logo: unofficial/experiment-impact-tracker.svg
+            project: "archive"
+
       - name: AI Inference
         items:
 
