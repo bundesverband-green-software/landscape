@@ -83,6 +83,14 @@ categories:
             docs: https://www.scaleway.com/en/docs/environmental-footprint/
             logo: scaleway.svg
 
+          - item:
+            name: Tailpipe
+            description: Tailpipe is a proprietary service that estimates your organization's carbon emissions from cloud computing. It uses billing and usage data from your cloud service provider (CSP), combines it with other data from the CSP and other third parties (like Boavizta). It also provides recommendations for cost-effective carbon reduction methods.
+            homepage_url: https://tailpipe.ai/
+            logo: tailpipe.svg
+            second_path:
+              - "Optimization / Cloud Infrastructure"
+
       - name: Kubernetes
         items:
 

@@ -24,8 +24,13 @@ categories:
 
       - subcategory: "Aufbau"
         content: |
+          Die Landkarte ist in zwei Gruppen aufgeteilt:
+          - "Measurement"
+          - "Optimization"
+          
+          Beim ersten Aufruf der Landkarte wird die Gruppe "Measurement" angezeigt. Eine Umschaltung zwischen den Gruppen ist oben mit den Schaltflächen neben dem "Group"-Label möglich.
 
-          Die Landkarte ist in mehrere Kategorien (links) sowie Unter-Kategorien (mittig) eingeteilt. Die Kategorisierung erfolgte im Wesentlichen nach dem "Was?", also welche Art von System/Software wird gemessen bzw. optimiert.
+          Die Tools sind in mehrere Kategorien (links) sowie Unter-Kategorien (mittig) eingeteilt. Die Kategorisierung erfolgt im Wesentlichen nach dem "Was?", also welche Art von System/Software wird gemessen bzw. optimiert.
           Wenn ein Tool in mehrere Kategorien passt, wird es entsprechend mehrfach dargestellt.
           Mittels der Filter-Funktion links oben können Kategorien gefiltert werden.
 
@@ -60,8 +65,13 @@ categories:
 
       - subcategory: "Structure"
         content: |
+          The landscape is divided into two groups:
+          - "Measurement"
+          - "Optimization"
 
-          The landscape is divided into several categories (left) and sub-categories (center). The categorization was essentially based on "What?"", i.e. what type of system/software is being measured or optimized.
+          When the landscape is first opened, the "Measurement" group is displayed. You can switch between the groups using the buttons next to the "Group" label at the top.
+          
+          The tools are divided into several categories (left) and sub-categories (center). The categorization was essentially based on "What?"", i.e. what type of system/software is being measured or optimized.
           If a tool fits into several categories, it is displayed several times.
           Categories can be filtered using the filter function at the top left.
 

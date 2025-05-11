@@ -38,30 +38,30 @@ footer:
     homepage: https://www.bundesverband-green-software.de
     linkedin: https://www.linkedin.com/company/bundesverband-green-software/
     github: https://github.com/bundesverband-green-software/
-  logo: https://www.bundesverband-green-software.de/assets/images/template/logo-bvgs.svg
+  logo: https://raw.githubusercontent.com/bundesverband-green-software/landscape/refs/heads/main/logos/bvgs/logo-bvgs-white.svg
   text: |
     Copyright © 2025 Bundesverband Green Software
 
 grid_items_size: large
 
-# groups:
-#   - name: Measurement
-#     categories:
-#       - Infrastructure Provider / Cluster
-#       - Component
-#       - Website
-#       - Artificial Intelligence
-#       - Code
-#       - Emission Factor & Inventory
-#       - Measurement Toolbox
-#   - name: Optimization
-#     categories:
-#       - Optimization
+groups:
+  - name: Measurement
+    categories:
+      - Infrastructure Provider / Cluster
+      - Component
+      - Website
+      - Artificial Intelligence
+      - Code
+      - Emission Factor & Inventory
+      - Measurement Toolbox
+  - name: Optimization
+    categories:
+      - Optimization
 
 header:
   links:
     github: https://github.com/bundesverband-green-software/landscape
-  logo: https://www.bundesverband-green-software.de/assets/images/template/logo-bvgs.svg
+  logo: https://raw.githubusercontent.com/bundesverband-green-software/landscape/refs/heads/main/logos/bvgs/logo-bvgs.svg
 
 images:
   favicon: https://www.bundesverband-green-software.de/favicon.ico
