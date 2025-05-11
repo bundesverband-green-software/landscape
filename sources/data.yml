@@ -342,6 +342,15 @@ categories:
             second_path:
               - "Artificial Intelligence / AI Inference"
 
+          - item:
+            name: experiment-impact-tracker
+            description: The experiment-impact-tracker is meant to be a simple drop-in method to track energy usage, carbon emissions, and compute utilization of your system.
+            homepage_url: https://github.com/Breakend/experiment-impact-tracker
+            repo_url: https://github.com/Breakend/experiment-impact-tracker
+            docs: https://breakend.github.io/experiment-impact-tracker/
+            logo: unofficial/experiment-impact-tracker.svg
+            project: "archive"
+
       - name: AI Inference
         items:
 
@@ -417,7 +426,7 @@ categories:
             homepage_url: https://resilio-solutions.com/en/services/database
             logo: resilio.svg
 
-      - name: IT Inventory
+      - name: IT Inventory / Organizational Level
         items:
 
           - item:
@@ -432,6 +441,21 @@ categories:
             description: A platform for managing IT inventory and analyzing its environmental impact.
             homepage_url: https://www.fruggr.io/
             logo: fruggr.svg
+
+          - item:
+            name: Antarctica
+            description: A real time observability platform for monitoring the carbon emissions of your on-premise and cloud infrastructure, IT hardware assets and websites. It can also provide optimization recommendations.
+            homepage_url: https://antarctica.io/solution
+            logo: antarctica.svg
+            second_path:
+              - "Optimization / Cloud Infrastructure"
+
+          - item:
+            name: Technology Carbon Estimator
+            description: The Technology Carbon Estimator is designed to give a high-level overview of the possible areas of carbon impact within your IT estate. The estimations are framed within the "Technology Carbon Standard", a model proposed by Scott Logic, designed to help you map out, measure and improve the environmental impacts of your technology.
+            homepage_url: https://www.techcarbonstandard.org/estimator
+            repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
+            logo: Technology-Carbon-Estimator.svg
 
   - name: Measurement Toolbox
     subcategories:
