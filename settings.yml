@@ -29,9 +29,9 @@ colors:
 featured_items:
   - field: maturity
     options:
-      - value: proved+tested
+      - value: approved+tested
         order: 1
-        label: BVGS Proved & Tested
+        label: BVGS Approved & Tested
 
 footer:
   links:

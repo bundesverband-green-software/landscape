@@ -37,7 +37,7 @@ Add the tool to the correct category/subcategory in `data.yml`. If it belongs to
 
 The possible fields are explained [here](https://github.com/cncf/landscape2/blob/main/docs/config/data.yml).
 
-Note: we use the field `project` not to specify the maturity in the sense of the CNCF, but if we, the Bundesverband Green Software, have successfully field-tested the tool/project. If that is the case, you can add `project: "proved+tested"`.
+Note: we use the field `project` not to specify the maturity in the sense of the CNCF, but if we, the Bundesverband Green Software, have successfully field-tested the tool/project. If that is the case, you can add `project: "approved+tested"`.
 
 Please also provide a logo and place it into the [logos](./logos/) directory. If there is no logo available, you may either use the logo of the organization behind the tool (place it in the subfolder [organization](./logos/organization/)) or you may generate a text only image yourself (place it in the [unofficial](./logos/unofficial/)). We used the tool [Text-SVG-Generator](https://text-to-svg.com/) to generate some logos and used the font "Impact".
 
