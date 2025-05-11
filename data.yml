@@ -442,6 +442,14 @@ categories:
             homepage_url: https://www.fruggr.io/
             logo: fruggr.svg
 
+          - item:
+            name: Antarctica
+            description: A real time observability platform for monitoring the carbon emissions of your on-premise and cloud infrastructure, IT hardware assets and websites. It can also provide optimization recommendations.
+            homepage_url: https://antarctica.io/solution
+            logo: antarctica.svg
+            second_path:
+              - "Optimization / Cloud Infrastructure"
+
   - name: Measurement Toolbox
     subcategories:
 
