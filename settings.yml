@@ -44,19 +44,19 @@ footer:
 
 grid_items_size: large
 
-# groups:
-#   - name: Measurement
-#     categories:
-#       - Infrastructure Provider / Cluster
-#       - Component
-#       - Website
-#       - Artificial Intelligence
-#       - Code
-#       - Emission Factor & Inventory
-#       - Measurement Toolbox
-#   - name: Optimization
-#     categories:
-#       - Optimization
+groups:
+  - name: Measurement
+    categories:
+      - Infrastructure Provider / Cluster
+      - Component
+      - Website
+      - Artificial Intelligence
+      - Code
+      - Emission Factor & Inventory
+      - Measurement Toolbox
+  - name: Optimization
+    categories:
+      - Optimization
 
 header:
   links:
