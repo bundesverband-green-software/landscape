@@ -22,7 +22,7 @@ categories:
             repo_url: https://github.com/cloud-carbon-footprint/cloud-carbon-footprint
             blog: https://www.cloudcarbonfootprint.org/blog
             logo: cloudcarbonfootprint.png
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Azure Emission Impact Dashboard
@@ -58,7 +58,7 @@ categories:
             homepage_url: https://www.li10.com/
             docs: https://www.li10.com/#docs
             logo: li10.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Boavizta Cloud-Scanner for AWS
@@ -92,7 +92,7 @@ categories:
             homepage_url: https://sustainable-computing.io/
             repo_url: https://github.com/sustainable-computing-io/kepler
             logo: kepler.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: KEIT
@@ -100,7 +100,7 @@ categories:
             homepage_url: https://github.com/aknostic/keit/
             repo_url: https://github.com/aknostic/keit/
             logo: unofficial/KEIT.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: aether
@@ -148,7 +148,7 @@ categories:
             blog: https://www.green-coding.io/blog/
             repo_url: https://github.com/green-coding-solutions/green-metrics-tool
             logo: green-metrics-tool.png
-            project: "proved+tested"
+            project: "approved+tested"
             second_path:
               - "Website / Website Energy Measurement"
 
@@ -204,7 +204,7 @@ categories:
             description: A proprietary solution for measuring the energy efficiency and carbon footprint of websites and mobile applications on real devices on the test bench of Greenspector.
             homepage_url: https://greenspector.com/en/greenspector-studio-it-environmental-footprint-websites-applications/
             logo: greenspector.png
-            project: "proved+tested"
+            project: "approved+tested"
             second_path:
               - "Website / Website Energy Measurement"
 
@@ -262,7 +262,7 @@ categories:
             homepage_url: https://codecarbon.io/
             repo_url: https://github.com/mlco2/codecarbon
             logo: codecarbon.jpg
-            project: "proved+tested"
+            project: "approved+tested"
             second_path:
               - "Artificial Intelligence / AI Model Training"
 
@@ -280,7 +280,7 @@ categories:
             homepage_url: https://www.oaklean.io/
             repo_url: https://github.com/hitabisgmbh/oaklean
             logo: oaklean.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Coppers
@@ -394,7 +394,7 @@ categories:
             docs: https://doc.api.boavizta.org/
             repo_url: https://github.com/Boavizta/boaviztapi
             logo: boaviztapi.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Climatiq
@@ -417,7 +417,7 @@ categories:
             description: CarbonDB collects and consolidates energy usage data from multiple sources within a company, providing a unified view of energy consumption. It accurately converts energy usage into carbon emissions, enabling precise tracking of a company's carbon footprint.
             homepage_url: https://www.green-coding.io/products/carbondb/
             logo: carbondb.png
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: fruggr
@@ -438,7 +438,7 @@ categories:
             docs: https://github.com/green-coding-solutions/hog/blob/main/README.md#the-power-hog
             repo_url: https://github.com/green-coding-solutions/hog/
             logo: power-hog.png
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Watt Wiser
@@ -505,7 +505,7 @@ categories:
             docs: https://hubblo-org.github.io/scaphandre-documentation/index.html
             repo_url: https://github.com/hubblo-org/scaphandre
             logo: scaphandre.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Cloud Energy
@@ -513,7 +513,7 @@ categories:
             homepage_url: https://www.green-coding.io/products/cloud-energy/
             repo_url: https://github.com/green-coding-solutions/cloud-energy
             logo: cloud-energy.png
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: CPU Energy Meter
@@ -532,7 +532,7 @@ categories:
             homepage_url: https://www.green-coding.io/products/eco-ci/
             repo_url: https://github.com/green-coding-solutions/eco-ci-energy-estimation
             logo: eco-ci.png
-            project: "proved+tested"
+            project: "approved+tested"
 
   - name: Website
     subcategories:
@@ -546,21 +546,21 @@ categories:
             homepage_url: https://github.com/thegreenwebfoundation/co2.js
             repo_url: https://github.com/thegreenwebfoundation/co2.js
             logo: unofficial/CO2.js.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Website Carbon Calculator
             description: Website Carbon Calculator estimates the carbon emissions of a website by analyzing factors like data transfer size and energy source of the hosting provider. A badge is provided that can be added to the footer of websites.
             homepage_url: https://www.websitecarbon.com/
             logo: WebsiteCarbon.jpg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Ecograder
             description: Ecograder analyzes websites for environmental impact by evaluating performance, design, development practices, and hosting, offering insights and recommendations to improve digital sustainability. A badge is provided that can be added to the footer of websites.
             homepage_url: https://ecograder.com/
             logo: ecograder.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: EcoIndex
@@ -599,7 +599,7 @@ categories:
             homepage_url: https://github.com/cnumr/GreenIT-Analysis
             repo_url: https://github.com/cnumr/GreenIT-Analysis
             logo: greenit-analysis.png
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Firefox Power Profiler
@@ -678,7 +678,7 @@ categories:
             homepage_url: https://keda.sh/
             repo_url: https://github.com/kedacore/keda
             logo: keda.png
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Goldilocks
@@ -695,7 +695,7 @@ categories:
             docs: https://karpenter.sh/docs/
             repo_url: https://github.com/aws/karpenter
             logo: karpenter.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: kube-green
@@ -703,7 +703,7 @@ categories:
             homepage_url: https://kube-green.dev/
             repo_url: https://github.com/kube-green/kube-green
             logo: kube-green.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: DailyClean
@@ -737,7 +737,7 @@ categories:
             homepage_url: https://carbon-aware-sdk.greensoftware.foundation/
             repo_url: https://github.com/Green-Software-Foundation/carbon-aware-sdk
             logo: carbon-aware-sdk.png
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: grid-intensity-go
@@ -752,7 +752,7 @@ categories:
             homepage_url: https://github.com/envite-consulting/camunda-carbon-reductor
             repo_url: https://github.com/envite-consulting/camunda-carbon-reductor
             logo: camunda-carbon-reductor.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Carbon-Aware-Computing.com
@@ -760,7 +760,7 @@ categories:
             homepage_url: https://carbon-aware-computing.com/
             repo_url: https://github.com/bluehands/Carbon-Aware-Computing
             logo: unofficial/Carbon-Aware-Computing.com.svg
-            project: "proved+tested"
+            project: "approved+tested"
 
           - item:
             name: Grid-aware Websites

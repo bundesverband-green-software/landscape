@@ -29,10 +29,10 @@ categories:
           Wenn ein Tool in mehrere Kategorien passt, wird es entsprechend mehrfach dargestellt.
           Mittels der Filter-Funktion links oben können Kategorien gefiltert werden.
 
-      - subcategory: "Kennzeichnung 'BVGS Proved & Tested'"
+      - subcategory: "Kennzeichnung 'BVGS Approved & Tested'"
         content: |
 
-          Einzelne Tools werden mit der Kennzeichnung 'BVGS Proved & Tested' hervorgehoben, die unserer Erfahrung nach für einen praktischen Einsatz geeignet sind. Ob ein Tool die Kennzeichnung erhält entscheidet der BVGS-Arbeitskreis "Tools & Messverfahren". Das wesentliche Kriterium hierfür ist, ob mindestens ein Mitglied im Bundesverband das Tool erfolgreich im praktischen Einsatz erprobt und getested hat und für hilfreich befunden hat.
+          Einzelne Tools werden mit der Kennzeichnung 'BVGS Approved & Tested' hervorgehoben, die unserer Erfahrung nach für einen praktischen Einsatz geeignet sind. Ob ein Tool die Kennzeichnung erhält entscheidet der BVGS-Arbeitskreis "Tools & Messverfahren". Das wesentliche Kriterium hierfür ist, ob mindestens ein Mitglied im Bundesverband das Tool erfolgreich im praktischen Einsatz erprobt und getested hat und für hilfreich befunden hat.
           
       - subcategory: "Kennzeichnung 'Archived'"
         content: |
@@ -65,10 +65,10 @@ categories:
           If a tool fits into several categories, it is displayed several times.
           Categories can be filtered using the filter function at the top left.
 
-      - subcategory: "Label 'BVGS Proved & Tested'"
+      - subcategory: "Label 'BVGS Approved & Tested'"
         content: |
 
-          Individual tools are highlighted with the 'BVGS Proved & Tested' label, which in our experience are suitable for practical use. The BVGS working group "Tools & Measurement Methods" decides whether a tool receives the label. The main criterion for this is whether at least one member of the association has successfully tried and tested the tool in practical use and found it to be helpful.
+          Individual tools are highlighted with the 'BVGS Approved & Tested' label, which in our experience are suitable for practical use. The BVGS working group "Tools & Measurement Methods" decides whether a tool receives the label. The main criterion for this is whether at least one member of the association has successfully tried and tested the tool in practical use and found it to be helpful.
           
       - subcategory: "Label 'Archived'"
         content: |
