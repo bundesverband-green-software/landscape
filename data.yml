@@ -8,7 +8,7 @@
 
 categories:
 
-  - name: Infrastructure Provider / Cluster
+  - name: Infrastructure & Cluster Level
     subcategories:
 
       - name: Infrastructure Provider Level
@@ -681,18 +681,24 @@ categories:
             description: A solution for optimizing cloud infrastructure to reduce carbon emissions.
             homepage_url: https://greenpixie.com/
             logo: greenpixie.svg
+            second_path:
+              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
 
           - item:
             name: txture
             description: A platform for analyzing and optimizing cloud infrastructure for cost and sustainability.
             homepage_url: https://txture.io/
             logo: txture.png
+            second_path:
+              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
 
           - item:
             name: OxygenIT
             description: A solution for optimizing IT infrastructure to reduce energy consumption and carbon emissions.
             homepage_url: https://www.oxygenit.io/
             logo: oxygenit.png
+            second_path:
+              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
 
           - item:
             name: Cycloid
@@ -702,10 +708,12 @@ categories:
 
           - item:
             name: EcoInfra
-            description: ecoinfra is a powerful tool that helps you predict, asses, and reduce the environmental impact of your cloud infrastructure. By integrating your existing or new IaC project you can harness predictive sustainability into your cloud operations.
+            description: ecoinfra is a powerful tool that helps you predict, assess, and reduce the environmental impact of your cloud infrastructure. By integrating your existing or new IaC project you can harness predictive sustainability into your cloud operations.
             homepage_url: https://eco-infra.com
             repo_url: https://github.com/eco-infra/ecoinfra
             logo: ecoinfra.svg
+            second_path:
+              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
 
       - name: Cloud Application Profiling
         items:
