@@ -91,6 +91,13 @@ categories:
             second_path:
               - "Optimization / Cloud Infrastructure"
 
+          - item:
+            name: Cloud Assess
+            description: Cloud Assess is an open-source tool to automate the assessment of the environmental impacts of cloud services.
+            homepage_url: https://cloudassess.org/
+            repo_url: https://github.com/kleis-technology/cloud-assess
+            logo: cloudassess.svg
+
       - name: Kubernetes
         items:
 
@@ -289,6 +296,15 @@ categories:
             repo_url: https://github.com/hitabisgmbh/oaklean
             logo: oaklean.svg
             project: "approved+tested"
+            
+          - item:
+            name: perun
+            description: perun is a Python package that calculates the energy consumption of Python scripts by sampling usage statistics from your Intel, Nvidia or AMD hardware components. It can handle MPI applications, gather data from hundreds of nodes, and accumulate it efficiently. perun can be used as a command-line tool or as a function decorator in Python scripts.
+            homepage_url: https://perun.readthedocs.io/en/latest/
+            repo_url: https://github.com/Helmholtz-AI-Energy/perun
+            logo: perun.svg
+            second_path:
+              - "Measurement Toolbox / Shell Tools"
 
           - item:
             name: Coppers
@@ -684,6 +700,13 @@ categories:
             homepage_url: https://www.cycloid.io/
             logo: cycloid.png
 
+          - item:
+            name: EcoInfra
+            description: ecoinfra is a powerful tool that helps you predict, asses, and reduce the environmental impact of your cloud infrastructure. By integrating your existing or new IaC project you can harness predictive sustainability into your cloud operations.
+            homepage_url: https://eco-infra.com
+            repo_url: https://github.com/eco-infra/ecoinfra
+            logo: ecoinfra.svg
+
       - name: Cloud Application Profiling
         items:
 
@@ -728,6 +751,13 @@ categories:
             repo_url: https://github.com/aws/karpenter
             logo: karpenter.svg
             project: "approved+tested"
+
+          - item:
+            name: Compute Gardener Scheduler
+            description: The Compute Gardener Scheduler is a Kubernetes scheduler plugin that enables carbon and price-aware scheduling of pods based on real-time carbon intensity data and time-of-use electricity pricing.
+            homepage_url: https://www.compute-gardener.com
+            repo_url: https://github.com/elevated-systems/compute-gardener-scheduler
+            logo: compute-gardener-scheduler.svg
 
           - item:
             name: kube-green
@@ -831,3 +861,14 @@ categories:
             repo_url: https://github.com/sesalab/aDoctor
             logo: unofficial/aDoctor.svg
             project: "archived"
+
+      - name: Artificial Intelligence
+        items:
+
+          - item:
+            name: Pruna AI
+            description: Pruna is a model optimization framework built for developers, enabling you to deliver faster, more efficient models with minimal overhead. It provides a comprehensive suite of compression algorithms including caching, quantization, pruning, distillation and compilation techniques.
+            homepage_url: https://www.pruna.ai/
+            docs_url: https://docs.pruna.ai/
+            repo_url: https://github.com/PrunaAI/pruna
+            logo: pruna.png
