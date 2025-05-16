@@ -289,6 +289,15 @@ categories:
             repo_url: https://github.com/hitabisgmbh/oaklean
             logo: oaklean.svg
             project: "approved+tested"
+            
+          - item:
+            name: perun
+            description: perun is a Python package that calculates the energy consumption of Python scripts by sampling usage statistics from your Intel, Nvidia or AMD hardware components. It can handle MPI applications, gather data from hundreds of nodes, and accumulate it efficiently. perun can be used as a command-line tool or as a function decorator in Python scripts.
+            homepage_url: https://perun.readthedocs.io/en/latest/
+            repo_url: https://github.com/Helmholtz-AI-Energy/perun
+            logo: perun.svg
+            second_path:
+              - "Measurement Toolbox / Shell Tools"
 
           - item:
             name: Coppers
