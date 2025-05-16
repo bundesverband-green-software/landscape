@@ -43,10 +43,12 @@ Please also provide a logo and place it into the [logos](./logos/) directory. If
 
 ## Credits
 
-Existing tool lists that we have taken inspiration from when creating this tool landscape:
+Existing tool lists that we have taken inspiration from when creating and updating this tool landscape:
 
-- Green Web Foundation: <https://github.com/Green-Software-Foundation/awesome-green-software>
-- GitHub: <https://github.com/topics/green-software>
+- Green Software Foundation's awesome list: <https://github.com/Green-Software-Foundation/awesome-green-software>
+- GitHub's Green Software Directory <https://github.com/github/GreenSoftwareDirectory>
+- GitHub's Green Software topic list: <https://github.com/topics/green-software>
+- ClimateTriage: <https://climatetriage.com/category/consumption>
 - Tim Schade: <https://github.com/schaDev/GreenCoding-measuring-tools>
 - Andreas Weber: <https://green-software-big-picture.org>
 - Green Coding Solutions: <https://www.green-coding.io/products>
