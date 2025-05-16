@@ -91,6 +91,13 @@ categories:
             second_path:
               - "Optimization / Cloud Infrastructure"
 
+          - item:
+            name: Cloud Assess
+            description: Cloud Assess is an open-source tool to automate the assessment of the environmental impacts of cloud services.
+            homepage_url: https://cloudassess.org/
+            repo_url: https://github.com/kleis-technology/cloud-assess
+            logo: cloudassess.svg
+
       - name: Kubernetes
         items:
 
