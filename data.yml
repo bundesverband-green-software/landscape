@@ -693,6 +693,13 @@ categories:
             homepage_url: https://www.cycloid.io/
             logo: cycloid.png
 
+          - item:
+            name: EcoInfra
+            description: ecoinfra is a powerful tool that helps you predict, asses, and reduce the environmental impact of your cloud infrastructure. By integrating your existing or new IaC project you can harness predictive sustainability into your cloud operations.
+            homepage_url: https://eco-infra.com
+            repo_url: https://github.com/eco-infra/ecoinfra
+            logo: ecoinfra.svg
+
       - name: Cloud Application Profiling
         items:
 
