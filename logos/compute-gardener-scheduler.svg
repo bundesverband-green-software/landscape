@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Boundary circle -->
+  <circle cx="50" cy="50" r="35" fill="none" stroke="#326CE5" stroke-width="1.5"/>
+  
+  <!-- First we add all 7 leaves with their rotations (1-7) -->
+  <!-- Leaf 1 (top) -->
+  <g transform="rotate(0 50 50)">
+    <path d="M 50,50 Q 65,35 50,15 Q 35,35 50,50" fill="#059669" stroke="#064E3B" stroke-width="1"/>
+    <path d="M 50,50 L 50,15 L 50,9" stroke="#064E3B" stroke-width="1" stroke-linecap="round"/>
+    <path d="M 50,25 L 57,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+    <path d="M 50,25 L 43,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+  </g>
+
+  <!-- Leaf 2 -->
+  <g transform="rotate(51.43 50 50)">
+    <path d="M 50,50 Q 65,35 50,15 Q 35,35 50,50" fill="#059669" stroke="#064E3B" stroke-width="1"/>
+    <path d="M 50,50 L 50,15 L 50,9" stroke="#064E3B" stroke-width="1" stroke-linecap="round"/>
+    <path d="M 50,25 L 57,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+    <path d="M 50,25 L 43,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+  </g>
+
+  <!-- Leaf 3 -->
+  <g transform="rotate(102.86 50 50)">
+    <path d="M 50,50 Q 65,35 50,15 Q 35,35 50,50" fill="#059669" stroke="#064E3B" stroke-width="1"/>
+    <path d="M 50,50 L 50,15 L 50,9" stroke="#064E3B" stroke-width="1" stroke-linecap="round"/>
+    <path d="M 50,25 L 57,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+    <path d="M 50,25 L 43,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+  </g>
+
+  <!-- Leaf 4 -->
+  <g transform="rotate(154.29 50 50)">
+    <path d="M 50,50 Q 65,35 50,15 Q 35,35 50,50" fill="#059669" stroke="#064E3B" stroke-width="1"/>
+    <path d="M 50,50 L 50,15 L 50,9" stroke="#064E3B" stroke-width="1" stroke-linecap="round"/>
+    <path d="M 50,25 L 57,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+    <path d="M 50,25 L 43,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+  </g>
+
+  <!-- Leaf 5 -->
+  <g transform="rotate(205.71 50 50)">
+    <path d="M 50,50 Q 65,35 50,15 Q 35,35 50,50" fill="#059669" stroke="#064E3B" stroke-width="1"/>
+    <path d="M 50,50 L 50,15 L 50,9" stroke="#064E3B" stroke-width="1" stroke-linecap="round"/>
+    <path d="M 50,25 L 57,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+    <path d="M 50,25 L 43,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+  </g>
+
+  <!-- Leaf 6 -->
+  <g transform="rotate(257.14 50 50)">
+    <path d="M 50,50 Q 65,35 50,15 Q 35,35 50,50" fill="#059669" stroke="#064E3B" stroke-width="1"/>
+    <path d="M 50,50 L 50,15 L 50,9" stroke="#064E3B" stroke-width="1" stroke-linecap="round"/>
+    <path d="M 50,25 L 57,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+    <path d="M 50,25 L 43,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+  </g>
+
+  <!-- Leaf 7 -->
+  <g transform="rotate(308.57 50 50)">
+    <path d="M 50,50 Q 65,35 50,15 Q 35,35 50,50" fill="#059669" stroke="#064E3B" stroke-width="1"/>
+    <path d="M 50,50 L 50,15 L 50,9" stroke="#064E3B" stroke-width="1" stroke-linecap="round"/>
+    <path d="M 50,25 L 57,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+    <path d="M 50,25 L 43,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+  </g>
+  
+  <!-- Now redraw the left half of Leaf 1 on top to create consistent overlapping -->
+  <g transform="rotate(0 50 50)">
+    <path d="M 50,50 Q 35,35 50,15 L 50,50" fill="#059669" stroke="#064E3B" stroke-width="1"/>
+    <path d="M 50,25 L 43,35" stroke="#064E3B" stroke-width="0.75" opacity="0.8"/>
+  </g>
+</svg>

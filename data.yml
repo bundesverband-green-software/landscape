@@ -746,6 +746,13 @@ categories:
             project: "approved+tested"
 
           - item:
+            name: Compute Gardener Scheduler
+            description: The Compute Gardener Scheduler is a Kubernetes scheduler plugin that enables carbon and price-aware scheduling of pods based on real-time carbon intensity data and time-of-use electricity pricing.
+            homepage_url: https://www.compute-gardener.com
+            repo_url: https://github.com/elevated-systems/compute-gardener-scheduler
+            logo: compute-gardener-scheduler.svg
+
+          - item:
             name: kube-green
             description: A Kubernetes operator to reduce CO2 footprint by shutting down idle resources.
             homepage_url: https://kube-green.dev/
