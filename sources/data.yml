@@ -175,6 +175,7 @@ categories:
             docs: https://docs.greenframe.io/
             repo_url: https://github.com/marmelab/greenframe-cli
             logo: greenframe.svg
+            license: "Elastic-2.0"
             second_path:
               - "Website / Website Carbon Estimation"
 
@@ -594,6 +595,7 @@ categories:
             homepage_url: https://github.com/thegreenwebfoundation/co2.js
             repo_url: https://github.com/thegreenwebfoundation/co2.js
             logo: unofficial/CO2.js.svg
+            license: "Apache-2.0"
             project: "approved+tested"
 
           - item:
@@ -830,6 +832,7 @@ categories:
             homepage_url: https://www.thegreenwebfoundation.org/tools/grid-aware-websites/
             repo_url: https://github.com/thegreenwebfoundation/grid-aware-websites
             logo: unofficial/Grid-aware_Websites.svg
+            license: "Apache-2.0"
 
       - name: Static Code Analysis
         items:
