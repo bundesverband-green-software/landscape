@@ -393,14 +393,14 @@ categories:
 
           - item:
             name: Electricity Maps
-            description: An API that provides real-time carbon intensity data for electricity grids around the world.
+            description: An API that provides real-time and forecast carbon intensity data for electricity grids around the world.
             homepage_url: https://www.electricitymaps.com/
             docs: https://portal.electricitymaps.com/docs/getting-started
             logo: electricity-maps.svg
 
           - item:
             name: WattTime
-            description: An API that provides real-time and forecast marginal carbon emissions data for electricity grids.
+            description: An API that provides real-time and forecast marginal carbon intensity data for electricity grids around the world.
             homepage_url: https://www.watttime.org/
             docs: https://docs.watttime.org/
             logo: WattTime.png
@@ -413,7 +413,7 @@ categories:
 
           - item:
             name: Carbon-Intensity UK
-            description: An API that provides carbon intensity data for the UK electricity grid.
+            description: An API service from UK National Grid ESO that provides carbon intensity data for the UK electricity grid.
             homepage_url: https://carbonintensity.org.uk/
             docs: https://carbon-intensity.github.io/api-definitions/
             logo: unofficial/Carbon-Intensity_UK.svg
@@ -820,11 +820,16 @@ categories:
 
           - item:
             name: Carbon-Aware-Computing.com
-            description: An API service and tool suite for carbon-aware computing that uses data from Energy-Charts.
+            description: |
+              An API service and tool suite for carbon-aware computing with focus on Europe.
+              The API service provides real-time and forecast carbon intensity data for European countries, using data from Energy-Charts and UK National Grid ESO.
+              The data is also provided as JSON formatted files that are consumable by the Carbon Aware SDK.
             homepage_url: https://carbon-aware-computing.com/
             repo_url: https://github.com/bluehands/Carbon-Aware-Computing
             logo: unofficial/Carbon-Aware-Computing.com.svg
             project: "approved+tested"
+            second_path:
+              - "Emission Factor & Inventory / Carbon Intensity"
 
           - item:
             name: Grid-aware Websites
