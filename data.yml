@@ -522,7 +522,13 @@ categories:
 
       - name: Shell Tools
         items:
-
+          - item:
+            name: ExperimentRunner
+            description: Experiment Runner is a generic framework to automatically execute measurement-based experiments on any platform. The experiments are user-defined, can be completely customized, and expressed in python code.
+            homepage_url: https://github.com/S2-group/experiment-runner
+            repo_url: https://github.com/S2-group/experiment-runner
+            logo: organization/s2.png
+          
           - item:
             name: powerletrics
             description: PowerLetrics is an open-source framework designed to monitor and analyze power consumption metrics at the process level on Linux. Similar to how top displays memory or CPU time, PowerLetrics provides the "Energy Footprint" of each process in real-time.
