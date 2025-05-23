@@ -595,6 +595,13 @@ categories:
             project: "approved+tested"
 
           - item:
+            name: EnergiBridge
+            description: EnergiBridge is a cross-platform tool designed to measure the energy consumption of software across various operating systems and hardware architectures.
+            homepage_url: https://github.com/tdurieux/EnergiBridge
+            repo_url: https://github.com/tdurieux/EnergiBridge
+            logo: unofficial/EnergiBridge.svg
+
+          - item:
             name: CPU Energy Meter
             description: CPU Energy Meter is a Linux tool that allows to monitor power consumption of Intel CPUs at fine time granularities.
             homepage_url: https://github.com/sosy-lab/cpu-energy-meter
