@@ -676,7 +676,6 @@ categories:
             description: Website Carbon Calculator estimates the carbon emissions of a website by analyzing factors like data transfer size and energy source of the hosting provider. A badge is provided that can be added to the footer of websites.
             homepage_url: https://www.websitecarbon.com/
             logo: WebsiteCarbon.jpg
-            project: "approved+tested"
 
           - item:
             name: Ecograder
@@ -694,16 +693,26 @@ categories:
             logo: ecoindex.png
 
           - item:
-            name: Ecometer
-            description: Ecometer is a tool that assesses the environmental impact of websites by analyzing their technical structure, performance, and hosting, offering a clear eco-score and suggestions to reduce digital carbon emissions.
-            homepage_url: http://www.ecometer.org/
-            logo: ecometer-with-bg.png
-
-          - item:
             name: Kastor
             description: Kastor estimates the carbon emissions of a website and analyzes it according to eco design and accessibility guidelines.
             homepage_url: https://kastor.green/
             logo: kastor-without-text.svg
+            second_path:
+              - "Website / Website Analysis"
+
+          - item:
+            name: EcoPing
+            description: EcoPing is a commercial website carbon calculator that allows you to monitor your websites to track their performance. It uses dynamic grid intensity data on the national level instead of a global average. It integrates Google Lighthouse & Core Web Vitals to give key metrics and actionable tasks for improving the site.
+            homepage_url: https://ecoping.earth/
+            logo: ecoping.svg
+            second_path:
+              - "Website / Website Analysis"
+
+          - item:
+            name: Klimatest
+            description: Klimatest is another website carbon calculator from a German web agency called "°Cleaner Web". It also provides some recommendations.
+            homepage_url: https://klimatest.cleaner-web.com/
+            logo: organization/cleaner-web.svg
             second_path:
               - "Website / Website Analysis"
 

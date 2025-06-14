@@ -32,4 +32,3 @@
 [oaklean](https://www.oaklean.io/) | approved+tested |  |  |  |  |  | 0 |  |
 [power hog](https://www.green-coding.io/products/power-hog/) | approved+tested |  |  |  |  |  | 0 |  |
 [scaphandre](https://github.com/hubblo-org/scaphandre) | approved+tested |  |  |  |  |  | 0 |  |
-[website carbon calculator](https://www.websitecarbon.com/) | approved+tested |  |  |  |  |  | 0 |  |
