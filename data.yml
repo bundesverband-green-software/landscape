@@ -702,6 +702,14 @@ categories:
               - "Website / Website Analysis"
 
           - item:
+            name: Klimatest
+            description: Klimatest is another website carbon calculator from a German web agency called "°Cleaner Web". It also provides some recommendations.
+            homepage_url: https://klimatest.cleaner-web.com/
+            logo: organization/cleaner-web.svg
+            second_path:
+              - "Website / Website Analysis"
+
+          - item:
             name: Website Carbon Meter
             description: Tracks the carbon emissions of a website as live metrics. Based on CO2.js and and the actual grid carbon intensity, provided by the Carbon-Aware-Computing project.
             homepage_url: https://github.com/bluehands/Website-Carbon-Meter
