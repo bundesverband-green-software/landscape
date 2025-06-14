@@ -676,7 +676,6 @@ categories:
             description: Website Carbon Calculator estimates the carbon emissions of a website by analyzing factors like data transfer size and energy source of the hosting provider. A badge is provided that can be added to the footer of websites.
             homepage_url: https://www.websitecarbon.com/
             logo: WebsiteCarbon.jpg
-            project: "approved+tested"
 
           - item:
             name: Ecograder
