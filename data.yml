@@ -115,7 +115,6 @@ categories:
             homepage_url: https://github.com/aknostic/keit/
             repo_url: https://github.com/aknostic/keit/
             logo: unofficial/KEIT.svg
-            project: "approved+tested"
 
           - item:
             name: aether
@@ -125,15 +124,17 @@ categories:
             logo: aether.svg
             project: "archived"
 
-      - name: Other
+      - name: Agent
         items:
 
           - item:
-            name: OpenTelemetry Java Agent Extension (RETIT)
-            description: An extension for the OpenTelemetry Java Agent that collects resource demand data and publishes carbon emissions.
-            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            logo: organization/retit.png
+            name: Scaphandre
+            description: A monitoring agent dedicated to energy consumption metrics of bare metal hosts and qemu/kvm virtual machines.
+            homepage_url: https://github.com/hubblo-org/scaphandre
+            docs: https://hubblo-org.github.io/scaphandre-documentation/index.html
+            repo_url: https://github.com/hubblo-org/scaphandre
+            logo: scaphandre.svg
+            project: "approved+tested"
 
           - item:
             name: Dynatrace Carbon Impact
@@ -149,10 +150,17 @@ categories:
             repo_url: https://github.com/influxdata/telegraf
             logo: TelegrafTigerSmall.png
 
+          - item:
+            name: OpenTelemetry Java Agent Extension
+            description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions.
+            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            logo: organization/retit.png
+
   - name: Component
     subcategories:
 
-      - name: Containerized Applications
+      - name: Containerized Application
         items:
 
           - item:
@@ -195,16 +203,24 @@ categories:
             repo_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/
             logo: unofficial/LIMo.svg
 
-      - name: Framework
+      - name: Desktop Application
         items:
 
           - item:
-            name: Impact Framework
-            description: A framework for modeling and analyzing the environmental impact of software systems.
-            homepage_url: https://if.greensoftware.foundation/
-            docs: https://if.greensoftware.foundation/intro
-            repo_url: https://github.com/Green-Software-Foundation/if
-            logo: impact-framework.svg
+            name: Power Hog
+            description: A tool for monitoring the power consumption of desktop applications.
+            homepage_url: https://www.green-coding.io/products/power-hog/
+            docs: https://github.com/green-coding-solutions/hog/blob/main/README.md#the-power-hog
+            repo_url: https://github.com/green-coding-solutions/hog/
+            logo: power-hog.png
+            project: "approved+tested"
+
+          - item:
+            name: Watt Wiser
+            description: A desktop software energy consumption estimation tool built as part of the [Watt-Wise Game Jam](https://wattwise.games/). Usable for simple energy estimation and benchmarking on Linux, macOS, and Windows.
+            homepage_url: https://github.com/wattwisegames/watt-wiser
+            repo_url: https://github.com/wattwisegames/watt-wiser
+            logo: watt-wiser.svg
 
       - name: Mobile App
         items:
@@ -241,7 +257,7 @@ categories:
   - name: Code
     subcategories:
 
-      - name: Code
+      - name: Code Level Energy Measurement
         items:
 
           - item:
@@ -315,6 +331,37 @@ categories:
             logo: coppers.svg
             project: "archived"
 
+      - name: Static Code Analysis
+        items:
+
+          - item:
+            name: Creedengo
+            description: A static code analysis tool for identifying energy inefficiencies in code.
+            homepage_url: https://green-code-initiative.org
+            repo_url: https://github.com/green-code-initiative/creedengo-rules-specifications
+            logo: creedengo.png
+
+          - item:
+            name: CAST
+            description: A proprietary software intelligence platform that includes analysis of energy efficiency and carbon footprint.
+            homepage_url: https://www.castsoftware.com/highlight
+            logo: cast.jpg
+
+          - item:
+            name: ec0lint
+            description: ec0lint is a static code analysis tool that provides users with hints on how to reduce the carbon footprint of their websites during the development process.
+            homepage_url: https://ec0lint.com
+            repo_url: https://github.com/ec0lint/ec0lint
+            logo: ec0lint.jpg
+
+          - item:
+            name: aDoctor
+            description: A tool for detecting energy code smells in Android applications.
+            homepage_url: https://github.com/sesalab/aDoctor
+            repo_url: https://github.com/sesalab/aDoctor
+            logo: unofficial/aDoctor.svg
+            project: "archived"
+
   - name: Artificial Intelligence
     subcategories:
 
@@ -385,10 +432,10 @@ categories:
             repo_url: https://github.com/genai-impact/ecologits
             logo: ecologits.png
 
-  - name: Emission Factor & Inventory
+  - name: Databases
     subcategories:
 
-      - name: Carbon Intensity
+      - name: Grid Carbon Intensity API Service
         items:
 
           - item:
@@ -418,7 +465,7 @@ categories:
             docs: https://carbon-intensity.github.io/api-definitions/
             logo: unofficial/Carbon-Intensity_UK.svg
 
-      - name: Emission Inventory
+      - name: IT Emission Inventory
         items:
 
           - item:
@@ -443,7 +490,10 @@ categories:
             homepage_url: https://resilio-solutions.com/en/services/database
             logo: resilio-database.svg
 
-      - name: IT Inventory / Organizational Level
+  - name: Data Aggregation
+    subcategories:
+
+      - name: Organizational Level
         items:
 
           - item:
@@ -491,6 +541,9 @@ categories:
             second_path:
               - "Optimization / Cloud Infrastructure"
 
+      - name: Estimation
+        items:
+
           - item:
             name: Technology Carbon Estimator
             description: The Technology Carbon Estimator is designed to give a high-level overview of the possible areas of carbon impact within your IT estate. The estimations are framed within the "Technology Carbon Standard", a model proposed by Scott Logic, designed to help you map out, measure and improve the environmental impacts of your technology.
@@ -498,27 +551,19 @@ categories:
             repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
             logo: Technology-Carbon-Estimator.svg
 
-  - name: Measurement Toolbox
-    subcategories:
-
-      - name: Desktop Tools
+      - name: Modeling
         items:
 
           - item:
-            name: Power Hog
-            description: A tool for monitoring the power consumption of desktop applications.
-            homepage_url: https://www.green-coding.io/products/power-hog/
-            docs: https://github.com/green-coding-solutions/hog/blob/main/README.md#the-power-hog
-            repo_url: https://github.com/green-coding-solutions/hog/
-            logo: power-hog.png
-            project: "approved+tested"
+            name: Impact Framework
+            description: A framework for modeling and analyzing the environmental impact of software systems.
+            homepage_url: https://if.greensoftware.foundation/
+            docs: https://if.greensoftware.foundation/intro
+            repo_url: https://github.com/Green-Software-Foundation/if
+            logo: impact-framework.svg
 
-          - item:
-            name: Watt Wiser
-            description: A desktop software energy consumption estimation tool built as part of the [Watt-Wise Game Jam](https://wattwise.games/). Usable for simple energy estimation and benchmarking on Linux, macOS, and Windows.
-            homepage_url: https://github.com/wattwisegames/watt-wiser
-            repo_url: https://github.com/wattwisegames/watt-wiser
-            logo: watt-wiser.svg
+  - name: Measurement Toolbox
+    subcategories:
 
       - name: Shell Tools
         items:
@@ -576,15 +621,6 @@ categories:
             homepage_url: https://github.com/fenrus75/powertop
             repo_url: https://github.com/fenrus75/powertop
             logo: unofficial/PowerTOP.svg
-
-          - item:
-            name: Scaphandre
-            description: A monitoring agent dedicated to energy consumption metrics of bare metal hosts and qemu/kvm virtual machines.
-            homepage_url: https://github.com/hubblo-org/scaphandre
-            docs: https://hubblo-org.github.io/scaphandre-documentation/index.html
-            repo_url: https://github.com/hubblo-org/scaphandre
-            logo: scaphandre.svg
-            project: "approved+tested"
 
           - item:
             name: Cloud Energy
@@ -648,6 +684,8 @@ categories:
             homepage_url: https://ecograder.com/
             logo: ecograder.svg
             project: "approved+tested"
+            second_path:
+              - "Website / Website Analysis"
 
           - item:
             name: EcoIndex
@@ -666,6 +704,8 @@ categories:
             description: Kastor estimates the carbon emissions of a website and analyzes it according to eco design and accessibility guidelines.
             homepage_url: https://kastor.green/
             logo: kastor-without-text.svg
+            second_path:
+              - "Website / Website Analysis"
 
           - item:
             name: Website Carbon Meter
@@ -677,7 +717,7 @@ categories:
       - name: Website Energy Measurement
         items: [] # is used as a second path
 
-      - name: Browser Extensions
+      - name: Website Analysis
         items:
 
           - item:
@@ -754,7 +794,7 @@ categories:
             second_path:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
 
-      - name: Cloud Application Profiling
+      - name: Cloud Application Analysis
         items:
 
           - item:
@@ -874,7 +914,7 @@ categories:
             logo: unofficial/Carbon-Aware-Computing.com.svg
             project: "approved+tested"
             second_path:
-              - "Emission Factor & Inventory / Carbon Intensity"
+              - "Databases / Grid Carbon Intensity API Service"
 
           - item:
             name: Grid-aware Websites
@@ -883,37 +923,6 @@ categories:
             repo_url: https://github.com/thegreenwebfoundation/grid-aware-websites
             logo: unofficial/Grid-aware_Websites.svg
             license: "Apache-2.0"
-
-      - name: Static Code Analysis
-        items:
-
-          - item:
-            name: Creedengo
-            description: A static code analysis tool for identifying energy inefficiencies in code.
-            homepage_url: https://green-code-initiative.org
-            repo_url: https://github.com/green-code-initiative/creedengo-rules-specifications
-            logo: creedengo.png
-
-          - item:
-            name: CAST
-            description: A proprietary software intelligence platform that includes analysis of energy efficiency and carbon footprint.
-            homepage_url: https://www.castsoftware.com/highlight
-            logo: cast.jpg
-
-          - item:
-            name: ec0lint
-            description: ec0lint is a static code analysis tool that provides users with hints on how to reduce the carbon footprint of their websites during the development process.
-            homepage_url: https://ec0lint.com
-            repo_url: https://github.com/ec0lint/ec0lint
-            logo: ec0lint.jpg
-
-          - item:
-            name: aDoctor
-            description: A tool for detecting energy code smells in Android applications.
-            homepage_url: https://github.com/sesalab/aDoctor
-            repo_url: https://github.com/sesalab/aDoctor
-            logo: unofficial/aDoctor.svg
-            project: "archived"
 
       - name: Artificial Intelligence
         items:
