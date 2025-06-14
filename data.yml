@@ -724,7 +724,14 @@ categories:
             logo: unofficial/website-carbon-meter.svg
 
       - name: Website Energy Measurement
-        items: [] # is used as a second path
+        items:
+
+          - item:
+            name: WebNRG
+            description: With WebNRG, you can measure the energy consumption of a webpage by simply providing its URL. It uses the Green Metrics Tool in the background. WebNRG enables you to monitor a website over time and highlight differences between websites that are not purely time-based.
+            homepage_url: https://github.com/green-coding-solutions/green-metrics-tool/tree/main/templates/website
+            repo_url: https://github.com/green-coding-solutions/green-metrics-tool/tree/main/templates/website
+            logo: webnrg.png
 
       - name: Website Analysis
         items:
