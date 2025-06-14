@@ -702,6 +702,14 @@ categories:
               - "Website / Website Analysis"
 
           - item:
+            name: EcoPing
+            description: EcoPing is a commercial website carbon calculator that allows you to monitor your websites to track their performance. It uses dynamic grid intensity data on the national level instead of a global average. It integrates Google Lighthouse & Core Web Vitals to give key metrics and actionable tasks for improving the site.
+            homepage_url: https://ecoping.earth/
+            logo: ecoping.svg
+            second_path:
+              - "Website / Website Analysis"
+
+          - item:
             name: Klimatest
             description: Klimatest is another website carbon calculator from a German web agency called "°Cleaner Web". It also provides some recommendations.
             homepage_url: https://klimatest.cleaner-web.com/
