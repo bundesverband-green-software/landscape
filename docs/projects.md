@@ -26,7 +26,6 @@
 [greenspector studio](https://greenspector.com/en/greenspector-studio-it-environmental-footprint-websites-applications/) | approved+tested |  |  |  |  |  | 0 |  |
 [karpenter](https://karpenter.sh/) | approved+tested |  |  |  |  |  | 0 |  |
 [keda](https://keda.sh/) | approved+tested |  |  |  |  |  | 0 |  |
-[keit](https://github.com/aknostic/keit/) | approved+tested |  |  |  |  |  | 0 |  |
 [kepler](https://sustainable-computing.io/) | approved+tested |  |  |  |  |  | 0 |  |
 [kube-green](https://kube-green.dev/) | approved+tested |  |  |  |  |  | 0 |  |
 [li10 for aws](https://www.li10.com/) | approved+tested |  |  |  |  |  | 0 |  |
