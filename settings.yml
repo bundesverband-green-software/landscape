@@ -47,7 +47,7 @@ grid_items_size: large
 groups:
   - name: Measurement
     categories:
-      - Infrastructure Provider / Cluster
+      - Infrastructure & Cluster Level
       - Component
       - Website
       - Artificial Intelligence
