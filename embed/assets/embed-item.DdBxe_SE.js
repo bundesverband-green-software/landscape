@@ -225,14 +225,12 @@ B.version="2.30.1";O7(ge);B.fn=D;B.min=vv;B.max=yv;B.now=wv;B.utc=nt;B.unix=Gy;B
   max-height: calc(100% - 6rem);
   margin: 3em auto;
 
-  @media only screen and (max-width: 767.98px) {
-    margin: 0.75em auto !important;
-  }
-
   @media (max-width: 1199.98px) {
-    width: 95% !important;
-    max-width: 95% !important;
-    max-height: calc(100% - 1.5rem);
+    width: calc(100% - 2rem);
+    max-width: calc(100% - 2rem);
+    max-height: calc(100% - 2rem);
+    min-height: calc(100% - 2rem);
+    margin: 1rem !important;
   }
 `,kC=C`
   top: 3rem;
