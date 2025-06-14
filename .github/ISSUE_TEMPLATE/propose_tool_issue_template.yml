@@ -39,24 +39,26 @@ body:
       label: In which measurement categories should the tool be listed? (multiple ones can be selected)
       multiple: true
       options:
-        - Infrastructure - Provider Level
-        - Infrastructure - Kubernetes
-        - Infrastructure - Other
-        - Containerized Applications
-        - Framework
+        - Infrastructure Provider Level
+        - Kubernetes
+        - Agent
+        - Containerized Application
+        - Desktop Application
         - Mobile App
-        - Code
-        - AI Model Training
-        - AI Inference
-        - Carbon Intensity (Data Provider)
-        - Emission Inventory (Data Provider)
-        - IT Inventory / Organizational Level (Data Aggregation)
-        - Desktop
-        - Shell
+        - Code Level Energy Measurement
+        - Static Code Analysis
+        - Shell Tools
         - CI Pipeline
         - Website Carbon Estimation
         - Website Energy Measurement
-        - Browser Extensions
+        - Website Profiling
+        - AI Model Training
+        - AI Inference
+        - Grid Carbon Intensity API Service
+        - IT Emission Inventory
+        - Data Aggregation - Organizational Level
+        - Data Aggregation - Estimation
+        - Data Aggregation - Modeling
 
   - type: dropdown
     id: categories_optimization
@@ -65,10 +67,9 @@ body:
       multiple: true
       options:
         - Cloud Infrastructure
-        - Cloud Application Profiling
+        - Cloud Application Analysis
         - Kubernetes
         - Carbon Awareness
-        - Static Code Analysis
         - Artificial Intelligence
 
   - type: input
