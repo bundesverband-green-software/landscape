@@ -6,6 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
+        
         Thanks for taking the time to propose adding a missing tool to the landscape!
 
   - type: input
@@ -23,48 +24,19 @@ body:
   - type: textarea
     id: urls
     attributes:
-      label: urls
+      label: URLs
       description: URLs to the home page, repository, docs, etc.
 
   - type: input
     id: logo
     attributes:
-      label: logo
+      label: Logo
       description: Path to logo (optional)
-
-  - type: markdown
-    attributes:
-      value: |
-        Please also answer the following questions to help us decide whether the tool is appropriate for the landscape.
-  
-  - type: textarea
-    id: comparison_to_others
-    attributes:
-      label: What does the tool do and what are the advantages compared to similar tools?
-
-  - type: textarea
-    id: methodology
-    attributes:
-      label: Where is the methodology of the tool described in detail?** (Should be publicly accessible)
-
-  - type: textarea
-    id: integration
-    attributes:
-      label: How can the tool be used and integrated into the software lifecycle?
-
-  - type: dropdown
-    id: groups
-    attributes:
-      label: Does the tool belong to the measurement or the optimization group? (can be both)
-      multiple: true
-      options:
-        - Measurement
-        - Optimization
 
   - type: dropdown
     id: categories_measurement
     attributes:
-      label: In which measurement categories should the tool be listed?
+      label: In which measurement categories should the tool be listed? (multiple ones can be selected)
       multiple: true
       options:
         - Infrastructure - Provider Level
@@ -89,7 +61,7 @@ body:
   - type: dropdown
     id: categories_optimization
     attributes:
-      label: In which optimization categories should the tool be listed?
+      label: In which optimization categories should the tool be listed? (multiple ones can be selected)
       multiple: true
       options:
         - Cloud Infrastructure
@@ -99,7 +71,28 @@ body:
         - Static Code Analysis
         - Artificial Intelligence
 
-  - type: textarea
+  - type: input
     id: categories_missing
     attributes:
       label: Are categories missing?
+
+  - type: markdown
+    attributes:
+      value: |
+        
+        *Please also answer the following questions to help us decide whether the tool is appropriate for the landscape.*
+  
+  - type: textarea
+    id: comparison_to_others
+    attributes:
+      label: What does the tool do and what are the advantages compared to similar tools?
+
+  - type: textarea
+    id: methodology
+    attributes:
+      label: Where is the methodology of the tool described in detail?** (Should be publicly accessible)
+
+  - type: textarea
+    id: integration
+    attributes:
+      label: How can the tool be used and integrated into the software lifecycle?
