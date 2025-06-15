@@ -217,7 +217,7 @@ categories:
 
           - item:
             name: Watt Wiser
-            description: A desktop software energy consumption estimation tool built as part of the [Watt-Wise Game Jam](https://wattwise.games/). Usable for simple energy estimation and benchmarking on Linux, macOS, and Windows.
+            description: A desktop software energy consumption estimation tool built as part of the Watt-Wise Game Jam (https://wattwise.games/). Usable for simple energy estimation and benchmarking on Linux, macOS, and Windows.
             homepage_url: https://github.com/wattwisegames/watt-wiser
             repo_url: https://github.com/wattwisegames/watt-wiser
             logo: watt-wiser.svg
@@ -361,6 +361,17 @@ categories:
             repo_url: https://github.com/sesalab/aDoctor
             logo: unofficial/aDoctor.svg
             project: "archived"
+
+      - name: CI Pipeline
+        items:
+
+          - item:
+            name: Eco CI
+            description: Eco CI is a project aimed at estimating energy consumption in continuous integration (CI) environments. It provides functionality to calculate the energy consumption of CI jobs based on the power consumption characteristics of the underlying hardware.
+            homepage_url: https://www.green-coding.io/products/eco-ci/
+            repo_url: https://github.com/green-coding-solutions/eco-ci-energy-estimation
+            logo: eco-ci.png
+            project: "approved+tested"
 
   - name: Artificial Intelligence
     subcategories:
@@ -644,17 +655,6 @@ categories:
             repo_url: https://github.com/sosy-lab/cpu-energy-meter
             logo: unofficial/CPU_Energy_Meter.svg
             project: "archived"
-
-      - name: CI Pipeline
-        items:
-
-          - item:
-            name: Eco CI
-            description: Eco CI is a project aimed at estimating energy consumption in continuous integration (CI) environments. It provides functionality to calculate the energy consumption of CI jobs based on the power consumption characteristics of the underlying hardware.
-            homepage_url: https://www.green-coding.io/products/eco-ci/
-            repo_url: https://github.com/green-coding-solutions/eco-ci-energy-estimation
-            logo: eco-ci.png
-            project: "approved+tested"
 
   - name: Website
     subcategories:
