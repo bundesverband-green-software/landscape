@@ -470,6 +470,13 @@ categories:
             logo: energy-charts.svg
 
           - item:
+            name: ENTSO-E Transparency Platform
+            description: The ENTSO-E Transparency Platform provides data about the electricity load and generation in the EU. The data can be obtained via a RESTful API.
+            homepage_url: https://transparency.entsoe.eu/dashboard/show
+            docs: https://transparencyplatform.zendesk.com/hc/en-us/articles/15692855254548-Sitemap-for-Restful-API-Integration
+            logo: entso-e.svg
+
+          - item:
             name: Carbon-Intensity UK
             description: An API service from UK National Grid ESO that provides carbon intensity data for the UK electricity grid.
             homepage_url: https://carbonintensity.org.uk/
