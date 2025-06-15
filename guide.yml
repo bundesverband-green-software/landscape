@@ -47,7 +47,7 @@ categories:
       - subcategory: "Änderung/Ergänzung vorschlagen"
         content: |
 
-          Wir freuen uns über jegliche Verbesserungs- und Ergänzungsvorschläge via Pull Requests! Du findest weitere Informationen in der Datei [README.md](https://github.com/bundesverband-green-software/landscape/?tab=readme-ov-file#green-software-landscape) im GitHub-Repository.
+          Wir freuen uns über jegliche Verbesserungs- und Ergänzungsvorschläge! Reiche diese gerne als Issue oder Pull Request im [GitHub-Repository](https://github.com/bundesverband-green-software/landscape) ein. Du findest weitere Informationen in der Datei [README.md](https://github.com/bundesverband-green-software/landscape/?tab=readme-ov-file#green-software-landscape) im GitHub-Repository.
 
   - category: "Introduction 🇬🇧/🇺🇸"
     content: |
@@ -88,4 +88,4 @@ categories:
       - subcategory: "Propose change/addition"
         content: |
 
-          We welcome any suggestions for improvements and additions via pull requests! You can find more information in the file [README.md](https://github.com/bundesverband-green-software/landscape/?tab=readme-ov-file#green-software-landscape) in the GitHub repository.
+          We welcome any suggestions for improvements and additions! Please submit these as an issue or pull request in the [GitHub repository](https://github.com/bundesverband-green-software/landscape). You can find more information in the file [README.md](https://github.com/bundesverband-green-software/landscape/?tab=readme-ov-file#green-software-landscape) in the GitHub repository.
