@@ -7,25 +7,31 @@ body:
     attributes:
       value: |
         
-        Thanks for taking the time to propose adding a missing tool to the landscape!
+        Thanks for taking the time to propose adding a new tool to the landscape!
 
   - type: input
     id: name
     attributes:
       label: Name
       description: Name of the tool
+    validations:
+      required: true
 
   - type: textarea
     id: description
     attributes:
       label: Description
       description: Short description of what the tool does
+    validations:
+      required: true
 
   - type: textarea
     id: urls
     attributes:
       label: URLs
       description: URLs to the home page, repository, docs, etc.
+    validations:
+      required: true
 
   - type: input
     id: logo
@@ -82,7 +88,21 @@ body:
       value: |
         
         *Please also answer the following questions to help us decide whether the tool is appropriate for the landscape.*
-  
+
+  - type: dropdown
+    attributes:
+      label: Status
+      description: What status does the tool/project currently have?
+      multiple: false
+      options:
+        - Concept
+        - In early development
+        - Beta
+        - Stable / Mature
+        - Deprecated / Archived (not supported anymore)
+    validations:
+      required: true
+
   - type: textarea
     id: comparison_to_others
     attributes:
@@ -91,9 +111,9 @@ body:
   - type: textarea
     id: methodology
     attributes:
-      label: Where is the methodology of the tool described in detail?** (Should be publicly accessible)
-
+      label: Where is the methodology of the tool described in detail? (Should be publicly accessible)
+  
   - type: textarea
     id: integration
     attributes:
-      label: How can the tool be used and integrated into the software lifecycle?
+      label: In which phases of the software lifecycle (Design, Development, Testing, Usage, Removal) can the tool be used, and how can it be integrated / set up?
