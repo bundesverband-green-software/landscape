@@ -137,6 +137,17 @@ categories:
             project: "approved+tested"
 
           - item:
+            name: CEEMS
+            description: CEEMS (Compute Energy & Emissions Monitoring Stack) is a complete monitoring solution that provides energy and equivalent emissions besides performance, I/O and network metrics of SLURM (HPC), Openstack (VM) and Kubernetes (Container) workloads.
+            homepage_url: https://ceems-dev.github.io/ceems/
+            docs: https://ceems-dev.github.io/ceems/docs/
+            repo_url: https://github.com/ceems-dev/ceems
+            logo: ceems.svg
+            second_path:
+              - "Infrastructure & Cluster Level / Kubernetes"
+              - "Optimization / Cloud Application Analysis"
+
+          - item:
             name: Dynatrace Carbon Impact
             description: A proprietary solution that provides insights into the carbon footprint of cloud applications and infrastructure, helping organizations reduce their environmental impact.
             homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
