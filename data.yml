@@ -573,6 +573,16 @@ categories:
             repo_url: https://github.com/Green-Software-Foundation/if
             logo: impact-framework.svg
 
+          - item:
+            name: Carbon Footprint Modeling Tool
+            description: |
+              A data model and a viewer for carbon footprint scenarios.
+              This toolkit makes it easy to create, share and compare emission scenarios.
+              Its purpose is to improve data quality and transparency in the field of carbon footprint quantification.
+            homepage_url: https://github.com/borisruf/carbon-footprint-modeling-tool
+            repo_url: https://github.com/borisruf/carbon-footprint-modeling-tool
+            logo: unofficial/carbon-footprint-modeling-tool.svg
+
   - name: Measurement Toolbox
     subcategories:
 
