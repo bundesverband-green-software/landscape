@@ -77,11 +77,14 @@ categories:
             project: "archived"
 
           - item:
-            name: Scaleway Environment Footprint Calculator
-            description: Scaleway's Environmental footprint calculator allows you to measure your environmental impact to your use of Scaleway cloud and bare metal services.
-            homepage_url: https://www.scaleway.com/en/docs/environmental-footprint/
-            docs: https://www.scaleway.com/en/docs/environmental-footprint/
-            logo: scaleway.svg
+            name: Scaleway Environmental Footprint Calculator
+            description: |
+              Scaleway's Environmental Footprint Calculator allows you to calculate the environmental impact of your use of Scaleway cloud and bare metal services.
+              The methodology is available (part of the documentation). 
+            logo: organization/scaleway.svg
+            homepage_url: https://www.scaleway.com/en/environmental-footprint-calculator/
+            extra:
+              documentation_url: https://www.scaleway.com/en/docs/environmental-footprint/
 
           - item:
             name: Tailpipe
