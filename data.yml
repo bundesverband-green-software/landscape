@@ -619,6 +619,15 @@ categories:
             repo_url: https://github.com/borisruf/carbon-footprint-modeling-tool
             logo: unofficial/carbon-footprint-modeling-tool.svg
 
+          - item:
+            name: e-footprint model
+            description: |
+              A toolkit for exhaustively modeling the environmental impact of digital services.
+              It can model the carbon footprint associated with the fabrication and usage of servers, storage, network (usage only) and end-user devices necessary for the existence of a digital service.
+            homepage_url: https://boavizta.github.io/e-footprint/
+            repo_url: https://github.com/Boavizta/e-footprint
+            logo: unofficial/e-footprint-model.svg
+
   - name: Measurement Toolbox
     subcategories:
 
