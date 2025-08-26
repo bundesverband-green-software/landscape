@@ -77,11 +77,14 @@ categories:
             project: "archived"
 
           - item:
-            name: Scaleway Environment Footprint Calculator
-            description: Scaleway's Environmental footprint calculator allows you to measure your environmental impact to your use of Scaleway cloud and bare metal services.
-            homepage_url: https://www.scaleway.com/en/docs/environmental-footprint/
-            docs: https://www.scaleway.com/en/docs/environmental-footprint/
-            logo: scaleway.svg
+            name: Scaleway Environmental Footprint Calculator
+            description: |
+              Scaleway's Environmental Footprint Calculator allows you to calculate the environmental impact of your use of Scaleway cloud and bare metal services.
+              The methodology is available (part of the documentation). 
+            logo: organization/scaleway.svg
+            homepage_url: https://www.scaleway.com/en/environmental-footprint-calculator/
+            extra:
+              documentation_url: https://www.scaleway.com/en/docs/environmental-footprint/
 
           - item:
             name: Tailpipe
@@ -135,6 +138,17 @@ categories:
             repo_url: https://github.com/hubblo-org/scaphandre
             logo: scaphandre.svg
             project: "approved+tested"
+
+          - item:
+            name: CEEMS
+            description: CEEMS (Compute Energy & Emissions Monitoring Stack) is a complete monitoring solution that provides energy and equivalent emissions besides performance, I/O and network metrics of SLURM (HPC), Openstack (VM) and Kubernetes (Container) workloads.
+            homepage_url: https://ceems-dev.github.io/ceems/
+            docs: https://ceems-dev.github.io/ceems/docs/
+            repo_url: https://github.com/ceems-dev/ceems
+            logo: ceems.svg
+            second_path:
+              - "Infrastructure & Cluster Level / Kubernetes"
+              - "Optimization / Cloud Application Analysis"
 
           - item:
             name: Dynatrace Carbon Impact
@@ -324,6 +338,17 @@ categories:
               - "Measurement Toolbox / Shell Tools"
 
           - item:
+            name: Energy Monitoring Tool
+            description: |
+              EMT is a lightweight tool capable of tracking and reporting the energy consumption of software systems with process-level granularity.
+              While particularly valuable for compute-intensive workloads like machine learning, it's designed for broad applicability across various use cases.
+              The tool supports two usage modes. The Python Context Manager is ideal for instrumenting Python code directly. This mode allows developers to wrap specific code blocks to measure energy consumption with precision. 
+              The Command-Line Interface is designed to tag and monitor running application without modifying the code. This mode is currently under active development and not yet available.
+            homepage_url: https://github.com/FairCompute/energy-monitoring-tool
+            repo_url: https://github.com/FairCompute/energy-monitoring-tool
+            logo: emt.png
+
+          - item:
             name: Coppers
             description: Coppers is a test harness for Rust that can measure the evolution of power consumptions of a Rust program between different versions with the help of Intel RAPL.
             homepage_url: https://github.com/ThijsRay/coppers
@@ -451,27 +476,38 @@ categories:
 
           - item:
             name: Electricity Maps
-            description: An API that provides real-time and forecast carbon intensity data for electricity grids around the world.
+            description: A commercial API service that provides real-time and forecast carbon intensity data for electricity grids around the world.
             homepage_url: https://www.electricitymaps.com/
             docs: https://portal.electricitymaps.com/docs/getting-started
             logo: electricity-maps.svg
 
           - item:
             name: WattTime
-            description: An API that provides real-time and forecast marginal carbon intensity data for electricity grids around the world.
+            description: A commercial API service that provides real-time and forecast marginal carbon intensity data for electricity grids around the world.
             homepage_url: https://www.watttime.org/
             docs: https://docs.watttime.org/
             logo: WattTime.png
 
           - item:
             name: Energy-Charts
-            description: A service that provides data on electricity generation, consumption, and carbon intensity for various countries in Europe.
+            description: A service from the Fraunhofer ISE that provides data on electricity generation, consumption, and carbon intensity for various countries in Europe for free.
             homepage_url: https://energy-charts.info/
             logo: energy-charts.svg
 
           - item:
+            name: ENTSO-E Transparency Platform
+            description: |
+              ENTSO-E is the "European Network of Transmission System Operators for Electricity".
+              The Transparency Platform provides data about the electricity load and generation in the EU.
+              The data can be downloaded for free and obtained via a RESTful API.
+              There is also a Python client available (https://github.com/EnergieID/entsoe-py).
+            homepage_url: https://transparency.entsoe.eu/dashboard/show
+            docs: https://transparencyplatform.zendesk.com/hc/en-us/articles/15692855254548-Sitemap-for-Restful-API-Integration
+            logo: entso-e.svg
+
+          - item:
             name: Carbon-Intensity UK
-            description: An API service from UK National Grid ESO that provides carbon intensity data for the UK electricity grid.
+            description: An API service from UK National Grid ESO that provides carbon intensity data for the UK electricity grid for free.
             homepage_url: https://carbonintensity.org.uk/
             docs: https://carbon-intensity.github.io/api-definitions/
             logo: unofficial/Carbon-Intensity_UK.svg
@@ -572,6 +608,16 @@ categories:
             docs: https://if.greensoftware.foundation/intro
             repo_url: https://github.com/Green-Software-Foundation/if
             logo: impact-framework.svg
+
+          - item:
+            name: Carbon Footprint Modeling Tool
+            description: |
+              A data model and a viewer for carbon footprint scenarios.
+              This toolkit makes it easy to create, share and compare emission scenarios.
+              Its purpose is to improve data quality and transparency in the field of carbon footprint quantification.
+            homepage_url: https://github.com/borisruf/carbon-footprint-modeling-tool
+            repo_url: https://github.com/borisruf/carbon-footprint-modeling-tool
+            logo: unofficial/carbon-footprint-modeling-tool.svg
 
           - item:
             name: e-footprint model
