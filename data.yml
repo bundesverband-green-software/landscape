@@ -327,6 +327,17 @@ categories:
               - "Measurement Toolbox / Shell Tools"
 
           - item:
+            name: Energy Monitoring Tool
+            description: |
+              EMT is a lightweight tool capable of tracking and reporting the energy consumption of software systems with process-level granularity.
+              While particularly valuable for compute-intensive workloads like machine learning, it's designed for broad applicability across various use cases.
+              The tool supports two usage modes. The Python Context Manager is ideal for instrumenting Python code directly. This mode allows developers to wrap specific code blocks to measure energy consumption with precision. 
+              The Command-Line Interface is designed to tag and monitor running application without modifying the code. This mode is currently under active development and not yet available.
+            homepage_url: https://github.com/FairCompute/energy-monitoring-tool
+            repo_url: https://github.com/FairCompute/energy-monitoring-tool
+            logo: emt.png
+
+          - item:
             name: Coppers
             description: Coppers is a test harness for Rust that can measure the evolution of power consumptions of a Rust program between different versions with the help of Intel RAPL.
             homepage_url: https://github.com/ThijsRay/coppers
