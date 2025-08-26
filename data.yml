@@ -92,7 +92,7 @@ categories:
               OVHcloud's Environmental Impact Tracker allows you to calculate the environmental impact of your use of OVHcloud cloud and bare metal services.
               The methodology is available (see the referenced PDF in the documentation URL).
             logo: organization/OVHcloud.svg
-            homepage_url: https://corporate.ovhcloud.com/en/newsroom/news/environmental-impact-tracker/
+            homepage_url: https://www.ovhcloud.com/en/about-us/environmental-impact-tracker/
             extra:
               documentation_url: https://corporate.ovhcloud.com/sites/default/files/2025-07/environmental_impact_tracker_-_methodology.pdf
 
