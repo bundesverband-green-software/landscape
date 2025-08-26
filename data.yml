@@ -87,6 +87,16 @@ categories:
               documentation_url: https://www.scaleway.com/en/docs/environmental-footprint/
 
           - item:
+            name: OVHcloud Environmental Impact Tracker
+            description: |
+              OVHcloud's Environmental Impact Tracker allows you to calculate the environmental impact of your use of OVHcloud cloud and bare metal services.
+              The methodology is available (see the referenced PDF in the documentation URL).
+            logo: organization/OVHcloud.svg
+            homepage_url: https://www.ovhcloud.com/en/about-us/environmental-impact-tracker/
+            extra:
+              documentation_url: https://corporate.ovhcloud.com/sites/default/files/2025-07/environmental_impact_tracker_-_methodology.pdf
+
+          - item:
             name: Tailpipe
             description: Tailpipe is a proprietary service that estimates your organization's carbon emissions from cloud computing. It uses billing and usage data from your cloud service provider (CSP), combines it with other data from the CSP and other third parties (like Boavizta). It also provides recommendations for cost-effective carbon reduction methods.
             homepage_url: https://tailpipe.ai/
