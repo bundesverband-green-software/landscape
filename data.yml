@@ -120,6 +120,8 @@ categories:
             homepage_url: https://github.com/DigitalPebble/spruce
             repo_url: https://github.com/DigitalPebble/spruce
             logo: spruce.webp
+            extra:
+              documentation_url: https://github.com/DigitalPebble/spruce/wiki/Methodology
 
       - name: Kubernetes
         items:
