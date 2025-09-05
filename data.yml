@@ -471,7 +471,7 @@ categories:
             repo_url: https://github.com/Breakend/experiment-impact-tracker
             docs: https://breakend.github.io/experiment-impact-tracker/
             logo: unofficial/experiment-impact-tracker.svg
-            project: "archive"
+            project: "archived"
 
       - name: AI Inference
         items:
