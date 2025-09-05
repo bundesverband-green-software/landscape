@@ -18,7 +18,7 @@ categories:
       - subcategory: "Hintergrund"
         content: |
 
-          Diese Landkarte wurde vom Arbeitskreis "Tools & Messverfahren" der deutschen Organisation [Bundesverbands Green Software e.V.](https://www.bundesverband-green-software.de/) (BVGS) kreiert, mit dem Ziel, einen Überblick über das stetig wachsende Green Software-Ökosystem zu geben und basierend auf eigenen Praxiserfahrungen konkrete Empfehlungen aussprechen zu können.
+          Diese Landkarte wurde vom Arbeitskreis "Tools & Messverfahren" der deutschen Organisation [Bundesverbands Green Software e.V.](https://www.bundesverband-green-software.de/) (BvGS) kreiert, mit dem Ziel, einen strukturierten Überblick über das stetig wachsende Green Software-Ökosystem zu geben.
           Die Landkarte enthält sowohl Werkzeuge zum Messen als auch zum Optimieren, da beides essentiell für die Erreichung der Ziele von Green Software ist.
           Sie wurde inspiriert von der [CNCF Landscape](https://landscape.cncf.io/) und verwendet den gleichen Static-Site-Generator, um sie zu erstellen.
 
@@ -54,7 +54,7 @@ categories:
       - subcategory: "Background"
         content: |
 
-          This landscape was created by the "Tools & Measurement" working group of the German organization [Bundesverband Green Software e.V.](https://www.bundesverband-green-software.de/) (BVGS) with the aim of providing an overview of the constantly growing green software ecosystem and making concrete recommendations based on its own practical experience.
+          This landscape was created by the "Tools & Measurement" working group of the German organization [Bundesverband Green Software e.V.](https://www.bundesverband-green-software.de/) (BvGS) with the aim of providing an structured overview of the constantly growing green software ecosystem.
           The landscape contains both measurement and optimization tools, as both are essential for achieving the goals of Green Software.
           It was inspired by the [CNCF Landscape](https://landscape.cncf.io/) and uses the same static site generator to create it.
 
