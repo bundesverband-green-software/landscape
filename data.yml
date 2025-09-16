@@ -22,7 +22,7 @@ categories:
             repo_url: https://github.com/cloud-carbon-footprint/cloud-carbon-footprint
             blog: https://www.cloudcarbonfootprint.org/blog
             logo: cloudcarbonfootprint.png
-            project: "approved+tested"
+            project: "archived"
 
           - item:
             name: Azure Emission Impact Dashboard
@@ -238,6 +238,7 @@ categories:
             homepage_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/README.md
             repo_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/
             logo: unofficial/LIMo.svg
+            project: "archived"
 
       - name: Desktop Application
         items:
@@ -724,6 +725,7 @@ categories:
             homepage_url: https://github.com/tdurieux/EnergiBridge
             repo_url: https://github.com/tdurieux/EnergiBridge
             logo: unofficial/EnergiBridge.svg
+            project: "archived"
 
           - item:
             name: CPU Energy Meter
@@ -819,7 +821,7 @@ categories:
             homepage_url: https://github.com/cnumr/GreenIT-Analysis
             repo_url: https://github.com/cnumr/GreenIT-Analysis
             logo: greenit-analysis.png
-            project: "approved+tested"
+            project: "archived"
 
           - item:
             name: Firefox Power Profiler
