@@ -34,10 +34,10 @@ categories:
           Wenn ein Tool in mehrere Kategorien passt, wird es entsprechend mehrfach dargestellt.
           Mittels der Filter-Funktion links oben können Kategorien gefiltert werden.
 
-      - subcategory: "Kennzeichnung 'BVGS Approved & Tested'"
+      - subcategory: "Kennzeichnung 'In Active Use by BvGS Members'"
         content: |
 
-          Einzelne Tools werden mit der Kennzeichnung 'BVGS Approved & Tested' hervorgehoben, die unserer Erfahrung nach für einen praktischen Einsatz geeignet sind. Ob ein Tool die Kennzeichnung erhält entscheidet der BVGS-Arbeitskreis "Tools & Messverfahren". Das wesentliche Kriterium hierfür ist, ob mindestens ein Mitglied im Bundesverband das Tool erfolgreich im praktischen Einsatz erprobt und getested hat und für hilfreich befunden hat.
+          Einzelne Tools sind mit der Kennzeichnung 'In Active Use by BvGS Members' hervorgehoben. Wir kennzeichnen damit die Tools, die von den Mitgliedsorganisationen des Bundesverbands Green Software in der Praxis im Einsatz sind. Es handelt sich hierbei um kein Qualitätssiegel.
           
       - subcategory: "Kennzeichnung 'Archived'"
         content: |
@@ -75,11 +75,11 @@ categories:
           If a tool fits into several categories, it is displayed several times.
           Categories can be filtered using the filter function at the top left.
 
-      - subcategory: "Label 'BVGS Approved & Tested'"
+      - subcategory: "Label 'In Active Use by BvGS Members'"
         content: |
 
-          Individual tools are highlighted with the 'BVGS Approved & Tested' label, which in our experience are suitable for practical use. The BVGS working group "Tools & Measurement Methods" decides whether a tool receives the label. The main criterion for this is whether at least one member of the association has successfully tried and tested the tool in practical use and found it to be helpful.
-          
+          Individual tools are highlighted with the label 'In Active Use by BvGS Members'. We use this label to highlight tools that are used in practice by member organisations of the Bundesverband Green Software. This is not a seal of quality.          
+
       - subcategory: "Label 'Archived'"
         content: |
 

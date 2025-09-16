@@ -23,7 +23,7 @@ The file `data.yml` includes all the information about the tools and the categor
 Every tool is part of one category. By using the field `second_path`, a tool can be displayed in more than one category.
 The available fields are explained [here](https://github.com/cncf/landscape2/blob/main/docs/config/data.yml).
 
-The field `project` is not used to specify the maturity in the sense of the CNCF, but if we, the Bundesverband Green Software, have successfully field-tested the tool/project. If that is the case, the field is set to: `project: "approved+tested"`
+The field `project` is not used to specify the maturity in the sense of the CNCF. Instead, we use it to highlight tools that are used in practice by member organiations of the Bundesverband Green Software. If that is the case, the field is set to: `project: "in-active-use-by-members"`
 
 Logos are placed in the [logos](./logos/) directory. If there is no logo available, we either use the logo of the organization behind the project (subfolder [organization](./logos/organization/)) or we generate a basic text only image (subfolder [unofficial](./logos/unofficial/)). We used the tool [Text-SVG-Generator](https://text-to-svg.com/) to generate some logos and used the font "Impact".
 
