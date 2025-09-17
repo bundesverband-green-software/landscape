@@ -29,9 +29,9 @@ colors:
 featured_items:
   - field: maturity
     options:
-      - value: approved+tested
+      - value: in-active-use-by-members
         order: 1
-        label: BVGS Approved & Tested
+        label: In Active Use by BvGS Members
 
 footer:
   links:
