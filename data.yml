@@ -227,7 +227,7 @@ categories:
             name: Cardamon
             description: Cardamon is a tool to help development teams measure the power consumption and carbon emissions of their software. The tool is built around the concept of observations and scenarios.
             homepage_url: https://cardamon.io/
-            repo_url: https://github.com/Root-Branch/cardamon
+            repo_url: https://github.com/Root-Branch/cardamon-core
             logo: cardamon.svg
             second_path:
               - "Website / Website Carbon Estimation"
