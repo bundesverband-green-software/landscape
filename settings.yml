@@ -26,6 +26,8 @@ colors:
   color6: "rgba(0, 150, 79, 1)" # Categories and subcategories frames (even)
   color7: "rgba(0, 150, 79, 1)" # Borders, shadows and options boxes in games
 
+description: The landscape provides an overview of the green software tool ecosystem
+
 featured_items:
   - field: maturity
     options:
