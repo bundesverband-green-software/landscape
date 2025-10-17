@@ -40,7 +40,7 @@ footer:
     homepage: https://www.bundesverband-green-software.de
     linkedin: https://www.linkedin.com/company/bundesverband-green-software/
     github: https://github.com/bundesverband-green-software/
-  logo: https://raw.githubusercontent.com/bundesverband-green-software/landscape/refs/heads/main/logos/bvgs/logo-bvgs-white.svg
+  logo: logos/bvgs/logo-bvgs.svg
   text: |
     Copyright © 2025 Bundesverband Green Software
 
@@ -64,7 +64,7 @@ groups:
 header:
   links:
     github: https://github.com/bundesverband-green-software/landscape
-  logo: https://raw.githubusercontent.com/bundesverband-green-software/landscape/refs/heads/main/logos/bvgs/logo-bvgs.svg
+  logo: logos/bvgs/logo-bvgs.svg
 
 images:
   favicon: https://www.bundesverband-green-software.de/favicon-96x96.png
