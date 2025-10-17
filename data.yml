@@ -18,55 +18,62 @@ categories:
             name: Cloud Carbon Footprint
             description: An open source tool that provides visibility and tooling to measure, monitor, and reduce your cloud carbon emissions.
             homepage_url: https://www.cloudcarbonfootprint.org/
-            docs: https://www.cloudcarbonfootprint.org/docs/
             repo_url: https://github.com/cloud-carbon-footprint/cloud-carbon-footprint
             blog: https://www.cloudcarbonfootprint.org/blog
             logo: cloudcarbonfootprint.png
             project: "archived"
+            extra:
+              documentation_url: https://www.cloudcarbonfootprint.org/docs/
 
           - item:
             name: Azure Emission Impact Dashboard
             description: Power BI App that provides emissions for azure cloud resource usage.
             homepage_url: https://appsource.microsoft.com/en-us/product/power-bi/coi-sustainability.emissions_impact_dashboard
-            docs: https://appsource.microsoft.com/en-us/product/power-bi/coi-sustainability.emissions_impact_dashboard
             logo: azure-impact-dashboard.png
+            extra:
+              documentation_url: https://appsource.microsoft.com/en-us/product/power-bi/coi-sustainability.emissions_impact_dashboard
 
           - item:
             name: Azure Cloud for Sustainability API
             description: Microsoft Cloud for Sustainability provides APIs to access emissions data related to your Azure and Microsoft 365 usage.
             homepage_url: https://learn.microsoft.com/en-us/industry/sustainability/api-overview
-            docs: https://learn.microsoft.com/en-us/industry/sustainability/api-reference
             logo: azure.svg
+            extra:
+              documentation_url: https://learn.microsoft.com/en-us/industry/sustainability/api-reference
 
           - item:
             name: Google Carbon Footprint
             description: The Carbon Footprint dashboard displays estimated greenhouse gas emissions associated with the usage of covered Google Cloud services for the selected billing account.
             homepage_url: https://cloud.google.com/carbon-footprint
-            docs: https://cloud.google.com/carbon-footprint#documentation
             logo: google-cloud.svg
+            extra:
+              documentation_url: https://cloud.google.com/carbon-footprint#documentation
 
           - item:
             name: AWS Customer Carbon Footprint Tool
             description: The AWS Customer Carbon Footprint Tool provides estimates of the carbon emissions associated with AWS products and services. Data is updated with a delay of three months.
             homepage_url: https://cloud.google.com/carbon-footprint
-            docs: https://cloud.google.com/carbon-footprint#documentation
             logo: aws.svg
+            extra:
+              documentation_url: https://cloud.google.com/carbon-footprint#documentation
 
           - item:
             name: Li10 for AWS
             description: Measures the emissions for AWS resources with Software Carbon Intensity methodology defined by the Green Software Foundation.
             homepage_url: https://www.li10.com/
-            docs: https://www.li10.com/#docs
             logo: li10.svg
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://www.li10.com/#docs
 
           - item:
             name: Boavizta Cloud-Scanner for AWS
             description: Boavizta Cloud-Scanner calculates environmental impacts of your cloud compute and storage instances. It combines real time inventory and usage data from your cloud account with Boavizta API to offer a view of your impacts on a given region.
             homepage_url: https://github.com/Boavizta/cloud-scanner
-            docs: https://boavizta.github.io/cloud-scanner/
             repo_url: https://github.com/Boavizta/cloud-scanner
             logo: cloudscanner.svg
+            extra:
+              documentation_url: https://boavizta.github.io/cloud-scanner/
 
           - item:
             name: Green Cost Explorer for AWS
@@ -156,28 +163,31 @@ categories:
             name: Scaphandre
             description: A monitoring agent dedicated to energy consumption metrics of bare metal hosts and qemu/kvm virtual machines.
             homepage_url: https://github.com/hubblo-org/scaphandre
-            docs: https://hubblo-org.github.io/scaphandre-documentation/index.html
             repo_url: https://github.com/hubblo-org/scaphandre
             logo: scaphandre.svg
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://hubblo-org.github.io/scaphandre-documentation/index.html
 
           - item:
             name: CEEMS
             description: CEEMS (Compute Energy & Emissions Monitoring Stack) is a complete monitoring solution that provides energy and equivalent emissions besides performance, I/O and network metrics of SLURM (HPC), Openstack (VM) and Kubernetes (Container) workloads.
             homepage_url: https://ceems-dev.github.io/ceems/
-            docs: https://ceems-dev.github.io/ceems/docs/
             repo_url: https://github.com/ceems-dev/ceems
             logo: ceems.svg
             second_path:
               - "Infrastructure & Cluster Level / Kubernetes"
               - "Optimization / Cloud Application Analysis"
+            extra:
+              documentation_url: https://ceems-dev.github.io/ceems/docs/
 
           - item:
             name: Dynatrace Carbon Impact
             description: A proprietary solution that provides insights into the carbon footprint of cloud applications and infrastructure, helping organizations reduce their environmental impact.
             homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
-            docs: https://docs.dynatrace.com/docs/observe/business-analytics/apps/cost-and-carbon-optimization
             logo: organization/dynatrace.svg
+            extra:
+              documentation_url: https://docs.dynatrace.com/docs/observe/business-analytics/apps/cost-and-carbon-optimization
 
           - item:
             name: InfluxData Telegraf
@@ -203,25 +213,27 @@ categories:
             name: Green Metrics Tool
             description: The Green Metrics Tool is a developer tool indented for measuring the energy and CO2 consumption of software through a software life cycle analysis (SLCA).
             homepage_url: https://www.green-coding.io/products/green-metrics-tool/
-            docs: https://docs.green-coding.io
             blog: https://www.green-coding.io/blog/
             repo_url: https://github.com/green-coding-solutions/green-metrics-tool
             logo: green-metrics-tool.png
             project: "in-active-use-by-members"
             second_path:
               - "Website / Website Energy Measurement"
+            extra:
+              documentation_url: https://docs.green-coding.io
 
           - item:
             name: GreenFrame
             description: Estimates the carbon footprint of a user scenario on a web application. Full-stack analysis (browser, screen, network, server). Can be used standalone, in a CI/CD pipeline, and in conjunction with the greenframe.io service.
             homepage_url: https://greenframe.io/
             blog: https://marmelab.com/en/blog/#greenframe
-            docs: https://docs.greenframe.io/
             repo_url: https://github.com/marmelab/greenframe-cli
             logo: greenframe.svg
             license: "Elastic-2.0"
             second_path:
               - "Website / Website Carbon Estimation"
+            extra:
+              documentation_url: https://docs.greenframe.io/
 
           - item:
             name: Cardamon
@@ -247,10 +259,11 @@ categories:
             name: Power Hog
             description: A tool for monitoring the power consumption of desktop applications.
             homepage_url: https://www.green-coding.io/products/power-hog/
-            docs: https://github.com/green-coding-solutions/hog/blob/main/README.md#the-power-hog
             repo_url: https://github.com/green-coding-solutions/hog/
             logo: power-hog.png
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://github.com/green-coding-solutions/hog/blob/main/README.md#the-power-hog
 
           - item:
             name: Watt Wiser
@@ -301,9 +314,10 @@ categories:
             name: JoularJX
             description: JoularJX is a Java-based agent for software power monitoring at the source code level.
             homepage_url: https://github.com/joular/joularjx
-            docs: https://joular.github.io/joularjx/
             repo_url: https://github.com/joular/joularjx
             logo: joularjx.png
+            extra:
+              documentation_url: https://joular.github.io/joularjx/
 
           - item:
             name: jPowerMonitor
@@ -339,9 +353,10 @@ categories:
             name: Tracarbon
             description: Tracarbon is a Python library that tracks your device's energy consumption and calculates your carbon emissions.
             homepage_url: https://github.com/fvaleye/tracarbon
-            docs: https://fvaleye.github.io/tracarbon/documentation/
             repo_url: https://github.com/fvaleye/tracarbon
             logo: tracarbon.png
+            extra:
+              documentation_url: https://fvaleye.github.io/tracarbon/documentation/
 
           - item:
             name: oaklean
@@ -432,8 +447,9 @@ categories:
             description: The library enables to monitor energy usage of machine learning programs. It uses RAPL for the CPU and nvidia-smi for the GPU.
             homepage_url: https://github.com/GreenAI-Uppa/AIPowerMeter
             repo_url: https://github.com/GreenAI-Uppa/AIPowerMeter
-            docs: https://greenai-uppa.github.io/AIPowerMeter/
             logo: unofficial/AI_Power_Meter.svg
+            extra:
+              documentation_url: https://greenai-uppa.github.io/AIPowerMeter/
 
           - item:
             name: Carbontracker
@@ -470,9 +486,10 @@ categories:
             description: The experiment-impact-tracker is meant to be a simple drop-in method to track energy usage, carbon emissions, and compute utilization of your system.
             homepage_url: https://github.com/Breakend/experiment-impact-tracker
             repo_url: https://github.com/Breakend/experiment-impact-tracker
-            docs: https://breakend.github.io/experiment-impact-tracker/
             logo: unofficial/experiment-impact-tracker.svg
             project: "archived"
+            extra:
+              documentation_url: https://breakend.github.io/experiment-impact-tracker/
 
       - name: AI Inference
         items:
@@ -487,9 +504,10 @@ categories:
             name: EcoLogits
             description: EcoLogits tracks the energy consumption and environmental impacts of using generative AI models through APIs.
             homepage_url: https://huggingface.co/spaces/genai-impact/ecologits-calculator
-            docs: https://ecologits.ai
             repo_url: https://github.com/genai-impact/ecologits
             logo: ecologits.png
+            extra:
+              documentation_url: https://ecologits.ai
 
   - name: Databases
     subcategories:
@@ -501,15 +519,17 @@ categories:
             name: Electricity Maps
             description: A commercial API service that provides real-time and forecast carbon intensity data for electricity grids around the world.
             homepage_url: https://www.electricitymaps.com/
-            docs: https://portal.electricitymaps.com/docs/getting-started
             logo: electricity-maps.svg
+            extra:
+              documentation_url: https://portal.electricitymaps.com/docs/getting-started
 
           - item:
             name: WattTime
             description: A commercial API service that provides real-time and forecast marginal carbon intensity data for electricity grids around the world.
             homepage_url: https://www.watttime.org/
-            docs: https://docs.watttime.org/
             logo: WattTime.png
+            extra:
+              documentation_url: https://docs.watttime.org/
 
           - item:
             name: Energy-Charts
@@ -525,15 +545,17 @@ categories:
               The data can be downloaded for free and obtained via a RESTful API.
               There is also a Python client available (https://github.com/EnergieID/entsoe-py).
             homepage_url: https://transparency.entsoe.eu/dashboard/show
-            docs: https://transparencyplatform.zendesk.com/hc/en-us/articles/15692855254548-Sitemap-for-Restful-API-Integration
             logo: entso-e.svg
+            extra:
+              documentation_url: https://transparencyplatform.zendesk.com/hc/en-us/articles/15692855254548-Sitemap-for-Restful-API-Integration
 
           - item:
             name: Carbon-Intensity UK
             description: An API service from UK National Grid ESO that provides carbon intensity data for the UK electricity grid for free.
             homepage_url: https://carbonintensity.org.uk/
-            docs: https://carbon-intensity.github.io/api-definitions/
             logo: unofficial/Carbon-Intensity_UK.svg
+            extra:
+              documentation_url: https://carbon-intensity.github.io/api-definitions/
 
       - name: IT Emission Inventory
         items:
@@ -542,17 +564,19 @@ categories:
             name: BoaviztAPI
             description: An open source API that provides environmental impact data for IT equipment, including carbon footprint, energy consumption, and resource depletion.
             homepage_url: https://github.com/Boavizta/boaviztapi
-            docs: https://doc.api.boavizta.org/
             repo_url: https://github.com/Boavizta/boaviztapi
             logo: boaviztapi.svg
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://doc.api.boavizta.org/
 
           - item:
             name: Climatiq
             description: A proprietary API that provides carbon emissions data for various activities, including cloud computing, to help organizations measure and reduce their carbon footprint.
             homepage_url: https://www.climatiq.io/
-            docs: https://www.climatiq.io/docs
             logo: climatiq.png
+            extra:
+              documentation_url: https://www.climatiq.io/docs
 
           - item:
             name: ResilioDB
@@ -628,9 +652,10 @@ categories:
             name: Impact Framework
             description: A framework for modeling and analyzing the environmental impact of software systems.
             homepage_url: https://if.greensoftware.foundation/
-            docs: https://if.greensoftware.foundation/intro
             repo_url: https://github.com/Green-Software-Foundation/if
             logo: impact-framework.svg
+            extra:
+              documentation_url: https://if.greensoftware.foundation/intro
 
           - item:
             name: Carbon Footprint Modeling Tool
@@ -694,8 +719,9 @@ categories:
             name: NVIDIA SMI
             description: A tool for monitoring and managing NVIDIA GPUs, including power consumption.
             homepage_url: https://developer.nvidia.com/nvidia-system-management-interface
-            docs: https://docs.nvidia.com/deploy/nvidia-smi/index.html
             logo: organization/nvidia.png
+            extra:
+              documentation_url: https://docs.nvidia.com/deploy/nvidia-smi/index.html
 
           - item:
             name: Intel PCM
@@ -827,16 +853,18 @@ categories:
             name: Firefox Power Profiler
             description: A tool for profiling the power consumption of websites in Firefox.
             homepage_url: https://profiler.firefox.com/
-            docs: https://profiler.firefox.com/docs/
             repo_url: https://github.com/firefox-devtools/profiler
             logo: firefox-developer.svg
+            extra:
+              documentation_url: https://profiler.firefox.com/docs/
 
           - item:
             name: Safari Web Inspector
             description: A tool for inspecting and profiling websites in Safari, including energy impact.
             homepage_url: https://developer.apple.com/safari/tools/
-            docs: https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/Introduction/Introduction.html
             logo: safari.svg
+            extra:
+              documentation_url: https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/Introduction/Introduction.html
 
   - name: Optimization
     subcategories:
@@ -896,15 +924,17 @@ categories:
             name: Elastic Universal Profiling
             description: A profiling solution that helps identify energy-intensive code paths and optimize application performance and energy efficiency.
             homepage_url: https://www.elastic.co/observability/universal-profiling
-            docs: https://www.elastic.co/guide/en/observability/current/universal-profiling.html
             logo: elastic.svg
+            extra:
+              documentation_url: https://www.elastic.co/guide/en/observability/current/universal-profiling.html
 
           - item:
             name: OpenTelemetry eBPF Profiler
             description: A whole-system, cross-language profiler for Linux via eBPF.
             homepage_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
-            docs: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
             logo: opentelemetry.svg
+            extra:
+              documentation_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
 
       - name: Kubernetes
         items:
@@ -921,18 +951,20 @@ categories:
             name: Goldilocks
             description: A tool for identifying and setting resource requests and limits for Kubernetes workloads.
             homepage_url: https://github.com/FairwindsOps/goldilocks
-            docs: https://goldilocks.docs.fairwinds.com/
             repo_url: https://github.com/FairwindsOps/goldilocks
             logo: goldilocks.svg
+            extra:
+              documentation_url: https://goldilocks.docs.fairwinds.com/
 
           - item:
             name: Karpenter
             description: A Kubernetes node autoscaler that helps improve application availability and cluster efficiency.
             homepage_url: https://karpenter.sh/
-            docs: https://karpenter.sh/docs/
             repo_url: https://github.com/aws/karpenter
             logo: karpenter.svg
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://karpenter.sh/docs/
 
           - item:
             name: Compute Gardener Scheduler
@@ -1026,6 +1058,7 @@ categories:
             name: Pruna AI
             description: Pruna is a model optimization framework built for developers, enabling you to deliver faster, more efficient models with minimal overhead. It provides a comprehensive suite of compression algorithms including caching, quantization, pruning, distillation and compilation techniques.
             homepage_url: https://www.pruna.ai/
-            docs_url: https://docs.pruna.ai/
             repo_url: https://github.com/PrunaAI/pruna
             logo: pruna.png
+            extra:
+              documentation_url: https://docs.pruna.ai/
