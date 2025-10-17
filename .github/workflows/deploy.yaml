@@ -25,7 +25,7 @@ jobs:
     runs-on:
       labels: ubuntu-latest
     container:
-      image: public.ecr.aws/g6m3a0y9/landscape2
+      image: ghcr.io/cncf/landscape2:latest
       options: --user root
     steps:
       - name: Checkout this repository
