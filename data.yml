@@ -140,6 +140,8 @@ categories:
             repo_url: https://github.com/sustainable-computing-io/kepler
             logo: kepler.svg
             project: "in-active-use-by-members"
+            second_path:
+              - "Cloud Application / Cloud Application Monitoring"
 
           - item:
             name: KEIT
@@ -177,7 +179,7 @@ categories:
             logo: ceems.svg
             second_path:
               - "Infrastructure & Cluster Level / Kubernetes"
-              - "Optimization / Cloud Application Analysis"
+              - "Cloud Application / Cloud Application Monitoring"
             extra:
               documentation_url: https://ceems-dev.github.io/ceems/docs/
 
@@ -186,6 +188,8 @@ categories:
             description: A proprietary solution that provides insights into the carbon footprint of cloud applications and infrastructure, helping organizations reduce their environmental impact.
             homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
             logo: organization/dynatrace.svg
+            second_path:
+              - "Cloud Application / Cloud Application Monitoring"
             extra:
               documentation_url: https://docs.dynatrace.com/docs/observe/business-analytics/apps/cost-and-carbon-optimization
 
@@ -196,12 +200,37 @@ categories:
             repo_url: https://github.com/influxdata/telegraf
             logo: TelegrafTigerSmall.png
 
+  - name: Cloud Application
+    subcategories:
+
+      - name: Cloud Application Monitoring
+        items:
+
           - item:
             name: OpenTelemetry Java Agent Extension
-            description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions.
+            description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions using coefficient data from Cloud Carbon Footprint.
             homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             logo: organization/retit.png
+
+      - name: Cloud Application Profiling
+        items:
+
+          - item:
+            name: Elastic Universal Profiling
+            description: A profiling solution that helps identify energy-intensive code paths and optimize application performance and energy efficiency.
+            homepage_url: https://www.elastic.co/observability/universal-profiling
+            logo: elastic.svg
+            extra:
+              documentation_url: https://www.elastic.co/guide/en/observability/current/universal-profiling.html
+
+          - item:
+            name: OpenTelemetry eBPF Profiler
+            description: A whole-system, cross-language profiler for Linux via eBPF.
+            homepage_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
+            logo: opentelemetry.svg
+            extra:
+              documentation_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
 
   - name: Component
     subcategories:
@@ -916,25 +945,6 @@ categories:
             logo: ecoinfra.svg
             second_path:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
-
-      - name: Cloud Application Analysis
-        items:
-
-          - item:
-            name: Elastic Universal Profiling
-            description: A profiling solution that helps identify energy-intensive code paths and optimize application performance and energy efficiency.
-            homepage_url: https://www.elastic.co/observability/universal-profiling
-            logo: elastic.svg
-            extra:
-              documentation_url: https://www.elastic.co/guide/en/observability/current/universal-profiling.html
-
-          - item:
-            name: OpenTelemetry eBPF Profiler
-            description: A whole-system, cross-language profiler for Linux via eBPF.
-            homepage_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
-            logo: opentelemetry.svg
-            extra:
-              documentation_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
 
       - name: Kubernetes
         items:

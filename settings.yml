@@ -50,6 +50,7 @@ groups:
   - name: Measurement
     categories:
       - Infrastructure & Cluster Level
+      - Cloud Application
       - Component
       - Website
       - Artificial Intelligence
