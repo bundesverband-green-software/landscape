@@ -47,8 +47,10 @@ body:
       options:
         - Infrastructure Provider Level
         - Kubernetes
-        - Agent
-        - Containerized Application
+        - Cluster Level - Agent
+        - Server - Use Case Measurement
+        - Server - Monitoring
+        - Server - Profiling
         - Desktop Application
         - Mobile App
         - Code Level Energy Measurement
@@ -73,7 +75,6 @@ body:
       multiple: true
       options:
         - Cloud Infrastructure
-        - Cloud Application Analysis
         - Kubernetes
         - Carbon Awareness
         - Artificial Intelligence
