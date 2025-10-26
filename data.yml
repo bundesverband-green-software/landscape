@@ -141,7 +141,7 @@ categories:
             logo: kepler.svg
             project: "in-active-use-by-members"
             second_path:
-              - "Cloud Application / Cloud Application Monitoring"
+              - "Component / Cloud Application"
 
           - item:
             name: KEIT
@@ -179,7 +179,7 @@ categories:
             logo: ceems.svg
             second_path:
               - "Infrastructure & Cluster Level / Kubernetes"
-              - "Cloud Application / Cloud Application Monitoring"
+              - "Component / Cloud Application"
             extra:
               documentation_url: https://ceems-dev.github.io/ceems/docs/
 
@@ -189,7 +189,7 @@ categories:
             homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
             logo: organization/dynatrace.svg
             second_path:
-              - "Cloud Application / Cloud Application Monitoring"
+              - "Component / Cloud Application"
             extra:
               documentation_url: https://docs.dynatrace.com/docs/observe/business-analytics/apps/cost-and-carbon-optimization
 
@@ -200,10 +200,10 @@ categories:
             repo_url: https://github.com/influxdata/telegraf
             logo: TelegrafTigerSmall.png
 
-  - name: Cloud Application
+  - name: Component
     subcategories:
 
-      - name: Cloud Application Monitoring
+      - name: Cloud Application
         items:
 
           - item:
@@ -212,9 +212,6 @@ categories:
             homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             logo: organization/retit.png
-
-      - name: Cloud Application Profiling
-        items:
 
           - item:
             name: Elastic Universal Profiling
@@ -231,9 +228,6 @@ categories:
             logo: opentelemetry.svg
             extra:
               documentation_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
-
-  - name: Component
-    subcategories:
 
       - name: Containerized Application
         items:
