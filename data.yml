@@ -691,6 +691,19 @@ categories:
 
       - name: Shell Tools
         items:
+
+          - item:
+            name: PowerJoular
+            description: |
+              PowerJoular is a command line software to monitor, in real time, the power consumption of software and hardware components.
+              It also supports monitoring specific processes and works on multiple platforms and hardware architectures.
+              The multi-architecture support is a distinctive feature of the tool, along with its processes & tasks monitoring capability and its low overhead.
+            homepage_url: https://www.noureddine.org/research/joular/powerjoular
+            repo_url: https://github.com/joular/powerjoular
+            logo: powerjoular.webp
+            extra:
+              documentation_url: https://joular.github.io/powerjoular/
+
           - item:
             name: ExperimentRunner
             description: Experiment Runner is a generic framework to automatically execute measurement-based experiments on any platform. The experiments are user-defined, can be completely customized, and expressed in python code.
