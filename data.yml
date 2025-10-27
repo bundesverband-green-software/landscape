@@ -315,7 +315,7 @@ categories:
             description: JoularJX is a Java-based agent for software power monitoring at the source code level.
             homepage_url: https://github.com/joular/joularjx
             repo_url: https://github.com/joular/joularjx
-            logo: joularjx.png
+            logo: joularjx.webp
             extra:
               documentation_url: https://joular.github.io/joularjx/
 
