@@ -203,6 +203,37 @@ categories:
             repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             logo: organization/retit.png
 
+      - name: Simulation
+        items:
+
+          - item:
+            name: Datavizta
+            description: The impact assessment tool provides an understanding of the environmental impacts of servers, cloud instances and user terminals on several criteria (at least Global Warming Potential, Primary Energy and Abiotic Resource Depletion Potential), over two life cycle phases (use, manufacturing) based on their technical characteristics and context of use.
+            homepage_url: https://datavizta.boavizta.org/
+            repo_url: https://github.com/Boavizta/datavizta
+            logo: datavizta.svg
+
+          - item:
+            name: EasyVirt Eclyo
+            description: ECLYO is an innovative comparison and simulation tool designed to provide you with detailed insights into the prices and carbon emissions of virtual machines offered by major cloud providers such as AWS, GCP, Azure. This tool allows you to evaluate and compare costs as well as the environmental impact of different options, helping you make informed decisions when migrating your on-premises infrastructure to the public cloud.
+            homepage_url: https://cloudpricing.easyvirt.com/simulator
+            logo: easyvirt_old.png
+
+          - item:
+            name: Cloud Project Carbon Emission Simulator by OxygenIT
+            description: It allows you to run cloud project simulations with an interface similar to Google Cloud Cost Simulator, but by providing the energy/carbon cost. An API key is required (can be created for free).
+            homepage_url: https://project.oxygenit.io/
+            logo: oxygenit.png
+            extra:
+              documentation_url: https://docs.oxygenit.io/#cloud-project-carbon-emission-simulator
+
+          - item:
+            name: Technology Carbon Estimator
+            description: The Technology Carbon Estimator is designed to give a high-level overview of the possible areas of carbon impact within your IT estate. The estimations are framed within the "Technology Carbon Standard", a model proposed by Scott Logic, designed to help you map out, measure and improve the environmental impacts of your technology.
+            homepage_url: https://www.techcarbonstandard.org/estimator
+            repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
+            logo: Technology-Carbon-Estimator.svg
+
   - name: Component
     subcategories:
 
@@ -644,16 +675,6 @@ categories:
             logo: antarctica.svg
             second_path:
               - "Optimization / Cloud Infrastructure"
-
-      - name: Estimation
-        items:
-
-          - item:
-            name: Technology Carbon Estimator
-            description: The Technology Carbon Estimator is designed to give a high-level overview of the possible areas of carbon impact within your IT estate. The estimations are framed within the "Technology Carbon Standard", a model proposed by Scott Logic, designed to help you map out, measure and improve the environmental impacts of your technology.
-            homepage_url: https://www.techcarbonstandard.org/estimator
-            repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
-            logo: Technology-Carbon-Estimator.svg
 
       - name: Modeling
         items:
