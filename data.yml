@@ -228,6 +228,12 @@ categories:
               documentation_url: https://docs.oxygenit.io/#cloud-project-carbon-emission-simulator
 
           - item:
+            name: Hardware Replacement Calculator
+            description: This little script enables you to see when it is worth replacing an old machine with a new one.
+            homepage_url: https://hardware-checker.green-coding.io/
+            logo: unofficial/hardware-replacement-calculator.svg
+
+          - item:
             name: Technology Carbon Estimator
             description: The Technology Carbon Estimator is designed to give a high-level overview of the possible areas of carbon impact within your IT estate. The estimations are framed within the "Technology Carbon Standard", a model proposed by Scott Logic, designed to help you map out, measure and improve the environmental impacts of your technology.
             homepage_url: https://www.techcarbonstandard.org/estimator
