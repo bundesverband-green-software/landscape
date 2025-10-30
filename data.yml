@@ -634,7 +634,7 @@ categories:
           - item:
             name: Aguaro
             description: Aguaro offers SaaS solutions integrated with ServiceNow to help companies automate the management of their environmental impact and reduce their carbon footprint. It streamlines hardware inventory retrieval and presents the data through intuitive dashboards.
-            homepage_url: https://www.aguaro.io/en/sustainableit
+            homepage_url: https://www.aguaro.io/solution/sustainable-it
             logo: aguaro.svg
 
           - item:
