@@ -11,7 +11,7 @@ categories:
   - name: Infrastructure & Cluster Level
     subcategories:
 
-      - name: Infrastructure Provider Level
+      - name: Public Cloud
         items:
 
           - item:
@@ -129,18 +129,13 @@ categories:
               documentation_url: https://github.com/DigitalPebble/spruce/blob/main/docs/src/methodology.md
 
           - item:
-            name: CO2 Scope® (by EasyVirt)
-            description: |             
-              CO₂ Scope® is a simple and effective sovereign solution that enables you to measure, analyse, and reduce the environmental footprint of your IT infrastructure. With precise realtime data analysis, it delivers detailed insights into the environmental impact of your digital assets. Non-intrusive and easy to integrate, CO₂ Scope® empowers you to lead the decarbonisation of your IT systems, helping you reduce your ecological footprint while optimising performance.
-              CO₂ Scope® is not a SaaS solution but is on premise. This a virtual appliance (VM) installed by the clients. Agentless, CO₂ Scope® is non intrusive.
-            homepage_url: https://www.easyvirt.com/en/our-it-solutions/co2-scope-greenops-solution/
-            logo: easyvirt.svg
-            second_path:
-              - "Infrastructure & Cluster Level / Kubernetes"
-              - "Optimization / Cloud Infrastructure"
-              - "Optimization / Kubernetes"
+            name: Dynatrace Cost & Carbon Optimization
+            description: | 
+              Cost & Carbon Optimization is a proprietary app for the Dynatrace ecosystem that can report carbon emissions and public cloud costs for all hosts monitored by OneAgent, and provides carbon emissions and energy consumption metrics for Kubernetes infrastructure monitored by Dynatrace.
+            homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
+            logo: organization/dynatrace.svg
             extra:
-              documentation_url: https://easyvirt.gitlab.io/dcscope/user-guide/
+              documentation_url: https://docs.dynatrace.com/docs/observe/business-observability/cost-and-carbon-optimization
 
       - name: Kubernetes
         items:
@@ -168,7 +163,7 @@ categories:
             extra:
               documentation_url: https://github.com/Green-Software-Foundation/if-carmen/blob/dev/docs/methodology.md
             second_path:
-              - "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              - "Infrastructure & Cluster Level / Public Cloud"
 
           - item:
             name: KEIT
@@ -177,8 +172,22 @@ categories:
             repo_url: https://github.com/aknostic/keit/
             logo: unofficial/keit.svg
 
-      - name: Agent
+      - name: On-Premise & Bare-Metal
         items:
+
+          - item:
+            name: CO2 Scope® (by EasyVirt)
+            description: |             
+              CO₂ Scope® is a simple and effective sovereign solution that enables you to measure, analyse, and reduce the environmental footprint of your IT infrastructure. With precise realtime data analysis, it delivers detailed insights into the environmental impact of your digital assets. Non-intrusive and easy to integrate, CO₂ Scope® empowers you to lead the decarbonisation of your IT systems, helping you reduce your ecological footprint while optimising performance.
+              CO₂ Scope® is not a SaaS solution but is on premise. This a virtual appliance (VM) installed by the clients. Agentless, CO₂ Scope® is non intrusive.
+            homepage_url: https://www.easyvirt.com/en/our-it-solutions/co2-scope-greenops-solution/
+            logo: easyvirt.svg
+            second_path:
+              - "Infrastructure & Cluster Level / Kubernetes"
+              - "Optimization / Cloud Infrastructure"
+              - "Optimization / Kubernetes"
+            extra:
+              documentation_url: https://easyvirt.gitlab.io/dcscope/user-guide/
 
           - item:
             name: Scaphandre
@@ -200,22 +209,6 @@ categories:
               - "Full-Stack Application / Monitoring & Tracing"
             extra:
               documentation_url: https://ceems-dev.github.io/ceems/docs/advanced/power-consumption
-
-          - item:
-            name: Dynatrace Cost & Carbon Optimization
-            description: | 
-              Cost & Carbon Optimization is a proprietary app for the Dynatrace ecosystem that can report carbon emissions and public cloud costs for all hosts monitored by OneAgent, and provides carbon emissions and energy consumption metrics for Kubernetes infrastructure monitored by Dynatrace.
-            homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
-            logo: organization/dynatrace.svg
-            extra:
-              documentation_url: https://docs.dynatrace.com/docs/observe/business-observability/cost-and-carbon-optimization
-
-          - item:
-            name: InfluxData Telegraf
-            description: A plugin-driven server agent for collecting and reporting metrics, including energy consumption and carbon emissions.
-            homepage_url: https://www.influxdata.com/time-series-platform/telegraf/
-            repo_url: https://github.com/influxdata/telegraf
-            logo: telegraftigersmall.png
 
       - name: Planning & Calculation
         items:
@@ -724,7 +717,7 @@ categories:
             homepage_url: https://www.fruggr.io/
             logo: fruggr.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
           - item:
             name: Sopht
@@ -732,7 +725,7 @@ categories:
             homepage_url: https://sopht.com/solution
             logo: sopht.png
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
           - item:
             name: Resilio Tech
@@ -752,7 +745,7 @@ categories:
             homepage_url: https://www.aguaro.io/solution/sustainable-it
             logo: aguaro.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
           - item:
             name: Antarctica
@@ -761,7 +754,7 @@ categories:
             logo: antarctica.svg
             second_path:
               - "Optimization / Cloud Infrastructure"
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
       - name: Modeling
         items:
@@ -1079,7 +1072,7 @@ categories:
             homepage_url: https://greenpixie.com/
             logo: greenpixie.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
           - item:
             name: IBM Txture
@@ -1087,7 +1080,7 @@ categories:
             homepage_url: https://www.ibm.com/products/txture
             logo: unofficial/ibm-txture.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
             extra:
               documentation_url: https://www.ibm.com/docs/en/txture
 
@@ -1104,7 +1097,7 @@ categories:
             repo_url: https://github.com/eco-infra/ecoinfra
             logo: ecoinfra.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
       - name: Application Profiling
         items:

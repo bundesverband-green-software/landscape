@@ -45,9 +45,9 @@ body:
       label: "In which measurement categories should the tool be listed? (multiple ones can be selected)"
       multiple: true
       options:
-        - Infrastructure & Cluster Level / Infrastructure Provider Level (cloud providers such as AWS, Azure, GCP)
+        - Infrastructure & Cluster Level / Public Cloud (cloud providers such as AWS, Azure, GCP)
         - Infrastructure & Cluster Level / Kubernetes
-        - Infrastructure & Cluster Level / Agent (monitoring agent or daemon)
+        - Infrastructure & Cluster Level / On-Premise & Bare-Metal (bare-metal hosts and on-premise infrastructure)
         - Infrastructure & Cluster Level / Planning & Calculation (estimators and calculators)
         - Full-Stack Application / Monitoring & Tracing
         - Full-Stack Application / Scenario Measurement
