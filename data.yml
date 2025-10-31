@@ -329,7 +329,7 @@ categories:
             description: JoularJX is a Java-based agent for software power monitoring at the source code level.
             homepage_url: https://github.com/joular/joularjx
             repo_url: https://github.com/joular/joularjx
-            logo: joularjx.png
+            logo: joularjx.webp
             extra:
               documentation_url: https://joular.github.io/joularjx/
 
@@ -598,6 +598,16 @@ categories:
             homepage_url: https://resilio-solutions.com/en/services/database
             logo: resilio-database.svg
 
+          - item:
+            name: OxygenIT
+            description: OxygenIT provides GreenOps APIs for estimating energy and carbon emissions from IaaS, DBaaS, and PaaS cloud services, as well as on-premises bare metal and laptop/desktops hardware. The enterprise version can also provide optimization suggestions.
+            homepage_url: https://www.oxygenit.io/
+            logo: oxygenit.png
+            second_path:
+              -  "Optimization / Cloud Infrastructure"
+            extra:
+              documentation_url: https://docs.oxygenit.io/
+
   - name: Data Aggregation
     subcategories:
 
@@ -638,7 +648,7 @@ categories:
           - item:
             name: Aguaro
             description: Aguaro offers SaaS solutions integrated with ServiceNow to help companies automate the management of their environmental impact and reduce their carbon footprint. It streamlines hardware inventory retrieval and presents the data through intuitive dashboards.
-            homepage_url: https://www.aguaro.io/en/sustainableit
+            homepage_url: https://www.aguaro.io/solution/sustainable-it
             logo: aguaro.svg
 
           - item:
@@ -695,6 +705,19 @@ categories:
 
       - name: Shell Tools
         items:
+
+          - item:
+            name: PowerJoular
+            description: |
+              PowerJoular is a command line software to monitor, in real time, the power consumption of software and hardware components.
+              It also supports monitoring specific processes and works on multiple platforms and hardware architectures.
+              The multi-architecture support is a distinctive feature of the tool, along with its processes & tasks monitoring capability and its low overhead.
+            homepage_url: https://www.noureddine.org/research/joular/powerjoular
+            repo_url: https://github.com/joular/powerjoular
+            logo: powerjoular.webp
+            extra:
+              documentation_url: https://joular.github.io/powerjoular/
+
           - item:
             name: ExperimentRunner
             description: Experiment Runner is a generic framework to automatically execute measurement-based experiments on any platform. The experiments are user-defined, can be completely customized, and expressed in python code.
@@ -905,14 +928,6 @@ categories:
             description: A platform for analyzing and optimizing cloud infrastructure for cost and sustainability.
             homepage_url: https://txture.io/
             logo: txture.png
-            second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
-
-          - item:
-            name: OxygenIT
-            description: A solution for optimizing IT infrastructure to reduce energy consumption and carbon emissions.
-            homepage_url: https://www.oxygenit.io/
-            logo: oxygenit.png
             second_path:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
 
