@@ -228,6 +228,14 @@ categories:
               documentation_url: https://docs.oxygenit.io/#cloud-project-carbon-emission-simulator
 
           - item:
+            name: Data Center Water Consumption Calculator
+            description: The calculator utilizes Uptime Institute's "Topology Tier Standard" to estimate the water consumption of data centers. The estimates can serve as the starting point for discussions on data center water use and consumption.
+            homepage_url: https://www.tapsrundry.com/data-center-water-consumption-calculator
+            logo: unofficial/data-center-water-consumption-calculator.svg
+            extra:
+              documentation_url: https://eatyourfrog.substack.com/p/there-isnt-enough-water-for-all-of
+
+          - item:
             name: Hardware Replacement Calculator
             description: This little script enables you to see when it is worth replacing an old machine with a new one.
             homepage_url: https://hardware-checker.green-coding.io/
