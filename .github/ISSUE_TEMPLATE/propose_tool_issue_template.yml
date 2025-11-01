@@ -51,9 +51,9 @@ body:
         - Containerized Application
         - Desktop Application
         - Mobile App
+        - Device & Process Level
         - Code Level Energy Measurement
         - Static Code Analysis
-        - Shell Tools
         - CI Pipeline
         - Website Carbon Estimation
         - Website Energy Measurement
@@ -65,6 +65,7 @@ body:
         - Data Aggregation - Organizational Level
         - Data Aggregation - Estimation
         - Data Aggregation - Modeling
+        - Measurement Utilities
 
   - type: dropdown
     id: categories_optimization
