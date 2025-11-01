@@ -716,7 +716,14 @@ categories:
             description: PowerLetrics is an open-source framework designed to monitor and analyze power consumption metrics at the process level on Linux. Similar to how top displays memory or CPU time, PowerLetrics provides the "Energy Footprint" of each process in real-time.
             homepage_url: https://github.com/green-kernel/powerletrics
             repo_url: https://github.com/green-kernel/powerletrics
-            logo: powerletrics.png
+            logo: unofficial/powerletrics.svg
+
+          - item:
+            name: procpower
+            description: procpower is a Linux kernel module that exposes per‑PID runtime, I/O and energy‑related statistics—including Intel RAPL readings—via /proc and debugfs. It is designed for lightweight, high‑frequency sampling so that userspace can build accurate power‑ or carbon‑aware schedulers, profilers and monitors.
+            homepage_url: https://github.com/green-kernel/procpower
+            repo_url: https://github.com/green-kernel/procpower
+            logo: unofficial/procpower.svg
 
           - item:
             name: Powerstat
