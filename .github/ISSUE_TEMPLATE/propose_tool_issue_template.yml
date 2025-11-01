@@ -76,6 +76,7 @@ body:
         - Cloud Application Analysis
         - Kubernetes
         - Carbon Awareness
+        - Energy Awareness
         - Artificial Intelligence
 
   - type: input
