@@ -228,6 +228,15 @@ categories:
               documentation_url: https://docs.oxygenit.io/#cloud-project-carbon-emission-simulator
 
           - item:
+            name: Green Algorithms Calculator
+            description: A tool for estimating the carbon footprint of computational tasks using parameters like runtime, number of cores, platform, cloud environment, etc.
+            homepage_url: https://calculator.green-algorithms.org
+            repo_url: https://github.com/GreenAlgorithms/green-algorithms-tool
+            logo: unofficial/Green_Algorithms_Calculator.svg
+            extra:
+              documentation_url: https://www.green-algorithms.org/GAapp-overview/
+
+          - item:
             name: Data Center Water Consumption Calculator
             description: The calculator utilizes Uptime Institute's "Topology Tier Standard" to estimate the water consumption of data centers. The estimates can serve as the starting point for discussions on data center water use and consumption.
             homepage_url: https://www.tapsrundry.com/data-center-water-consumption-calculator
@@ -518,11 +527,13 @@ categories:
             logo: mlco2impact.png
 
           - item:
-            name: Green Algorithms Calculator
-            description: A tool for estimating the carbon footprint of computational tasks, including AI Model Training and inference.
-            homepage_url: https://www.green-algorithms.org/
+            name: Green Algorithms Calculator (AI)
+            description: A tool for estimating the carbon footprint of AI model training and inference.
+            homepage_url: https://calculator.green-algorithms.org/ai
             repo_url: https://github.com/GreenAlgorithms/green-algorithms-tool
             logo: unofficial/Green_Algorithms_Calculator.svg
+            extra:
+              documentation_url: https://www.green-algorithms.org/GAapp-overview/
             second_path:
               - "Artificial Intelligence / AI Inference"
 
