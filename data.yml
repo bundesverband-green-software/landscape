@@ -701,6 +701,8 @@ categories:
             logo: impact-framework.svg
             extra:
               documentation_url: https://if.greensoftware.foundation/intro
+            second_path:
+              - "Infrastructure & Cluster Level / Planning & Calculation"
 
           - item:
             name: Carbon Footprint Modeling Tool
