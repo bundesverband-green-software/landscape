@@ -1066,6 +1066,18 @@ categories:
             logo: unofficial/Grid-aware_Websites.svg
             license: "Apache-2.0"
 
+      - name: Energy Awareness
+        items:
+
+          - item:
+            name: Obs.js
+            description: |
+              Obs.js uses the Navigator and Battery APIs to get contextual information about your users' connection strength and battery status.
+              You can use this data to adapt your site/app to their environment, or beacon the data off to an analytics endpoint. It exposes those signals as CSS classes on the <html> element, and as properties on window.obs, so you can adapt delivery accordingly: serve lower-resolution media, forgo web fonts, disable auto-playing video… you name it.
+            homepage_url: https://csswizardry.com/Obs.js/demo/
+            repo_url: https://github.com/csswizardry/Obs.js
+            logo: obs-js.svg
+
       - name: Artificial Intelligence
         items:
 
