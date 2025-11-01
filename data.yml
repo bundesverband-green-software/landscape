@@ -140,6 +140,8 @@ categories:
             repo_url: https://github.com/sustainable-computing-io/kepler
             logo: kepler.svg
             project: "in-active-use-by-members"
+            second_path:
+              - "Measurement Toolbox / Process Metrics Exporter"
 
           - item:
             name: KEIT
@@ -348,6 +350,7 @@ categories:
             project: "in-active-use-by-members"
             second_path:
               - "Artificial Intelligence / AI Model Training"
+              - "Measurement Toolbox / Device Measurement"
 
           - item:
             name: Tracarbon
@@ -357,6 +360,8 @@ categories:
             logo: tracarbon.png
             extra:
               documentation_url: https://fvaleye.github.io/tracarbon/documentation/
+            second_path:
+              - "Measurement Toolbox / Device Measurement"
 
           - item:
             name: oaklean
@@ -373,18 +378,7 @@ categories:
             repo_url: https://github.com/Helmholtz-AI-Energy/perun
             logo: perun.svg
             second_path:
-              - "Measurement Toolbox / Shell Tools"
-
-          - item:
-            name: Energy Monitoring Tool
-            description: |
-              EMT is a lightweight tool capable of tracking and reporting the energy consumption of software systems with process-level granularity.
-              While particularly valuable for compute-intensive workloads like machine learning, it's designed for broad applicability across various use cases.
-              The tool supports two usage modes. The Python Context Manager is ideal for instrumenting Python code directly. This mode allows developers to wrap specific code blocks to measure energy consumption with precision. 
-              The Command-Line Interface is designed to tag and monitor running application without modifying the code. This mode is currently under active development and not yet available.
-            homepage_url: https://github.com/FairCompute/energy-monitoring-tool
-            repo_url: https://github.com/FairCompute/energy-monitoring-tool
-            logo: emt.png
+              - "Measurement Toolbox / Device Measurement"
 
           - item:
             name: Coppers
@@ -689,7 +683,7 @@ categories:
   - name: Measurement Toolbox
     subcategories:
 
-      - name: Shell Tools
+      - name: Device Measurement
         items:
 
           - item:
@@ -703,28 +697,7 @@ categories:
             logo: powerjoular.webp
             extra:
               documentation_url: https://joular.github.io/powerjoular/
-
-          - item:
-            name: ExperimentRunner
-            description: Experiment Runner is a generic framework to automatically execute measurement-based experiments on any platform. The experiments are user-defined, can be completely customized, and expressed in python code.
-            homepage_url: https://github.com/S2-group/experiment-runner
-            repo_url: https://github.com/S2-group/experiment-runner
-            logo: organization/s2.png
           
-          - item:
-            name: powerletrics
-            description: PowerLetrics is an open-source framework designed to monitor and analyze power consumption metrics at the process level on Linux. Similar to how top displays memory or CPU time, PowerLetrics provides the "Energy Footprint" of each process in real-time.
-            homepage_url: https://github.com/green-kernel/powerletrics
-            repo_url: https://github.com/green-kernel/powerletrics
-            logo: unofficial/powerletrics.svg
-
-          - item:
-            name: procpower
-            description: procpower is a Linux kernel module that exposes per‑PID runtime, I/O and energy‑related statistics—including Intel RAPL readings—via /proc and debugfs. It is designed for lightweight, high‑frequency sampling so that userspace can build accurate power‑ or carbon‑aware schedulers, profilers and monitors.
-            homepage_url: https://github.com/green-kernel/procpower
-            repo_url: https://github.com/green-kernel/procpower
-            logo: unofficial/procpower.svg
-
           - item:
             name: Powerstat
             description: Powerstat measures the power consumption of a machine using the battery stats or the Intel RAPL interface. The output is like vmstat but also shows power consumption statistics.
@@ -790,6 +763,65 @@ categories:
             repo_url: https://github.com/sosy-lab/cpu-energy-meter
             logo: unofficial/CPU_Energy_Meter.svg
             project: "archived"
+
+      - name: Process Metrics Exporter
+        items:
+
+          - item:
+            name: procpower
+            description: procpower is a Linux kernel module that exposes per‑PID runtime, I/O and energy‑related statistics—including Intel RAPL readings—via /proc and debugfs. It is designed for lightweight, high‑frequency sampling so that userspace can build accurate power‑ or carbon‑aware schedulers, profilers and monitors.
+            homepage_url: https://github.com/green-kernel/procpower
+            repo_url: https://github.com/green-kernel/procpower
+            logo: unofficial/procpower.svg
+
+          - item:
+            name: powerletrics
+            description: PowerLetrics is an open-source framework designed to monitor and analyze power consumption metrics at the process level on Linux. Similar to how top displays memory or CPU time, PowerLetrics provides the "Energy Footprint" of each process in real-time.
+            homepage_url: https://github.com/green-kernel/powerletrics
+            repo_url: https://github.com/green-kernel/powerletrics
+            logo: unofficial/powerletrics.svg
+
+          - item:
+            name: Energy Monitoring Tool
+            description: |
+              EMT is a lightweight tool capable of tracking and reporting the energy consumption of software systems with process-level granularity.
+              While particularly valuable for compute-intensive workloads like machine learning, it's designed for broad applicability across various use cases.
+              The tool supports two usage modes. The Python Context Manager is ideal for instrumenting Python code directly. This mode allows developers to wrap specific code blocks to measure energy consumption with precision. 
+              The Command-Line Interface is designed to tag and monitor running application without modifying the code. This mode is currently under active development and not yet available.
+            homepage_url: https://github.com/FairCompute/energy-monitoring-tool
+            repo_url: https://github.com/FairCompute/energy-monitoring-tool
+            logo: emt.png
+            second_path:
+              - "Measurement Toolbox / Device Measurement"
+              - "Artificial Intelligence / AI Model Training"
+              - "Code / Code Level Energy Measurement"
+
+          - item:
+            name: PowerAPI
+            description: |
+              PowerAPI is a middleware toolkit for building software-defined power meters. Software-defined power meters are configurable software libraries that can estimate the power consumption of software in real-time. PowerAPI supports the acquisition of raw metrics from a wide diversity of sensors (eg., physical meters, processor interfaces, hardware counters, OS counters) and the delivery of power consumptions via different channels (including file system, network, web, graphical). As a middleware toolkit, PowerAPI offers the capability of assembling power meters «à la carte» to accommodate user requirements.
+            homepage_url: https://powerapi.org/
+            repo_url: https://github.com/powerapi-ng/powerapi
+            logo: PowerAPI.webp
+
+          - item:
+            name: EnergAt
+            description: |
+              EnergAt is a prototype implementation of the thread-level, NUMA-aware energy attribution model for multi-tenancy, as proposed in the paper "EnergAt: Fine-Grained Energy Attribution for Multi-Tenancy". It offers precise tracking of the energy consumption of your software application, even when it is running alongside other jobs from different users.
+            homepage_url: https://hongyu.nl/papers/2023_hotcarbon_energat.pdf
+            repo_url: https://github.com/HongyuHe/energat
+            logo: unofficial/EnergAt.svg
+            project: "archived"
+
+      - name: Automation
+        items:
+
+          - item:
+            name: ExperimentRunner
+            description: Experiment Runner is a generic framework to automatically execute measurement-based experiments on any platform. The experiments are user-defined, can be completely customized, and expressed in python code.
+            homepage_url: https://github.com/S2-group/experiment-runner
+            repo_url: https://github.com/S2-group/experiment-runner
+            logo: organization/s2.png
 
   - name: Website
     subcategories:
