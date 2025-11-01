@@ -141,7 +141,7 @@ categories:
             logo: kepler.svg
             project: "in-active-use-by-members"
             second_path:
-              - "Measurement Toolbox / Process Metrics Exporter"
+              - "Device & Process Level / Process Metrics Exporter"
 
           - item:
             name: KEIT
@@ -350,7 +350,7 @@ categories:
             project: "in-active-use-by-members"
             second_path:
               - "Artificial Intelligence / AI Model Training"
-              - "Measurement Toolbox / Device Measurement"
+              - "Device & Process Level / Device Measurement"
 
           - item:
             name: Tracarbon
@@ -361,7 +361,7 @@ categories:
             extra:
               documentation_url: https://fvaleye.github.io/tracarbon/documentation/
             second_path:
-              - "Measurement Toolbox / Device Measurement"
+              - "Device & Process Level / Device Measurement"
 
           - item:
             name: oaklean
@@ -378,7 +378,7 @@ categories:
             repo_url: https://github.com/Helmholtz-AI-Energy/perun
             logo: perun.svg
             second_path:
-              - "Measurement Toolbox / Device Measurement"
+              - "Device & Process Level / Device Measurement"
 
           - item:
             name: Coppers
@@ -680,7 +680,7 @@ categories:
             repo_url: https://github.com/Boavizta/e-footprint
             logo: unofficial/e-footprint-model.svg
 
-  - name: Measurement Toolbox
+  - name: Device & Process Level
     subcategories:
 
       - name: Device Measurement
@@ -792,7 +792,7 @@ categories:
             repo_url: https://github.com/FairCompute/energy-monitoring-tool
             logo: emt.png
             second_path:
-              - "Measurement Toolbox / Device Measurement"
+              - "Device & Process Level / Device Measurement"
               - "Artificial Intelligence / AI Model Training"
               - "Code / Code Level Energy Measurement"
 
@@ -812,16 +812,6 @@ categories:
             repo_url: https://github.com/HongyuHe/energat
             logo: unofficial/EnergAt.svg
             project: "archived"
-
-      - name: Automation
-        items:
-
-          - item:
-            name: ExperimentRunner
-            description: Experiment Runner is a generic framework to automatically execute measurement-based experiments on any platform. The experiments are user-defined, can be completely customized, and expressed in python code.
-            homepage_url: https://github.com/S2-group/experiment-runner
-            repo_url: https://github.com/S2-group/experiment-runner
-            logo: organization/s2.png
 
   - name: Website
     subcategories:
@@ -927,6 +917,21 @@ categories:
             logo: safari.svg
             extra:
               documentation_url: https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/Introduction/Introduction.html
+
+  - name: Measurement Utilities
+    subcategories:
+
+      - name: Automation
+        items:
+
+          - item:
+            name: ExperimentRunner
+            description: Experiment Runner is a generic framework to automatically execute measurement-based experiments on any platform. The experiments are user-defined, can be completely customized, and expressed in python code.
+            homepage_url: https://github.com/S2-group/experiment-runner
+            repo_url: https://github.com/S2-group/experiment-runner
+            logo: organization/s2.png
+
+
 
   - name: Optimization
     subcategories:
