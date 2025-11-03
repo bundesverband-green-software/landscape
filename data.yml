@@ -137,6 +137,8 @@ categories:
             logo: organization/dynatrace.svg
             extra:
               documentation_url: https://docs.dynatrace.com/docs/observe/business-analytics/apps/cost-and-carbon-optimization
+            second_path:
+              - "Infrastructure & Cluster Level / On-Premise & Bare-Metal"
 
           - item:
             name: OpenTelemetry Java Agent Extension
