@@ -205,6 +205,60 @@ categories:
             repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             logo: organization/retit.png
 
+      - name: Planning & Calculation
+        items:
+
+          - item:
+            name: Datavizta
+            description: The impact assessment tool provides an understanding of the environmental impacts of servers, cloud instances and user terminals on several criteria (at least Global Warming Potential, Primary Energy and Abiotic Resource Depletion Potential), over two life cycle phases (use, manufacturing) based on their technical characteristics and context of use.
+            homepage_url: https://datavizta.boavizta.org/
+            repo_url: https://github.com/Boavizta/datavizta
+            logo: datavizta.svg
+
+          - item:
+            name: EasyVirt Eclyo
+            description: ECLYO is an innovative comparison and simulation tool designed to provide you with detailed insights into the prices and carbon emissions of virtual machines offered by major cloud providers such as AWS, GCP, Azure. This tool allows you to evaluate and compare costs as well as the environmental impact of different options, helping you make informed decisions when migrating your on-premises infrastructure to the public cloud.
+            homepage_url: https://cloudpricing.easyvirt.com/simulator
+            logo: easyvirt_old.png
+
+          - item:
+            name: Cloud Project Carbon Emission Simulator by OxygenIT
+            description: It allows you to run cloud project simulations with an interface similar to Google Cloud Cost Simulator, but by providing the energy/carbon cost. An API key is required (can be created for free).
+            homepage_url: https://project.oxygenit.io/
+            logo: oxygenit.png
+            extra:
+              documentation_url: https://docs.oxygenit.io/#cloud-project-carbon-emission-simulator
+
+          - item:
+            name: Green Algorithms Calculator
+            description: A tool for estimating the carbon footprint of computational tasks using parameters like runtime, number of cores, platform, cloud environment, etc.
+            homepage_url: https://calculator.green-algorithms.org
+            repo_url: https://github.com/GreenAlgorithms/green-algorithms-tool
+            logo: unofficial/Green_Algorithms_Calculator.svg
+            extra:
+              documentation_url: https://www.green-algorithms.org/GAapp-overview/
+
+          - item:
+            name: Data Center Water Consumption Calculator
+            description: The calculator utilizes Uptime Institute's "Topology Tier Standard" to estimate the water consumption of data centers. The estimates can serve as the starting point for discussions on data center water use and consumption.
+            homepage_url: https://www.tapsrundry.com/data-center-water-consumption-calculator
+            logo: unofficial/data-center-water-consumption-calculator.svg
+            extra:
+              documentation_url: https://eatyourfrog.substack.com/p/there-isnt-enough-water-for-all-of
+
+          - item:
+            name: Hardware Replacement Calculator
+            description: This little script enables you to see when it is worth replacing an old machine with a new one.
+            homepage_url: https://hardware-checker.green-coding.io/
+            logo: unofficial/hardware-replacement-calculator.svg
+
+          - item:
+            name: Technology Carbon Estimator
+            description: The Technology Carbon Estimator is designed to give a high-level overview of the possible areas of carbon impact within your IT estate. The estimations are framed within the "Technology Carbon Standard", a model proposed by Scott Logic, designed to help you map out, measure and improve the environmental impacts of your technology.
+            homepage_url: https://www.techcarbonstandard.org/estimator
+            repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
+            logo: unofficial/technology-carbon-estimator.svg
+
   - name: Component
     subcategories:
 
@@ -467,11 +521,13 @@ categories:
             logo: mlco2impact.png
 
           - item:
-            name: Green Algorithms Calculator
-            description: A tool for estimating the carbon footprint of computational tasks, including AI Model Training and inference.
-            homepage_url: https://www.green-algorithms.org/
+            name: Green Algorithms Calculator (AI)
+            description: A tool for estimating the carbon footprint of AI model training and inference.
+            homepage_url: https://calculator.green-algorithms.org/ai
             repo_url: https://github.com/GreenAlgorithms/green-algorithms-tool
             logo: unofficial/Green_Algorithms_Calculator.svg
+            extra:
+              documentation_url: https://www.green-algorithms.org/GAapp-overview/
             second_path:
               - "Artificial Intelligence / AI Inference"
 
@@ -639,16 +695,6 @@ categories:
             second_path:
               - "Optimization / Cloud Infrastructure"
 
-      - name: Estimation
-        items:
-
-          - item:
-            name: Technology Carbon Estimator
-            description: The Technology Carbon Estimator is designed to give a high-level overview of the possible areas of carbon impact within your IT estate. The estimations are framed within the "Technology Carbon Standard", a model proposed by Scott Logic, designed to help you map out, measure and improve the environmental impacts of your technology.
-            homepage_url: https://www.techcarbonstandard.org/estimator
-            repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
-            logo: Technology-Carbon-Estimator.svg
-
       - name: Modeling
         items:
 
@@ -660,6 +706,8 @@ categories:
             logo: impact-framework.svg
             extra:
               documentation_url: https://if.greensoftware.foundation/intro
+            second_path:
+              - "Infrastructure & Cluster Level / Planning & Calculation"
 
           - item:
             name: Carbon Footprint Modeling Tool
