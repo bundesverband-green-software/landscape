@@ -53,9 +53,9 @@ body:
         - Server - Profiling
         - Desktop Application
         - Mobile App
+        - Device & Process Level
         - Code Level Energy Measurement
         - Static Code Analysis
-        - Shell Tools
         - CI Pipeline
         - Website Carbon Estimation
         - Website Energy Measurement
@@ -67,6 +67,7 @@ body:
         - Data Aggregation - Organizational Level
         - Data Aggregation - Estimation
         - Data Aggregation - Modeling
+        - Measurement Utilities
 
   - type: dropdown
     id: categories_optimization
@@ -78,6 +79,7 @@ body:
         - Kubernetes
         - Carbon Awareness
         - Artificial Intelligence
+        - CI/CD Pipeline
 
   - type: input
     id: categories_missing

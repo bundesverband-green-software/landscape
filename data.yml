@@ -141,6 +141,7 @@ categories:
             logo: kepler.svg
             project: "in-active-use-by-members"
             second_path:
+              - "Device & Process Level / Process Metrics Exporter"
               - "Server Application / Monitoring"
 
           - item:
@@ -199,6 +200,60 @@ categories:
             homepage_url: https://www.influxdata.com/time-series-platform/telegraf/
             repo_url: https://github.com/influxdata/telegraf
             logo: TelegrafTigerSmall.png
+
+      - name: Planning & Calculation
+        items:
+
+          - item:
+            name: Datavizta
+            description: The impact assessment tool provides an understanding of the environmental impacts of servers, cloud instances and user terminals on several criteria (at least Global Warming Potential, Primary Energy and Abiotic Resource Depletion Potential), over two life cycle phases (use, manufacturing) based on their technical characteristics and context of use.
+            homepage_url: https://datavizta.boavizta.org/
+            repo_url: https://github.com/Boavizta/datavizta
+            logo: datavizta.svg
+
+          - item:
+            name: EasyVirt Eclyo
+            description: ECLYO is an innovative comparison and simulation tool designed to provide you with detailed insights into the prices and carbon emissions of virtual machines offered by major cloud providers such as AWS, GCP, Azure. This tool allows you to evaluate and compare costs as well as the environmental impact of different options, helping you make informed decisions when migrating your on-premises infrastructure to the public cloud.
+            homepage_url: https://cloudpricing.easyvirt.com/simulator
+            logo: easyvirt_old.png
+
+          - item:
+            name: Cloud Project Carbon Emission Simulator by OxygenIT
+            description: It allows you to run cloud project simulations with an interface similar to Google Cloud Cost Simulator, but by providing the energy/carbon cost. An API key is required (can be created for free).
+            homepage_url: https://project.oxygenit.io/
+            logo: oxygenit.png
+            extra:
+              documentation_url: https://docs.oxygenit.io/#cloud-project-carbon-emission-simulator
+
+          - item:
+            name: Green Algorithms Calculator
+            description: A tool for estimating the carbon footprint of computational tasks using parameters like runtime, number of cores, platform, cloud environment, etc.
+            homepage_url: https://calculator.green-algorithms.org
+            repo_url: https://github.com/GreenAlgorithms/green-algorithms-tool
+            logo: unofficial/Green_Algorithms_Calculator.svg
+            extra:
+              documentation_url: https://www.green-algorithms.org/GAapp-overview/
+
+          - item:
+            name: Data Center Water Consumption Calculator
+            description: The calculator utilizes Uptime Institute's "Topology Tier Standard" to estimate the water consumption of data centers. The estimates can serve as the starting point for discussions on data center water use and consumption.
+            homepage_url: https://www.tapsrundry.com/data-center-water-consumption-calculator
+            logo: unofficial/data-center-water-consumption-calculator.svg
+            extra:
+              documentation_url: https://eatyourfrog.substack.com/p/there-isnt-enough-water-for-all-of
+
+          - item:
+            name: Hardware Replacement Calculator
+            description: This little script enables you to see when it is worth replacing an old machine with a new one.
+            homepage_url: https://hardware-checker.green-coding.io/
+            logo: unofficial/hardware-replacement-calculator.svg
+
+          - item:
+            name: Technology Carbon Estimator
+            description: The Technology Carbon Estimator is designed to give a high-level overview of the possible areas of carbon impact within your IT estate. The estimations are framed within the "Technology Carbon Standard", a model proposed by Scott Logic, designed to help you map out, measure and improve the environmental impacts of your technology.
+            homepage_url: https://www.techcarbonstandard.org/estimator
+            repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
+            logo: unofficial/technology-carbon-estimator.svg
 
   - name: Server Application
     subcategories:
@@ -345,7 +400,7 @@ categories:
             description: JoularJX is a Java-based agent for software power monitoring at the source code level.
             homepage_url: https://github.com/joular/joularjx
             repo_url: https://github.com/joular/joularjx
-            logo: joularjx.png
+            logo: joularjx.webp
             extra:
               documentation_url: https://joular.github.io/joularjx/
 
@@ -378,6 +433,7 @@ categories:
             project: "in-active-use-by-members"
             second_path:
               - "Artificial Intelligence / AI Model Training"
+              - "Device & Process Level / Device Measurement"
 
           - item:
             name: Tracarbon
@@ -387,6 +443,8 @@ categories:
             logo: tracarbon.png
             extra:
               documentation_url: https://fvaleye.github.io/tracarbon/documentation/
+            second_path:
+              - "Device & Process Level / Device Measurement"
 
           - item:
             name: oaklean
@@ -403,18 +461,7 @@ categories:
             repo_url: https://github.com/Helmholtz-AI-Energy/perun
             logo: perun.svg
             second_path:
-              - "Measurement Toolbox / Shell Tools"
-
-          - item:
-            name: Energy Monitoring Tool
-            description: |
-              EMT is a lightweight tool capable of tracking and reporting the energy consumption of software systems with process-level granularity.
-              While particularly valuable for compute-intensive workloads like machine learning, it's designed for broad applicability across various use cases.
-              The tool supports two usage modes. The Python Context Manager is ideal for instrumenting Python code directly. This mode allows developers to wrap specific code blocks to measure energy consumption with precision. 
-              The Command-Line Interface is designed to tag and monitor running application without modifying the code. This mode is currently under active development and not yet available.
-            homepage_url: https://github.com/FairCompute/energy-monitoring-tool
-            repo_url: https://github.com/FairCompute/energy-monitoring-tool
-            logo: emt.png
+              - "Device & Process Level / Device Measurement"
 
           - item:
             name: Coppers
@@ -503,11 +550,13 @@ categories:
             logo: mlco2impact.png
 
           - item:
-            name: Green Algorithms Calculator
-            description: A tool for estimating the carbon footprint of computational tasks, including AI Model Training and inference.
-            homepage_url: https://www.green-algorithms.org/
+            name: Green Algorithms Calculator (AI)
+            description: A tool for estimating the carbon footprint of AI model training and inference.
+            homepage_url: https://calculator.green-algorithms.org/ai
             repo_url: https://github.com/GreenAlgorithms/green-algorithms-tool
             logo: unofficial/Green_Algorithms_Calculator.svg
+            extra:
+              documentation_url: https://www.green-algorithms.org/GAapp-overview/
             second_path:
               - "Artificial Intelligence / AI Inference"
 
@@ -614,6 +663,16 @@ categories:
             homepage_url: https://resilio-solutions.com/en/services/database
             logo: resilio-database.svg
 
+          - item:
+            name: OxygenIT
+            description: OxygenIT provides GreenOps APIs for estimating energy and carbon emissions from IaaS, DBaaS, and PaaS cloud services, as well as on-premises bare metal and laptop/desktops hardware. The enterprise version can also provide optimization suggestions.
+            homepage_url: https://www.oxygenit.io/
+            logo: oxygenit.png
+            second_path:
+              -  "Optimization / Cloud Infrastructure"
+            extra:
+              documentation_url: https://docs.oxygenit.io/
+
   - name: Data Aggregation
     subcategories:
 
@@ -654,7 +713,7 @@ categories:
           - item:
             name: Aguaro
             description: Aguaro offers SaaS solutions integrated with ServiceNow to help companies automate the management of their environmental impact and reduce their carbon footprint. It streamlines hardware inventory retrieval and presents the data through intuitive dashboards.
-            homepage_url: https://www.aguaro.io/en/sustainableit
+            homepage_url: https://www.aguaro.io/solution/sustainable-it
             logo: aguaro.svg
 
           - item:
@@ -664,16 +723,6 @@ categories:
             logo: antarctica.svg
             second_path:
               - "Optimization / Cloud Infrastructure"
-
-      - name: Estimation
-        items:
-
-          - item:
-            name: Technology Carbon Estimator
-            description: The Technology Carbon Estimator is designed to give a high-level overview of the possible areas of carbon impact within your IT estate. The estimations are framed within the "Technology Carbon Standard", a model proposed by Scott Logic, designed to help you map out, measure and improve the environmental impacts of your technology.
-            homepage_url: https://www.techcarbonstandard.org/estimator
-            repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
-            logo: Technology-Carbon-Estimator.svg
 
       - name: Modeling
         items:
@@ -686,6 +735,8 @@ categories:
             logo: impact-framework.svg
             extra:
               documentation_url: https://if.greensoftware.foundation/intro
+            second_path:
+              - "Infrastructure & Cluster Level / Planning & Calculation"
 
           - item:
             name: Carbon Footprint Modeling Tool
@@ -706,25 +757,24 @@ categories:
             repo_url: https://github.com/Boavizta/e-footprint
             logo: unofficial/e-footprint-model.svg
 
-  - name: Measurement Toolbox
+  - name: Device & Process Level
     subcategories:
 
-      - name: Shell Tools
+      - name: Device Measurement
         items:
-          - item:
-            name: ExperimentRunner
-            description: Experiment Runner is a generic framework to automatically execute measurement-based experiments on any platform. The experiments are user-defined, can be completely customized, and expressed in python code.
-            homepage_url: https://github.com/S2-group/experiment-runner
-            repo_url: https://github.com/S2-group/experiment-runner
-            logo: organization/s2.png
-          
-          - item:
-            name: powerletrics
-            description: PowerLetrics is an open-source framework designed to monitor and analyze power consumption metrics at the process level on Linux. Similar to how top displays memory or CPU time, PowerLetrics provides the "Energy Footprint" of each process in real-time.
-            homepage_url: https://github.com/green-kernel/powerletrics
-            repo_url: https://github.com/green-kernel/powerletrics
-            logo: powerletrics.png
 
+          - item:
+            name: PowerJoular
+            description: |
+              PowerJoular is a command line software to monitor, in real time, the power consumption of software and hardware components.
+              It also supports monitoring specific processes and works on multiple platforms and hardware architectures.
+              The multi-architecture support is a distinctive feature of the tool, along with its processes & tasks monitoring capability and its low overhead.
+            homepage_url: https://www.noureddine.org/research/joular/powerjoular
+            repo_url: https://github.com/joular/powerjoular
+            logo: powerjoular.webp
+            extra:
+              documentation_url: https://joular.github.io/powerjoular/
+          
           - item:
             name: Powerstat
             description: Powerstat measures the power consumption of a machine using the battery stats or the Intel RAPL interface. The output is like vmstat but also shows power consumption statistics.
@@ -789,6 +839,55 @@ categories:
             homepage_url: https://github.com/sosy-lab/cpu-energy-meter
             repo_url: https://github.com/sosy-lab/cpu-energy-meter
             logo: unofficial/CPU_Energy_Meter.svg
+            project: "archived"
+
+      - name: Process Metrics Exporter
+        items:
+
+          - item:
+            name: procpower
+            description: procpower is a Linux kernel module that exposes per‑PID runtime, I/O and energy‑related statistics—including Intel RAPL readings—via /proc and debugfs. It is designed for lightweight, high‑frequency sampling so that userspace can build accurate power‑ or carbon‑aware schedulers, profilers and monitors.
+            homepage_url: https://github.com/green-kernel/procpower
+            repo_url: https://github.com/green-kernel/procpower
+            logo: unofficial/procpower.svg
+
+          - item:
+            name: powerletrics
+            description: PowerLetrics is an open-source framework designed to monitor and analyze power consumption metrics at the process level on Linux. Similar to how top displays memory or CPU time, PowerLetrics provides the "Energy Footprint" of each process in real-time.
+            homepage_url: https://github.com/green-kernel/powerletrics
+            repo_url: https://github.com/green-kernel/powerletrics
+            logo: unofficial/powerletrics.svg
+
+          - item:
+            name: Energy Monitoring Tool
+            description: |
+              EMT is a lightweight tool capable of tracking and reporting the energy consumption of software systems with process-level granularity.
+              While particularly valuable for compute-intensive workloads like machine learning, it's designed for broad applicability across various use cases.
+              The tool supports two usage modes. The Python Context Manager is ideal for instrumenting Python code directly. This mode allows developers to wrap specific code blocks to measure energy consumption with precision. 
+              The Command-Line Interface is designed to tag and monitor running application without modifying the code. This mode is currently under active development and not yet available.
+            homepage_url: https://github.com/FairCompute/energy-monitoring-tool
+            repo_url: https://github.com/FairCompute/energy-monitoring-tool
+            logo: emt.png
+            second_path:
+              - "Device & Process Level / Device Measurement"
+              - "Artificial Intelligence / AI Model Training"
+              - "Code / Code Level Energy Measurement"
+
+          - item:
+            name: PowerAPI
+            description: |
+              PowerAPI is a middleware toolkit for building software-defined power meters. Software-defined power meters are configurable software libraries that can estimate the power consumption of software in real-time. PowerAPI supports the acquisition of raw metrics from a wide diversity of sensors (eg., physical meters, processor interfaces, hardware counters, OS counters) and the delivery of power consumptions via different channels (including file system, network, web, graphical). As a middleware toolkit, PowerAPI offers the capability of assembling power meters «à la carte» to accommodate user requirements.
+            homepage_url: https://powerapi.org/
+            repo_url: https://github.com/powerapi-ng/powerapi
+            logo: PowerAPI.webp
+
+          - item:
+            name: EnergAt
+            description: |
+              EnergAt is a prototype implementation of the thread-level, NUMA-aware energy attribution model for multi-tenancy, as proposed in the paper "EnergAt: Fine-Grained Energy Attribution for Multi-Tenancy". It offers precise tracking of the energy consumption of your software application, even when it is running alongside other jobs from different users.
+            homepage_url: https://hongyu.nl/papers/2023_hotcarbon_energat.pdf
+            repo_url: https://github.com/HongyuHe/energat
+            logo: unofficial/EnergAt.svg
             project: "archived"
 
   - name: Website
@@ -896,6 +995,21 @@ categories:
             extra:
               documentation_url: https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/Web_Inspector_Tutorial/Introduction/Introduction.html
 
+  - name: Measurement Utilities
+    subcategories:
+
+      - name: Automation
+        items:
+
+          - item:
+            name: Experiment Runner
+            description: Experiment Runner is a generic framework to automatically execute measurement-based experiments on any platform. The experiments are user-defined, can be completely customized, and expressed in python code.
+            homepage_url: https://github.com/S2-group/experiment-runner
+            repo_url: https://github.com/S2-group/experiment-runner
+            logo: unofficial/Experiment-Runner.svg
+
+
+
   - name: Optimization
     subcategories:
 
@@ -921,14 +1035,6 @@ categories:
             description: A platform for analyzing and optimizing cloud infrastructure for cost and sustainability.
             homepage_url: https://txture.io/
             logo: txture.png
-            second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
-
-          - item:
-            name: OxygenIT
-            description: A solution for optimizing IT infrastructure to reduce energy consumption and carbon emissions.
-            homepage_url: https://www.oxygenit.io/
-            logo: oxygenit.png
             second_path:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
 
@@ -1061,6 +1167,24 @@ categories:
             repo_url: https://github.com/thegreenwebfoundation/grid-aware-websites
             logo: unofficial/Grid-aware_Websites.svg
             license: "Apache-2.0"
+
+          - item:
+            name: VSCarbon
+            description: A VS Code extension that shows live electricity grid's carbon intensity and encourages low-carbon coding. VSCarbon shows you when the electricity grid has lower carbon intensity, helping you time energy-intensive tasks.
+            homepage_url: https://github.com/liti-dev/vscarbon
+            repo_url: https://github.com/liti-dev/vscarbon
+            logo: unofficial/VSCarbon.svg
+
+      - name: CI/CD Pipeline
+        items:
+
+          - item:
+            name: CarbonRunner
+            description: CarbonRunner re-routes workloads to the lowest-CO₂ regions. For faster, 25% cheaper, and 90% greener workloads — built for speed, savings, and sustainability with multi-cloud resilience.
+            homepage_url: https://carbonrunner.io/
+            logo: carbon-runner.png
+            extra:
+              documentation_url: https://carbonrunner.io/docs
 
       - name: Artificial Intelligence
         items:

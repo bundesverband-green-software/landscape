@@ -57,7 +57,8 @@ groups:
       - Code
       - Databases
       - Data Aggregation
-      - Measurement Toolbox
+      - Device & Process Level
+      - Measurement Utilities
   - name: Optimization
     categories:
       - Optimization
