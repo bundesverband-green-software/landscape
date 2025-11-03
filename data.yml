@@ -1073,6 +1073,17 @@ categories:
             repo_url: https://github.com/liti-dev/vscarbon
             logo: unofficial/VSCarbon.svg
 
+      - name: CI/CD Pipeline
+        items:
+
+          - item:
+            name: CarbonRunner
+            description: CarbonRunner re-routes workloads to the lowest-CO₂ regions. For faster, 25% cheaper, and 90% greener workloads — built for speed, savings, and sustainability with multi-cloud resilience.
+            homepage_url: https://carbonrunner.io/
+            logo: carbon-runner.png
+            extra:
+              documentation_url: https://carbonrunner.io/docs
+
       - name: Artificial Intelligence
         items:
 
