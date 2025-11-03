@@ -1066,6 +1066,13 @@ categories:
             logo: unofficial/Grid-aware_Websites.svg
             license: "Apache-2.0"
 
+          - item:
+            name: VSCarbon
+            description: A VS Code extension that shows live electricity grid's carbon intensity and encourages low-carbon coding. VSCarbon shows you when the electricity grid has lower carbon intensity, helping you time energy-intensive tasks.
+            homepage_url: https://github.com/liti-dev/vscarbon
+            repo_url: https://github.com/liti-dev/vscarbon
+            logo: unofficial/VSCarbon.svg
+
       - name: CI/CD Pipeline
         items:
 
