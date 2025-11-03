@@ -925,11 +925,11 @@ categories:
         items:
 
           - item:
-            name: ExperimentRunner
+            name: Experiment Runner
             description: Experiment Runner is a generic framework to automatically execute measurement-based experiments on any platform. The experiments are user-defined, can be completely customized, and expressed in python code.
             homepage_url: https://github.com/S2-group/experiment-runner
             repo_url: https://github.com/S2-group/experiment-runner
-            logo: organization/s2.png
+            logo: unofficial/Experiment-Runner.svg
 
 
 
