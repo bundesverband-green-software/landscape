@@ -136,6 +136,9 @@ categories:
             logo: organization/dynatrace.svg
             extra:
               documentation_url: https://docs.dynatrace.com/docs/observe/business-observability/cost-and-carbon-optimization
+            second_path:
+              - "Infrastructure & Cluster Level / Kubernetes"
+              - "Infrastructure & Cluster Level / On-Premise & Bare-Metal"
 
       - name: Kubernetes
         items:
