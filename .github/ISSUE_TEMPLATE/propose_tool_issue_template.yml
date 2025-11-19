@@ -45,9 +45,9 @@ body:
       label: In which measurement categories should the tool be listed? (multiple ones can be selected)
       multiple: true
       options:
-        - Infrastructure Provider Level
+        - Public Cloud
         - Kubernetes
-        - Agent
+        - On-Premise & Bare-Metal
         - Containerized Application
         - Desktop Application
         - Mobile App
