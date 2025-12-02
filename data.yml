@@ -34,14 +34,6 @@ categories:
               documentation_url: https://learn.microsoft.com/en-us/power-bi/connect-data/service-connect-to-emissions-impact-dashboard
 
           - item:
-            name: Azure Cloud for Sustainability API
-            description: Microsoft Cloud for Sustainability provides APIs to access emissions data related to your Azure and Microsoft 365 usage.
-            homepage_url: https://learn.microsoft.com/en-us/industry/sustainability/api-overview
-            logo: azure.svg
-            extra:
-              documentation_url: https://learn.microsoft.com/en-us/industry/sustainability/api-reference
-
-          - item:
             name: Google Carbon Footprint
             description: The Carbon Footprint dashboard displays estimated greenhouse gas emissions associated with the usage of covered Google Cloud services for the selected billing account.
             homepage_url: https://cloud.google.com/carbon-footprint
