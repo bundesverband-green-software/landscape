@@ -26,12 +26,12 @@ categories:
               documentation_url: https://www.cloudcarbonfootprint.org/docs/
 
           - item:
-            name: Azure Emission Impact Dashboard
+            name: Azure Emissions Impact Dashboard
             description: Power BI App that provides emissions for azure cloud resource usage.
-            homepage_url: https://appsource.microsoft.com/en-us/product/power-bi/coi-sustainability.emissions_impact_dashboard
+            homepage_url: https://marketplace.microsoft.com/en-us/product/power-bi/coi-sustainability.emissions_impact_dashboard
             logo: azure-impact-dashboard.png
             extra:
-              documentation_url: https://appsource.microsoft.com/en-us/product/power-bi/coi-sustainability.emissions_impact_dashboard
+              documentation_url: https://learn.microsoft.com/en-us/power-bi/connect-data/service-connect-to-emissions-impact-dashboard
 
           - item:
             name: Azure Cloud for Sustainability API
@@ -52,10 +52,10 @@ categories:
           - item:
             name: AWS Customer Carbon Footprint Tool
             description: The AWS Customer Carbon Footprint Tool provides estimates of the carbon emissions associated with AWS products and services. Data is updated with a delay of three months.
-            homepage_url: https://cloud.google.com/carbon-footprint
+            homepage_url: https://aws.amazon.com/sustainability/tools/aws-customer-carbon-footprint-tool/
             logo: aws.svg
             extra:
-              documentation_url: https://cloud.google.com/carbon-footprint#documentation
+              documentation_url: https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/what-is-ccft.html
 
           - item:
             name: Li10 for AWS
