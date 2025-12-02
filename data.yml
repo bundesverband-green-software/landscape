@@ -30,6 +30,7 @@ categories:
             description: Tracks and analyzes the carbon emissions of Azure resources and subscriptions, with AI-driven recommendations to reduce emissions and costs.
             homepage_url: https://learn.microsoft.com/en-us/azure/carbon-optimization/overview
             logo: azure.svg
+            project: "in-active-use-by-members"
             extra:
               documentation_url: https://learn.microsoft.com/en-us/azure/carbon-optimization/view-emissions
 
@@ -38,6 +39,7 @@ categories:
             description: The Carbon Footprint dashboard displays estimated greenhouse gas emissions associated with the usage of covered Google Cloud services for the selected billing account.
             homepage_url: https://cloud.google.com/carbon-footprint
             logo: google-cloud.svg
+            project: "in-active-use-by-members"
             extra:
               documentation_url: https://cloud.google.com/carbon-footprint#documentation
 
@@ -46,6 +48,7 @@ categories:
             description: The AWS Sustainability Console provides estimates of the carbon emissions and water withdrawals associated with AWS products and services, with customizable reporting and programmatic API access.
             homepage_url: https://aws.amazon.com/sustainability/tools/console/
             logo: aws.svg
+            project: "in-active-use-by-members"
             extra:
               documentation_url: https://docs.aws.amazon.com/sustainability/latest/userguide/console-visualizations.html
 
@@ -226,6 +229,7 @@ categories:
             homepage_url: https://datavizta.boavizta.org/
             repo_url: https://github.com/Boavizta/datavizta
             logo: datavizta.svg
+            project: "in-active-use-by-members"
 
           - item:
             name: EasyVirt Eclyo
@@ -261,6 +265,7 @@ categories:
             description: This little script enables you to see when it is worth replacing an old machine with a new one.
             homepage_url: https://hardware-checker.green-coding.io/
             logo: unofficial/hardware-replacement-calculator.svg
+            project: "in-active-use-by-members"
 
           - item:
             name: Technology Carbon Estimator
@@ -391,6 +396,7 @@ categories:
             homepage_url: https://github.com/msg-systems/jpowermonitor
             repo_url: https://github.com/msg-systems/jpowermonitor
             logo: unofficial/jpowermonitor.svg
+            project: "in-active-use-by-members"
 
           - item:
             name: DotNet-Counters
@@ -411,7 +417,6 @@ categories:
             homepage_url: https://codecarbon.io/
             repo_url: https://github.com/mlco2/codecarbon
             logo: codecarbon.jpg
-            project: "in-active-use-by-members"
             second_path:
               - "Artificial Intelligence / AI Model Training"
               - "Device & Process Level / Device Measurement"
@@ -799,6 +804,7 @@ categories:
             homepage_url: https://github.com/ColinIanKing/powerstat
             repo_url: https://github.com/ColinIanKing/powerstat
             logo: powerstat.png
+            project: "in-active-use-by-members"
 
           - item:
             name: Perf
@@ -806,6 +812,7 @@ categories:
             homepage_url: https://perfwiki.github.io/
             repo_url: https://web.git.kernel.org/pub/scm/linux/kernel/git/perf/perf-tools-next.git/
             logo: unofficial/perf.svg
+            project: "in-active-use-by-members"
 
           - item:
             name: Turbostat
@@ -834,6 +841,7 @@ categories:
             homepage_url: https://github.com/fenrus75/powertop
             repo_url: https://github.com/fenrus75/powertop
             logo: unofficial/powertop.svg
+            project: "in-active-use-by-members"
 
           - item:
             name: Cloud Energy
@@ -932,13 +940,13 @@ categories:
             description: Website Carbon Calculator estimates the carbon emissions of a website by analyzing factors like data transfer size and energy source of the hosting provider. A badge is provided that can be added to the footer of websites.
             homepage_url: https://www.websitecarbon.com/
             logo: websitecarbon.jpg
+            project: "in-active-use-by-members"
 
           - item:
             name: Ecograder
             description: Ecograder analyzes websites for environmental impact by evaluating performance, design, development practices, and hosting, offering insights and recommendations to improve digital sustainability. A badge is provided that can be added to the footer of websites.
             homepage_url: https://ecograder.com/
             logo: ecograder.svg
-            project: "in-active-use-by-members"
             second_path:
               - "Website / Website Analysis"
 
@@ -970,6 +978,7 @@ categories:
             homepage_url: https://github.com/bluehands/Website-Carbon-Meter
             repo_url: https://github.com/bluehands/Website-Carbon-Meter
             logo: unofficial/website-carbon-meter.svg
+            project: "in-active-use-by-members"
 
       - name: Website Energy Measurement
         items:
@@ -1130,7 +1139,6 @@ categories:
             homepage_url: https://kube-green.dev/
             repo_url: https://github.com/kube-green/kube-green
             logo: kube-green.svg
-            project: "in-active-use-by-members"
 
           - item:
             name: DailyClean
