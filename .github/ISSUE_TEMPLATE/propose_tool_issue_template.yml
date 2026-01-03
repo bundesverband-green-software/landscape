@@ -109,13 +109,97 @@ body:
     id: comparison_to_others
     attributes:
       label: What does the tool do and what are the advantages compared to similar tools?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: metrics
+    attributes:
+      label: Which metrics are outputted by the tool?
+      multiple: true
+      options:
+        - Energy
+        - Embodied Carbon
+        - Carbon Intensity
+        - Water Use
+        - Electronic Waste 
+        - TOX
+        - ADB
+    validations:
+      required: true
+
+  - type: dropdown
+    id: grid_intensity_method
+    attributes:
+      label: Which grid intensity method does your tool use?
+      multiple: true
+      options:
+        - Market Based
+        - Location Based
+    validations:
+      required: true
+
+  - type: dropdown
+    id: emission_scopes
+    attributes:
+      label: Which emission scopes are covered by your tool?
+      multiple: true
+      options:
+        - Scope 1
+        - Scope 2
+        - Scope 3
+    validations:
+      required: true
+
+  - type: dropdown
+    id: direct_or_model
+    attributes:
+      label: Is the tool using direct measurement or model based measurement
+      multiple: true
+      options:
+        - Direct
+        - Model Based
+    validations:
+      required: true
 
   - type: textarea
-    id: methodology
+    id: direct_or_model
     attributes:
-      label: Where is the methodology of the tool described in detail? (Should be publicly accessible)
-  
+      label: If you use direct measurement: What hardware devices, software power meters and configuration do you use?
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        
+        Example: We are using RAPL to get the CPU energy with 100ms sampling rate
+        Example #2: We are using a Xilinx power meter which captures all three AC phases of the rack and then split by 10 to get the power per VM
+      
+
   - type: textarea
+    id: direct_or_model
+    attributes:
+      label: If you use a model: Please disclose which source data were used as input data (separate for every model)
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        
+        Example: We use an XGBoost Model to get from CPU Utilization to Energy consumption based on average data from the TEADS Open Dataset of AWS Energy Measurements
+        Example #2: We get embodied carbon values from the ADEME database
+
+  - type: dropdown
     id: integration
     attributes:
-      label: In which phases of the software lifecycle (Design, Development, Testing, Usage, Removal) can the tool be used, and how can it be integrated / set up?
+      label: In which phases of the software lifecycle can the tool be used?
+      multiple: true
+      options:
+        - Design
+        - Development
+        - Testing
+        - Usage / Production
+        - Removal
+    validations:
+      required: false
