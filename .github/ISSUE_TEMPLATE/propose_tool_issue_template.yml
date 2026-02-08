@@ -193,17 +193,3 @@ body:
 
         Example: We use an XGBoost Model to get from CPU Utilization to Energy consumption based on average data from the TEADS Open Dataset of AWS Energy Measurements
         Example #2: We get embodied carbon values from the ADEME database
-
-  - type: dropdown
-    id: integration
-    attributes:
-      label: "In which phases of the software lifecycle can the tool be used?"
-      multiple: true
-      options:
-        - Design
-        - Development
-        - Testing
-        - Usage / Production
-        - Removal
-    validations:
-      required: false
