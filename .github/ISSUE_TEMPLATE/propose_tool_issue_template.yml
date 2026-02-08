@@ -135,7 +135,7 @@ body:
   - type: dropdown
     id: grid_intensity_method
     attributes:
-      label: "Which grid intensity method does your tool use?"
+      label: "If carbon emissions are calculated: Which grid intensity method does the tool use?"
       multiple: true
       options:
         - Market Based
@@ -146,7 +146,7 @@ body:
   - type: dropdown
     id: emission_scopes
     attributes:
-      label: "Which emission scopes are covered by your tool?"
+      label: "If carbon emissions are calculated: Which emission scopes are covered by the tool?"
       multiple: true
       options:
         - Scope 1
@@ -158,7 +158,7 @@ body:
   - type: dropdown
     id: direct_or_model
     attributes:
-      label: "Is the tool using direct measurement or model based measurement?"
+      label: "If it is a measurement tool: Is the tool using direct measurement or model based measurement?"
       multiple: true
       options:
         - Direct
@@ -169,7 +169,7 @@ body:
   - type: textarea
     id: direct_measurement_method
     attributes:
-      label: "If you use direct measurement: What hardware devices, software power meters and configuration do you use?"
+      label: "If the tool uses a direct measurement approach: What hardware devices, software power meters and configuration are used?"
     validations:
       required: false
 
@@ -183,7 +183,7 @@ body:
   - type: textarea
     id: model_source_data
     attributes:
-      label: "If you use a model: Please disclose which source data were used as input data (separate for every model)"
+      label: "If the tool uses uses a model-based approach: Please disclose which source data were used as input data (separate for every model)"
     validations:
       required: false
 
