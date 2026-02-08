@@ -116,16 +116,19 @@ body:
   - type: dropdown
     id: metrics
     attributes:
-      label: "Which metrics are outputted by the tool?"
+      label: "If it is a measurement tool: Which metrics does the tool output? (multiple ones can be selected)"
       multiple: true
       options:
         - Energy
-        - Embodied Carbon
-        - Carbon Intensity
+        - Embodied Carbon Emissions
+        - Operational Carbon Emissions
+        - Grid Carbon Intensity
         - Water Use
-        - Electronic Waste 
-        - TOX
-        - ADB
+        - Electronic Waste
+        - Toxicity
+        - Abiotic Depletion Potential (ADP)
+        - Biodiversity Loss
+        - Others
     validations:
       required: true
 
