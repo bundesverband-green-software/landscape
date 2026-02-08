@@ -130,7 +130,7 @@ body:
         - Biodiversity Loss
         - Others
     validations:
-      required: true
+      required: false
 
   - type: dropdown
     id: grid_intensity_method
@@ -141,7 +141,7 @@ body:
         - Market Based
         - Location Based
     validations:
-      required: true
+      required: false
 
   - type: dropdown
     id: emission_scopes
@@ -153,7 +153,7 @@ body:
         - Scope 2
         - Scope 3
     validations:
-      required: true
+      required: false
 
   - type: dropdown
     id: direct_or_model
@@ -164,7 +164,7 @@ body:
         - Direct
         - Model Based
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: direct_measurement_method
