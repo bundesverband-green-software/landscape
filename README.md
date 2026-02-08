@@ -10,10 +10,15 @@ The CNCF tool [landscape2](https://github.com/cncf/landscape2/) is used to gener
 
 The landscape is open to all Green Software tools. We only require a minimal set of prerequisites:
 
-- The project must be related to Green Software.
-- The tool must be usable (the project must have at least beta status).
-- Information about how to use the tool is provided.
-- Information about the tool's methodology is provided.
+- **The project must be related to Green Software**
+- **The tool must be publicly available and functional** (minimum beta status)
+- **User documentation must be provided** (installation guide, usage instructions, or tutorial)
+- **Methodology documentation must explain how metrics are calculated**:
+    - For each output metric, describe the measurement or calculation approach
+    - Include data sources, key formulas, and underlying assumptions
+    - Complete mathematical formulas aren't required, but the basic methodology must be clear
+    - *Example:* \
+      Carbon emissions are calculated as the sum of operational and embodied emissions. The tool uses model-based measurement with CPU utilization as the primary input. Operational emissions combine CPU utilization measurements with energy intensity coefficients from [Cloud Carbon Footprint](https://www.cloudcarbonfootprint.org/docs/methodology#appendix-i-energy-coefficients) and location-based average grid intensity from regional carbon intensity data. Embodied emissions are derived from [BoaviztAPI](https://api.boavizta.org/docs), covering the manufacturing impact of CPU, RAM, and storage components allocated over their expected lifespan. Emission scopes covered: Scope 2 (operational) and Scope 3 (embodied hardware). Current limitations: network infrastructure and peripheral components are not yet included in the calculation.
 
 If you would like to propose a new tool for the landscape, please create an issue using the template [Tool Proposal](https://github.com/bundesverband-green-software/landscape/issues/new?template=propose_tool_issue_template.yml) and fill in the required information.
 
