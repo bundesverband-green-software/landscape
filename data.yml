@@ -611,6 +611,17 @@ categories:
             project: "in-active-use-by-members"
             extra:
               documentation_url: https://doc.api.boavizta.org/
+              tag:
+                - assessment-type--evaluation
+                - methodology--fully-disclosed
+                - measurement--model-based
+                - data-source--lca-database
+                - metric--energy
+                - metric--carbon
+                - metric--embodied-carbon
+                - metric--resource-depletion
+                - carbon-calculation--location-based
+                - self-hostable
 
           - item:
             name: Climatiq
@@ -619,6 +630,12 @@ categories:
             logo: climatiq.png
             extra:
               documentation_url: https://www.climatiq.io/docs
+              tag:
+                - assessment-type--evaluation
+                - methodology--undisclosed
+                - measurement--model-based
+                - metric--carbon
+                - carbon-calculation--location-based
 
           - item:
             name: ResilioDB
