@@ -42,7 +42,7 @@ body:
   - type: dropdown
     id: categories_measurement
     attributes:
-      label: In which measurement categories should the tool be listed? (multiple ones can be selected)
+      label: "In which measurement categories should the tool be listed? (multiple ones can be selected)"
       multiple: true
       options:
         - Infrastructure Provider Level
@@ -70,7 +70,7 @@ body:
   - type: dropdown
     id: categories_optimization
     attributes:
-      label: In which optimization categories should the tool be listed? (multiple ones can be selected)
+      label: "In which optimization categories should the tool be listed? (multiple ones can be selected)"
       multiple: true
       options:
         - Cloud Infrastructure
@@ -92,9 +92,10 @@ body:
         *Please also answer the following questions to help us decide whether the tool is appropriate for the landscape.*
 
   - type: dropdown
+    id: status
     attributes:
       label: Status
-      description: What status does the tool/project currently have?
+      description: "What status does the tool/project currently have?"
       multiple: false
       options:
         - Concept
@@ -108,14 +109,87 @@ body:
   - type: textarea
     id: comparison_to_others
     attributes:
-      label: What does the tool do and what are the advantages compared to similar tools?
+      label: "What does the tool do and what are the advantages compared to similar tools?"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: metrics
+    attributes:
+      label: "If it is a measurement tool: Which metrics does the tool output? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - Energy
+        - Embodied Carbon Emissions
+        - Operational Carbon Emissions
+        - Grid Carbon Intensity
+        - Water Use
+        - Electronic Waste
+        - Toxicity
+        - Abiotic Depletion Potential (ADP)
+        - Biodiversity Loss
+        - Others
+    validations:
+      required: false
+
+  - type: dropdown
+    id: grid_intensity_method
+    attributes:
+      label: "If carbon emissions are calculated: Which grid intensity method does the tool use?"
+      multiple: true
+      options:
+        - Market Based
+        - Location Based
+    validations:
+      required: false
+
+  - type: dropdown
+    id: emission_scopes
+    attributes:
+      label: "If carbon emissions are calculated: Which emission scopes are covered by the tool?"
+      multiple: true
+      options:
+        - Scope 1
+        - Scope 2
+        - Scope 3
+    validations:
+      required: false
+
+  - type: dropdown
+    id: direct_or_model
+    attributes:
+      label: "If it is a measurement tool: Is the tool using direct measurement or model based measurement?"
+      multiple: true
+      options:
+        - Direct
+        - Model Based
+    validations:
+      required: false
 
   - type: textarea
-    id: methodology
+    id: direct_measurement_method
     attributes:
-      label: Where is the methodology of the tool described in detail? (Should be publicly accessible)
-  
+      label: "If the tool uses a direct measurement approach: What hardware devices, software power meters and configuration are used?"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        
+        Example: We are using RAPL to get the CPU energy with 100ms sampling rate
+        Example #2: We are using a Xilinx power meter which captures all three AC phases of the rack and then split by 10 to get the power per VM
+
   - type: textarea
-    id: integration
+    id: model_source_data
     attributes:
-      label: In which phases of the software lifecycle (Design, Development, Testing, Usage, Removal) can the tool be used, and how can it be integrated / set up?
+      label: "If the tool uses uses a model-based approach: Please disclose which source data were used as input data (separate for every model)"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+
+        Example: We use an XGBoost Model to get from CPU Utilization to Energy consumption based on average data from the TEADS Open Dataset of AWS Energy Measurements
+        Example #2: We get embodied carbon values from the ADEME database
