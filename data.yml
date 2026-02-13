@@ -11,7 +11,7 @@ categories:
   - name: Infrastructure & Cluster Level
     subcategories:
 
-      - name: Infrastructure Provider Level
+      - name: Public Cloud
         items:
 
           - item:
@@ -122,6 +122,23 @@ categories:
             extra:
               documentation_url: https://github.com/DigitalPebble/spruce/wiki/Methodology
 
+          - item:
+            name: Dynatrace Carbon Impact
+            description: A proprietary solution that provides insights into the carbon footprint of cloud applications and infrastructure, helping organizations reduce their environmental impact.
+            homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
+            logo: organization/dynatrace.svg
+            extra:
+              documentation_url: https://docs.dynatrace.com/docs/observe/business-analytics/apps/cost-and-carbon-optimization
+            second_path:
+              - "Infrastructure & Cluster Level / On-Premise & Bare-Metal"
+
+          - item:
+            name: OpenTelemetry Java Agent Extension
+            description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions.
+            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            logo: organization/retit.png
+
       - name: Kubernetes
         items:
 
@@ -150,8 +167,22 @@ categories:
             logo: aether.svg
             project: "archived"
 
-      - name: Agent
+      - name: On-Premise & Bare-Metal
         items:
+
+          - item:
+            name: CO2 Scope® (by EasyVirt)
+            description: |             
+              CO₂ Scope® is a simple and effective sovereign solution that enables you to measure, analyse, and reduce the environmental footprint of your IT infrastructure. With precise realtime data analysis, it delivers detailed insights into the environmental impact of your digital assets. Non-intrusive and easy to integrate, CO₂ Scope® empowers you to lead the decarbonisation of your IT systems, helping you reduce your ecological footprint while optimising performance.
+              CO₂ Scope® is not a SaaS solution but is on premise. This a virtual appliance (VM) installed by the clients. Agentless, CO₂ Scope® is non intrusive.
+            homepage_url: https://www.easyvirt.com/en/our-it-solutions/co2-scope-greenops-solution/
+            logo: EasyVirt.svg
+            second_path:
+              - "Infrastructure & Cluster Level / Kubernetes"
+              - "Optimization / Cloud Infrastructure"
+              - "Optimization / Kubernetes"
+            extra:
+              documentation_url: https://easyvirt.gitlab.io/dcscope/user-guide/
 
           - item:
             name: Scaphandre
@@ -174,28 +205,6 @@ categories:
               - "Optimization / Cloud Application Analysis"
             extra:
               documentation_url: https://ceems-dev.github.io/ceems/docs/
-
-          - item:
-            name: Dynatrace Carbon Impact
-            description: A proprietary solution that provides insights into the carbon footprint of cloud applications and infrastructure, helping organizations reduce their environmental impact.
-            homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
-            logo: organization/dynatrace.svg
-            extra:
-              documentation_url: https://docs.dynatrace.com/docs/observe/business-analytics/apps/cost-and-carbon-optimization
-
-          - item:
-            name: InfluxData Telegraf
-            description: A plugin-driven server agent for collecting and reporting metrics, including energy consumption and carbon emissions.
-            homepage_url: https://www.influxdata.com/time-series-platform/telegraf/
-            repo_url: https://github.com/influxdata/telegraf
-            logo: TelegrafTigerSmall.png
-
-          - item:
-            name: OpenTelemetry Java Agent Extension
-            description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions.
-            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            logo: organization/retit.png
 
       - name: Planning & Calculation
         items:
@@ -990,7 +999,7 @@ categories:
             homepage_url: https://greenpixie.com/
             logo: greenpixie.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
           - item:
             name: txture
@@ -998,7 +1007,7 @@ categories:
             homepage_url: https://txture.io/
             logo: txture.png
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
           - item:
             name: Cycloid
@@ -1013,7 +1022,7 @@ categories:
             repo_url: https://github.com/eco-infra/ecoinfra
             logo: ecoinfra.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
       - name: Cloud Application Analysis
         items:
