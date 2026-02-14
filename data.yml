@@ -122,6 +122,20 @@ categories:
             extra:
               documentation_url: https://github.com/DigitalPebble/spruce/wiki/Methodology
 
+          - item:
+            name: CO2 Scope® (by EasyVirt)
+            description: |             
+              CO₂ Scope® is a simple and effective sovereign solution that enables you to measure, analyse, and reduce the environmental footprint of your IT infrastructure. With precise realtime data analysis, it delivers detailed insights into the environmental impact of your digital assets. Non-intrusive and easy to integrate, CO₂ Scope® empowers you to lead the decarbonisation of your IT systems, helping you reduce your ecological footprint while optimising performance.
+              CO₂ Scope® is not a SaaS solution but is on premise. This a virtual appliance (VM) installed by the clients. Agentless, CO₂ Scope® is non intrusive.
+            homepage_url: https://www.easyvirt.com/en/our-it-solutions/co2-scope-greenops-solution/
+            logo: EasyVirt.svg
+            second_path:
+              - "Infrastructure & Cluster Level / Kubernetes"
+              - "Optimization / Cloud Infrastructure"
+              - "Optimization / Kubernetes"
+            extra:
+              documentation_url: https://easyvirt.gitlab.io/dcscope/user-guide/
+
       - name: Kubernetes
         items:
 
