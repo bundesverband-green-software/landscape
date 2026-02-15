@@ -134,6 +134,7 @@ categories:
             project: "in-active-use-by-members"
             second_path:
               - "Device & Process Level / Process Metrics Exporter"
+              - "Server Application / Monitoring"
 
           - item:
             name: KEIT
@@ -171,7 +172,7 @@ categories:
             logo: ceems.svg
             second_path:
               - "Infrastructure & Cluster Level / Kubernetes"
-              - "Optimization / Cloud Application Analysis"
+              - "Server Application / Monitoring"
             extra:
               documentation_url: https://ceems-dev.github.io/ceems/docs/
 
@@ -180,6 +181,8 @@ categories:
             description: A proprietary solution that provides insights into the carbon footprint of cloud applications and infrastructure, helping organizations reduce their environmental impact.
             homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
             logo: organization/dynatrace.svg
+            second_path:
+              - "Server Application / Monitoring"
             extra:
               documentation_url: https://docs.dynatrace.com/docs/observe/business-analytics/apps/cost-and-carbon-optimization
 
@@ -189,13 +192,6 @@ categories:
             homepage_url: https://www.influxdata.com/time-series-platform/telegraf/
             repo_url: https://github.com/influxdata/telegraf
             logo: TelegrafTigerSmall.png
-
-          - item:
-            name: OpenTelemetry Java Agent Extension
-            description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions.
-            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            logo: organization/retit.png
 
       - name: Planning & Calculation
         items:
@@ -251,10 +247,10 @@ categories:
             repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
             logo: unofficial/technology-carbon-estimator.svg
 
-  - name: Component
+  - name: Server Application
     subcategories:
 
-      - name: Containerized Application
+      - name: Use Case Measurement
         items:
 
           - item:
@@ -290,7 +286,18 @@ categories:
             repo_url: https://github.com/Root-Branch/cardamon-core
             logo: cardamon.svg
             second_path:
+              - "Server Application / Monitoring"
               - "Website / Website Carbon Estimation"
+
+      - name: Monitoring
+        items:
+
+          - item:
+            name: OpenTelemetry Java Agent Extension
+            description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions using coefficient data from Cloud Carbon Footprint.
+            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            logo: organization/retit.png
 
           - item:
             name: LIMo
@@ -299,6 +306,28 @@ categories:
             repo_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/
             logo: unofficial/LIMo.svg
             project: "archived"
+
+      - name: Profiling
+        items:
+
+          - item:
+            name: Elastic Universal Profiling
+            description: A profiling solution that helps identify energy-intensive code paths and optimize application performance and energy efficiency.
+            homepage_url: https://www.elastic.co/observability/universal-profiling
+            logo: elastic.svg
+            extra:
+              documentation_url: https://www.elastic.co/guide/en/observability/current/universal-profiling.html
+
+          - item:
+            name: OpenTelemetry eBPF Profiler
+            description: A whole-system, cross-language profiler for Linux via eBPF.
+            homepage_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
+            logo: opentelemetry.svg
+            extra:
+              documentation_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
+
+  - name: Desktop & Mobile
+    subcategories:
 
       - name: Desktop Application
         items:
@@ -1018,25 +1047,6 @@ categories:
             logo: ecoinfra.svg
             second_path:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
-
-      - name: Cloud Application Analysis
-        items:
-
-          - item:
-            name: Elastic Universal Profiling
-            description: A profiling solution that helps identify energy-intensive code paths and optimize application performance and energy efficiency.
-            homepage_url: https://www.elastic.co/observability/universal-profiling
-            logo: elastic.svg
-            extra:
-              documentation_url: https://www.elastic.co/guide/en/observability/current/universal-profiling.html
-
-          - item:
-            name: OpenTelemetry eBPF Profiler
-            description: A whole-system, cross-language profiler for Linux via eBPF.
-            homepage_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
-            logo: opentelemetry.svg
-            extra:
-              documentation_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
 
       - name: Kubernetes
         items:
