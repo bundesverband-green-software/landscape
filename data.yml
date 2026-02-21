@@ -176,12 +176,13 @@ categories:
               documentation_url: https://ceems-dev.github.io/ceems/docs/
 
           - item:
-            name: Dynatrace Carbon Impact
-            description: A proprietary solution that provides insights into the carbon footprint of cloud applications and infrastructure, helping organizations reduce their environmental impact.
+            name: Dynatrace Cost & Carbon Optimization
+            description: | 
+              Cost & Carbon Optimization is a proprietary app for the Dynatrace ecosystem that can report carbon emissions and public cloud costs for all hosts monitored by OneAgent, and provides carbon emissions and energy consumption metrics for Kubernetes infrastructure monitored by Dynatrace.
             homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
             logo: organization/dynatrace.svg
             extra:
-              documentation_url: https://docs.dynatrace.com/docs/observe/business-analytics/apps/cost-and-carbon-optimization
+              documentation_url: https://docs.dynatrace.com/docs/observe/business-observability/cost-and-carbon-optimization
 
           - item:
             name: InfluxData Telegraf
