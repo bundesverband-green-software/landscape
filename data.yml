@@ -628,6 +628,12 @@ categories:
             logo: resilio-database.svg
 
           - item:
+            name: Base Empreinte
+            description: This open database includes LCA environnemental impacts of many digital equipments and services. It is managed by ADEME a French governemental organisation.
+            homepage_url: https://base-empreinte.ademe.fr
+            logo: base-empreinte.svg
+
+          - item:
             name: OxygenIT
             description: OxygenIT provides GreenOps APIs for estimating energy and carbon emissions from IaaS, DBaaS, and PaaS cloud services, as well as on-premises bare metal and laptop/desktops hardware. The enterprise version can also provide optimization suggestions.
             homepage_url: https://www.oxygenit.io/
