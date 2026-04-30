@@ -136,6 +136,19 @@ categories:
               - "Device & Process Level / Process Metrics Exporter"
 
           - item:
+            name: Carbon Measurement Engine (Carmen)
+            description: |
+              Carmen is an open-source tool to measure the carbon footprint of cloud-based software at two levels: infrastructure level (VMs, storage, and other cloud services) and application level (individual applications and workloads running in your K8s cluster). It is built on top of the Impact Framework and uses either FinOps / VM usage CSVs or Prometheus container metrics as the data source.
+              Carmen is managed by the Software Standards Working Group in the Green Software Foundation. 
+            homepage_url: https://greensoftware.foundation/tools/carmen/
+            repo_url: https://github.com/Green-Software-Foundation/if-carmen
+            logo: carmen.svg
+            extra:
+              documentation_url: https://github.com/Green-Software-Foundation/if-carmen/blob/dev/docs/methodology.md
+            second_path:
+              - "Infrastructure & Cluster Level / Infrastructure Provider Level"
+
+          - item:
             name: KEIT
             description: KEIT (Kubernetes Emissions Insights Tool) supplements the energy recording with Kepler with current grid carbon intensity values and embodied carbon emissions.
             homepage_url: https://github.com/aknostic/keit/
