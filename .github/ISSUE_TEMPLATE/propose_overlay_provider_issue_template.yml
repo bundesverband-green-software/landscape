@@ -1,0 +1,315 @@
+name: AI Service Provider Proposal
+description: Use this template to propose an AI service provider that runs on top of third-party infrastructure (AI inference, model serving, GPU reselling, routing services, etc.) without operating its own data centers.
+title: "[AI Service Provider Proposal]: "
+labels: ["ai service provider proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing an AI service provider!
+
+        This template is for providers that do **not** operate their own data centers —
+        e.g. AI inference APIs, model serving platforms, GPU cloud resellers, AI routers,
+        or managed AI services built on hyperscaler or colocation infrastructure.
+
+        If the provider **operates its own data centers or owns physical hardware in
+        a colocation site**, please use the *Infrastructure Provider Proposal* template
+        instead, or in addition to this one.
+
+        We are looking for **authentic and verifiable information**, not marketing language.
+        "Not measured" or "we don't know" are acceptable answers — unsubstantiated claims
+        are not.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Name of the provider (legal entity, if the brand name differs)
+    validations:
+      required: true
+
+  - type: input
+    id: headquarters
+    attributes:
+      label: Headquarters
+      description: City and country where the provider's legal entity is based. E.g. "Helsinki, FI".
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Short description of what the provider offers
+    validations:
+      required: true
+
+  - type: textarea
+    id: urls
+    attributes:
+      label: URLs
+      description: URLs to the home page, sustainability/ESG page, status page, docs, public reports, etc.
+    validations:
+      required: true
+
+  - type: input
+    id: logo
+    attributes:
+      label: Logo
+      description: Path to logo (optional)
+
+  - type: dropdown
+    id: categories_service
+    attributes:
+      label: "Which services does the provider offer? (multiple can be selected)"
+      multiple: true
+      options:
+        - AI Inference API / Model Serving
+        - AI Router / Multi-provider Gateway
+        - Fine-tuning / training (managed)
+        - GPU / Accelerator Compute (resold)
+        - Other
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Operating model — whose infrastructure do you run on?
+
+        *We want to understand what is yours and what you are reselling or routing,
+        because the "green" claim may belong to the underlying provider, not to you.*
+
+  - type: dropdown
+    id: operating_model
+    attributes:
+      label: "What is your relationship to the physical infrastructure? (multiple can be selected)"
+      multiple: true
+      options:
+        - We resell / manage capacity of a hyperscaler (AWS, Azure, GCP, OCI, ...)
+        - We resell capacity of a regional or specialised IaaS provider
+        - We route requests across multiple underlying providers
+        - We are a pure software layer on top of another provider's API
+        - We own some hardware in third-party colocation (please also fill out the infrastructure provider template for that part)
+        - We operate our own site (please also fill out the infrastructure provider template)
+    validations:
+      required: true
+
+  - type: textarea
+    id: underlying_providers
+    attributes:
+      label: "Which underlying provider(s) do you run on, and in which regions?"
+      description: |
+        One line per provider. E.g. "AWS eu-central-1 (Frankfurt), GCP europe-west4 (Netherlands)".
+        If you route between providers, note which workloads land where and what
+        routing logic you use (e.g. carbon-aware, price-optimised, latency-optimised).
+
+        Example: "Verda (Finland, FI) for open-weight models; OVHcloud (Roubaix, FR)
+        for hosted models; routing is 60% carbon-aware, 20% price, 20% speed."
+        Example #2: "AWS eu-central-1 only; no routing, fixed region."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Data residency and privacy
+
+  - type: textarea
+    id: data_residency
+    attributes:
+      label: "Where does customer data go, and what privacy guarantees do you make?"
+      description: |
+        Which regions process and store customer data, whether data leaves the EU/EEA,
+        and what data residency or sovereignty guarantees you provide. If you claim
+        GDPR or AI Act readiness, state specifically what that means in practice
+        (e.g. EU-only processing, no data retention, no training on customer data).
+
+        Example: "All inference runs in EU data centers only (FI, FR); no customer
+        data is stored after the response is returned; GDPR-compliant DPA available;
+        not an AI Act high-risk system."
+        Example #2: "Requests may route to US-based providers; data residency not guaranteed."
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Customer transparency
+
+        *This is the part that matters most: can a customer find out what their own
+        workload — or a single inference call — actually consumed?*
+
+  - type: dropdown
+    id: customer_data
+    attributes:
+      label: "What energy and emissions data do you expose to customers? (multiple can be selected)"
+      multiple: true
+      options:
+        - Energy consumption (kWh) per customer
+        - Energy consumption per request / inference call / job
+        - Carbon emissions per customer
+        - Carbon emissions per request / inference call / job
+        - Water consumption per request
+        - Grid carbon intensity of the underlying site / region
+        - Which underlying provider served the request
+        - Which region / grid served the request
+        - Available via API (in the response body)
+        - Available via a separate API / dashboard
+        - Available as a periodic report only
+        - Project-level / tenant-level reporting
+        - Nothing is exposed
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data_granularity
+    attributes:
+      label: "At what time granularity is that data available?"
+      multiple: false
+      options:
+        - Per request / per call
+        - Real time
+        - Hourly
+        - Daily
+        - Monthly
+        - Annually
+        - On request only
+        - Not available
+    validations:
+      required: false
+
+  - type: textarea
+    id: measurement_method
+    attributes:
+      label: "How do you measure or model energy and emissions, and how do you allocate to customers?"
+      description: |
+        Do you use direct measurements from the underlying provider, or a model? If a
+        model is used, disclose its source data and assumptions (e.g. fixed PUE,
+        TDP-based estimates, vendor datasheets, third-party grid intensity data). Describe
+        the allocation key used to get from a site-level value to a per-customer or
+        per-request value. State what you do NOT count (e.g. training, embodied, network).
+
+        Example: Per-request energy is estimated from GPU utilisation reported by the
+        underlying provider's API, multiplied by the site's published annual PUE and
+        the regional grid carbon intensity (source: ElectricityMaps, 2025).
+        Training, embodied carbon, and network transit are not included.
+        Example #2: We pass through the underlying provider's per-instance kWh data
+        without modification; no additional model is applied.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Claims
+
+        *We check public claims against the information above. Please help us do that
+        accurately.*
+
+  - type: textarea
+    id: claims_basis
+    attributes:
+      label: "Which environmental claims do you make publicly, and what exactly is the basis for each?"
+      description: |
+        For every claim such as "climate neutral", "CO2-free", "100% green", "net zero",
+        "renewable-powered", "energy-efficient": state what it covers (which services,
+        which underlying providers, which scopes), what instrument backs it, and what it
+        excludes. If the claim relies on the underlying provider's green energy or carbon
+        data, say so explicitly — the green claim may not be yours to make.
+
+        If you make hardware-specific claims (e.g. "energy-efficient Dataflow architecture",
+        "SambaNova hardware"), state what efficiency data backs that claim.
+
+        If offsets are used: state registry, project type, vintage, and volume (t CO2e).
+
+        Example: "Carbon-neutral inference" covers market-based Scope 2 for API calls
+        routed to AWS eu-central-1 only; Scope 3 and training workloads are excluded.
+        Based on AWS's published renewable energy claims for that region, not on our own
+        measurement.
+        Example #2: We make no neutrality claim; we publish estimated per-request
+        emissions and a reduction pathway instead.
+        Example #3: "Renewable-powered" — all underlying providers report >90% renewable
+        grid mix; we do not purchase offsets or GOs ourselves.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Efficiency and customer choice
+
+  - type: dropdown
+    id: efficiency_options
+    attributes:
+      label: "Which options do customers have to reduce their own footprint? (multiple can be selected)"
+      multiple: true
+      options:
+        - Carbon-aware routing across regions / underlying providers
+        - Energy-based pricing (customers pay per unit of energy, not per token)
+        - Model optimisation / quantisation / distillation offered to customers
+        - Batching / scheduling to improve utilisation
+        - Spot / interruptible / time-flexible workloads
+        - Region recommendations based on carbon intensity
+        - Right-sizing recommendations based on measured utilisation
+        - Automatic scale-to-zero
+        - Stranded energy utilisation (routing to otherwise-wasted energy)
+        - None of the above
+    validations:
+      required: false
+
+  - type: textarea
+    id: hardware_lifecycle
+    attributes:
+      label: "If you own or lease any hardware: what is its service life and what happens after decommissioning?"
+      description: Only answer this if you indicated above that you own or lease hardware. Average age at decommissioning, refurbishment / resale / recycling path, and whether you track embodied carbon per device. Leave blank if not applicable.
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Finally
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: "What status does the offering currently have?"
+      multiple: false
+      options:
+        - Announced / in planning
+        - In beta / limited availability
+        - Generally available
+        - Winding down / end of life
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: Contact for follow-up questions (name, role, email)
+      description: This will be visible publicly. Alternatively, provide a handle we can reach you at.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: "What is your relationship to the provider?"
+      multiple: false
+      options:
+        - I work for the provider
+        - I am a customer
+        - I have no relationship — I am proposing them as a third party
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: "I confirm this information is accurate to the best of my knowledge and I understand it will be reviewed publicly."
+          required: true
