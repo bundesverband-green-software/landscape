@@ -1,5 +1,5 @@
 name: AI Service Provider Proposal
-description: Use this template to propose an AI service provider that runs on top of third-party infrastructure (AI inference, model serving, GPU reselling, routing services, etc.) without operating its own data centers.
+description: Use this template to propose an AI service provider, inference, model serving, GPU compute, routing, or managed AI services, whether it runs on third-party infrastructure or its own.
 title: "[AI Service Provider Proposal]: "
 labels: ["ai service provider proposal"]
 body:
@@ -8,13 +8,15 @@ body:
       value: |
         Thanks for proposing an AI service provider!
 
-        This template is for providers that do **not** operate their own data centers —
-        e.g. AI inference APIs, model serving platforms, GPU cloud resellers, AI routers,
-        or managed AI services built on hyperscaler or colocation infrastructure.
+        This template is for providers of AI inference, model serving, GPU cloud,
+        AI routing, or managed AI services — whether they run on third-party
+        infrastructure or operate their own.
 
-        If the provider **operates its own data centers or owns physical hardware in
-        a colocation site**, please use the *Infrastructure Provider Proposal* template
-        instead, or in addition to this one.
+        If the provider **operates its own data centers or owns physical hardware**,
+        please also fill out the *Infrastructure Provider Proposal* template so that
+        facility-level data (PUE, cooling, water, certifications) is captured. This
+        template focuses on the AI service layer: what customers see, how green
+        claims are backed, and what efficiency options are available.
 
         We are looking for **authentic and verifiable information**, not marketing language.
         "Not measured" or "we don't know" are acceptable answers — unsubstantiated claims
@@ -67,7 +69,7 @@ body:
         - AI Inference API / Model Serving
         - AI Router / Multi-provider Gateway
         - Fine-tuning / training (managed)
-        - GPU / Accelerator Compute (resold)
+        - GPU / Accelerator Compute
         - Other
     validations:
       required: true
@@ -87,27 +89,30 @@ body:
       label: "What is your relationship to the physical infrastructure? (multiple can be selected)"
       multiple: true
       options:
+        - We operate our own data center(s) — please also fill out the infrastructure provider template
+        - We own some hardware in third-party colocation — please also fill out the infrastructure provider template
         - We resell / manage capacity of a hyperscaler (AWS, Azure, GCP, OCI, ...)
         - We resell capacity of a regional or specialised IaaS provider
         - We route requests across multiple underlying providers
         - We are a pure software layer on top of another provider's API
-        - We own some hardware in third-party colocation (please also fill out the infrastructure provider template for that part)
-        - We operate our own site (please also fill out the infrastructure provider template)
     validations:
       required: true
 
   - type: textarea
-    id: underlying_providers
+    id: compute_locations
     attributes:
-      label: "Which underlying provider(s) do you run on, and in which regions?"
+      label: "Where does your compute run? List every site or provider, with region."
       description: |
-        One line per provider. E.g. "AWS eu-central-1 (Frankfurt), GCP europe-west4 (Netherlands)".
-        If you route between providers, note which workloads land where and what
-        routing logic you use (e.g. carbon-aware, price-optimised, latency-optimised).
+        One line per site or provider. If you operate your own sites, give city, country
+        and IT connected load. If you use third-party providers, name them and their
+        regions. If you route between providers, note which workloads land where and
+        what routing logic you use (e.g. carbon-aware, price-optimised, latency-optimised).
 
-        Example: "Verda (Finland, FI) for open-weight models; OVHcloud (Roubaix, FR)
+        Example: "Own site: Paris, FR, 3 MW IT connected load. Also resells AWS eu-central-1
+        for burst capacity; routing is 70% own site, 30% AWS, carbon-aware."
+        Example #2: "Verda (Finland, FI) for open-weight models; OVHcloud (Roubaix, FR)
         for hosted models; routing is 60% carbon-aware, 20% price, 20% speed."
-        Example #2: "AWS eu-central-1 only; no routing, fixed region."
+        Example #3: "AWS eu-central-1 only; no routing, fixed region."
     validations:
       required: true
 
@@ -139,7 +144,7 @@ body:
         ## Customer transparency
 
         *This is the part that matters most: can a customer find out what their own
-        workload — or a single inference call — actually consumed?*
+        workload or a single inference call actually consumed?*
 
   - type: dropdown
     id: customer_data
@@ -185,11 +190,12 @@ body:
     attributes:
       label: "How do you measure or model energy and emissions, and how do you allocate to customers?"
       description: |
-        Do you use direct measurements from the underlying provider, or a model? If a
-        model is used, disclose its source data and assumptions (e.g. fixed PUE,
-        TDP-based estimates, vendor datasheets, third-party grid intensity data). Describe
-        the allocation key used to get from a site-level value to a per-customer or
-        per-request value. State what you do NOT count (e.g. training, embodied, network).
+        Do you use direct measurements from the underlying provider or your own
+        infrastructure, or a model? If a model is used, disclose its source data and
+        assumptions (e.g. fixed PUE, TDP-based estimates, vendor datasheets, third-party
+        grid intensity data). Describe the allocation key used to get from a site-level
+        value to a per-customer or per-request value. State what you do NOT count
+        (e.g. training, embodied, network).
 
         Example: Per-request energy is estimated from GPU utilisation reported by the
         underlying provider's API, multiplied by the site's published annual PUE and
@@ -197,8 +203,35 @@ body:
         Training, embodied carbon, and network transit are not included.
         Example #2: We pass through the underlying provider's per-instance kWh data
         without modification; no additional model is applied.
+        Example #3: Per-request energy is measured directly at the server PDU (own site,
+        1-minute resolution), allocated by GPU-seconds per request.
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Infrastructure summary (only if you operate your own sites)
+
+        *If you operate your own data centers or own hardware in colocation, please
+        also fill out the Infrastructure Provider Proposal template for full facility
+        data. Here we ask for a brief summary so the AI service entry is self-contained.*
+
+  - type: textarea
+    id: own_infra_summary
+    attributes:
+      label: "If you operate your own sites: what is your annualised PUE per site and how is your electricity sourced?"
+      description: |
+        One line per site. For PUE: state the value, reporting year, and measurement
+        approach (e.g. DIN EN 50600-4-2 category). For electricity: state which
+        instruments you count towards renewable energy (on-site generation, PPA,
+        bundled green tariff, unbundled GOs/RECs, standard grid mix).
+
+        Example: "Paris, FR: PUE 1.25 (2025, EN 50600-4-2 Category 2, measured at
+        UPS feed), 70% physical PPA with wind farm, 30% bundled green tariff."
+        Example #2: "Own site: PUE 1.15 (2025), 100% on-site PV + battery, no GOs
+        purchased."
 
   - type: markdown
     attributes:
@@ -216,9 +249,10 @@ body:
       description: |
         For every claim such as "climate neutral", "CO2-free", "100% green", "net zero",
         "renewable-powered", "energy-efficient": state what it covers (which services,
-        which underlying providers, which scopes), what instrument backs it, and what it
-        excludes. If the claim relies on the underlying provider's green energy or carbon
-        data, say so explicitly — the green claim may not be yours to make.
+        which sites or underlying providers, which scopes), what instrument backs it,
+        and what it excludes. If the claim relies on the underlying provider's green
+        energy or carbon data, say so explicitly — the green claim may not be yours
+        to make.
 
         If you make hardware-specific claims (e.g. "energy-efficient Dataflow architecture",
         "SambaNova hardware"), state what efficiency data backs that claim.
@@ -231,8 +265,9 @@ body:
         measurement.
         Example #2: We make no neutrality claim; we publish estimated per-request
         emissions and a reduction pathway instead.
-        Example #3: "Renewable-powered" — all underlying providers report >90% renewable
-        grid mix; we do not purchase offsets or GOs ourselves.
+        Example #3: "Renewable-powered"; our own site runs on 100% on-site PV; resold
+        capacity inherits the underlying provider's grid mix, which is not guaranteed
+        renewable.
     validations:
       required: true
 
