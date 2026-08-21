@@ -32,7 +32,7 @@ The field `project` is not used to specify the maturity in the sense of the CNCF
 
 Logos are placed in the [logos](./logos/) directory. If there is no logo available, we either use the logo of the organization behind the project (subfolder [organization](./logos/organization/)) or we generate a basic text only image (subfolder [unofficial](./logos/unofficial/)). We used the tool [Text-SVG-Generator](https://text-to-svg.com/) to generate some logos and used the font "Impact".
 
-The definition of how the categories are split into the two groups, measurement and optimization, can be found in the file `settings.yml`.
+The definition of how the categories are split into the two groups, measurement and optimization, can be found in the file `settings.yml`. A third group, "AI Service Provider", lists providers of AI inference, model serving, GPU compute, routing and managed AI services.
 
 ## Local usage
 

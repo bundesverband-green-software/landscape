@@ -1205,3 +1205,100 @@ categories:
             logo: pruna.png
             extra:
               documentation_url: https://docs.pruna.ai/
+
+  - name: AI Service Provider
+    subcategories:
+
+      - name: AI Inference
+        items:
+
+          - item:
+            name: NeuralWatt
+            description: |
+              AI inference service that reports GPU-measured energy, grid-specific CO₂e and the electricity grid (grid_id) for every request. Offers energy-based pricing and carbon-aware routing. Per-request CO₂e and energy transparency; no public water metrics.
+            homepage_url: https://neuralwatt.com
+            logo: neuralwatt.jpg
+
+          - item:
+            name: Regolo
+            description: |
+              AI inference provider running on 100% green energy in Italy. No public environmental metrics for inference.
+            homepage_url: https://regolo.ai
+            logo: regolo.jpg
+
+          - item:
+            name: Mistral AI
+            description: |
+              European AI company offering open-weight models and inference services, hosted in France. No public environmental metrics for inference.
+            homepage_url: https://mistral.ai
+            logo: mistral.jpg
+
+          - item:
+            name: Infercom
+            description: |
+              EU-hosted inference service (infrastructure in Germany), GDPR & AI Act ready, running on energy-efficient SambaNova hardware. No public per-request sustainability metrics.
+            homepage_url: https://infercom.ai
+            logo: infercom.svg
+
+          - item:
+            name: GreenPT
+            description: |
+              AI chat service running on 100% renewable energy with per-chat environmental metrics, hosted on Scaleway (France) and Verda (Finland). EU-hosted infrastructure.
+            homepage_url: https://greenpt.com
+            logo: greenpt.svg
+
+          - item:
+            name: Infomaniak
+            description: |
+              Provider with self-operated data centers, renewable electricity, heat recovery and ISO 14001 & ISO 50001 certification. AI services hosted in Switzerland; publishes infrastructure-level sustainability metrics but no per-request environmental impact.
+            homepage_url: https://www.infomaniak.com
+            logo: infomaniak.svg
+
+      - name: AI Router & Gateway
+        items:
+
+          - item:
+            name: Melious.ai
+            description: |
+              AI routing service providing per-request energy, CO₂e and water metrics through an Environmental Impact API. EU-hosted infrastructure; routes to Verda (Finland, FI) for model hosting on its name.
+            homepage_url: https://melious.ai
+            logo: melious.png
+            second_path:
+              - "AI Service Provider / AI Inference"
+
+      - name: GPU & Accelerator Compute
+        items:
+
+          - item:
+            name: Crusoe
+            description: |
+              Renewable-powered AI infrastructure that utilises stranded energy. Focused on sustainable infrastructure rather than public environmental metrics.
+            homepage_url: https://crusoe.ai
+            logo: crusoe.png
+
+          - item:
+            name: SambaNova
+            description: |
+              Energy-efficient Dataflow architecture for AI acceleration. No public per-request sustainability metrics.
+            homepage_url: https://sambanova.ai
+            logo: sambanova.png
+
+          - item:
+            name: Nebius
+            description: |
+              Energy-efficient GPU infrastructure provider. No public energy or CO₂ reporting.
+            homepage_url: https://nebius.com
+            logo: nebius.png
+            second_path:
+              - "AI Service Provider / AI Inference"
+
+          - item:
+            name: Scaleway
+            description: |
+              Cloud provider with an Environmental Footprint Dashboard and renewable electricity. Project-level sustainability reporting for AI services.
+            homepage_url: https://www.scaleway.com
+            logo: organization/scaleway.svg
+            extra:
+              documentation_url: https://www.scaleway.com/en/environmental-footprint-calculator/
+            second_path:
+              - "AI Service Provider / AI Inference"
