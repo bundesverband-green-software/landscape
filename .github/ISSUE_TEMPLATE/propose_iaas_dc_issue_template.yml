@@ -115,7 +115,7 @@ body:
   - type: textarea
     id: sites
     attributes:
-      label: "Please list every site you use, with: city + country, owner, operator, your IT connected load (kW/MW), year of commissioning, availability class (e.g. EN 50600 VK 1-4 / Tier)"
+      label: "Please list every site you use, with: city + country, owner, operator, your IT connected load (kW/MW), year of commissioning. Also, preferably, a public link to a website which lists this is acceptable."
       description: One line per site. Mark clearly which sites are yours and which belong to a third party.
     validations:
       required: true
@@ -124,7 +124,7 @@ body:
     attributes:
       value: |
 
-        Example: Nuremberg, DE - building owned by us, operated by us, 4.5 MW IT connected load, in operation since 2019, EN 50600 VK-3
+        Example: Nuremberg, DE - building owned by us, operated by us, 4.5 MW IT connected load, in operation since 2019
         Example #2: Amsterdam, NL - third-party colocation (Operator XY), we rent 12 racks / ~90 kW, no control over cooling or power sourcing
 
   - type: dropdown
@@ -177,6 +177,13 @@ body:
       label: "WUE: What is your annual Water Usage Effectiveness, and where does the water come from?"
       description: Litres per kWh of IT energy, plus absolute annual water consumption (m³), water source (potable, grey water, surface water, closed loop), and whether the site is in a water-stressed region.
 
+  - type: markdown
+    attributes:
+      value: |
+
+        Example: Site Frankfurt, 0.18 L/kWh, 12,400 m³/year total, potable water, not in a water-stressed region per WRI Aqueduct
+
+
   - type: textarea
     id: erf_heat_reuse
     attributes:
@@ -189,8 +196,8 @@ body:
     attributes:
       value: |
 
-        Example: ERF 18 percent (2025), 42 °C raised to 70 °C via heat pump, delivered to the municipal heat network under a 15-year contract, live since 03/2024
-        Example #2: ERF 0 percent - heat pump installed, no heat network within reach, no offtaker contract
+        Example: ERF 0.18 (2025), 42 °C raised to 70 °C via heat pump, delivered to the municipal heat network under a 15-year contract, live since 03/2024
+        Example #2: ERF 0.0 - heat pump installed, no heat network within reach, no offtaker contract
 
   - type: textarea
     id: ref
@@ -229,11 +236,6 @@ body:
         - Ground water / surface water / river cooling
     validations:
       required: false
-
-  - type: input
-    id: setpoint
-    attributes:
-      label: "What is the IT inlet air temperature set point (or coolant supply temperature for liquid cooling)?"
 
   - type: input
     id: refrigerants
@@ -588,20 +590,6 @@ body:
         - In beta / limited availability
         - Generally available
         - Winding down / end of life
-    validations:
-      required: false
-
-  - type: textarea
-    id: comparison_to_others
-    attributes:
-      label: "What does the provider offer and what are the advantages compared to similar providers?"
-    validations:
-      required: true
-
-  - type: input
-    id: contact
-    attributes:
-      label: "Contact for follow-up questions (name, role, email)"
     validations:
       required: true
 
