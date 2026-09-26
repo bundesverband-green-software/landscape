@@ -26,12 +26,12 @@ categories:
               documentation_url: https://www.cloudcarbonfootprint.org/docs/
 
           - item:
-            name: Azure Emissions Impact Dashboard
-            description: Power BI App that provides emissions for azure cloud resource usage.
-            homepage_url: https://marketplace.microsoft.com/en-us/product/power-bi/coi-sustainability.emissions_impact_dashboard
-            logo: azure-impact-dashboard.png
+            name: Azure Carbon Optimization
+            description: Tracks and analyzes the carbon emissions of Azure resources and subscriptions, with AI-driven recommendations to reduce emissions and costs.
+            homepage_url: https://learn.microsoft.com/en-us/azure/carbon-optimization/overview
+            logo: azure.svg
             extra:
-              documentation_url: https://learn.microsoft.com/en-us/power-bi/connect-data/service-connect-to-emissions-impact-dashboard
+              documentation_url: https://learn.microsoft.com/en-us/azure/carbon-optimization/view-emissions
 
           - item:
             name: Google Carbon Footprint
