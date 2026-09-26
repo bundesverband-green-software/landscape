@@ -90,7 +90,7 @@ categories:
             description: |
               OVHcloud's Environmental Impact Tracker allows you to calculate the environmental impact of your use of OVHcloud cloud and bare metal services.
               The methodology is available (see the referenced PDF in the documentation URL).
-            logo: organization/OVHcloud.svg
+            logo: organization/ovhcloud.svg
             homepage_url: https://www.ovhcloud.com/en/about-us/environmental-impact-tracker/
             extra:
               documentation_url: https://corporate.ovhcloud.com/sites/default/files/2025-07/environmental_impact_tracker_-_methodology.pdf
@@ -128,7 +128,7 @@ categories:
               CO₂ Scope® is a simple and effective sovereign solution that enables you to measure, analyse, and reduce the environmental footprint of your IT infrastructure. With precise realtime data analysis, it delivers detailed insights into the environmental impact of your digital assets. Non-intrusive and easy to integrate, CO₂ Scope® empowers you to lead the decarbonisation of your IT systems, helping you reduce your ecological footprint while optimising performance.
               CO₂ Scope® is not a SaaS solution but is on premise. This a virtual appliance (VM) installed by the clients. Agentless, CO₂ Scope® is non intrusive.
             homepage_url: https://www.easyvirt.com/en/our-it-solutions/co2-scope-greenops-solution/
-            logo: EasyVirt.svg
+            logo: easyvirt.svg
             second_path:
               - "Infrastructure & Cluster Level / Kubernetes"
               - "Optimization / Cloud Infrastructure"
@@ -167,7 +167,7 @@ categories:
             description: KEIT (Kubernetes Emissions Insights Tool) supplements the energy recording with Kepler with current grid carbon intensity values and embodied carbon emissions.
             homepage_url: https://github.com/aknostic/keit/
             repo_url: https://github.com/aknostic/keit/
-            logo: unofficial/KEIT.svg
+            logo: unofficial/keit.svg
 
           - item:
             name: aether
@@ -216,7 +216,7 @@ categories:
             description: A plugin-driven server agent for collecting and reporting metrics, including energy consumption and carbon emissions.
             homepage_url: https://www.influxdata.com/time-series-platform/telegraf/
             repo_url: https://github.com/influxdata/telegraf
-            logo: TelegrafTigerSmall.png
+            logo: telegraftigersmall.png
 
           - item:
             name: OpenTelemetry Java Agent Extension
@@ -239,7 +239,7 @@ categories:
             name: EasyVirt Eclyo
             description: ECLYO is an innovative comparison and simulation tool designed to provide you with detailed insights into the prices and carbon emissions of virtual machines offered by major cloud providers such as AWS, GCP, Azure. This tool allows you to evaluate and compare costs as well as the environmental impact of different options, helping you make informed decisions when migrating your on-premises infrastructure to the public cloud.
             homepage_url: https://cloudpricing.easyvirt.com/simulator
-            logo: easyvirt_old.png
+            logo: easyvirt-old.png
 
           - item:
             name: Cloud Project Carbon Emission Simulator by OxygenIT
@@ -254,7 +254,7 @@ categories:
             description: A tool for estimating the carbon footprint of computational tasks using parameters like runtime, number of cores, platform, cloud environment, etc.
             homepage_url: https://calculator.green-algorithms.org
             repo_url: https://github.com/GreenAlgorithms/green-algorithms-tool
-            logo: unofficial/Green_Algorithms_Calculator.svg
+            logo: unofficial/green-algorithms-calculator.svg
             extra:
               documentation_url: https://www.green-algorithms.org/GAapp-overview/
 
@@ -325,7 +325,7 @@ categories:
             description: A lightweight monitoring tool for calculating the energy consumption of microservices in Docker containers.
             homepage_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/README.md
             repo_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/
-            logo: unofficial/LIMo.svg
+            logo: unofficial/limo.svg
             project: "archived"
 
       - name: Desktop Application
@@ -378,7 +378,7 @@ categories:
             description: Android Runner (AR) is a tool for automatically executing measurement-based experiments on native and web apps running on Android devices.
             homepage_url: https://github.com/S2-group/android-runner/
             repo_url: https://github.com/S2-group/android-runner/
-            logo: unofficial/Android_Runner.svg
+            logo: unofficial/android-runner.svg
 
   - name: Code
     subcategories:
@@ -400,7 +400,7 @@ categories:
             description: JUnit Extension and Java Agent for energy consumption measurement.
             homepage_url: https://github.com/msg-systems/jpowermonitor
             repo_url: https://github.com/msg-systems/jpowermonitor
-            logo: unofficial/jPowerMonitor.svg
+            logo: unofficial/jpowermonitor.svg
 
           - item:
             name: DotNet-Counters
@@ -490,7 +490,7 @@ categories:
             description: A tool for detecting energy code smells in Android applications.
             homepage_url: https://github.com/sesalab/aDoctor
             repo_url: https://github.com/sesalab/aDoctor
-            logo: unofficial/aDoctor.svg
+            logo: unofficial/adoctor.svg
             project: "archived"
 
       - name: CI Pipeline
@@ -515,7 +515,7 @@ categories:
             description: The library enables to monitor energy usage of machine learning programs. It uses RAPL for the CPU and nvidia-smi for the GPU.
             homepage_url: https://github.com/GreenAI-Uppa/AIPowerMeter
             repo_url: https://github.com/GreenAI-Uppa/AIPowerMeter
-            logo: unofficial/AI_Power_Meter.svg
+            logo: unofficial/ai-power-meter.svg
             extra:
               documentation_url: https://greenai-uppa.github.io/AIPowerMeter/
 
@@ -545,7 +545,7 @@ categories:
             description: A tool for estimating the carbon footprint of AI model training and inference.
             homepage_url: https://calculator.green-algorithms.org/ai
             repo_url: https://github.com/GreenAlgorithms/green-algorithms-tool
-            logo: unofficial/Green_Algorithms_Calculator.svg
+            logo: unofficial/green-algorithms-calculator.svg
             extra:
               documentation_url: https://www.green-algorithms.org/GAapp-overview/
             second_path:
@@ -597,7 +597,7 @@ categories:
             name: WattTime
             description: A commercial API service that provides real-time and forecast marginal carbon intensity data for electricity grids around the world.
             homepage_url: https://www.watttime.org/
-            logo: WattTime.png
+            logo: watttime.png
             extra:
               documentation_url: https://docs.watttime.org/
 
@@ -623,7 +623,7 @@ categories:
             name: Carbon-Intensity UK
             description: An API service from UK National Grid ESO that provides carbon intensity data for the UK electricity grid for free.
             homepage_url: https://carbonintensity.org.uk/
-            logo: unofficial/Carbon-Intensity_UK.svg
+            logo: unofficial/carbon-intensity-uk.svg
             extra:
               documentation_url: https://carbon-intensity.github.io/api-definitions/
 
@@ -819,7 +819,7 @@ categories:
             description: A tool for diagnosing issues with power consumption and power management on Linux.
             homepage_url: https://github.com/fenrus75/powertop
             repo_url: https://github.com/fenrus75/powertop
-            logo: unofficial/PowerTOP.svg
+            logo: unofficial/powertop.svg
 
           - item:
             name: Cloud Energy
@@ -834,7 +834,7 @@ categories:
             description: EnergiBridge is a cross-platform tool designed to measure the energy consumption of software across various operating systems and hardware architectures.
             homepage_url: https://github.com/tdurieux/EnergiBridge
             repo_url: https://github.com/tdurieux/EnergiBridge
-            logo: unofficial/EnergiBridge.svg
+            logo: unofficial/energibridge.svg
             project: "archived"
 
           - item:
@@ -842,7 +842,7 @@ categories:
             description: CPU Energy Meter is a Linux tool that allows to monitor power consumption of Intel CPUs at fine time granularities.
             homepage_url: https://github.com/sosy-lab/cpu-energy-meter
             repo_url: https://github.com/sosy-lab/cpu-energy-meter
-            logo: unofficial/CPU_Energy_Meter.svg
+            logo: unofficial/cpu-energy-meter.svg
             project: "archived"
 
       - name: Process Metrics Exporter
@@ -887,7 +887,7 @@ categories:
               PowerAPI is a middleware toolkit for building software-defined power meters. Software-defined power meters are configurable software libraries that can estimate the power consumption of software in real-time. PowerAPI supports the acquisition of raw metrics from a wide diversity of sensors (eg., physical meters, processor interfaces, hardware counters, OS counters) and the delivery of power consumptions via different channels (including file system, network, web, graphical). As a middleware toolkit, PowerAPI offers the capability of assembling power meters «à la carte» to accommodate user requirements.
             homepage_url: https://powerapi.org/
             repo_url: https://github.com/powerapi-ng/powerapi
-            logo: PowerAPI.webp
+            logo: powerapi.webp
 
           - item:
             name: EnergAt
@@ -895,7 +895,7 @@ categories:
               EnergAt is a prototype implementation of the thread-level, NUMA-aware energy attribution model for multi-tenancy, as proposed in the paper "EnergAt: Fine-Grained Energy Attribution for Multi-Tenancy". It offers precise tracking of the energy consumption of your software application, even when it is running alongside other jobs from different users.
             homepage_url: https://hongyu.nl/papers/2023_hotcarbon_energat.pdf
             repo_url: https://github.com/HongyuHe/energat
-            logo: unofficial/EnergAt.svg
+            logo: unofficial/energat.svg
             project: "archived"
 
   - name: Website
@@ -909,7 +909,7 @@ categories:
             description: A JavaScript library for estimating the carbon emissions of websites and web applications.
             homepage_url: https://github.com/thegreenwebfoundation/co2.js
             repo_url: https://github.com/thegreenwebfoundation/co2.js
-            logo: unofficial/CO2.js.svg
+            logo: unofficial/co2-js.svg
             license: "Apache-2.0"
             project: "in-active-use-by-members"
 
@@ -917,7 +917,7 @@ categories:
             name: Website Carbon Calculator
             description: Website Carbon Calculator estimates the carbon emissions of a website by analyzing factors like data transfer size and energy source of the hosting provider. A badge is provided that can be added to the footer of websites.
             homepage_url: https://www.websitecarbon.com/
-            logo: WebsiteCarbon.jpg
+            logo: websitecarbon.jpg
 
           - item:
             name: Ecograder
@@ -1006,7 +1006,7 @@ categories:
             description: Experiment Runner is a generic framework to automatically execute measurement-based experiments on any platform. The experiments are user-defined, can be completely customized, and expressed in python code.
             homepage_url: https://github.com/S2-group/experiment-runner
             repo_url: https://github.com/S2-group/experiment-runner
-            logo: unofficial/Experiment-Runner.svg
+            logo: unofficial/experiment-runner.svg
 
 
 
@@ -1020,7 +1020,7 @@ categories:
             name: IBM Turbonomic
             description: A platform for optimizing cloud resources to reduce costs and carbon emissions.
             homepage_url: https://www.ibm.com/products/turbonomic
-            logo: IBM-Turbonomics.png
+            logo: ibm-turbonomics.png
 
           - item:
             name: Greenpixie GPX Data
@@ -1122,14 +1122,14 @@ categories:
             description: Shutting down pods by cronjob.
             homepage_url: https://github.com/AxaFrance/dailyclean
             repo_url: https://github.com/AxaFrance/dailyclean
-            logo: unofficial/DailyClean.svg
+            logo: unofficial/dailyclean.svg
 
           - item:
             name: Carbon Aware KEDA Operator
             description: A Kubernetes operator that scales workloads based on carbon intensity data.
             homepage_url: https://github.com/Azure/carbon-aware-keda-operator
             repo_url: https://github.com/Azure/carbon-aware-keda-operator
-            logo: unofficial/Carbon_Aware_KEDA_Operator.svg
+            logo: unofficial/carbon-aware-keda-operator.svg
             project: "archived"
 
           - item:
@@ -1137,7 +1137,7 @@ categories:
             description: Container Level Energy-efficient VPA Recommender for Kubernetes
             homepage_url: https://github.com/sustainable-computing-io/clever
             repo_url: https://github.com/sustainable-computing-io/clever
-            logo: unofficial/CLEVER.svg
+            logo: unofficial/clever.svg
             project: "archived"
 
       - name: Carbon Awareness
@@ -1174,7 +1174,7 @@ categories:
               The data is also provided as JSON formatted files that are consumable by the Carbon Aware SDK.
             homepage_url: https://carbon-aware-computing.com/
             repo_url: https://github.com/bluehands/Carbon-Aware-Computing
-            logo: unofficial/Carbon-Aware-Computing.com.svg
+            logo: unofficial/carbon-aware-computing-com.svg
             project: "in-active-use-by-members"
             second_path:
               - "Databases / Grid Carbon Intensity API Service"
@@ -1184,7 +1184,7 @@ categories:
             description: A library for making websites carbon-aware by adapting to the carbon intensity of the electricity grid.
             homepage_url: https://www.thegreenwebfoundation.org/tools/grid-aware-websites/
             repo_url: https://github.com/thegreenwebfoundation/grid-aware-websites
-            logo: unofficial/Grid-aware_Websites.svg
+            logo: unofficial/grid-aware-websites.svg
             license: "Apache-2.0"
 
           - item:
@@ -1192,7 +1192,7 @@ categories:
             description: A VS Code extension that shows live electricity grid's carbon intensity and encourages low-carbon coding. VSCarbon shows you when the electricity grid has lower carbon intensity, helping you time energy-intensive tasks.
             homepage_url: https://github.com/liti-dev/vscarbon
             repo_url: https://github.com/liti-dev/vscarbon
-            logo: unofficial/VSCarbon.svg
+            logo: unofficial/vscarbon.svg
 
       - name: Artificial Intelligence
         items:
