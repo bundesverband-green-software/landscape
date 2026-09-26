@@ -42,8 +42,8 @@ categories:
               documentation_url: https://cloud.google.com/carbon-footprint#documentation
 
           - item:
-            name: AWS Customer Carbon Footprint Tool
-            description: The AWS Customer Carbon Footprint Tool provides estimates of the carbon emissions associated with AWS products and services. Data is updated with a delay of three months.
+            name: AWS Sustainability Console
+            description: The AWS Sustainability Console provides estimates of the carbon emissions and water withdrawals associated with AWS products and services, with customizable reporting and programmatic API access.
             homepage_url: https://aws.amazon.com/sustainability/tools/console/
             logo: aws.svg
             extra:
