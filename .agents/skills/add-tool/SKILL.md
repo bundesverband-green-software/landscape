@@ -63,9 +63,14 @@ them the same way. Older issues may use the previous bare option names, e.g.
 `Agent` or `Website Profiling` — match those by subcategory name against the
 tree and flag any that no longer exist.)
 
-The **first** resolved path is the item's primary location (insert the
-`- item:` block there). Every other resolved path becomes a `second_path`
-entry (`"Category / Subcategory"`), excluding the primary.
+Pick the path that fits the tool **semantically best** as its primary location
+(that is where the `- item:` block is inserted) — do not just take the first one
+listed. Every other resolved path becomes a `second_path` entry
+(`"Category / Subcategory"`), excluding the primary.
+
+A tool should appear in **at most 3 categories in total** (the primary plus its
+`second_path` entries). If the proposal selects more, keep the best-fitting ones
+and flag the rest for the user to decide.
 
 **Flag** any proposed category that:
 
