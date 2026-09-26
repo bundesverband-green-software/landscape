@@ -990,7 +990,6 @@ categories:
             homepage_url: https://github.com/cnumr/GreenIT-Analysis
             repo_url: https://github.com/cnumr/GreenIT-Analysis
             logo: greenit-analysis.png
-            project: "archived"
 
           - item:
             name: Firefox Power Profiler
