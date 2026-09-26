@@ -94,11 +94,13 @@ entry (`"Category / Subcategory"`), excluding the primary.
 
 Field rules:
 
-- **`description`** — landscape2 shows it on cards and truncates it, and
-  Markdown/HTML are **not** supported. Write 1–3 plain sentences (aim under
-  ~300 chars), condensed from the proposal's Description (mode A) or the
-  homepage/repo description (mode B). Strip any markup. Do **not** put
-  methodology detail here.
+- **`description`** — Markdown/HTML are **not** supported. Write plain
+  sentences, condensed from the proposal's description (mode A) or the
+  homepage/repo description (mode B). There is no character limit, but keep it
+  concise — shorter reads better on cards. Strip any markup. Keep methodology
+  detail out, except for an important point in a short statement (studies and
+  factors change, so don't go into detail); full detail belongs in
+  `extra.documentation_url` and the PR.
 - **`project`** — only ever `"archived"` or `"in-active-use-by-members"`.
   Set `"archived"` when the status is "Deprecated / Archived" (mode A) or the
   repo is archived (mode B). `"in-active-use-by-members"` is **not** derived
