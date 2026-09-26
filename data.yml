@@ -591,6 +591,17 @@ categories:
             extra:
               documentation_url: https://github.com/gwittebolle/claude-carbon/blob/main/METHODOLOGY.md
 
+          - item:
+            name: Token & CO2 Dashboard
+            description: Collects the token consumption of AI coding agents across a company and displays it alongside an estimate of the associated carbon emissions and API cost, even for subscription models. Data is collected anonymously via plugins on self-hosted infrastructure and can be analysed by provider, model, time, and token type.
+            homepage_url: https://tokendashboard.neuland-bfi.de/
+            repo_url: https://github.com/neuland/tokendashboard-backend
+            logo: token-co2-dashboard.svg
+            extra:
+              documentation_url: https://github.com/neuland/tokendashboard-backend/tree/main/docs
+            second_path:
+              - "Data Aggregation / Organizational Level"
+
   - name: Databases
     subcategories:
 
