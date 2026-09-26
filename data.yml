@@ -1045,12 +1045,14 @@ categories:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
 
           - item:
-            name: txture
-            description: A platform for analyzing and optimizing cloud infrastructure for cost and sustainability.
+            name: IBM Txture
+            description: An application portfolio intelligence platform for planning cloud migrations and modernization, with cost, energy consumption and carbon emissions modelling.
             homepage_url: https://www.ibm.com/products/txture
-            logo: txture.png
+            logo: unofficial/ibm-txture.svg
             second_path:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+            extra:
+              documentation_url: https://www.ibm.com/docs/en/txture
 
           - item:
             name: Cycloid
