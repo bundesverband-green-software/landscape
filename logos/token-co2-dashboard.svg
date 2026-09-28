@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="t">
+  <title id="t">Token Dashboard</title>
+  <!-- Three stacked-token bars: one per provider, coloured like the dashboard's charts.
+       Each segment is a token batch; the bars read as usage that adds up. -->
+  <g fill="#FF5A55">
+    <rect x="6"  y="48" width="14" height="10" rx="3"/>
+    <rect x="6"  y="36" width="14" height="10" rx="3"/>
+    <rect x="6"  y="24" width="14" height="10" rx="3"/>
+    <rect x="6"  y="12" width="14" height="10" rx="3"/>
+  </g>
+  <g fill="#77C4B4">
+    <rect x="25" y="48" width="14" height="10" rx="3"/>
+    <rect x="25" y="36" width="14" height="10" rx="3"/>
+  </g>
+  <g fill="#0EA19C">
+    <rect x="44" y="48" width="14" height="10" rx="3"/>
+    <rect x="44" y="36" width="14" height="10" rx="3"/>
+    <rect x="44" y="24" width="14" height="10" rx="3"/>
+  </g>
+</svg>
