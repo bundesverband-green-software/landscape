@@ -26,12 +26,12 @@ categories:
               documentation_url: https://www.cloudcarbonfootprint.org/docs/
 
           - item:
-            name: Azure Emissions Impact Dashboard
-            description: Power BI App that provides emissions for azure cloud resource usage.
-            homepage_url: https://marketplace.microsoft.com/en-us/product/power-bi/coi-sustainability.emissions_impact_dashboard
-            logo: azure-impact-dashboard.png
+            name: Azure Carbon Optimization
+            description: Tracks and analyzes the carbon emissions of Azure resources and subscriptions, with AI-driven recommendations to reduce emissions and costs.
+            homepage_url: https://learn.microsoft.com/en-us/azure/carbon-optimization/overview
+            logo: azure.svg
             extra:
-              documentation_url: https://learn.microsoft.com/en-us/power-bi/connect-data/service-connect-to-emissions-impact-dashboard
+              documentation_url: https://learn.microsoft.com/en-us/azure/carbon-optimization/view-emissions
 
           - item:
             name: Google Carbon Footprint
@@ -42,8 +42,8 @@ categories:
               documentation_url: https://cloud.google.com/carbon-footprint#documentation
 
           - item:
-            name: AWS Customer Carbon Footprint Tool
-            description: The AWS Customer Carbon Footprint Tool provides estimates of the carbon emissions associated with AWS products and services. Data is updated with a delay of three months.
+            name: AWS Sustainability Console
+            description: The AWS Sustainability Console provides estimates of the carbon emissions and water withdrawals associated with AWS products and services, with customizable reporting and programmatic API access.
             homepage_url: https://aws.amazon.com/sustainability/tools/console/
             logo: aws.svg
             extra:
@@ -990,7 +990,6 @@ categories:
             homepage_url: https://github.com/cnumr/GreenIT-Analysis
             repo_url: https://github.com/cnumr/GreenIT-Analysis
             logo: greenit-analysis.png
-            project: "archived"
 
           - item:
             name: Firefox Power Profiler
@@ -1045,12 +1044,14 @@ categories:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
 
           - item:
-            name: txture
-            description: A platform for analyzing and optimizing cloud infrastructure for cost and sustainability.
+            name: IBM Txture
+            description: An application portfolio intelligence platform for planning cloud migrations and modernization, with cost, energy consumption and carbon emissions modelling.
             homepage_url: https://www.ibm.com/products/txture
-            logo: txture.png
+            logo: unofficial/ibm-txture.svg
             second_path:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+            extra:
+              documentation_url: https://www.ibm.com/docs/en/txture
 
           - item:
             name: Cycloid
