@@ -1,0 +1,19 @@
+# Hosts that commonly answer automated link checks with 403/429 (bot
+# protection) even though the page is fine in a browser.
+#
+# The checker tolerates ONLY 403/429 from these hosts. Network errors
+# (DNS, timeouts) and 5xx are still reported as real problems.
+#
+# Matching is by host suffix: "electricitymaps.com" also covers
+# "app.electricitymaps.com" and "portal.electricitymaps.com".
+#
+# Add a host only after confirming in a browser that the page works.
+# One host per line; blank lines and # comments are ignored.
+
+electricitymaps.com
+transparencyplatform.zendesk.com
+intel.com
+ibm.com
+# GitHub 429s usually come from this script's own request concurrency, not a
+# dead link — re-run before editing anything.
+github.com
