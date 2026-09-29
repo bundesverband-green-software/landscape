@@ -60,21 +60,13 @@ writes redirects it confirmed as 2xx.
 ## Known false positives
 
 These hosts commonly answer automated clients with 403/429 even though the page
-is fine. They are **not** suppressed — the script still reports them — but on
-sight, verify in a browser and move on instead of chasing a fix. This list is
-host-scoped on purpose: bot protection is a property of the server, not of the
-path, so it survives URL changes.
+is fine. They live in `false-positive-hosts.txt` (one host suffix per line) so
+the list is data, not prose — add an entry only after verifying in a browser.
 
-- `app.electricitymaps.com` / `portal.electricitymaps.com` — 403 (client-side app)
-- `transparencyplatform.zendesk.com` — 403 (bot protection)
-- `intel.com` — 403 (bot protection)
-- `github.com` — occasional 429: this is the script's own request concurrency,
-  not a dead link. The script already retries once (honoring `Retry-After`), so a
-  429 that still reaches the report means even the retry was limited — re-run,
-  or check the URL directly, before editing.
-
-Do not extend this list to excuse DNS failures, timeouts or 5xx — those are the
-signals the check exists to surface, and pre-excusing them hides real breakage.
+The script reports them under **Tolerated false positives** and they do **not**
+count toward its exit code. Only 403/429 are excused, and only for listed hosts;
+DNS failures, timeouts and 5xx are still real problems. Matching is by host
+suffix, so `electricitymaps.com` covers `app.` and `portal.`.
 
 ## Gotchas
 
