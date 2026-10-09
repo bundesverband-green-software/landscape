@@ -1,0 +1,69 @@
+name: Link check
+
+on:
+  schedule:
+    # Mondays 06:00 UTC.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install requests pyyaml
+
+      # Known 403/429 hosts are tolerated and do not count as problems.
+      - name: Check links in data.yml
+        id: check
+        run: |
+          set -o pipefail
+          if python .agents/skills/check-links/scripts/check_links.py 2>&1 | tee link-check.txt; then
+            echo "failed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "failed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish summary
+        if: always()
+        run: |
+          {
+            echo "## Link check"
+            echo ""
+            echo '```'
+            cat link-check.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open or update issue on failure
+        if: steps.check.outputs.failed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh label create link-check --color BFD4F9 \
+            --description "Weekly data.yml link check" 2>/dev/null || true
+          body=$(cat <<EOF
+          The weekly link check found problems in \`data.yml\`.
+
+          \`\`\`
+          $(cat link-check.txt)
+          \`\`\`
+
+          _Updated by the [link-check workflow](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})._
+          EOF
+          )
+          number=$(gh issue list --label link-check --state open \
+            --json number --jq '.[0].number // empty')
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --body "$body"
+          else
+            gh issue create \
+              --title "Weekly link check found broken links" \
+              --body "$body" --label link-check
+          fi

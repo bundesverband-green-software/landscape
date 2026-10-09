@@ -3,7 +3,8 @@
 
 - 2xx                     -> OK
 - 2xx after redirect(s)   -> redirect: final URL is written back to data.yml (--write)
-- 4xx / 5xx / network err -> reported, never written
+- 403/429 from a listed host -> tolerated false positive (see false-positive-hosts.txt)
+- any other 4xx / 5xx / network err -> reported, never written
 
 URLs are deduplicated and checked concurrently. Only the matched field lines
 are rewritten, so YAML formatting is preserved.
@@ -21,12 +22,16 @@ import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import requests
 import yaml
 
 FIELDS = ("homepage_url", "repo_url", "blog", "documentation_url")
 DEFAULT_DATA = "data.yml"
+FALSE_POSITIVES_FILE = Path(__file__).resolve().parent.parent / "false-positive-hosts.txt"
+# Only bot-protection statuses are excused for listed hosts; never 5xx/DNS.
+TOLERATED_STATUSES = (403, 429)
 
 # One session per worker thread; a browser-ish UA avoids 403s from strict sites.
 _local = threading.local()
@@ -73,6 +78,25 @@ def check(url: str, timeout: int):
                 return None, None, type(e).__name__
             time.sleep(1)
     return None, None, "unknown error"
+
+
+def load_false_positive_hosts(path: Path) -> list[str]:
+    """Host suffixes whose 403/429 answers are treated as bot protection."""
+    if not path.is_file():
+        return []
+    hosts = []
+    for line in path.read_text().splitlines():
+        line = line.split("#", 1)[0].strip().lower()
+        if line:
+            hosts.append(line)
+    return hosts
+
+
+def is_tolerated(url: str, status: int, hosts: list[str]) -> bool:
+    if status not in TOLERATED_STATUSES:
+        return False
+    host = (urlsplit(url).hostname or "").lower()
+    return any(host == h or host.endswith("." + h) for h in hosts)
 
 
 def load_owners(path: Path):
@@ -134,12 +158,15 @@ def main() -> int:
             url = futures[fut]
             results[url] = fut.result()
 
+    false_positive_hosts = load_false_positive_hosts(FALSE_POSITIVES_FILE)
     redirects = {}
-    client_errors, server_errors, network_errors = [], [], []
+    client_errors, server_errors, network_errors, tolerated = [], [], [], []
     for url in urls:
         status, final, error = results[url]
         if error or status is None:
             network_errors.append((url, error))
+        elif is_tolerated(url, status, false_positive_hosts):
+            tolerated.append((url, status))
         elif 400 <= status < 500:
             client_errors.append((url, status))
         elif status >= 500:
@@ -171,6 +198,12 @@ def main() -> int:
         for url, err in network_errors:
             print(f"  {err}  {url}\n       {', '.join(owners.get(url, []))}")
 
+    if tolerated:
+        print(f"\nTolerated false positives ({len(tolerated)}) "
+              f"[{FALSE_POSITIVES_FILE.name}: known 403/429 hosts]:")
+        for url, st in tolerated:
+            print(f"  {st}  {url}\n       {', '.join(owners.get(url, []))}")
+
     if args.write and redirects:
         new_text, changed = rewrite(text, redirects)
         path.write_text(new_text)
@@ -180,8 +213,9 @@ def main() -> int:
         print("\nNo changes written (dry run). Re-run with --write to apply.")
 
     problems = len(client_errors) + len(server_errors) + len(network_errors)
-    print(f"\nSummary: {len(urls) - len(redirects) - problems} ok, "
-          f"{len(redirects)} redirect(s), {problems} problem(s).")
+    print(f"\nSummary: {len(urls) - len(redirects) - problems - len(tolerated)} ok, "
+          f"{len(redirects)} redirect(s), {len(tolerated)} tolerated, "
+          f"{problems} problem(s).")
     return 1 if problems else 0
 
 
