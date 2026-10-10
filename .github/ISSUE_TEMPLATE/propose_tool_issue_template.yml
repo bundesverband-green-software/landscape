@@ -49,9 +49,10 @@ body:
         - Infrastructure & Cluster Level / Kubernetes
         - Infrastructure & Cluster Level / Agent (monitoring agent or daemon)
         - Infrastructure & Cluster Level / Planning & Calculation (estimators and calculators)
-        - Component / Containerized Application
-        - Component / Desktop Application
-        - Component / Mobile App
+        - Application / Monitoring & Tracing
+        - Application / Scenario Measurement
+        - Desktop & Mobile / Desktop Application
+        - Desktop & Mobile / Mobile App
         - Code / Code Level Energy Measurement
         - Code / Static Code Analysis
         - Code / CI Pipeline
@@ -76,7 +77,7 @@ body:
       multiple: true
       options:
         - Optimization / Cloud Infrastructure
-        - Optimization / Cloud Application Analysis
+        - Optimization / Application Profiling
         - Optimization / Kubernetes
         - Optimization / Carbon Awareness
         - Optimization / Artificial Intelligence
