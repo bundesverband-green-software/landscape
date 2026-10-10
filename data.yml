@@ -26,6 +26,15 @@ categories:
               documentation_url: https://www.cloudcarbonfootprint.org/docs/
 
           - item:
+            name: AWS Sustainability Console
+            description: The AWS Sustainability Console provides estimates of the carbon emissions and water withdrawals associated with AWS products and services, with customizable reporting and programmatic API access.
+            homepage_url: https://aws.amazon.com/sustainability/tools/console/
+            logo: aws.svg
+            project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://docs.aws.amazon.com/sustainability/latest/userguide/console-visualizations.html
+
+          - item:
             name: Azure Carbon Optimization
             description: Tracks and analyzes the carbon emissions of Azure resources and subscriptions, with AI-driven recommendations to reduce emissions and costs.
             homepage_url: https://learn.microsoft.com/en-us/azure/carbon-optimization/overview
@@ -44,13 +53,25 @@ categories:
               documentation_url: https://cloud.google.com/carbon-footprint#documentation
 
           - item:
-            name: AWS Sustainability Console
-            description: The AWS Sustainability Console provides estimates of the carbon emissions and water withdrawals associated with AWS products and services, with customizable reporting and programmatic API access.
-            homepage_url: https://aws.amazon.com/sustainability/tools/console/
-            logo: aws.svg
+            name: Scaleway Environmental Footprint Calculator
+            description: |
+              Scaleway's Environmental Footprint Calculator allows you to calculate the environmental impact of your use of Scaleway cloud and bare metal services.
+              The methodology is available (part of the documentation). 
+            logo: organization/scaleway.svg
+            homepage_url: https://www.scaleway.com/en/environmental-footprint-calculator/
             project: "in-active-use-by-members"
             extra:
-              documentation_url: https://docs.aws.amazon.com/sustainability/latest/userguide/console-visualizations.html
+              documentation_url: https://www.scaleway.com/en/docs/environmental-footprint/
+
+          - item:
+            name: OVHcloud Environmental Impact Tracker
+            description: |
+              OVHcloud's Environmental Impact Tracker allows you to calculate the environmental impact of your use of OVHcloud cloud and bare metal services.
+              The methodology is available (see the referenced PDF in the documentation URL).
+            logo: organization/ovhcloud.svg
+            homepage_url: https://www.ovhcloud.com/en/about-us/environmental-impact-tracker/
+            extra:
+              documentation_url: https://corporate.ovhcloud.com/sites/default/files/2025-07/environmental_impact_tracker_-_methodology.pdf
 
           - item:
             name: Li10 for AWS
@@ -77,26 +98,6 @@ categories:
             repo_url: https://github.com/thegreenwebfoundation/green-cost-explorer
             logo: green-cost-explorer.png
             project: "archived"
-
-          - item:
-            name: Scaleway Environmental Footprint Calculator
-            description: |
-              Scaleway's Environmental Footprint Calculator allows you to calculate the environmental impact of your use of Scaleway cloud and bare metal services.
-              The methodology is available (part of the documentation). 
-            logo: organization/scaleway.svg
-            homepage_url: https://www.scaleway.com/en/environmental-footprint-calculator/
-            extra:
-              documentation_url: https://www.scaleway.com/en/docs/environmental-footprint/
-
-          - item:
-            name: OVHcloud Environmental Impact Tracker
-            description: |
-              OVHcloud's Environmental Impact Tracker allows you to calculate the environmental impact of your use of OVHcloud cloud and bare metal services.
-              The methodology is available (see the referenced PDF in the documentation URL).
-            logo: organization/ovhcloud.svg
-            homepage_url: https://www.ovhcloud.com/en/about-us/environmental-impact-tracker/
-            extra:
-              documentation_url: https://corporate.ovhcloud.com/sites/default/files/2025-07/environmental_impact_tracker_-_methodology.pdf
 
           - item:
             name: Tailpipe
@@ -597,6 +598,7 @@ categories:
               documentation_url: https://github.com/neuland/tokendashboard-backend/tree/main/docs
             second_path:
               - "Data Aggregation / Organizational Level"
+            project: "in-active-use-by-members"
 
   - name: Databases
     subcategories:
@@ -609,6 +611,7 @@ categories:
             description: A commercial API service that provides real-time and forecast carbon intensity data for electricity grids around the world.
             homepage_url: https://www.electricitymaps.com/
             logo: electricity-maps.svg
+            project: "in-active-use-by-members"
             extra:
               documentation_url: https://app.electricitymaps.com/docs
 
@@ -949,6 +952,7 @@ categories:
             logo: ecograder.svg
             second_path:
               - "Website / Website Analysis"
+            project: "in-active-use-by-members"
 
           - item:
             name: EcoIndex
@@ -989,6 +993,7 @@ categories:
             homepage_url: https://github.com/green-coding-solutions/green-metrics-tool/tree/main/templates/website
             repo_url: https://github.com/green-coding-solutions/green-metrics-tool/tree/main/templates/website
             logo: webnrg.png
+            project: "in-active-use-by-members"
 
       - name: Website Analysis
         items:
@@ -999,6 +1004,7 @@ categories:
             homepage_url: https://github.com/cnumr/GreenIT-Analysis
             repo_url: https://github.com/cnumr/GreenIT-Analysis
             logo: greenit-analysis.png
+            project: "in-active-use-by-members"
 
           - item:
             name: Firefox Power Profiler
