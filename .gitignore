@@ -3,3 +3,6 @@ cache
 .env
 __pycache__/
 *.pyc
+
+# Pi agent local config (personal, not shared)
+.pi/
