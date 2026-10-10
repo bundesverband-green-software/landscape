@@ -194,7 +194,6 @@ categories:
             logo: ceems.svg
             second_path:
               - "Infrastructure & Cluster Level / Kubernetes"
-              - "Optimization / Cloud Application Analysis"
             extra:
               documentation_url: https://ceems-dev.github.io/ceems/docs/
 
@@ -213,13 +212,6 @@ categories:
             homepage_url: https://www.influxdata.com/time-series-platform/telegraf/
             repo_url: https://github.com/influxdata/telegraf
             logo: telegraftigersmall.png
-
-          - item:
-            name: OpenTelemetry Java Agent Extension
-            description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions.
-            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            logo: organization/retit.png
 
       - name: Planning & Calculation
         items:
@@ -275,10 +267,28 @@ categories:
             repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
             logo: unofficial/technology-carbon-estimator.svg
 
-  - name: Component
+  - name: Server Application
     subcategories:
 
-      - name: Containerized Application
+      - name: Monitoring & Tracing
+        items:
+
+          - item:
+            name: OpenTelemetry Java Agent Extension
+            description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions using coefficient data from Cloud Carbon Footprint.
+            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            logo: organization/retit.png
+
+          - item:
+            name: LIMo
+            description: A lightweight monitoring tool for calculating the energy consumption of microservices in Docker containers.
+            homepage_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/README.md
+            repo_url: https://github.com/qaware/microservice-energy-consumption-benchmark/tree/main/tools/limo
+            logo: unofficial/limo.svg
+            project: "archived"
+
+      - name: Scenario Measurement
         items:
 
           - item:
@@ -316,13 +326,8 @@ categories:
             second_path:
               - "Website / Website Carbon Estimation"
 
-          - item:
-            name: LIMo
-            description: A lightweight monitoring tool for calculating the energy consumption of microservices in Docker containers.
-            homepage_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/README.md
-            repo_url: https://github.com/qaware/microservice-energy-consumption-benchmark/tree/main/tools/limo
-            logo: unofficial/limo.svg
-            project: "archived"
+  - name: Desktop & Mobile
+    subcategories:
 
       - name: Desktop Application
         items:
@@ -1093,14 +1098,6 @@ categories:
             logo: elastic.svg
             extra:
               documentation_url: https://www.elastic.co/docs/solutions/observability/infra-and-hosts/universal-profiling
-
-          - item:
-            name: OpenTelemetry eBPF Profiler
-            description: A whole-system, cross-language profiler for Linux via eBPF.
-            homepage_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
-            logo: opentelemetry.svg
-            extra:
-              documentation_url: https://github.com/open-telemetry/opentelemetry-ebpf-profiler
 
       - name: Kubernetes
         items:

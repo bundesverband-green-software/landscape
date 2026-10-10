@@ -53,9 +53,9 @@ for c in yaml.safe_load(open('data.yml'))['categories']:
 Match each proposed path to one in the tree:
 
 - measurement dropdown → the Measurement tree (everything under
-  Infrastructure & Cluster Level, Component, Code, Artificial Intelligence,
-  Databases, Data Aggregation, Device & Process Level, Website, Measurement
-  Utilities)
+  Infrastructure & Cluster Level, Server Application, Desktop & Mobile, Code,
+  Artificial Intelligence, Databases, Data Aggregation, Device & Process Level,
+  Website, Measurement Utilities)
 - optimization dropdown → the Optimization tree
 
 (For a bare URL/name, propose categories from what the tool does and resolve
@@ -68,7 +68,7 @@ Pick the path that fits the tool **semantically best** as its primary location
 listed. Every other resolved path becomes a `second_path` entry
 (`"Category / Subcategory"`), excluding the primary.
 
-A tool should appear in **at most 3 categories in total** (the primary plus its
+A tool should appear in **at most 2 categories in total** (the primary plus its
 `second_path` entries). If the proposal selects more, keep the best-fitting ones
 and flag the rest for the user to decide.
 
