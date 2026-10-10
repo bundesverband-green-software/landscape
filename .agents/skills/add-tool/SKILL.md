@@ -53,7 +53,7 @@ for c in yaml.safe_load(open('data.yml'))['categories']:
 Match each proposed path to one in the tree:
 
 - measurement dropdown → the Measurement tree (everything under
-  Infrastructure & Cluster Level, Server Application, Desktop & Mobile, Code,
+  Infrastructure & Cluster Level, Application, Desktop & Mobile, Code,
   Artificial Intelligence, Databases, Data Aggregation, Device & Process Level,
   Website, Measurement Utilities)
 - optimization dropdown → the Optimization tree

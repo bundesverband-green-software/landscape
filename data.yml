@@ -193,7 +193,7 @@ categories:
             repo_url: https://github.com/ceems-dev/ceems
             logo: ceems.svg
             second_path:
-              - "Server Application / Monitoring & Tracing"
+              - "Application / Monitoring & Tracing"
             extra:
               documentation_url: https://ceems-dev.github.io/ceems/docs/
 
@@ -267,7 +267,7 @@ categories:
             repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
             logo: unofficial/technology-carbon-estimator.svg
 
-  - name: Server Application
+  - name: Application
     subcategories:
 
       - name: Monitoring & Tracing
