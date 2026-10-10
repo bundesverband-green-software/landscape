@@ -24,9 +24,10 @@ categories:
 
       - subcategory: "Aufbau"
         content: |
-          Die Landkarte ist in zwei Gruppen aufgeteilt:
+          Die Landkarte ist in drei Gruppen aufgeteilt:
           - "Measurement"
           - "Optimization"
+          - "AI Service Provider"
           
           Beim ersten Aufruf der Landkarte wird die Gruppe "Measurement" angezeigt. Eine Umschaltung zwischen den Gruppen ist oben mit den Schaltflächen neben dem "Group"-Label möglich.
 
@@ -65,9 +66,10 @@ categories:
 
       - subcategory: "Structure"
         content: |
-          The landscape is divided into two groups:
+          The landscape is divided into three groups:
           - "Measurement"
           - "Optimization"
+          - "AI Service Provider"
 
           When the landscape is first opened, the "Measurement" group is displayed. You can switch between the groups using the buttons next to the "Group" label at the top.
           

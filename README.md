@@ -32,7 +32,7 @@ The field `project` is not used to specify the maturity in the sense of the CNCF
 
 Logos are placed in the [logos](./logos/) directory. If there is no logo available, we either use the logo of the organization behind the project (subfolder [organization](./logos/organization/)) or we generate a basic text-only logo (subfolder [unofficial](./logos/unofficial/)). To generate a text-based logo, use the script [`.agents/skills/add-logo/scripts/generate_logo.py`](./.agents/skills/add-logo/scripts/generate_logo.py), which renders the tool name in the libre font [Roboto Condensed](https://fonts.google.com/specimen/Roboto+Condensed). Earlier placeholders were generated with [Text-SVG-Generator](https://text-to-svg.com/) using the font "Impact".
 
-The definition of how the categories are split into the two groups, measurement and optimization, can be found in the file `settings.yml`.
+The definition of how the categories are split into the two groups, measurement and optimization, can be found in the file `settings.yml`. A third group, "AI Service Provider", lists providers of AI inference, model serving, GPU compute, routing and managed AI services.
 
 ## Local usage
 
