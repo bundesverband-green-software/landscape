@@ -708,7 +708,7 @@ categories:
           - item:
             name: Sopht
             description: Sopht is a platform for collecting, managing and optimizing the environmental footprint of your cloud & on-prem infrastructure, digital workplaces, IT assets, websites, applications and more.
-            homepage_url: https://sopht.com/solution
+            homepage_url: https://sopht.com/en/solution
             logo: sopht.png
             second_path:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
