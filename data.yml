@@ -193,7 +193,7 @@ categories:
             repo_url: https://github.com/ceems-dev/ceems
             logo: ceems.svg
             second_path:
-              - "Infrastructure & Cluster Level / Kubernetes"
+              - "Server Application / Monitoring & Tracing"
             extra:
               documentation_url: https://ceems-dev.github.io/ceems/docs/
 
@@ -1088,7 +1088,7 @@ categories:
             second_path:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
 
-      - name: Cloud Application Analysis
+      - name: Application Profiling
         items:
 
           - item:

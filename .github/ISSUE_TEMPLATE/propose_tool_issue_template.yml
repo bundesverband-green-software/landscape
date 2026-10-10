@@ -77,7 +77,7 @@ body:
       multiple: true
       options:
         - Optimization / Cloud Infrastructure
-        - Optimization / Cloud Application Analysis
+        - Optimization / Application Profiling
         - Optimization / Kubernetes
         - Optimization / Carbon Awareness
         - Optimization / Artificial Intelligence
