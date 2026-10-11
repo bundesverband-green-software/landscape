@@ -329,7 +329,7 @@ categories:
   - name: Desktop & Mobile
     subcategories:
 
-      - name: Desktop
+      - name: Desktop Application
         items:
 
           - item:
@@ -349,7 +349,7 @@ categories:
             repo_url: https://github.com/wattwisegames/watt-wiser
             logo: watt-wiser.svg
 
-      - name: Mobile
+      - name: Mobile Application
         items:
 
           - item:
