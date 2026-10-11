@@ -70,43 +70,72 @@ def clean_text(name: str) -> str:
     return name.encode("ascii", "ignore").decode().strip()
 
 
-def build_svg(text: str, font: TTFont, size: float = 100.0) -> str:
+def build_svg(text: str, font: TTFont, size: float = 100.0,
+              line_gap: float = 1.25, align: str = "left") -> str:
     upem = font["head"].unitsPerEm
     scale = size / upem
     cmap = font.getBestCmap()
     glyphset = font.getGlyphSet()
     hmtx = font["hmtx"]
 
-    paths: list[str] = []
-    bounds = None
-    x = 0.0
-    for ch in text:
-        gname = cmap.get(ord(ch))
-        if gname is None:
-            gname = cmap.get(ord(" "))  # fall back to a space advance
-        if gname is None:
-            continue
-        transform = Transform(scale, 0, 0, -scale, x, 0)
-        spen = SVGPathPen(glyphset)
-        glyphset[gname].draw(TransformPen(spen, transform))
-        d = spen.getCommands()
-        if d:
-            paths.append(d)
-        bpen = BoundsPen(glyphset)
-        glyphset[gname].draw(TransformPen(bpen, transform))
-        if bpen.bounds:
-            b = bpen.bounds
-            bounds = b if bounds is None else (
-                min(bounds[0], b[0]), min(bounds[1], b[1]),
-                max(bounds[2], b[2]), max(bounds[3], b[3]),
-            )
-        x += hmtx[gname][0] * scale
+    def render_line(line: str, y_baseline: float) -> tuple[list[str], tuple | None, float]:
+        paths: list[str] = []
+        bounds = None
+        x = 0.0
+        for ch in line:
+            gname = cmap.get(ord(ch))
+            if gname is None:
+                gname = cmap.get(ord(" "))  # fall back to a space advance
+            if gname is None:
+                continue
+            transform = Transform(scale, 0, 0, -scale, x, y_baseline)
+            spen = SVGPathPen(glyphset)
+            glyphset[gname].draw(TransformPen(spen, transform))
+            d = spen.getCommands()
+            if d:
+                paths.append(d)
+            bpen = BoundsPen(glyphset)
+            glyphset[gname].draw(TransformPen(bpen, transform))
+            if bpen.bounds:
+                b = bpen.bounds
+                bounds = b if bounds is None else (
+                    min(bounds[0], b[0]), min(bounds[1], b[1]),
+                    max(bounds[2], b[2]), max(bounds[3], b[3]),
+                )
+            x += hmtx[gname][0] * scale
+        return paths, bounds, x
 
-    if bounds is None:
+    lines = text.splitlines() or [text]
+    line_height = size * line_gap
+
+    rendered: list[tuple[list[str], tuple | None, float]] = []
+    for i, line in enumerate(lines):
+        rendered.append(render_line(line, i * line_height))
+
+    all_bounds = None
+    for _, b, _ in rendered:
+        if b is None:
+            continue
+        all_bounds = b if all_bounds is None else (
+            min(all_bounds[0], b[0]), min(all_bounds[1], b[1]),
+            max(all_bounds[2], b[2]), max(all_bounds[3], b[3]),
+        )
+    if all_bounds is None:
         sys.exit("no drawable glyphs in the provided name")
-    x0, y0, x1, y1 = bounds
+
+    x0, y0, x1, y1 = all_bounds
     w, h = x1 - x0, y1 - y0
-    body = "\n".join(f'<path d="{d}"/>' for d in paths)
+    body_parts: list[str] = []
+    for paths, _, advance in rendered:
+        dx = 0.0
+        if align == "center":
+            dx = (w - advance) / 2.0
+        for d in paths:
+            if dx:
+                body_parts.append(f'<path transform="translate({dx:.2f},0)" d="{d}"/>')
+            else:
+                body_parts.append(f'<path d="{d}"/>')
+    body = "\n".join(body_parts)
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w:.2f} {h:.2f}">\n'
         f'<g fill="#000000" transform="translate({-x0:.2f},{-y0:.2f})">\n'
@@ -119,6 +148,10 @@ def main() -> None:
     ap.add_argument("--name", required=True, help="text to render, e.g. the tool name")
     ap.add_argument("--out", required=True, help="output SVG path")
     ap.add_argument("--font", help="path to a TTF font (default: Roboto Condensed)")
+    ap.add_argument("--line-gap", type=float, default=1.25,
+                    help="line height as a multiple of the font size (default: 1.25)")
+    ap.add_argument("--align", choices=("left", "center"), default="left",
+                    help="horizontal alignment of lines (default: left)")
     ap.add_argument("--force", action="store_true", help="overwrite an existing file")
     args = ap.parse_args()
 
@@ -127,7 +160,8 @@ def main() -> None:
         sys.exit(f"{out} already exists (use --force to overwrite)")
 
     text = clean_text(args.name)
-    svg = build_svg(text, load_font(find_font(args.font)))
+    svg = build_svg(text, load_font(find_font(args.font)),
+                    line_gap=args.line_gap, align=args.align)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(svg)
     print(f"wrote {out}  (slug: {slugify(args.name)})")
