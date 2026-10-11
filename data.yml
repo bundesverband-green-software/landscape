@@ -316,7 +316,7 @@ categories:
             description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions using coefficient data from Cloud Carbon Footprint.
             homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            logo: organization/retit.png
+            logo: unofficial/opentelemetry-java-agent-extension.svg
 
           - item:
             name: LIMo
