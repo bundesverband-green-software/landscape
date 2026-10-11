@@ -193,7 +193,7 @@ categories:
             repo_url: https://github.com/ceems-dev/ceems
             logo: ceems.svg
             second_path:
-              - "Application / Monitoring & Tracing"
+              - "Full-Stack Application / Monitoring & Tracing"
             extra:
               documentation_url: https://ceems-dev.github.io/ceems/docs/
 
@@ -267,7 +267,7 @@ categories:
             repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
             logo: unofficial/technology-carbon-estimator.svg
 
-  - name: Application
+  - name: Full-Stack Application
     subcategories:
 
       - name: Monitoring & Tracing
@@ -329,7 +329,7 @@ categories:
   - name: Desktop & Mobile
     subcategories:
 
-      - name: Desktop Application
+      - name: Desktop
         items:
 
           - item:
@@ -349,7 +349,7 @@ categories:
             repo_url: https://github.com/wattwisegames/watt-wiser
             logo: watt-wiser.svg
 
-      - name: Mobile App
+      - name: Mobile
         items:
 
           - item:
