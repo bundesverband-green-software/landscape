@@ -49,10 +49,10 @@ body:
         - Infrastructure & Cluster Level / Kubernetes
         - Infrastructure & Cluster Level / Agent (monitoring agent or daemon)
         - Infrastructure & Cluster Level / Planning & Calculation (estimators and calculators)
-        - Application / Monitoring & Tracing
-        - Application / Scenario Measurement
+        - Full-Stack Application / Monitoring & Tracing
+        - Full-Stack Application / Scenario Measurement
         - Desktop & Mobile / Desktop Application
-        - Desktop & Mobile / Mobile App
+        - Desktop & Mobile / Mobile Application
         - Code / Code Level Energy Measurement
         - Code / Static Code Analysis
         - Code / CI Pipeline
