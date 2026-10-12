@@ -270,24 +270,6 @@ categories:
   - name: Full-Stack Application
     subcategories:
 
-      - name: Monitoring & Tracing
-        items:
-
-          - item:
-            name: OpenTelemetry Java Agent Extension
-            description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions using coefficient data from Cloud Carbon Footprint.
-            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
-            logo: organization/retit.png
-
-          - item:
-            name: LIMo
-            description: A lightweight monitoring tool for calculating the energy consumption of microservices in Docker containers.
-            homepage_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/README.md
-            repo_url: https://github.com/qaware/microservice-energy-consumption-benchmark/tree/main/tools/limo
-            logo: unofficial/limo.svg
-            project: "archived"
-
       - name: Scenario Measurement
         items:
 
@@ -325,6 +307,24 @@ categories:
             logo: cardamon.svg
             second_path:
               - "Website / Website Carbon Estimation"
+
+      - name: Monitoring & Tracing
+        items:
+
+          - item:
+            name: OpenTelemetry Java Agent Extension
+            description: An extension for the OpenTelemetry Java Agent provided by RETIT that collects resource demand data and publishes carbon emissions using coefficient data from Cloud Carbon Footprint.
+            homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
+            logo: organization/retit.png
+
+          - item:
+            name: LIMo
+            description: A lightweight monitoring tool for calculating the energy consumption of microservices in Docker containers.
+            homepage_url: https://github.com/qaware/microservice-energy-consumption-benchmark/blob/main/tools/limo/README.md
+            repo_url: https://github.com/qaware/microservice-energy-consumption-benchmark/tree/main/tools/limo
+            logo: unofficial/limo.svg
+            project: "archived"
 
   - name: Desktop & Mobile
     subcategories:
