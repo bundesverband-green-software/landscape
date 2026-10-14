@@ -703,7 +703,7 @@ categories:
             second_path:
               -  "Optimization / Cloud Infrastructure"
             extra:
-              documentation_url: https://www.oxygenit.io/technology-methodology
+              documentation_url: https://docs.oxygenit.io/
 
   - name: Data Aggregation
     subcategories:
