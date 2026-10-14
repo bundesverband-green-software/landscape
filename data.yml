@@ -242,7 +242,7 @@ categories:
             homepage_url: https://project.oxygenit.io/
             logo: oxygenit.png
             extra:
-              documentation_url: https://www.oxygenit.io/technology-methodology
+              documentation_url: https://docs.oxygenit.io/#cloud-project-carbon-emission-simulator
 
           - item:
             name: Green Algorithms Calculator
@@ -1117,7 +1117,7 @@ categories:
             second_path:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
             extra:
-              documentation_url: https://www.ibm.com/docs/en/txture
+              documentation_url: https://www.ibm.com/docs/en/txture?topic=proposals-carbon-footprint-estimate
 
           - item:
             name: Cycloid
