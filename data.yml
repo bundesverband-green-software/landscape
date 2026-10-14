@@ -1166,6 +1166,15 @@ categories:
             logo: unofficial/clever.svg
             project: "archived"
 
+          - item:
+            name: Python Kubernetes Downscaler
+            description: Scales down or pauses idle Kubernetes workloads such as Deployments, StatefulSets and CronJobs during non-work hours to save energy and cost.
+            homepage_url: https://github.com/caas-team/py-kube-downscaler
+            repo_url: https://github.com/caas-team/py-kube-downscaler
+            logo: unofficial/python-kubernetes-downscaler.svg
+            extra:
+              documentation_url: https://github.com/caas-team/py-kube-downscaler/blob/main/README.md
+
       - name: Carbon Awareness
         items:
 
