@@ -113,6 +113,8 @@ categories:
             homepage_url: https://www.cloudassess.org/
             repo_url: https://github.com/kleis-technology/cloud-assess
             logo: cloudassess.svg
+            extra:
+              documentation_url: https://github.com/kleis-technology/cloud-assess#how-does-it-work
 
           - item:
             name: SPRUCE
@@ -172,6 +174,8 @@ categories:
             homepage_url: https://github.com/aknostic/keit/
             repo_url: https://github.com/aknostic/keit/
             logo: unofficial/keit.svg
+            extra:
+              documentation_url: https://www.cloudcarbonfootprint.org/docs/methodology/
 
       - name: Agent
         items:
@@ -223,6 +227,8 @@ categories:
             repo_url: https://github.com/Boavizta/datavizta
             logo: datavizta.svg
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://doc.api.boavizta.org/
 
           - item:
             name: EasyVirt Eclyo
@@ -236,7 +242,7 @@ categories:
             homepage_url: https://project.oxygenit.io/
             logo: oxygenit.png
             extra:
-              documentation_url: https://docs.oxygenit.io/#cloud-project-carbon-emission-simulator
+              documentation_url: https://www.oxygenit.io/technology-methodology
 
           - item:
             name: Green Algorithms Calculator
@@ -244,6 +250,8 @@ categories:
             homepage_url: https://calculator.green-algorithms.org/
             repo_url: https://github.com/Cambridge-Sustainable-Computing-Lab/Green-Algorithms-calculator
             logo: unofficial/green-algorithms-calculator.svg
+            extra:
+              documentation_url: https://doi.org/10.1002/advs.202100707
 
           - item:
             name: Data Center Water Consumption Calculator
@@ -266,6 +274,8 @@ categories:
             homepage_url: https://www.techcarbonstandard.org/estimator
             repo_url: https://github.com/ScottLogic/sl-tech-carbon-estimator/
             logo: unofficial/technology-carbon-estimator.svg
+            extra:
+              documentation_url: https://www.techcarbonstandard.org/
 
   - name: Full-Stack Application
     subcategories:
@@ -317,6 +327,8 @@ categories:
             homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             logo: unofficial/opentelemetry-java-agent-extension.svg
+            extra:
+              documentation_url: https://www.cloudcarbonfootprint.org/docs/methodology/
 
           - item:
             name: LIMo
@@ -366,6 +378,8 @@ categories:
             project: "in-active-use-by-members"
             second_path:
               - "Website / Website Energy Measurement"
+            extra:
+              documentation_url: https://greenspector.com/en/studio/environmental-impact-measurement/
 
           - item:
             name: PowDroid
@@ -403,6 +417,8 @@ categories:
             repo_url: https://github.com/msg-systems/jpowermonitor
             logo: unofficial/jpowermonitor.svg
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://www.cloudcarbonfootprint.org/docs/methodology/
 
           - item:
             name: DotNet-Counters
@@ -416,6 +432,8 @@ categories:
             homepage_url: https://github.com/powerapi-ng/pyRAPL
             repo_url: https://github.com/powerapi-ng/pyRAPL
             logo: pyrapl.png
+            extra:
+              documentation_url: https://pyrapl.readthedocs.io/en/latest/
 
           - item:
             name: CodeCarbon
@@ -445,6 +463,8 @@ categories:
             repo_url: https://github.com/hitabisgmbh/oaklean
             logo: oaklean.svg
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://github.com/hitabisgmbh/oaklean#readme
             
           - item:
             name: perun
@@ -536,6 +556,8 @@ categories:
             homepage_url: https://ml.energy/zeus/
             repo_url: https://github.com/ml-energy/zeus
             logo: zeus.svg
+            extra:
+              documentation_url: https://ml.energy/zeus/measure/
 
           - item:
             name: ML CO2 Impact
@@ -543,6 +565,8 @@ categories:
             homepage_url: https://mlco2.github.io/impact/
             repo_url: https://github.com/mlco2/impact
             logo: mlco2impact.png
+            extra:
+              documentation_url: https://arxiv.org/abs/1910.09700
 
           - item:
             name: Green Algorithms Calculator (AI)
@@ -552,6 +576,8 @@ categories:
             logo: unofficial/green-algorithms-calculator.svg
             second_path:
               - "Artificial Intelligence / AI Inference"
+            extra:
+              documentation_url: https://doi.org/10.1002/advs.202100707
 
           - item:
             name: experiment-impact-tracker
@@ -709,6 +735,8 @@ categories:
             homepage_url: https://www.green-coding.io/products/carbondb/
             logo: carbondb.png
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://docs.green-coding.io/docs/prologue/philosophy-methodology/
 
           - item:
             name: fruggr
@@ -778,6 +806,8 @@ categories:
             homepage_url: https://github.com/borisruf/carbon-footprint-modeling-tool
             repo_url: https://github.com/borisruf/carbon-footprint-modeling-tool
             logo: unofficial/carbon-footprint-modeling-tool.svg
+            extra:
+              documentation_url: https://arxiv.org/abs/2310.01278
 
           - item:
             name: e-footprint model
@@ -842,6 +872,8 @@ categories:
             homepage_url: https://www.intel.com/content/www/us/en/developer/articles/tool/performance-counter-monitor.html?wapkw=pcm
             repo_url: https://github.com/intel/pcm
             logo: organization/intel.png
+            extra:
+              documentation_url: https://github.com/intel/pcm#readme
 
           - item:
             name: PowerTOP
@@ -858,6 +890,8 @@ categories:
             repo_url: https://github.com/green-coding-solutions/cloud-energy
             logo: cloud-energy.png
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://github.com/green-coding-solutions/cloud-energy#readme
 
           - item:
             name: EnergiBridge
@@ -866,6 +900,8 @@ categories:
             repo_url: https://github.com/tdurieux/EnergiBridge
             logo: unofficial/energibridge.svg
             project: "archived"
+            extra:
+              documentation_url: https://arxiv.org/abs/2312.13897
 
           - item:
             name: CPU Energy Meter
@@ -874,6 +910,8 @@ categories:
             repo_url: https://github.com/sosy-lab/cpu-energy-meter
             logo: unofficial/cpu-energy-meter.svg
             project: "archived"
+            extra:
+              documentation_url: https://doi.org/10.1007/978-3-030-45237-7_8
 
       - name: Process Metrics Exporter
         items:
@@ -942,6 +980,8 @@ categories:
             logo: unofficial/co2-js.svg
             license: "Apache-2.0"
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://developers.thegreenwebfoundation.org/co2js/overview/
 
           - item:
             name: Website Carbon Calculator
@@ -988,6 +1028,8 @@ categories:
             repo_url: https://github.com/bluehands/Website-Carbon-Meter
             logo: unofficial/website-carbon-meter.svg
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://github.com/bluehands/Website-Carbon-Meter#how-it-works
 
       - name: Website Energy Measurement
         items:
@@ -999,6 +1041,8 @@ categories:
             repo_url: https://github.com/green-coding-solutions/green-metrics-tool/tree/main/templates/website
             logo: webnrg.png
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://docs.green-coding.io/docs/prologue/philosophy-methodology/
 
       - name: Website Analysis
         items:
@@ -1010,6 +1054,8 @@ categories:
             repo_url: https://github.com/cnumr/GreenIT-Analysis
             logo: greenit-analysis.png
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://www.ecoindex.fr/en/how-it-works/
 
           - item:
             name: Firefox Power Profiler
@@ -1157,6 +1203,8 @@ categories:
             repo_url: https://github.com/Azure/carbon-aware-keda-operator
             logo: unofficial/carbon-aware-keda-operator.svg
             project: "archived"
+            extra:
+              documentation_url: https://github.com/Azure/carbon-aware-keda-operator#how-it-works
 
           - item:
             name: CLEVER
@@ -1176,6 +1224,8 @@ categories:
             repo_url: https://github.com/Green-Software-Foundation/carbon-aware-sdk
             logo: carbon-aware-sdk.png
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://carbon-aware-sdk.greensoftware.foundation/docs/overview
 
           - item:
             name: grid-intensity-go
@@ -1204,6 +1254,8 @@ categories:
             project: "in-active-use-by-members"
             second_path:
               - "Databases / Grid Carbon Intensity API Service"
+            extra:
+              documentation_url: https://github.com/bluehands/Carbon-Aware-Computing#methodology
 
           - item:
             name: Grid-aware Websites
