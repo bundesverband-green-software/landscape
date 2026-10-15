@@ -1166,6 +1166,15 @@ categories:
             logo: unofficial/clever.svg
             project: "archived"
 
+          - item:
+            name: GoKubeDownscaler
+            description: A horizontal autoscaler for Kubernetes workloads that scales them down during off-hours such as nights and weekends to reduce energy consumption and cost. It is the Go successor of the Python Kubernetes Downscaler with new features and improvements.
+            homepage_url: https://kube-downscaler.io/
+            repo_url: https://github.com/caas-team/GoKubeDownscaler
+            logo: go-kube-downscaler.svg
+            extra:
+              documentation_url: https://kube-downscaler.io/docs/downscaler
+
       - name: Carbon Awareness
         items:
 
