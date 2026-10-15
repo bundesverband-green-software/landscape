@@ -66,6 +66,12 @@ Condensed font. If that font is missing, install it
 pass `--font /path/to/Font.ttf`. Never overwrite an existing file silently —
 `--force` only when that is intended.
 
+Keep the aspect ratio balanced: a single long line becomes an extremely wide
+SVG that is scaled down to near-illegibility on cards. For long names pass a
+multi-line `--name` (e.g. `--name $'Python\nKubernetes\nDownscaler'`) to wrap
+the text onto 2–3 lines; aim for an aspect ratio no wider than roughly 6:1,
+like the other placeholders in `logos/unofficial/`.
+
 Then set `logo: unofficial/<slug>.svg` in `data.yml`.
 
 ## Step 5 — validate
