@@ -5,9 +5,10 @@ on:
     branches:
       - main
     paths:
-      - '*.yml'
+      - 'data.yml'
+      - 'settings.yml'
+      - 'guide.yml'
       - 'logos/**'
-      - '.github/workflows/**'
   workflow_dispatch:
 
 permissions:
