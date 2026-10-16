@@ -174,8 +174,6 @@ categories:
             homepage_url: https://github.com/aknostic/keit/
             repo_url: https://github.com/aknostic/keit/
             logo: unofficial/keit.svg
-            extra:
-              documentation_url: https://www.cloudcarbonfootprint.org/docs/methodology/
 
       - name: Agent
         items:
@@ -327,8 +325,6 @@ categories:
             homepage_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             repo_url: https://github.com/RETIT/opentelemetry-javaagent-extension
             logo: unofficial/opentelemetry-java-agent-extension.svg
-            extra:
-              documentation_url: https://www.cloudcarbonfootprint.org/docs/methodology/
 
           - item:
             name: LIMo
@@ -417,8 +413,6 @@ categories:
             repo_url: https://github.com/msg-systems/jpowermonitor
             logo: unofficial/jpowermonitor.svg
             project: "in-active-use-by-members"
-            extra:
-              documentation_url: https://www.cloudcarbonfootprint.org/docs/methodology/
 
           - item:
             name: DotNet-Counters
