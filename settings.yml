@@ -62,6 +62,9 @@ groups:
   - name: Optimization
     categories:
       - Optimization
+  - name: AI Service Provider
+    categories:
+      - AI Service Provider
 
 header:
   links:
