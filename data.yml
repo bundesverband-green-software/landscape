@@ -23,7 +23,7 @@ categories:
             logo: cloudcarbonfootprint.png
             project: "archived"
             extra:
-              documentation_url: https://www.cloudcarbonfootprint.org/docs/
+              documentation_url: https://www.cloudcarbonfootprint.org/docs/methodology
 
           - item:
             name: AWS Sustainability Console
@@ -32,7 +32,7 @@ categories:
             logo: aws.svg
             project: "in-active-use-by-members"
             extra:
-              documentation_url: https://docs.aws.amazon.com/sustainability/latest/userguide/console-visualizations.html
+              documentation_url: https://docs.aws.amazon.com/sustainability/latest/userguide/methodology.html
 
           - item:
             name: Azure Carbon Optimization
@@ -50,7 +50,7 @@ categories:
             logo: google-cloud.svg
             project: "in-active-use-by-members"
             extra:
-              documentation_url: https://cloud.google.com/carbon-footprint#documentation
+              documentation_url: https://cloud.google.com/carbon-footprint/docs/methodology
 
           - item:
             name: Scaleway Environmental Footprint Calculator
@@ -61,7 +61,7 @@ categories:
             homepage_url: https://www.scaleway.com/en/environmental-footprint-calculator/
             project: "in-active-use-by-members"
             extra:
-              documentation_url: https://www.scaleway.com/en/docs/environmental-footprint/
+              documentation_url: https://www.scaleway.com/en/docs/environmental-footprint/additional-content/environmental-footprint-calculator/
 
           - item:
             name: OVHcloud Environmental Impact Tracker
@@ -89,7 +89,7 @@ categories:
             repo_url: https://github.com/Boavizta/cloud-scanner
             logo: cloudscanner.svg
             extra:
-              documentation_url: https://boavizta.github.io/cloud-scanner/
+              documentation_url: https://boavizta.github.io/cloud-scanner/explanations/methodology.html
 
           - item:
             name: Green Cost Explorer for AWS
@@ -106,6 +106,8 @@ categories:
             logo: tailpipe.svg
             second_path:
               - "Optimization / Cloud Infrastructure"
+            extra:
+              documentation_url: https://tailpipe.ai/methodology
 
           - item:
             name: Cloud Assess
@@ -152,6 +154,8 @@ categories:
             project: "in-active-use-by-members"
             second_path:
               - "Device & Process Level / Process Metrics Exporter"
+            extra:
+              documentation_url: https://sustainable-computing.io/kepler/usage/power-attribution/
 
           - item:
             name: Carbon Measurement Engine (Carmen)
@@ -195,7 +199,7 @@ categories:
             second_path:
               - "Full-Stack Application / Monitoring & Tracing"
             extra:
-              documentation_url: https://ceems-dev.github.io/ceems/docs/
+              documentation_url: https://ceems-dev.github.io/ceems/docs/advanced/power-consumption
 
           - item:
             name: Dynatrace Cost & Carbon Optimization
@@ -284,7 +288,7 @@ categories:
             second_path:
               - "Website / Website Energy Measurement"
             extra:
-              documentation_url: https://docs.green-coding.io/
+              documentation_url: https://docs.green-coding.io/docs/prologue/philosophy-methodology/
 
           - item:
             name: GreenFrame
@@ -426,6 +430,8 @@ categories:
             second_path:
               - "Artificial Intelligence / AI Model Training"
               - "Device & Process Level / Device Measurement"
+            extra:
+              documentation_url: https://docs.codecarbon.io/latest/explanation/methodology/
 
           - item:
             name: Tracarbon
@@ -505,6 +511,8 @@ categories:
             repo_url: https://github.com/green-coding-solutions/eco-ci-energy-estimation
             logo: eco-ci.png
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://docs.green-coding.io/docs/prologue/philosophy-methodology/
 
   - name: Artificial Intelligence
     subcategories:
@@ -600,7 +608,7 @@ categories:
             repo_url: https://github.com/neuland/tokendashboard-backend
             logo: token-co2-dashboard.svg
             extra:
-              documentation_url: https://github.com/neuland/tokendashboard-backend/tree/main/docs
+              documentation_url: https://github.com/neuland/tokendashboard-backend/blob/main/docs/co2-methodology.md
             second_path:
               - "Data Aggregation / Organizational Level"
             project: "in-active-use-by-members"
@@ -618,7 +626,7 @@ categories:
             logo: electricity-maps.svg
             project: "in-active-use-by-members"
             extra:
-              documentation_url: https://app.electricitymaps.com/docs
+              documentation_url: https://www.electricitymaps.com/data/methodology
 
           - item:
             name: WattTime
@@ -626,7 +634,7 @@ categories:
             homepage_url: https://watttime.org/
             logo: watttime.png
             extra:
-              documentation_url: https://docs.watttime.org/
+              documentation_url: https://watttime.org/data-science/methodology-validation/
 
           - item:
             name: Energy-Charts
@@ -652,7 +660,7 @@ categories:
             homepage_url: https://carbonintensity.org.uk/
             logo: unofficial/carbon-intensity-uk.svg
             extra:
-              documentation_url: https://carbon-intensity.github.io/api-definitions/
+              documentation_url: https://carbonintensity.org.uk/#methodology
 
       - name: IT Emission Inventory
         items:
@@ -673,7 +681,7 @@ categories:
             homepage_url: https://www.climatiq.io/
             logo: climatiq.png
             extra:
-              documentation_url: https://www.climatiq.io/docs
+              documentation_url: https://www.climatiq.io/methodology
 
           - item:
             name: ResilioDB
@@ -787,6 +795,8 @@ categories:
             homepage_url: https://boavizta.github.io/e-footprint/
             repo_url: https://github.com/Boavizta/e-footprint
             logo: unofficial/e-footprint-model.svg
+            extra:
+              documentation_url: https://boavizta.github.io/e-footprint/methodology/
 
   - name: Device & Process Level
     subcategories:
@@ -910,6 +920,8 @@ categories:
               - "Device & Process Level / Device Measurement"
               - "Artificial Intelligence / AI Model Training"
               - "Code / Code Level Energy Measurement"
+            extra:
+              documentation_url: https://github.com/FairCompute/energy-monitoring-tool#%EF%B8%8F-methodology
 
           - item:
             name: PowerAPI
@@ -918,6 +930,8 @@ categories:
             homepage_url: https://powerapi.org/
             repo_url: https://github.com/powerapi-ng/powerapi
             logo: powerapi.webp
+            extra:
+              documentation_url: https://powerapi.org/reference/formulas/smartwatts/
 
           - item:
             name: EnergAt
@@ -949,6 +963,8 @@ categories:
             homepage_url: https://www.websitecarbon.com/
             logo: websitecarbon.jpg
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://www.websitecarbon.com/how-does-it-work/
 
           - item:
             name: Ecograder
@@ -964,6 +980,8 @@ categories:
             description: EcoIndex evaluates the environmental impact of web pages by analyzing technical performance, complexity, and resource usage, providing a sustainability score along with actionable recommendations for optimization.
             homepage_url: https://www.ecoindex.fr/en/
             logo: ecoindex.png
+            extra:
+              documentation_url: https://www.ecoindex.fr/en/how-it-works/
 
           - item:
             name: Kastor
@@ -1135,6 +1153,8 @@ categories:
             homepage_url: https://www.compute-gardener.com/
             repo_url: https://github.com/elevated-systems/compute-gardener-scheduler
             logo: compute-gardener-scheduler.svg
+            extra:
+              documentation_url: https://github.com/elevated-systems/compute-gardener-scheduler/blob/main/docs/carbon-calculations.md
 
           - item:
             name: kube-green
