@@ -605,6 +605,45 @@ categories:
               - "Data Aggregation / Organizational Level"
             project: "in-active-use-by-members"
 
+      - name: AI Benchmarks & Leaderboards
+        items:
+
+          - item:
+            name: CLEER
+            description: Ranks closed AI models by estimated inference energy consumption and carbon emissions, derived from standardized benchmarking and published conversion factors.
+            homepage_url: https://cleerdash.sustainableaigroup.com/
+            repo_url: https://github.com/sustainableaigroup/CLEER
+            logo: unofficial/cleer.svg
+            extra:
+              documentation_url: https://reports.sustainableaigroup.com/CLEER-Tech-Report/
+
+          - item:
+            name: AI Energy Score
+            description: A leaderboard rating AI models by GPU energy consumption and energy efficiency across tasks such as text and image generation.
+            homepage_url: https://huggingface.co/spaces/AIEnergyScore/Leaderboard
+            repo_url: https://github.com/huggingface/AIEnergyScore
+            logo: ai-energy-score.png
+            extra:
+              documentation_url: https://huggingface.github.io/AIEnergyScore/
+
+          - item:
+            name: ML.ENERGY Leaderboard
+            description: A leaderboard comparing the inference time and energy consumption of generative AI models.
+            homepage_url: https://ml.energy/leaderboard/
+            repo_url: https://github.com/ml-energy/leaderboard
+            logo: unofficial/ml-energy.svg
+            extra:
+              documentation_url: https://github.com/ml-energy/benchmark
+
+          - item:
+            name: LLM-Perf Leaderboard
+            description: A leaderboard ranking large language models by inference performance, including latency, memory usage, and energy consumption across hardware and backends.
+            homepage_url: https://huggingface.co/spaces/optimum/llm-perf-leaderboard
+            repo_url: https://github.com/huggingface/optimum-benchmark
+            logo: llm-perf-leaderboard.png
+            extra:
+              documentation_url: https://github.com/huggingface/optimum-benchmark#readme
+
   - name: Databases
     subcategories:
 
