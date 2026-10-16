@@ -1048,8 +1048,6 @@ categories:
             repo_url: https://github.com/cnumr/GreenIT-Analysis
             logo: greenit-analysis.png
             project: "in-active-use-by-members"
-            extra:
-              documentation_url: https://www.ecoindex.fr/en/how-it-works/
 
           - item:
             name: Firefox Power Profiler
