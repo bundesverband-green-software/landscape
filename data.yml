@@ -155,7 +155,7 @@ categories:
             second_path:
               - "Device & Process Level / Process Metrics Exporter"
             extra:
-              documentation_url: https://sustainable-computing.io/archive/design/power_model/
+              documentation_url: https://sustainable-computing.io/kepler/usage/power-attribution/
 
           - item:
             name: Carbon Measurement Engine (Carmen)
@@ -188,7 +188,7 @@ categories:
             logo: scaphandre.svg
             project: "in-active-use-by-members"
             extra:
-              documentation_url: https://hubblo-org.github.io/scaphandre-documentation/explanations/how-scaph-computes-per-process-power-consumption.html
+              documentation_url: https://hubblo-org.github.io/scaphandre-documentation/index.html
 
           - item:
             name: CEEMS

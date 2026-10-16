@@ -45,6 +45,11 @@ categories:
 
           Manche Tools sind in der Landkarte ausgegraut und mit der Kennzeichnung 'Archived' versehen. Dies bedeutet, dass das Tool entweder offiziell nicht mehr weiterentwickelt wird oder das Repository den Eindruck erweckt, dass das Projekt inaktiv ist.
 
+      - subcategory: "Methodik-Dokumentation"
+        content: |
+
+          Die Methodik ist für uns ein zentraler Aspekt von Green-Software-Tools: Nur wenn nachvollziehbar ist, wie ein Tool misst und rechnet, lassen sich die Ergebnisse sinnvoll einordnen. Wo möglich, verweist der "Documentation"-Link eines Tools daher direkt auf die Seite, auf der die Methodik des Tools bzw. Projekts beschrieben wird.
+
       - subcategory: "Änderung/Ergänzung vorschlagen"
         content: |
 
@@ -86,6 +91,11 @@ categories:
         content: |
 
           Some tools are grayed out in the landscape and marked 'Archived'. This means that the tool is either no longer being officially developed or the repository gives the impression that the project is inactive.
+
+      - subcategory: "Methodology documentation"
+        content: |
+
+          Methodology is a central aspect of green software tools for us: only if it is traceable how a tool measures and calculates can its results be assessed meaningfully. Where possible, a tool's "Documentation" link therefore points directly to the page describing the methodology of the tool/project.
 
       - subcategory: "Propose change/addition"
         content: |
