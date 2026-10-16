@@ -730,7 +730,7 @@ categories:
             logo: carbondb.png
             project: "in-active-use-by-members"
             extra:
-              documentation_url: https://docs.green-coding.io/docs/prologue/philosophy-methodology/
+              documentation_url: https://docs.green-coding.io/docs/carbondb/overview/
 
           - item:
             name: fruggr
@@ -1036,7 +1036,7 @@ categories:
             logo: webnrg.png
             project: "in-active-use-by-members"
             extra:
-              documentation_url: https://docs.green-coding.io/docs/prologue/philosophy-methodology/
+              documentation_url: https://docs.green-coding.io/docs/measuring/measuring-websites/
 
       - name: Website Analysis
         items:
