@@ -61,7 +61,7 @@ categories:
             homepage_url: https://www.scaleway.com/en/environmental-footprint-calculator/
             project: "in-active-use-by-members"
             extra:
-              documentation_url: https://www.scaleway.com/en/docs/environmental-footprint/additional-content/environmental-footprint-calculator/#methodology-overview
+              documentation_url: https://www.scaleway.com/en/docs/environmental-footprint/additional-content/environmental-footprint-calculator/
 
           - item:
             name: OVHcloud Environmental Impact Tracker
