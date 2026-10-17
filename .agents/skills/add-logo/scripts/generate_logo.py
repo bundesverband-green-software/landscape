@@ -72,7 +72,7 @@ def clean_text(name: str) -> str:
 
 
 def build_svg(text: str, font: TTFont, size: float = 100.0,
-              line_gap: float = 1.25, align: str = "left",
+              line_gap: float = 1.25, align: str = "center",
               margin: float = 0.08) -> str:
     upem = font["head"].unitsPerEm
     scale = size / upem
@@ -161,8 +161,9 @@ def main() -> None:
     ap.add_argument("--font", help="path to a TTF font (default: Roboto Condensed)")
     ap.add_argument("--line-gap", type=float, default=1.25,
                     help="line height as a multiple of the font size (default: 1.25)")
-    ap.add_argument("--align", choices=("left", "center"), default="left",
-                    help="horizontal alignment of lines (default: left)")
+    ap.add_argument("--align", choices=("left", "center"), default="center",
+                    help="horizontal alignment of lines (default: center; "
+                         "single-line output is unaffected)")
     ap.add_argument("--margin", type=float, default=0.08,
                     help="padding around the glyphs as a fraction of the font size (default: 0.08)")
     ap.add_argument("--force", action="store_true", help="overwrite an existing file")
@@ -178,6 +179,16 @@ def main() -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(svg)
     print(f"wrote {out}  (slug: {slugify(args.name)})")
+
+    vb = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', svg)
+    if vb:
+        ratio = float(vb.group(1)) / float(vb.group(2))
+        if ratio > 6.0:
+            print(
+                f"warning: aspect ratio {ratio:.1f}:1 is very wide and will "
+                f"render small on cards; wrap --name onto 2-3 lines",
+                file=sys.stderr,
+            )
 
 
 if __name__ == "__main__":

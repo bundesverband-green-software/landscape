@@ -63,14 +63,28 @@ uv run --with fonttools python .agents/skills/add-logo/scripts/generate_logo.py 
 It emits black glyph outlines with a small margin around them using the libre
 Roboto Condensed font. If that font is missing, install it
 (`apt install fonts-roboto` / `brew install --cask font-roboto-condensed`) or
-pass `--font /path/to/Font.ttf`. Never overwrite an existing file silently —
-`--force` only when that is intended.
+pass `--font /path/to/Font.ttf`. `--margin` (default `0.08` of the font size)
+controls the padding around the glyphs. Never overwrite an existing file
+silently — `--force` only when that is intended.
 
-Keep the aspect ratio balanced: a single long line becomes an extremely wide
-SVG that is scaled down to near-illegibility on cards. For long names pass a
-multi-line `--name` (e.g. `--name $'Python\nKubernetes\nDownscaler'`) to wrap
-the text onto 2–3 lines; aim for an aspect ratio no wider than roughly 6:1,
-like the other placeholders in `logos/unofficial/`.
+### Sizing and line breaks
+
+Logos are scaled to fit a roughly 70 px wide card box (explore card `70×90`,
+mobile `55×55`; grid cards vary with zoom). A wide logo is width-limited, so its
+rendered height is about `70 / ratio` px — a single long line becomes an
+unreadable strip. For long names pass a multi-line `--name` with newlines, e.g.
+`--name $'Python\nKubernetes\nDownscaler'`.
+
+- Aim for an aspect ratio **≤ 5:1**; **~6:1 is the practical maximum** (the
+  script warns above it). A 6:1 logo renders only ~12 px tall in the card.
+- Break at spaces and hyphens, keeping the hyphen at the end of the line
+  (`grid-` / `intensity-go`), matching the existing placeholders.
+- Do not leave a very short fragment alone on a line (`UK`, `go`); rebalance so
+  every line has at least a few characters.
+- Keep the lines roughly balanced; 2 lines is usually enough, 3 for long names.
+  If a name is a single word with no break opportunity, accept the wide logo.
+- Multi-line output is centred by default (`--align center`); single-line
+  output is unaffected.
 
 Then set `logo: unofficial/<slug>.svg` in `data.yml`.
 
