@@ -4,8 +4,9 @@
 Run via:  uv run --with fonttools python generate_logo.py --name "Tool Name" --out logos/unofficial/tool-name.svg
 
 Uses a local libre condensed font (Roboto Condensed Bold by default) and emits
-black glyph <path> outlines with a tight viewBox, matching the style of the
-existing logos/unofficial/*.svg placeholders. No network, no permanent deps.
+black glyph <path> outlines with a small margin around the glyphs, matching the
+style of the existing logos/unofficial/*.svg placeholders. No network, no
+permanent deps.
 """
 
 import argparse
@@ -71,7 +72,8 @@ def clean_text(name: str) -> str:
 
 
 def build_svg(text: str, font: TTFont, size: float = 100.0,
-              line_gap: float = 1.25, align: str = "left") -> str:
+              line_gap: float = 1.25, align: str = "left",
+              margin: float = 0.08) -> str:
     upem = font["head"].unitsPerEm
     scale = size / upem
     cmap = font.getBestCmap()
@@ -112,24 +114,33 @@ def build_svg(text: str, font: TTFont, size: float = 100.0,
     for i, line in enumerate(lines):
         rendered.append(render_line(line, i * line_height))
 
+    # Centre lines within the widest line. Use the advance width rather than the
+    # ink width: otherwise a line can shift past the bounding box and get clipped
+    # at the viewBox edge.
+    max_advance = max((advance for _, _, advance in rendered), default=0.0)
+
+    shifts: list[float] = []
     all_bounds = None
-    for _, b, _ in rendered:
+    for _, b, advance in rendered:
+        dx = (max_advance - advance) / 2.0 if align == "center" else 0.0
+        shifts.append(dx)
         if b is None:
             continue
-        all_bounds = b if all_bounds is None else (
-            min(all_bounds[0], b[0]), min(all_bounds[1], b[1]),
-            max(all_bounds[2], b[2]), max(all_bounds[3], b[3]),
+        shifted = (b[0] + dx, b[1], b[2] + dx, b[3])
+        all_bounds = shifted if all_bounds is None else (
+            min(all_bounds[0], shifted[0]), min(all_bounds[1], shifted[1]),
+            max(all_bounds[2], shifted[2]), max(all_bounds[3], shifted[3]),
         )
     if all_bounds is None:
         sys.exit("no drawable glyphs in the provided name")
 
     x0, y0, x1, y1 = all_bounds
     w, h = x1 - x0, y1 - y0
+    # Breathing room so glyphs never touch the viewBox border.
+    pad = margin * size
+
     body_parts: list[str] = []
-    for paths, _, advance in rendered:
-        dx = 0.0
-        if align == "center":
-            dx = (w - advance) / 2.0
+    for (paths, _, _), dx in zip(rendered, shifts):
         for d in paths:
             if dx:
                 body_parts.append(f'<path transform="translate({dx:.2f},0)" d="{d}"/>')
@@ -137,8 +148,8 @@ def build_svg(text: str, font: TTFont, size: float = 100.0,
                 body_parts.append(f'<path d="{d}"/>')
     body = "\n".join(body_parts)
     return (
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w:.2f} {h:.2f}">\n'
-        f'<g fill="#000000" transform="translate({-x0:.2f},{-y0:.2f})">\n'
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w + 2 * pad:.2f} {h + 2 * pad:.2f}">\n'
+        f'<g fill="#000000" transform="translate({pad - x0:.2f},{pad - y0:.2f})">\n'
         f"{body}\n</g>\n</svg>\n"
     )
 
@@ -152,6 +163,8 @@ def main() -> None:
                     help="line height as a multiple of the font size (default: 1.25)")
     ap.add_argument("--align", choices=("left", "center"), default="left",
                     help="horizontal alignment of lines (default: left)")
+    ap.add_argument("--margin", type=float, default=0.08,
+                    help="padding around the glyphs as a fraction of the font size (default: 0.08)")
     ap.add_argument("--force", action="store_true", help="overwrite an existing file")
     args = ap.parse_args()
 
@@ -161,7 +174,7 @@ def main() -> None:
 
     text = clean_text(args.name)
     svg = build_svg(text, load_font(find_font(args.font)),
-                    line_gap=args.line_gap, align=args.align)
+                    line_gap=args.line_gap, align=args.align, margin=args.margin)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(svg)
     print(f"wrote {out}  (slug: {slugify(args.name)})")

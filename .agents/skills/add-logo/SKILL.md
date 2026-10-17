@@ -60,8 +60,8 @@ uv run --with fonttools python .agents/skills/add-logo/scripts/generate_logo.py 
   --name "<Tool Name>" --out logos/unofficial/<slug>.svg
 ```
 
-It emits black glyph outlines with a tight viewBox using the libre Roboto
-Condensed font. If that font is missing, install it
+It emits black glyph outlines with a small margin around them using the libre
+Roboto Condensed font. If that font is missing, install it
 (`apt install fonts-roboto` / `brew install --cask font-roboto-condensed`) or
 pass `--font /path/to/Font.ttf`. Never overwrite an existing file silently —
 `--force` only when that is intended.
