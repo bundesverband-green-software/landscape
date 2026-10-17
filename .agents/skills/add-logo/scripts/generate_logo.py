@@ -15,6 +15,7 @@ import sys
 from pathlib import Path
 
 from fontTools.pens.boundsPen import BoundsPen
+from fontTools.pens.recordingPen import RecordingPen
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 from fontTools.misc.transform import Transform
@@ -73,12 +74,26 @@ def clean_text(name: str) -> str:
 
 def build_svg(text: str, font: TTFont, size: float = 100.0,
               line_gap: float = 1.25, align: str = "center",
-              margin: float = 0.08) -> str:
+              margin: float = 0.08) -> tuple[str, float]:
     upem = font["head"].unitsPerEm
     scale = size / upem
     cmap = font.getBestCmap()
     glyphset = font.getGlyphSet()
     hmtx = font["hmtx"]
+
+    # Draw each glyph only once: cache its recorded outline (replayed per
+    # position) and its untransformed bounds (shifted by arithmetic below,
+    # since the transform is a uniform scale + flip + translate).
+    glyph_cache: dict[str, tuple[RecordingPen, tuple | None]] = {}
+
+    def outlines(gname: str) -> tuple[RecordingPen, tuple | None]:
+        if gname not in glyph_cache:
+            rec = RecordingPen()
+            glyphset[gname].draw(rec)
+            bpen = BoundsPen(glyphset)
+            rec.replay(bpen)
+            glyph_cache[gname] = (rec, bpen.bounds)
+        return glyph_cache[gname]
 
     def render_line(line: str, y_baseline: float) -> tuple[list[str], tuple | None, float]:
         paths: list[str] = []
@@ -90,16 +105,17 @@ def build_svg(text: str, font: TTFont, size: float = 100.0,
                 gname = cmap.get(ord(" "))  # fall back to a space advance
             if gname is None:
                 continue
+            rec, gb = outlines(gname)
             transform = Transform(scale, 0, 0, -scale, x, y_baseline)
             spen = SVGPathPen(glyphset)
-            glyphset[gname].draw(TransformPen(spen, transform))
+            rec.replay(TransformPen(spen, transform))
             d = spen.getCommands()
             if d:
                 paths.append(d)
-            bpen = BoundsPen(glyphset)
-            glyphset[gname].draw(TransformPen(bpen, transform))
-            if bpen.bounds:
-                b = bpen.bounds
+            if gb:
+                # transform maps (gx, gy) -> (x + scale*gx, y - scale*gy)
+                b = (x + scale * gb[0], y_baseline - scale * gb[3],
+                     x + scale * gb[2], y_baseline - scale * gb[1])
                 bounds = b if bounds is None else (
                     min(bounds[0], b[0]), min(bounds[1], b[1]),
                     max(bounds[2], b[2]), max(bounds[3], b[3]),
@@ -147,11 +163,12 @@ def build_svg(text: str, font: TTFont, size: float = 100.0,
             else:
                 body_parts.append(f'<path d="{d}"/>')
     body = "\n".join(body_parts)
-    return (
+    svg = (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w + 2 * pad:.2f} {h + 2 * pad:.2f}">\n'
         f'<g fill="#000000" transform="translate({pad - x0:.2f},{pad - y0:.2f})">\n'
         f"{body}\n</g>\n</svg>\n"
     )
+    return svg, (w + 2 * pad) / (h + 2 * pad)
 
 
 def main() -> None:
@@ -174,21 +191,18 @@ def main() -> None:
         sys.exit(f"{out} already exists (use --force to overwrite)")
 
     text = clean_text(args.name)
-    svg = build_svg(text, load_font(find_font(args.font)),
-                    line_gap=args.line_gap, align=args.align, margin=args.margin)
+    svg, ratio = build_svg(text, load_font(find_font(args.font)),
+                           line_gap=args.line_gap, align=args.align, margin=args.margin)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(svg)
     print(f"wrote {out}  (slug: {slugify(args.name)})")
 
-    vb = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', svg)
-    if vb:
-        ratio = float(vb.group(1)) / float(vb.group(2))
-        if ratio > 6.0:
-            print(
-                f"warning: aspect ratio {ratio:.1f}:1 is very wide and will "
-                f"render small on cards; wrap --name onto 2-3 lines",
-                file=sys.stderr,
-            )
+    if ratio > 6.0:
+        print(
+            f"warning: aspect ratio {ratio:.1f}:1 is very wide and will "
+            f"render small on cards; wrap --name onto 2-3 lines",
+            file=sys.stderr,
+        )
 
 
 if __name__ == "__main__":
