@@ -1081,7 +1081,7 @@ categories:
             homepage_url: https://www.cycloid.io/
             logo: cycloid.png
             extra:
-              documentation_url: https://www.cycloid.io/solutions/greenops-tool/
+              documentation_url: https://www.cycloid.io/blog/cloud-carbon-footprint-a-greenops-finops-approach-to-cloud-waste/
 
           - item:
             name: EcoInfra
