@@ -725,6 +725,8 @@ categories:
             logo: fruggr.svg
             second_path:
               -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+            extra:
+              documentation_url: https://www.fruggr.io/en/how-does-fruggr-assess-the-environmental-impacts-of-digital-services/
 
           - item:
             name: Sopht
@@ -1096,6 +1098,8 @@ categories:
             description: A platform for managing and optimizing cloud infrastructure with sustainability in mind.
             homepage_url: https://www.cycloid.io/
             logo: cycloid.png
+            extra:
+              documentation_url: https://www.cycloid.io/blog/cloud-carbon-footprint-a-greenops-finops-approach-to-cloud-waste/
 
           - item:
             name: EcoInfra
