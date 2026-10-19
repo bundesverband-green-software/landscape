@@ -47,7 +47,7 @@ body:
       options:
         - Infrastructure & Cluster Level / Public Cloud (cloud providers such as AWS, Azure, GCP)
         - Infrastructure & Cluster Level / Kubernetes
-        - Infrastructure & Cluster Level / On-Premise & Bare-Metal (bare-metal hosts and on-premise infrastructure)
+        - Infrastructure & Cluster Level / Bare-Metal & Host Level (physical hosts, hypervisors and VMs measured from the host side)
         - Infrastructure & Cluster Level / Planning & Calculation (estimators and calculators)
         - Full-Stack Application / Monitoring & Tracing
         - Full-Stack Application / Scenario Measurement

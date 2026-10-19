@@ -129,16 +129,17 @@ categories:
               documentation_url: https://github.com/DigitalPebble/spruce/blob/main/docs/src/methodology.md
 
           - item:
-            name: Dynatrace Cost & Carbon Optimization
-            description: | 
-              Cost & Carbon Optimization is a proprietary app for the Dynatrace ecosystem that can report carbon emissions and public cloud costs for all hosts monitored by OneAgent, and provides carbon emissions and energy consumption metrics for Kubernetes infrastructure monitored by Dynatrace.
-            homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
-            logo: organization/dynatrace.svg
+            name: Carbon Measurement Engine (Carmen)
+            description: |
+              Carmen is an open-source tool to measure the carbon footprint of cloud-based software at two levels: infrastructure level (VMs, storage, and other cloud services) and application level (individual applications and workloads running in your K8s cluster). It is built on top of the Impact Framework and uses either FinOps / VM usage CSVs or Prometheus container metrics as the data source.
+              Carmen is managed by the Software Standards Working Group in the Green Software Foundation. 
+            homepage_url: https://greensoftware.foundation/tools/carmen/
+            repo_url: https://github.com/Green-Software-Foundation/if-carmen
+            logo: carmen.svg
             extra:
-              documentation_url: https://docs.dynatrace.com/docs/observe/business-observability/cost-and-carbon-optimization
+              documentation_url: https://github.com/Green-Software-Foundation/if-carmen/blob/dev/docs/methodology.md
             second_path:
               - "Infrastructure & Cluster Level / Kubernetes"
-              - "Infrastructure & Cluster Level / On-Premise & Bare-Metal"
 
       - name: Kubernetes
         items:
@@ -156,26 +157,13 @@ categories:
               documentation_url: https://sustainable-computing.io/kepler/usage/power-attribution/
 
           - item:
-            name: Carbon Measurement Engine (Carmen)
-            description: |
-              Carmen is an open-source tool to measure the carbon footprint of cloud-based software at two levels: infrastructure level (VMs, storage, and other cloud services) and application level (individual applications and workloads running in your K8s cluster). It is built on top of the Impact Framework and uses either FinOps / VM usage CSVs or Prometheus container metrics as the data source.
-              Carmen is managed by the Software Standards Working Group in the Green Software Foundation. 
-            homepage_url: https://greensoftware.foundation/tools/carmen/
-            repo_url: https://github.com/Green-Software-Foundation/if-carmen
-            logo: carmen.svg
-            extra:
-              documentation_url: https://github.com/Green-Software-Foundation/if-carmen/blob/dev/docs/methodology.md
-            second_path:
-              - "Infrastructure & Cluster Level / Public Cloud"
-
-          - item:
             name: KEIT
             description: KEIT (Kubernetes Emissions Insights Tool) supplements the energy recording with Kepler with current grid carbon intensity values and embodied carbon emissions.
             homepage_url: https://github.com/aknostic/keit/
             repo_url: https://github.com/aknostic/keit/
             logo: unofficial/keit.svg
 
-      - name: On-Premise & Bare-Metal
+      - name: Bare-Metal & Host Level
         items:
 
           - item:
@@ -209,9 +197,22 @@ categories:
             repo_url: https://github.com/ceems-dev/ceems
             logo: ceems.svg
             second_path:
+              - "Infrastructure & Cluster Level / Kubernetes"
               - "Full-Stack Application / Monitoring & Tracing"
             extra:
               documentation_url: https://ceems-dev.github.io/ceems/docs/advanced/power-consumption
+
+          - item:
+            name: Dynatrace Cost & Carbon Optimization
+            description: | 
+              Cost & Carbon Optimization is a proprietary app for the Dynatrace ecosystem that can report carbon emissions and public cloud costs for all hosts monitored by OneAgent, and provides carbon emissions and energy consumption metrics for Kubernetes infrastructure monitored by Dynatrace.
+            homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
+            logo: organization/dynatrace.svg
+            second_path:
+              - "Infrastructure & Cluster Level / Public Cloud"
+              - "Infrastructure & Cluster Level / Kubernetes"
+            extra:
+              documentation_url: https://docs.dynatrace.com/docs/observe/business-observability/cost-and-carbon-optimization
 
       - name: Planning & Calculation
         items:
@@ -758,10 +759,10 @@ categories:
             description: fruggr is a platform for collecting, managing and optimizing the environmental footprint of your cloud & on-prem infrastructure, digital workplaces, IT assets, websites, applications and more.
             homepage_url: https://www.fruggr.io/
             logo: fruggr.svg
-            extra:
-              documentation_url: https://www.fruggr.io/en/how-does-fruggr-assess-the-environmental-impacts-of-digital-services/
             second_path:
               -  "Infrastructure & Cluster Level / Public Cloud"
+            extra:
+              documentation_url: https://www.fruggr.io/en/how-does-fruggr-assess-the-environmental-impacts-of-digital-services/
 
           - item:
             name: Sopht
