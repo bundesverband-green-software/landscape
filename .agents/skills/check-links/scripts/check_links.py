@@ -1,13 +1,24 @@
 #!/usr/bin/env python3
-"""Check every URL in data.yml for reachability.
+"""Check every URL in data.yml for reachability and classify what answers.
 
-- 2xx                     -> OK
-- 2xx after redirect(s)   -> redirect: final URL is written back to data.yml (--write)
-- 403/429 from a listed host -> tolerated false positive (see false-positive-hosts.txt)
-- any other 4xx / 5xx / network err -> reported, never written
+Buckets, decided in classify():
 
-URLs are deduplicated and checked concurrently. Only the matched field lines
-are rewritten, so YAML formatting is preserved.
+- ok        2xx, no redirect.
+- redirect  2xx after redirect(s). The final URL is written back to data.yml
+            (--write) unless writing it would bake in a wrong URL: a notation
+            change, an added locale prefix or an https->http downgrade (see
+            redirect_ignore_reason()). An http:// link that redirects to
+            https:// is upgraded this way.
+- broken    404/410/other 4xx, NXDOMAIN, redirect loop. FAILS the check.
+- suspect   401/403/429 without a bot-challenge header, 5xx, timeouts, other
+            network errors, and a plain http:// link that serves no upgrade.
+            Reported every run, never fails: a denial cannot be told apart from
+            bot protection, so it must not block a merge.
+- challenge 401/403/429 carrying cf-mitigated / x-vercel-mitigated: challenge.
+            Proven bot protection, reported under its own heading.
+
+Only broken sets the exit code. URLs are deduplicated and checked concurrently;
+only the matched field lines are rewritten, so YAML formatting is preserved.
 
 Usage:
     python3 check_links.py                 # dry run, report only
@@ -16,7 +27,9 @@ Usage:
 """
 
 import argparse
+import random
 import re
+import socket
 import sys
 import threading
 import time
@@ -29,9 +42,17 @@ import yaml
 
 FIELDS = ("homepage_url", "repo_url", "blog", "documentation_url")
 DEFAULT_DATA = "data.yml"
-FALSE_POSITIVES_FILE = Path(__file__).resolve().parent.parent / "false-positive-hosts.txt"
-# Only bot-protection statuses are excused for listed hosts; never 5xx/DNS.
-TOLERATED_STATUSES = (403, 429)
+ATTEMPTS = 2
+# Headers that prove a 401/403/429 is a challenge, not a verdict on the page.
+CHALLENGE_HEADERS = ("cf-mitigated", "x-vercel-mitigated")
+# Statuses that may be bot protection; never a failure on their own.
+DENIED_STATUSES = (401, 403, 429)
+# First path segments that are a language prefix. An explicit list, because
+# /go/ and /ai/ are real paths too; region forms ("pt-BR") match on the base.
+LOCALES = frozenset(
+    ("de", "en", "es", "fr", "it", "ja", "ko", "nl", "pl", "pt", "ru", "sv",
+     "tr", "zh")
+)
 
 # One session per worker thread; a browser-ish UA avoids 403s from strict sites.
 _local = threading.local()
@@ -50,53 +71,118 @@ def session() -> requests.Session:
     return s
 
 
-def retry_delay(r: requests.Response, attempt: int) -> float:
-    """Seconds to wait after a 429: honor Retry-After, else 1s, 2s, ..."""
-    value = r.headers.get("Retry-After", "")
+def backoff(r, attempt: int) -> float:
+    """Delay before the next attempt: honour Retry-After, else 2**attempt, jittered."""
+    delay = 2 ** attempt
+    if r is not None:
+        try:
+            delay = min(30.0, max(0.0, float(r.headers.get("Retry-After", ""))))
+        except ValueError:
+            pass
+    return delay * random.uniform(0.5, 1.5)
+
+
+def is_challenge(r: requests.Response) -> bool:
+    """True when the response headers say a bot challenge was served."""
+    if r.status_code not in DENIED_STATUSES:
+        return False
+    return any(
+        "challenge" in (r.headers.get(h) or "").lower() for h in CHALLENGE_HEADERS
+    )
+
+
+def dns_fails(url: str) -> bool:
+    """Distinguish a dead host from a connection that was merely blocked."""
+    host = urlsplit(url).hostname
+    if not host:
+        return True
     try:
-        return min(30.0, max(0.0, float(value)))  # ponytail: 30s cap, raise if GitHub asks for more and it matters
-    except ValueError:
-        return 2 ** attempt
+        socket.getaddrinfo(host, None)
+    except OSError:
+        return True
+    return False
 
 
 def check(url: str, timeout: int):
-    """Return (status_code|None, final_url|None, error|None)."""
-    for attempt in range(2):  # one retry for transient errors and 429
+    """Return (status|None, final_url|None, error|None, challenge)."""
+    for attempt in range(ATTEMPTS):
+        last = attempt + 1 == ATTEMPTS
         try:
             with session().get(
                 url, timeout=timeout, allow_redirects=True, stream=True
             ) as r:
                 r.raw.read(1)  # confirm the body is reachable, then stop
-                if r.status_code == 429 and attempt == 0:
-                    time.sleep(retry_delay(r, attempt))
+                # Retry throttling and server hiccups; a plain 403 is a
+                # verdict, retrying it only wastes time.
+                if not last and (r.status_code == 429 or r.status_code >= 500):
+                    time.sleep(backoff(r, attempt))
                     continue
-                return r.status_code, r.url, None
+                return r.status_code, r.url, None, is_challenge(r)
         except requests.TooManyRedirects:
-            return None, None, "too many redirects"
-        except requests.RequestException as e:
-            if attempt == 1:
-                return None, None, type(e).__name__
-            time.sleep(1)
-    return None, None, "unknown error"
+            return None, None, "too many redirects", False
+        except requests.RequestException:
+            if not last:
+                time.sleep(backoff(None, attempt))
+                continue
+            return None, None, "dns" if dns_fails(url) else "network error", False
+    raise AssertionError("unreachable")  # the last attempt always returns
 
 
-def load_false_positive_hosts(path: Path) -> list[str]:
-    """Host suffixes whose 403/429 answers are treated as bot protection."""
-    if not path.is_file():
-        return []
-    hosts = []
-    for line in path.read_text().splitlines():
-        line = line.split("#", 1)[0].strip().lower()
-        if line:
-            hosts.append(line)
-    return hosts
+def path_key(url: str):
+    """Host+path+query, ignoring scheme, "www." and a trailing slash."""
+    parts = urlsplit(url)
+    host = (parts.hostname or "").lower()
+    if host.startswith("www."):
+        host = host[4:]
+    return host, parts.path.rstrip("/"), parts.query
 
 
-def is_tolerated(url: str, status: int, hosts: list[str]) -> bool:
-    if status not in TOLERATED_STATUSES:
-        return False
-    host = (urlsplit(url).hostname or "").lower()
-    return any(host == h or host.endswith("." + h) for h in hosts)
+def classify(url: str, status, final, error, challenge: bool) -> str:
+    """Bucket for one URL. See the module docstring."""
+    if error:
+        return "broken" if error in ("dns", "too many redirects") else "suspect"
+    if status is None:
+        return "suspect"
+    if challenge:
+        return "challenge"
+    if status in DENIED_STATUSES:
+        return "suspect"
+    if 400 <= status < 500:
+        return "broken"
+    if status >= 500:
+        return "suspect"
+    if final and final != url:
+        return "redirect"
+    if urlsplit(url).scheme != "https":
+        return "suspect"  # plain http:// that offers no upgrade; fix by hand
+    return "ok"
+
+
+def _segments(path: str) -> list[str]:
+    return [s for s in path.split("/") if s]
+
+
+def _strip_locale(segments: list[str]):
+    if segments and segments[0].lower().split("-")[0] in LOCALES:
+        return segments[1:], True
+    return segments, False
+
+
+def redirect_ignore_reason(old: str, new: str):
+    """Why a redirect must not be written to data.yml, or None to write it."""
+    a, b = urlsplit(old), urlsplit(new)
+    if a.scheme == "https" and b.scheme == "http":
+        return "downgrade"
+    # Same scheme only: an http->https upgrade is a fix, not notation.
+    if a.scheme == b.scheme and path_key(old) == path_key(new):
+        return "cosmetic"
+    # /solution <-> /en/solution: locale redirects flip direction over time, so
+    # writing either end bakes in a wrong URL (see Sopht in #67 and #74).
+    segs_a, had_locale_a = _strip_locale(_segments(a.path))
+    segs_b, had_locale_b = _strip_locale(_segments(b.path))
+    if had_locale_a != had_locale_b and segs_a == segs_b and a.query == b.query:
+        return "locale"
+    return None
 
 
 def load_owners(path: Path):
@@ -135,10 +221,49 @@ def rewrite(data_text: str, redirects: dict[str, str]):
     return new_text, changed
 
 
+def report(buckets, writable, ignored, owners):
+    """Print the findings; returns the number of failing (broken) URLs."""
+
+    def who(url):
+        return "; ".join(owners.get(url, []))
+
+    def show(bucket, headline, detail):
+        entries = buckets[bucket]
+        if not entries:
+            return
+        print(f"\n{headline} ({len(entries)}):")
+        for url, status, final, error in entries:
+            print(f"  {detail(status, final, error)}  {url}")
+            if who(url):
+                print(f"       {who(url)}")
+
+    show("broken", "Broken (fails the check)",
+         lambda status, final, error: status or error)
+
+    if writable:
+        print(f"\nRedirects ({len(writable)}):")
+        for old, new in writable.items():
+            print(f"  {old}\n    -> {new}" + (f"   [{who(old)}]" if who(old) else ""))
+
+    if ignored:
+        print(f"\nRedirects ignored ({len(ignored)}) "
+              f"[notation, locale prefix or downgrade, not written]:")
+        for old, new, reason in ignored:
+            print(f"  ({reason})  {old}\n    -> {new}")
+
+    show("suspect", "Suspect (not a failure - verify before editing)",
+         lambda status, final, error: status or error)
+    show("challenge", "Bot challenge (not a failure - headers prove it)",
+         lambda status, final, error: status)
+
+    return len(buckets["broken"])
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--data-file", default=DEFAULT_DATA)
-    ap.add_argument("--write", action="store_true", help="apply redirect rewrites")
+    ap.add_argument("--write", action="store_true",
+                    help="apply redirect rewrites")
     ap.add_argument("--workers", type=int, default=16)
     ap.add_argument("--timeout", type=int, default=15)
     args = ap.parse_args()
@@ -158,65 +283,42 @@ def main() -> int:
             url = futures[fut]
             results[url] = fut.result()
 
-    false_positive_hosts = load_false_positive_hosts(FALSE_POSITIVES_FILE)
-    redirects = {}
-    client_errors, server_errors, network_errors, tolerated = [], [], [], []
+    buckets: dict[str, list] = {
+        "ok": [], "redirect": [],
+        "broken": [], "suspect": [], "challenge": [],
+    }
+    writable: dict[str, str] = {}
+    ignored: list[tuple[str, str, str]] = []
     for url in urls:
-        status, final, error = results[url]
-        if error or status is None:
-            network_errors.append((url, error))
-        elif is_tolerated(url, status, false_positive_hosts):
-            tolerated.append((url, status))
-        elif 400 <= status < 500:
-            client_errors.append((url, status))
-        elif status >= 500:
-            server_errors.append((url, status))
-        elif final and final != url:
-            redirects[url] = final
+        status, final, error, challenge = results[url]
+        bucket = classify(url, status, final, error, challenge)
+        buckets[bucket].append((url, status, final, error))
+        if bucket == "redirect":
+            reason = redirect_ignore_reason(url, final)
+            if reason:
+                ignored.append((url, final, reason))
+            else:
+                writable[url] = final
 
     print("\n" + "=" * 72)
+    failing = report(buckets, writable, ignored, owners)
 
-    if redirects:
-        print(f"\nRedirects ({len(redirects)}) -> "
-              f"{'written to ' + str(path) if args.write else 'dry run, use --write'}:")
-        for old, new in redirects.items():
-            who = "; ".join(owners.get(old, []))
-            print(f"  {old}\n    -> {new}   [{who}]")
-
-    if client_errors:
-        print(f"\n4xx client errors ({len(client_errors)}):")
-        for url, st in client_errors:
-            print(f"  {st}  {url}\n       {', '.join(owners.get(url, []))}")
-
-    if server_errors:
-        print(f"\n5xx server errors ({len(server_errors)}):")
-        for url, st in server_errors:
-            print(f"  {st}  {url}\n       {', '.join(owners.get(url, []))}")
-
-    if network_errors:
-        print(f"\nNetwork errors ({len(network_errors)}):")
-        for url, err in network_errors:
-            print(f"  {err}  {url}\n       {', '.join(owners.get(url, []))}")
-
-    if tolerated:
-        print(f"\nTolerated false positives ({len(tolerated)}) "
-              f"[{FALSE_POSITIVES_FILE.name}: known 403/429 hosts]:")
-        for url, st in tolerated:
-            print(f"  {st}  {url}\n       {', '.join(owners.get(url, []))}")
-
-    if args.write and redirects:
-        new_text, changed = rewrite(text, redirects)
+    if args.write and writable:
+        new_text, changed = rewrite(text, writable)
         path.write_text(new_text)
         print(f"\nWrote {changed} URL replacement(s) to {path}.")
         print("Now run: landscape2 validate data --data-file data.yml")
-    elif redirects:
+    elif writable:
         print("\nNo changes written (dry run). Re-run with --write to apply.")
 
-    problems = len(client_errors) + len(server_errors) + len(network_errors)
-    print(f"\nSummary: {len(urls) - len(redirects) - problems - len(tolerated)} ok, "
-          f"{len(redirects)} redirect(s), {len(tolerated)} tolerated, "
-          f"{problems} problem(s).")
-    return 1 if problems else 0
+    print(f"\nSummary: {len(buckets['ok'])} ok, {len(writable)} rewrite(s), "
+          f"{len(ignored)} ignored redirect(s), "
+          f"{len(buckets['challenge'])} bot challenge, "
+          f"{len(buckets['suspect'])} suspect, {len(buckets['broken'])} broken.")
+    if failing:
+        broken_urls = " ".join(url for url, *_ in buckets["broken"])
+        print(f"Exit code 1: {failing} broken URL(s): {broken_urls}")
+    return 1 if failing else 0
 
 
 if __name__ == "__main__":
