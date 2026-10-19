@@ -23,7 +23,7 @@ categories:
             logo: cloudcarbonfootprint.png
             project: "archived"
             extra:
-              documentation_url: https://www.cloudcarbonfootprint.org/docs/methodology
+              documentation_url: https://www.cloudcarbonfootprint.org/docs/methodology/
 
           - item:
             name: AWS Sustainability Console
@@ -50,7 +50,7 @@ categories:
             logo: google-cloud.svg
             project: "in-active-use-by-members"
             extra:
-              documentation_url: https://cloud.google.com/carbon-footprint/docs/methodology
+              documentation_url: https://docs.cloud.google.com/carbon-footprint/docs/methodology
 
           - item:
             name: Scaleway Environmental Footprint Calculator
@@ -107,7 +107,7 @@ categories:
             second_path:
               - "Optimization / Cloud Infrastructure"
             extra:
-              documentation_url: https://tailpipe.ai/methodology
+              documentation_url: https://tailpipe.ai/methodology/
 
           - item:
             name: Cloud Assess
@@ -199,7 +199,7 @@ categories:
             second_path:
               - "Full-Stack Application / Monitoring & Tracing"
             extra:
-              documentation_url: https://ceems-dev.github.io/ceems/docs/advanced/power-consumption
+              documentation_url: https://ceems-dev.github.io/ceems/docs/advanced/power-consumption/
 
           - item:
             name: Dynatrace Cost & Carbon Optimization
