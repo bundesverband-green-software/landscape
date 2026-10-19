@@ -4,8 +4,9 @@
 Run via:  uv run --with fonttools python generate_logo.py --name "Tool Name" --out logos/unofficial/tool-name.svg
 
 Uses a local libre condensed font (Roboto Condensed Bold by default) and emits
-black glyph <path> outlines with a tight viewBox, matching the style of the
-existing logos/unofficial/*.svg placeholders. No network, no permanent deps.
+black glyph <path> outlines with a small margin around the glyphs, matching the
+style of the existing logos/unofficial/*.svg placeholders. No network, no
+permanent deps.
 """
 
 import argparse
@@ -14,6 +15,7 @@ import sys
 from pathlib import Path
 
 from fontTools.pens.boundsPen import BoundsPen
+from fontTools.pens.recordingPen import RecordingPen
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 from fontTools.misc.transform import Transform
@@ -71,12 +73,27 @@ def clean_text(name: str) -> str:
 
 
 def build_svg(text: str, font: TTFont, size: float = 100.0,
-              line_gap: float = 1.25, align: str = "left") -> str:
+              line_gap: float = 1.25, align: str = "center",
+              margin: float = 0.08) -> tuple[str, float]:
     upem = font["head"].unitsPerEm
     scale = size / upem
     cmap = font.getBestCmap()
     glyphset = font.getGlyphSet()
     hmtx = font["hmtx"]
+
+    # Draw each glyph only once: cache its recorded outline (replayed per
+    # position) and its untransformed bounds (shifted by arithmetic below,
+    # since the transform is a uniform scale + flip + translate).
+    glyph_cache: dict[str, tuple[RecordingPen, tuple | None]] = {}
+
+    def outlines(gname: str) -> tuple[RecordingPen, tuple | None]:
+        if gname not in glyph_cache:
+            rec = RecordingPen()
+            glyphset[gname].draw(rec)
+            bpen = BoundsPen(glyphset)
+            rec.replay(bpen)
+            glyph_cache[gname] = (rec, bpen.bounds)
+        return glyph_cache[gname]
 
     def render_line(line: str, y_baseline: float) -> tuple[list[str], tuple | None, float]:
         paths: list[str] = []
@@ -88,16 +105,17 @@ def build_svg(text: str, font: TTFont, size: float = 100.0,
                 gname = cmap.get(ord(" "))  # fall back to a space advance
             if gname is None:
                 continue
+            rec, gb = outlines(gname)
             transform = Transform(scale, 0, 0, -scale, x, y_baseline)
             spen = SVGPathPen(glyphset)
-            glyphset[gname].draw(TransformPen(spen, transform))
+            rec.replay(TransformPen(spen, transform))
             d = spen.getCommands()
             if d:
                 paths.append(d)
-            bpen = BoundsPen(glyphset)
-            glyphset[gname].draw(TransformPen(bpen, transform))
-            if bpen.bounds:
-                b = bpen.bounds
+            if gb:
+                # transform maps (gx, gy) -> (x + scale*gx, y - scale*gy)
+                b = (x + scale * gb[0], y_baseline - scale * gb[3],
+                     x + scale * gb[2], y_baseline - scale * gb[1])
                 bounds = b if bounds is None else (
                     min(bounds[0], b[0]), min(bounds[1], b[1]),
                     max(bounds[2], b[2]), max(bounds[3], b[3]),
@@ -112,35 +130,45 @@ def build_svg(text: str, font: TTFont, size: float = 100.0,
     for i, line in enumerate(lines):
         rendered.append(render_line(line, i * line_height))
 
+    # Centre lines within the widest line. Use the advance width rather than the
+    # ink width: otherwise a line can shift past the bounding box and get clipped
+    # at the viewBox edge.
+    max_advance = max((advance for _, _, advance in rendered), default=0.0)
+
+    shifts: list[float] = []
     all_bounds = None
-    for _, b, _ in rendered:
+    for _, b, advance in rendered:
+        dx = (max_advance - advance) / 2.0 if align == "center" else 0.0
+        shifts.append(dx)
         if b is None:
             continue
-        all_bounds = b if all_bounds is None else (
-            min(all_bounds[0], b[0]), min(all_bounds[1], b[1]),
-            max(all_bounds[2], b[2]), max(all_bounds[3], b[3]),
+        shifted = (b[0] + dx, b[1], b[2] + dx, b[3])
+        all_bounds = shifted if all_bounds is None else (
+            min(all_bounds[0], shifted[0]), min(all_bounds[1], shifted[1]),
+            max(all_bounds[2], shifted[2]), max(all_bounds[3], shifted[3]),
         )
     if all_bounds is None:
         sys.exit("no drawable glyphs in the provided name")
 
     x0, y0, x1, y1 = all_bounds
     w, h = x1 - x0, y1 - y0
+    # Breathing room so glyphs never touch the viewBox border.
+    pad = margin * size
+
     body_parts: list[str] = []
-    for paths, _, advance in rendered:
-        dx = 0.0
-        if align == "center":
-            dx = (w - advance) / 2.0
+    for (paths, _, _), dx in zip(rendered, shifts):
         for d in paths:
             if dx:
                 body_parts.append(f'<path transform="translate({dx:.2f},0)" d="{d}"/>')
             else:
                 body_parts.append(f'<path d="{d}"/>')
     body = "\n".join(body_parts)
-    return (
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w:.2f} {h:.2f}">\n'
-        f'<g fill="#000000" transform="translate({-x0:.2f},{-y0:.2f})">\n'
+    svg = (
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w + 2 * pad:.2f} {h + 2 * pad:.2f}">\n'
+        f'<g fill="#000000" transform="translate({pad - x0:.2f},{pad - y0:.2f})">\n'
         f"{body}\n</g>\n</svg>\n"
     )
+    return svg, (w + 2 * pad) / (h + 2 * pad)
 
 
 def main() -> None:
@@ -150,8 +178,11 @@ def main() -> None:
     ap.add_argument("--font", help="path to a TTF font (default: Roboto Condensed)")
     ap.add_argument("--line-gap", type=float, default=1.25,
                     help="line height as a multiple of the font size (default: 1.25)")
-    ap.add_argument("--align", choices=("left", "center"), default="left",
-                    help="horizontal alignment of lines (default: left)")
+    ap.add_argument("--align", choices=("left", "center"), default="center",
+                    help="horizontal alignment of lines (default: center; "
+                         "single-line output is unaffected)")
+    ap.add_argument("--margin", type=float, default=0.08,
+                    help="padding around the glyphs as a fraction of the font size (default: 0.08)")
     ap.add_argument("--force", action="store_true", help="overwrite an existing file")
     args = ap.parse_args()
 
@@ -160,11 +191,18 @@ def main() -> None:
         sys.exit(f"{out} already exists (use --force to overwrite)")
 
     text = clean_text(args.name)
-    svg = build_svg(text, load_font(find_font(args.font)),
-                    line_gap=args.line_gap, align=args.align)
+    svg, ratio = build_svg(text, load_font(find_font(args.font)),
+                           line_gap=args.line_gap, align=args.align, margin=args.margin)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(svg)
     print(f"wrote {out}  (slug: {slugify(args.name)})")
+
+    if ratio > 6.0:
+        print(
+            f"warning: aspect ratio {ratio:.1f}:1 is very wide and will "
+            f"render small on cards; wrap --name onto 2-3 lines",
+            file=sys.stderr,
+        )
 
 
 if __name__ == "__main__":
