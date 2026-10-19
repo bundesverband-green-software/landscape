@@ -19,7 +19,9 @@ jobs:
       - name: Install dependencies
         run: pip install requests pyyaml
 
-      # Known 403/429 hosts are tolerated and do not count as problems.
+      # Exit code 1 only for broken (404/410/other 4xx, DNS failure, redirect
+      # loop) URLs. 401/403/429/5xx/timeouts are reported as "suspect" and never
+      # fail; see .agents/skills/check-links/.
       - name: Check links in data.yml
         id: check
         run: |
@@ -37,33 +39,48 @@ jobs:
             echo "## Link check"
             echo ""
             echo '```'
-            cat link-check.txt
+            cat link-check.txt 2>/dev/null || echo "(link check did not run)"
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: Open or update issue on failure
-        if: steps.check.outputs.failed == 'true'
+      # One rolling issue: its body is edited in place while the check keeps
+      # failing, and it is closed as soon as the check passes again. A body edit
+      # sends no notification, so a comment is added when the set of broken URLs
+      # changes. Suspect and bot-challenge findings stay in the run summary and
+      # never open an issue.
+      - name: Keep the link-check issue in sync
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh label create link-check --color BFD4F9 \
             --description "Weekly data.yml link check" 2>/dev/null || true
-          body=$(cat <<EOF
-          The weekly link check found problems in \`data.yml\`.
+          number=$(gh issue list --label link-check --state open \
+            --json number --jq '.[0].number // empty')
+
+          if [ "${{ steps.check.outputs.failed }}" = "true" ]; then
+            body=$(cat <<EOF
+          The weekly link check found broken links in \`data.yml\`.
 
           \`\`\`
           $(cat link-check.txt)
           \`\`\`
 
+          Only **broken** (404/410/other 4xx, DNS failure, redirect loop)
+          findings fail the check. Entries under _suspect_ and _bot challenge_
+          are reported for context, not as failures.
+
           _Updated by the [link-check workflow](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})._
           EOF
-          )
-          number=$(gh issue list --label link-check --state open \
-            --json number --jq '.[0].number // empty')
-          if [ -n "$number" ]; then
-            gh issue comment "$number" --body "$body"
-          else
-            gh issue create \
-              --title "Weekly link check found broken links" \
-              --body "$body" --label link-check
+            )
+            if [ -z "$number" ]; then
+              gh issue create \
+                --title "Weekly link check found broken links" \
+                --body "$body" --label link-check
+            else
+              gh issue edit "$number" --body "$body"
+            fi
+          elif [ "${{ steps.check.outputs.failed }}" = "false" ] && [ -n "$number" ]; then
+            gh issue close "$number" --reason completed --comment \
+              "Link check passes again: no broken URLs. Suspect and bot-challenge entries are listed in the [run summary](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})."
           fi

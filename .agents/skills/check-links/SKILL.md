@@ -1,6 +1,6 @@
 ---
 name: check-links
-description: Check that every URL in data.yml is still reachable, rewrite http redirects to their final URL, and report 4xx/5xx/network failures. Use when asked to check, validate, or fix links in the landscape.
+description: Check that every URL in data.yml is still reachable, rewrite redirect targets (including http:// -> https:// upgrades), and report what it found. Use when asked to check, validate, or fix links in the landscape.
 ---
 
 # Check links in `data.yml`
@@ -8,10 +8,19 @@ description: Check that every URL in data.yml is still reachable, rewrite http r
 Verifies `homepage_url`, `repo_url`, `blog` and `extra.documentation_url` for
 every tool. Deduplicated and concurrent, so the whole file is checked in one go.
 
-- **2xx** — reachable, nothing to do.
-- **redirect** — the request was answered by one or more 3xx responses that end
-  in a 2xx; the final URL is written back to `data.yml`.
-- **4xx / 5xx / network error** — reported only; never rewritten.
+Every URL lands in exactly one bucket:
+
+| Bucket | Meaning | Fails the check? |
+|--------|---------|------------------|
+| `ok` | 2xx, no redirect | no |
+| `redirect` | 2xx after redirect(s); target is written back with `--write` | no |
+| `broken` | 404/410/other 4xx, DNS failure, redirect loop | **yes** |
+| `suspect` | 401/403/429 without a bot-challenge header, 5xx, timeout, other network error, plain `http://` with no upgrade | no |
+| `challenge` | 401/403/429 with `cf-mitigated` / `x-vercel-mitigated: challenge` | no |
+
+Only `broken` sets the exit code. The rule behind that: a denial cannot be
+told apart from bot protection, so it must not block a merge — but it is still
+printed on every run, so it stays visible.
 
 ## Step 1 — dry run
 
@@ -22,57 +31,67 @@ uv run --with requests --with pyyaml python \
   .agents/skills/check-links/scripts/check_links.py
 ```
 
-Prints a report of redirects and failures, including which tool/field each URL
-belongs to (successful URLs are not listed). Exit code is `1` when there is at
-least one 4xx/5xx/network problem, `0` otherwise.
+Prints every bucket except `ok` (with the tool/field each URL belongs to) plus
+a one-line summary. Exit code `1` when something is `broken`, `0` otherwise.
 
-## Step 2 — apply redirect rewrites
+## Step 2 — apply rewrites
 
 ```sh
 uv run --with requests --with pyyaml python \
   .agents/skills/check-links/scripts/check_links.py --write
 ```
 
-The script edits only the matched field lines, so the YAML formatting is
-preserved. Review the diff afterwards, then validate:
+`--write` edits only the matched field lines, so YAML formatting is preserved.
+It writes one kind of change, a redirect target — which is also how a plain
+`http://` URL gets upgraded to `https://`. Review the diff afterwards, then
+validate:
 
 ```sh
 git diff data.yml
 landscape2 validate data --data-file data.yml
 ```
 
-## Step 3 — triage the failures (low effort)
+## Redirects that are never written
 
-For each reported 4xx/5xx/network URL, make a **quick** attempt to find the
-right URL (e.g. search the site or GitHub for the new location). If it is not
-found with low effort, stop — leave the field untouched and report the issue to
-the user instead. Do not spend a lot of time chasing dead links; a reported
-issue is an acceptable outcome.
+`--write` leaves these alone and lists them under *Redirects ignored*:
 
-- **Moved / dead** — update the field to the new URL, or leave it and report.
-- **Bot protection (403/429) and timeouts** — often false positives. Open the
-  URL in a browser before changing anything.
-- **5xx** — usually temporary; re-check before editing.
+- **cosmetic** — same scheme, and the target differs only by a trailing slash
+  or a `www.`. This is notation, not a move. An `http://` -> `https://`
+  redirect is *not* cosmetic and is written.
+- **locale** — one side has a leading language segment the other lacks
+  (`/solution` ↔ `/en/solution`). These flip direction over time, so writing
+  either end bakes in a wrong URL; see Sopht in issues #67 and #74. Only
+  known locale codes count (`en`, `de`, `pt-BR`, …), so `/go/docs` and
+  `/ai/docs` are treated as real paths.
+- **downgrade** — the target is `http://` while the source is `https://`. Never
+  written.
 
-Do not auto-edit anything the script reported as a failure — the script only
-writes redirects it confirmed as 2xx.
-
-## Known false positives
-
-These hosts commonly answer automated clients with 403/429 even though the page
-is fine. They live in `false-positive-hosts.txt` (one host suffix per line) so
-the list is data, not prose — add an entry only after verifying in a browser.
-
-The script reports them under **Tolerated false positives** and they do **not**
-count toward its exit code. Only 403/429 are excused, and only for listed hosts;
-DNS failures, timeouts and 5xx are still real problems. Matching is by host
-suffix, so `electricitymaps.com` covers `app.` and `portal.`.
+Anything else counts as a real move and is written.
 
 ## Gotchas
 
+- A plain `http://` page that serves 200 without redirecting is reported as
+  `suspect`: find the `https://` URL of the same page by hand and put it in the
+  field.
 - Redirects are the HTTP kind; JavaScript/meta-refresh redirects are invisible
-  to it and look like a normal 2xx.
-- A final URL that still redirects on the next run will simply be rewritten
-  again; the script is idempotent.
-- Report the failures and what you changed in the PR/summary; call out
-  false-positive suspects explicitly.
+  to the checker and look like a normal 2xx.
+- A target that still redirects on the next run is simply rewritten again; the
+  script is idempotent.
+- `suspect` is the noisy bucket on purpose. Before editing anything in it, open
+  the URL in a browser — a 403 there is usually bot protection or IP reputation,
+  not a dead page. Never rewrite a URL the script only reported.
+- `.github/workflows/link-check.yml` runs the dry run weekly and keeps a single
+  rolling issue: it edits the body in place and closes the issue once the check
+  passes. A body edit sends no notification: the issue stays open and current,
+  but nothing pings. `suspect` and `challenge` findings only ever appear in the
+  run summary.
+
+## Tests
+
+The classification and rewrite decisions are covered by plain assertions. They
+are not run in CI; run them by hand after changing the script:
+
+```sh
+uv run --with requests --with pyyaml python \
+  .agents/skills/check-links/scripts/test_check_links.py
+```
