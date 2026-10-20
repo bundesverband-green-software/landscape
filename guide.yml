@@ -35,6 +35,8 @@ categories:
           Wenn ein Tool in mehrere Kategorien passt, wird es entsprechend mehrfach dargestellt.
           Mittels der Filter-Funktion links oben können Kategorien gefiltert werden.
 
+          In der Kategorie "Infrastructure & Cluster Level" stehen "Public Cloud" für Tools, die den Fußabdruck aus Daten des Cloud-Anbieters ableiten (Abrechnungs- und Nutzungsdaten, veröffentlichte Faktoren), und "Bare-Metal & Host Level" für Tools, die Energie direkt am physischen Host oder Hypervisor auslesen (RAPL, BMC/IPMI, Hypervisor-APIs) – das schließt VMs ein, die von der Host-Seite aus gemessen werden. "Kubernetes" umfasst die Zurechnung innerhalb des Clusters auf Basis von cgroups, eBPF oder Cluster-Metriken.
+
       - subcategory: "Kennzeichnung 'In Active Use by BvGS Members'"
         content: |
 
@@ -81,6 +83,8 @@ categories:
           Sub-categories can be oriented towards the target object or towards the method; what matters is that they make it easier to find suitable tools. For example, "Monitoring & Tracing" covers continuous measurement of running applications, while "Scenario Measurement" covers measurement of a defined usage scenario.
           If a tool fits into several categories, it is displayed several times.
           Categories can be filtered using the filter function at the top left.
+
+          In the "Infrastructure & Cluster Level" category, "Public Cloud" covers tools that derive the footprint from data provided by the cloud provider (billing and usage data, published factors), while "Bare-Metal & Host Level" covers tools that read energy directly from the physical host or hypervisor (RAPL, BMC/IPMI, hypervisor APIs) – this includes VMs measured from the host side. "Kubernetes" covers attribution inside the cluster based on cgroups, eBPF or cluster metrics.
 
       - subcategory: "Label 'In Active Use by BvGS Members'"
         content: |

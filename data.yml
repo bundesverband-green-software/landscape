@@ -11,7 +11,7 @@ categories:
   - name: Infrastructure & Cluster Level
     subcategories:
 
-      - name: Infrastructure Provider Level
+      - name: Public Cloud
         items:
 
           - item:
@@ -131,18 +131,17 @@ categories:
               documentation_url: https://github.com/DigitalPebble/spruce/blob/main/docs/src/methodology.md
 
           - item:
-            name: CO2 Scope® (by EasyVirt)
-            description: |             
-              CO₂ Scope® is a simple and effective sovereign solution that enables you to measure, analyse, and reduce the environmental footprint of your IT infrastructure. With precise realtime data analysis, it delivers detailed insights into the environmental impact of your digital assets. Non-intrusive and easy to integrate, CO₂ Scope® empowers you to lead the decarbonisation of your IT systems, helping you reduce your ecological footprint while optimising performance.
-              CO₂ Scope® is not a SaaS solution but is on premise. This a virtual appliance (VM) installed by the clients. Agentless, CO₂ Scope® is non intrusive.
-            homepage_url: https://www.easyvirt.com/en/our-it-solutions/co2-scope-greenops-solution/
-            logo: easyvirt.svg
+            name: Carbon Measurement Engine (Carmen)
+            description: |
+              Carmen is an open-source tool to measure the carbon footprint of cloud-based software at two levels: infrastructure level (VMs, storage, and other cloud services) and application level (individual applications and workloads running in your K8s cluster). It is built on top of the Impact Framework and uses either FinOps / VM usage CSVs or Prometheus container metrics as the data source.
+              Carmen is managed by the Software Standards Working Group in the Green Software Foundation. 
+            homepage_url: https://greensoftware.foundation/tools/carmen/
+            repo_url: https://github.com/Green-Software-Foundation/if-carmen
+            logo: carmen.svg
+            extra:
+              documentation_url: https://github.com/Green-Software-Foundation/if-carmen/blob/dev/docs/methodology.md
             second_path:
               - "Infrastructure & Cluster Level / Kubernetes"
-              - "Optimization / Cloud Infrastructure"
-              - "Optimization / Kubernetes"
-            extra:
-              documentation_url: https://easyvirt.gitlab.io/dcscope/user-guide/
 
       - name: Kubernetes
         items:
@@ -160,27 +159,28 @@ categories:
               documentation_url: https://sustainable-computing.io/kepler/usage/power-attribution/
 
           - item:
-            name: Carbon Measurement Engine (Carmen)
-            description: |
-              Carmen is an open-source tool to measure the carbon footprint of cloud-based software at two levels: infrastructure level (VMs, storage, and other cloud services) and application level (individual applications and workloads running in your K8s cluster). It is built on top of the Impact Framework and uses either FinOps / VM usage CSVs or Prometheus container metrics as the data source.
-              Carmen is managed by the Software Standards Working Group in the Green Software Foundation. 
-            homepage_url: https://greensoftware.foundation/tools/carmen/
-            repo_url: https://github.com/Green-Software-Foundation/if-carmen
-            logo: carmen.svg
-            extra:
-              documentation_url: https://github.com/Green-Software-Foundation/if-carmen/blob/dev/docs/methodology.md
-            second_path:
-              - "Infrastructure & Cluster Level / Infrastructure Provider Level"
-
-          - item:
             name: KEIT
             description: KEIT (Kubernetes Emissions Insights Tool) supplements the energy recording with Kepler with current grid carbon intensity values and embodied carbon emissions.
             homepage_url: https://github.com/aknostic/keit/
             repo_url: https://github.com/aknostic/keit/
             logo: unofficial/keit.svg
 
-      - name: Agent
+      - name: Bare-Metal & Host Level
         items:
+
+          - item:
+            name: CO2 Scope® (by EasyVirt)
+            description: |             
+              CO₂ Scope® is a simple and effective sovereign solution that enables you to measure, analyse, and reduce the environmental footprint of your IT infrastructure. With precise realtime data analysis, it delivers detailed insights into the environmental impact of your digital assets. Non-intrusive and easy to integrate, CO₂ Scope® empowers you to lead the decarbonisation of your IT systems, helping you reduce your ecological footprint while optimising performance.
+              CO₂ Scope® is not a SaaS solution but is on premise. This a virtual appliance (VM) installed by the clients. Agentless, CO₂ Scope® is non intrusive.
+            homepage_url: https://www.easyvirt.com/en/our-it-solutions/co2-scope-greenops-solution/
+            logo: easyvirt.svg
+            second_path:
+              - "Infrastructure & Cluster Level / Kubernetes"
+              - "Optimization / Cloud Infrastructure"
+              - "Optimization / Kubernetes"
+            extra:
+              documentation_url: https://easyvirt.gitlab.io/dcscope/user-guide/
 
           - item:
             name: Scaphandre
@@ -199,6 +199,7 @@ categories:
             repo_url: https://github.com/ceems-dev/ceems
             logo: ceems.svg
             second_path:
+              - "Infrastructure & Cluster Level / Kubernetes"
               - "Full-Stack Application / Monitoring & Tracing"
             extra:
               documentation_url: https://ceems-dev.github.io/ceems/docs/advanced/power-consumption/
@@ -209,15 +210,11 @@ categories:
               Cost & Carbon Optimization is a proprietary app for the Dynatrace ecosystem that can report carbon emissions and public cloud costs for all hosts monitored by OneAgent, and provides carbon emissions and energy consumption metrics for Kubernetes infrastructure monitored by Dynatrace.
             homepage_url: https://www.dynatrace.com/hub/detail/carbon-impact/
             logo: organization/dynatrace.svg
+            second_path:
+              - "Infrastructure & Cluster Level / Public Cloud"
+              - "Infrastructure & Cluster Level / Kubernetes"
             extra:
               documentation_url: https://docs.dynatrace.com/docs/observe/business-observability/cost-and-carbon-optimization
-
-          - item:
-            name: InfluxData Telegraf
-            description: A plugin-driven server agent for collecting and reporting metrics, including energy consumption and carbon emissions.
-            homepage_url: https://www.influxdata.com/time-series-platform/telegraf/
-            repo_url: https://github.com/influxdata/telegraf
-            logo: telegraftigersmall.png
 
       - name: Planning & Calculation
         items:
@@ -785,7 +782,7 @@ categories:
             homepage_url: https://www.fruggr.io/
             logo: fruggr.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
             extra:
               documentation_url: https://www.fruggr.io/en/how-does-fruggr-assess-the-environmental-impacts-of-digital-services/
 
@@ -795,7 +792,7 @@ categories:
             homepage_url: https://sopht.com/solution
             logo: sopht.png
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
           - item:
             name: Resilio Tech
@@ -815,7 +812,7 @@ categories:
             homepage_url: https://www.aguaro.io/solution/sustainable-it
             logo: aguaro.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
           - item:
             name: Antarctica
@@ -824,7 +821,7 @@ categories:
             logo: antarctica.svg
             second_path:
               - "Optimization / Cloud Infrastructure"
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
       - name: Modeling
         items:
@@ -1158,7 +1155,7 @@ categories:
             homepage_url: https://greenpixie.com/
             logo: greenpixie.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
           - item:
             name: IBM Txture
@@ -1166,7 +1163,7 @@ categories:
             homepage_url: https://www.ibm.com/products/txture
             logo: unofficial/ibm-txture.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
             extra:
               documentation_url: https://www.ibm.com/docs/en/txture?topic=proposals-carbon-footprint-estimate
 
@@ -1185,7 +1182,7 @@ categories:
             repo_url: https://github.com/eco-infra/ecoinfra
             logo: ecoinfra.svg
             second_path:
-              -  "Infrastructure & Cluster Level / Infrastructure Provider Level"
+              -  "Infrastructure & Cluster Level / Public Cloud"
 
       - name: Application Profiling
         items:
