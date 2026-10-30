@@ -22,6 +22,8 @@ The landscape is open to all Green Software tools. We only require a minimal set
 
 If you would like to propose a new tool for the landscape, please create an issue using the template [Tool Proposal](https://github.com/bundesverband-green-software/landscape/issues/new?template=propose_tool_issue_template.yml) and fill in the required information.
 
+To propose an AI service provider (inference, model serving, GPU compute, routing, or managed AI services), use the [AI Service Provider Proposal](https://github.com/bundesverband-green-software/landscape/issues/new?template=propose_ai_provider_issue_template.yml) template instead.
+
 ## Structure
 
 The file `data.yml` includes all the information about the tools and the categories. To add/edit tools, only this file has to be changed.
