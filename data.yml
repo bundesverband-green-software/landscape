@@ -110,6 +110,16 @@ categories:
               documentation_url: https://tailpipe.ai/methodology/
 
           - item:
+            name: Greenpixie GPX
+            description: Greenpixie enriches AWS, Azure and GCP usage data with carbon, energy and water estimates at the granularity of individual cloud SKUs and, for AI, per token. It models emissions from actual usage data rather than spend-based proxies and publishes its methodology, which is aligned with the GHG Protocol and verified against ISO 14064-3.
+            homepage_url: https://greenpixie.com/
+            logo: greenpixie.svg
+            second_path:
+              - "Artificial Intelligence / AI Inference"
+            extra:
+              documentation_url: https://greenpixie.com/docs/methodology
+
+          - item:
             name: Cloud Assess
             description: Cloud Assess is an open-source tool to automate the assessment of the environmental impacts of cloud services.
             homepage_url: https://www.cloudassess.org/
@@ -1148,14 +1158,6 @@ categories:
             description: A platform for optimizing cloud resources to reduce costs and carbon emissions.
             homepage_url: https://www.ibm.com/products/turbonomic
             logo: ibm-turbonomics.png
-
-          - item:
-            name: Greenpixie GPX Data
-            description: A solution for optimizing cloud infrastructure to reduce carbon emissions.
-            homepage_url: https://greenpixie.com/
-            logo: greenpixie.svg
-            second_path:
-              -  "Infrastructure & Cluster Level / Public Cloud"
 
           - item:
             name: IBM Txture
