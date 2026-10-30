@@ -1,5 +1,5 @@
 name: AI Service Provider Proposal
-description: Use this template to propose an AI service provider, inference, model serving, GPU compute, routing, or managed AI services, whether it runs on third-party infrastructure or its own.
+description: Use this template to propose an AI service provider (for inference, model serving, GPU compute, routing, or managed AI services) that runs on its own infrastructure or on third-party infrastructure.
 title: "[AI Service Provider Proposal]: "
 labels: ["ai service provider proposal"]
 body:
