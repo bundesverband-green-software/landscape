@@ -1,0 +1,606 @@
+name: Infrastructure Provider Proposal
+description: Use this template to propose a new data center, hosting, IaaS or AI infrastructure provider.
+title: "[Infrastructure Provider Proposal]: "
+labels: ["infrastructure provider proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+
+        Thanks for taking the time to propose adding a new infrastructure provider to the landscape!
+
+        We are looking for **authentic and verifiable information**, not marketing language.
+        Wherever a question asks for a figure, please state the value, the reporting period it refers to,
+        the site it refers to, and where the figure can be independently checked. "Not measured" or "we don't know"
+        are acceptable answers - unsubstantiated claims are not.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Name of the provider (legal entity, if the brand name differs)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Short description of what the provider offers
+    validations:
+      required: true
+
+  - type: textarea
+    id: urls
+    attributes:
+      label: URLs
+      description: URLs to the home page, sustainability/ESG page, status page, docs, public reports, etc.
+    validations:
+      required: true
+
+  - type: input
+    id: logo
+    attributes:
+      label: Logo
+      description: Path to logo (optional)
+
+  - type: dropdown
+    id: categories_service
+    attributes:
+      label: "Which services does the provider offer? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - Colocation (rack / cage / suite)
+        - Wholesale Data Center Space
+        - Dedicated / Bare Metal Servers
+        - Virtual Machines (IaaS)
+        - Managed Kubernetes / Container Platform
+        - Serverless / Functions
+        - Object / Block / Archive Storage
+        - Managed Databases
+        - GPU / Accelerator Compute - AI Training
+        - GPU / Accelerator Compute - AI Inference
+        - HPC / Batch Compute
+        - Managed AI Model Serving / Inference API
+        - Web Hosting / Managed Application Hosting
+        - CDN / Edge Compute
+        - Network / Interconnect
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categories_region
+    attributes:
+      label: "In which regions does the provider operate its own sites? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - Germany
+        - Rest of EU / EEA
+        - Switzerland / UK
+        - North America
+        - Latin America
+        - Africa
+        - Middle East
+        - Asia
+        - Oceania
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Operating model - what is actually yours?
+
+        *We want to understand how much of the stack you control yourself, and which part of the "green" claim
+        is yours to make versus inherited from someone else.*
+
+  - type: dropdown
+    id: operating_model
+    attributes:
+      label: "Which parts of the stack do you own and operate yourself? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - We own the building / land
+        - We lease the building but operate the technical infrastructure (power, cooling) ourselves
+        - We are a colocation tenant in a third-party data center
+        - We own the IT hardware
+        - We lease or rent the IT hardware
+        - We resell capacity of another operator under our own brand (white label)
+        - We resell / manage capacity of a hyperscaler (AWS, Azure, GCP, OCI, ...)
+        - We hold the electricity supply contract for the site ourselves
+    validations:
+      required: true
+
+  - type: textarea
+    id: sites
+    attributes:
+      label: "Please list every site you use, with: city + country, owner, operator, your IT connected load (kW/MW), year of commissioning. Also, preferably, a public link to a website which lists this is acceptable."
+      description: One line per site. Mark clearly which sites are yours and which belong to a third party.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        Example: Nuremberg, DE - building owned by us, operated by us, 4.5 MW IT connected load, in operation since 2019
+        Example #2: Amsterdam, NL - third-party colocation (Operator XY), we rent 12 racks / ~90 kW, no control over cooling or power sourcing
+
+  - type: dropdown
+    id: share_own_capacity
+    attributes:
+      label: "What share of the capacity you sell runs in data centers you operate yourself?"
+      multiple: false
+      options:
+        - 100 percent
+        - More than 75 percent
+        - 25 to 75 percent
+        - Less than 25 percent
+        - None - we resell exclusively
+    validations:
+      required: true
+
+  - type: textarea
+    id: subcontracted
+    attributes:
+      label: "Which parts of operations are subcontracted, and to whom?"
+      description: E.g. facility management, cooling maintenance, energy procurement, hardware lifecycle, monitoring.
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Hard numbers
+
+        *Please state the reporting period and the site for every figure. Annualised values only - no design values,
+        no "up to", no best-day snapshots.*
+
+  - type: textarea
+    id: pue
+    attributes:
+      label: "PUE: Please state the annualised PUE per site, the reporting year, and the measurement approach"
+      description: Include which measurement category / interface level you use (e.g. DIN EN 50600-4-2 category 1/2/3, partial vs. total PUE) and whether the value is measured or estimated.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        Example: Site Nuremberg, PUE 1.19 (annual average 2025), DIN EN 50600-4-2 Category 3, measured continuously at the utility feed and at all PDUs
+        Example #2: Site Frankfurt, PUE 1.42 (2025), Category 1, single monthly meter reading, cooling load partly estimated
+
+  - type: textarea
+    id: wue
+    attributes:
+      label: "WUE: What is your annual Water Usage Effectiveness, and where does the water come from?"
+      description: Litres per kWh of IT energy, plus absolute annual water consumption (m³), water source (potable, grey water, surface water, closed loop), and whether the site is in a water-stressed region.
+
+  - type: markdown
+    attributes:
+      value: |
+
+        Example: Site Frankfurt, 0.18 L/kWh, 12,400 m³/year total, potable water, not in a water-stressed region per WRI Aqueduct
+
+
+  - type: textarea
+    id: erf_heat_reuse
+    attributes:
+      label: "ERF / waste heat: What share of energy is actually reused, and by whom?"
+      description: "Please give the ERF as defined in DIN EN 50600-4-6, the supply temperature, the offtaker, and whether a supply contract is actually signed and heat is actually flowing today."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+
+        Example: ERF 0.18 (2025), 42 °C raised to 70 °C via heat pump, delivered to the municipal heat network under a 15-year contract, live since 03/2024
+        Example #2: ERF 0.0 - heat pump installed, no heat network within reach, no offtaker contract
+
+  - type: textarea
+    id: ref
+    attributes:
+      label: "REF: What is your Renewable Energy Factor, and how is it calculated?"
+      description: Share of renewable energy in total data center energy consumption, and which instruments you count towards it (see energy sourcing section below).
+
+  - type: textarea
+    id: utilization
+    attributes:
+      label: "Utilisation: How much of the installed capacity is actually doing work?"
+      description: "Installed IT connected load vs. actual average IT power draw, average server/CPU utilisation, average GPU utilisation, and the share of powered-on but idle hardware."
+
+  - type: markdown
+    attributes:
+      value: |
+
+        *PUE says nothing about whether the machines are doing anything useful. A very efficient facility full of idle servers
+        is still waste, so we ask for utilisation explicitly.*
+
+  - type: dropdown
+    id: cooling
+    attributes:
+      label: "Which cooling technologies are in use? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - Direct free cooling (outside air)
+        - Indirect free cooling
+        - Adiabatic / evaporative cooling
+        - Chilled water with compression chillers
+        - Direct-to-chip liquid cooling
+        - Immersion cooling
+        - Rear door heat exchangers
+        - Heat pumps for heat recovery
+        - District heating coupling
+        - Ground water / surface water / river cooling
+    validations:
+      required: false
+
+  - type: input
+    id: refrigerants
+    attributes:
+      label: "Which refrigerants are used, and what is their GWP? Are any of them PFAS/F-gases subject to phase-out?"
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Energy sourcing
+
+        *"100% green electricity" can mean anything from an on-site wind farm to a €0.20/MWh certificate bought
+        from another country. We want to know which one it is.*
+
+  - type: dropdown
+    id: electricity_sourcing
+    attributes:
+      label: "How is the electricity sourced? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - On-site generation (PV, wind, CHP) consumed on site
+        - Physical / sleeved PPA with a named generation asset
+        - Virtual PPA (financial)
+        - Bundled green tariff from the utility
+        - Unbundled Guarantees of Origin (GOs) / RECs purchased separately
+        - Standard grid mix
+        - Carbon offsets / compensation certificates
+    validations:
+      required: true
+
+  - type: textarea
+    id: electricity_sourcing_detail
+    attributes:
+      label: "Please break the above down: which share comes from which instrument, and what are the details?"
+      description: "For GOs: country of origin, vintage year, technology. For PPAs: counterparty, asset, country, contract term, whether the asset is additional (newly built). For on-site generation: installed capacity and annual own-consumption in MWh."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        Example: 62 percent physical PPA with Windpark XY (DE, 12-year term, commissioned 2023, additional), 31 percent bundled green tariff from the local utility, 7 percent unbundled Norwegian hydro GOs (vintage 2024)
+        Example #2: 100 percent unbundled GOs, mixed European origin, purchased annually via broker; the grid connection itself is standard grid mix
+
+  - type: dropdown
+    id: matching_granularity
+    attributes:
+      label: "At what time granularity do you match consumption with renewable generation?"
+      multiple: false
+      options:
+        - Hourly (24/7 carbon-free energy matching)
+        - Monthly
+        - Annual (bilanziell / book-and-claim)
+        - No matching performed
+    validations:
+      required: false
+
+  - type: input
+    id: cfe_score
+    attributes:
+      label: "If you do hourly matching: What is your CFE score (percent of hours actually covered), and for which year?"
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Emissions and reporting
+
+  - type: dropdown
+    id: emission_scopes
+    attributes:
+      label: "Which emission scopes do you measure and report? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - Scope 1
+        - Scope 2
+        - Scope 3 - purchased IT hardware (embodied)
+        - Scope 3 - building / construction (embodied)
+        - Scope 3 - upstream fuel and energy
+        - Scope 3 - other categories
+    validations:
+      required: false
+
+  - type: dropdown
+    id: grid_intensity_method
+    attributes:
+      label: "Which grid intensity method do you report with? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - Market Based
+        - Location Based
+    validations:
+      required: false
+
+  - type: textarea
+    id: emissions_numbers
+    attributes:
+      label: "Please state your absolute emissions per scope for the latest reported year, plus the emission factors used"
+      description: "Absolute t CO2e per scope, total data center energy consumption in MWh, gCO2e/kWh applied, and the source of the emission factor. If you report both market-based and location-based, please give both."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: assurance
+    attributes:
+      label: "Are the reported figures externally assured?"
+      multiple: false
+      options:
+        - Reasonable assurance by an external auditor
+        - Limited assurance by an external auditor
+        - Reviewed internally only
+        - Not verified
+    validations:
+      required: false
+
+  - type: dropdown
+    id: frameworks
+    attributes:
+      label: "Under which frameworks do you report or commit? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - CSRD / ESRS
+        - GHG Protocol
+        - Science Based Targets (validated)
+        - Science Based Targets (committed, not yet validated)
+        - CDP
+        - EMAS
+        - ISO 14064
+        - GRI
+        - None of the above
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Transparency towards customers
+
+        *This is the part that matters most for the landscape: can a customer find out what their own workload consumed?*
+
+  - type: dropdown
+    id: customer_data
+    attributes:
+      label: "What energy and emissions data do you expose to customers? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - Energy consumption (kWh) per customer
+        - Energy consumption per service / instance / VM / rack
+        - Carbon emissions per customer
+        - Carbon emissions per service / instance / VM / rack
+        - Water consumption per customer
+        - Embodied emissions allocated per customer
+        - Grid carbon intensity of the site
+        - Available via API
+        - Available as a periodic report only
+        - Nothing is exposed
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data_granularity
+    attributes:
+      label: "At what time granularity is that data available?"
+      multiple: false
+      options:
+        - Sub-minute / real time
+        - Hourly
+        - Daily
+        - Monthly
+        - Annually
+        - On request only
+        - Not available
+    validations:
+      required: false
+
+  - type: dropdown
+    id: direct_or_model
+    attributes:
+      label: "Is the customer-facing data based on direct measurement or on a model?"
+      multiple: true
+      options:
+        - Direct
+        - Model Based
+    validations:
+      required: false
+
+  - type: textarea
+    id: measurement_method
+    attributes:
+      label: "If direct measurement is used: Where exactly do you meter, and how do you allocate to customers?"
+      description: "Metering points (utility feed, UPS, PDU, rack, per-server, per-component), sampling rate, and the allocation key used to get from a measured value to a per-customer value."
+
+  - type: markdown
+    attributes:
+      value: |
+
+        Example: Per-rack metering at the PDU with 1-minute resolution; colocation customers are billed and reported on their own rack meters
+        Example #2: Per-server IPMI/redfish readings at 10 s, split across VMs by allocated vCPU-seconds, with idle overhead distributed proportionally
+
+  - type: textarea
+    id: model_source_data
+    attributes:
+      label: "If a model is used: Which source data and assumptions feed it?"
+      description: Please disclose this separately for each model, including any static assumptions (e.g. fixed PUE, fixed grid factor, TDP-based estimates).
+
+  - type: markdown
+    attributes:
+      value: |
+
+        Example: Per-VM energy is estimated from CPU utilisation using the SPECpower curve of the underlying host generation, multiplied by the site's previous-year annual PUE
+        Example #2: We apply a flat 0.4 W per allocated GB of storage, derived from vendor datasheets
+
+  - type: textarea
+    id: public_data
+    attributes:
+      label: "What do you publish publicly, and where? Please give direct URLs."
+      description: "Sustainability report, per-site PUE/WUE/ERF figures, methodology documents, raw data, machine-readable exports, dashboards."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Hardware, circularity and customer choice
+
+  - type: textarea
+    id: hardware_lifecycle
+    attributes:
+      label: "What is the average service life of your IT hardware, and what happens to it afterwards?"
+      description: "Average age at decommissioning (separately for servers, storage, GPUs if possible), share of refurbished/second-life hardware purchased, refurbishment/resale/recycling path, WEEE partner, and whether you track embodied carbon per device."
+
+  - type: dropdown
+    id: efficiency_options
+    attributes:
+      label: "Which options do customers have to reduce their own footprint? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - Energy-efficient / low-power instance types
+        - ARM or other alternative architectures
+        - Older-generation hardware kept in service (longer lifetime)
+        - Spot / interruptible / time-flexible workloads
+        - Carbon-aware scheduling or region recommendations
+        - Right-sizing recommendations based on measured utilisation
+        - Automatic scale-to-zero
+        - None of the above
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Grid interaction and backup
+
+  - type: textarea
+    id: grid_flexibility
+    attributes:
+      label: "How does the site interact with the grid?"
+      description: "Participation in demand response or balancing markets, battery storage capacity, load shifting capability, curtailment agreements, and the type and fuel of backup generators (diesel, HVO, fuel cell) plus annual test run hours."
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Certifications and regulatory status
+
+  - type: dropdown
+    id: certifications
+    attributes:
+      label: "Which certifications and programmes apply? (multiple ones can be selected)"
+      multiple: true
+      options:
+        - Blauer Engel DE-UZ 228 (data centers)
+        - SDEA Platinum
+        - SDEA Gold
+        - SDEA Silver
+        - SDEA Bronze Plus
+        - EU Code of Conduct for Data Centre Energy Efficiency - Participant
+        - EU Code of Conduct for Data Centre Energy Efficiency - Endorser
+        - Climate Neutral Data Centre Pact signatory
+        - ISO 50001
+        - ISO 14001
+        - EMAS
+        - DIN EN 50600 certified
+        - Green Web Foundation verified
+        - LEED / BREEAM / DGNB
+        - None of the above
+    validations:
+      required: false
+
+  - type: textarea
+    id: regulatory_reporting
+    attributes:
+      label: "Which mandatory reporting do you fall under, and are you registered?"
+      description: "E.g. German EnEfG / Energieeffizienzregister für Rechenzentren, EU EED reporting to the European database on data centres under Delegated Regulation (EU) 2024/1364. Please state per site whether you are in scope and whether the report has been filed. If you are below the thresholds, please say so."
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Claims
+
+        *We check public claims against the numbers above. Please help us do that accurately.*
+
+  - type: textarea
+    id: claims_basis
+    attributes:
+      label: "Which environmental claims do you make publicly, and what exactly is the basis for each?"
+      description: "For every claim such as 'climate neutral', 'CO2-free', '100% green', 'net zero': state what it covers (which sites, which scopes, which services), what instrument backs it, and what it excludes."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+
+        Example: "Climate neutral operations" covers Scope 1 and market-based Scope 2 for our two German sites only; Scope 3 and our reseller capacity are excluded
+        Example #2: We make no neutrality claim; we publish absolute emissions and a reduction pathway instead
+
+  - type: dropdown
+    id: offsets
+    attributes:
+      label: "Do you use carbon offsets or compensation certificates?"
+      multiple: false
+      options:
+        - No offsets are used
+        - Offsets used for residual emissions only, after reduction measures
+        - Offsets used as the primary decarbonisation instrument
+        - Offsets used, relationship to reductions not defined
+    validations:
+      required: false
+
+  - type: input
+    id: offsets_detail
+    attributes:
+      label: "If offsets are used: Which registry, project type, vintage, and volume (t CO2e)?"
+
+  - type: markdown
+    attributes:
+      value: |
+
+        ## Finally
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: "What status does the offering currently have?"
+      multiple: false
+      options:
+        - Announced / in planning
+        - Under construction
+        - In beta / limited availability
+        - Generally available
+        - Winding down / end of life
+    validations:
+      required: true
+
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: "What is your relationship to the provider?"
+      multiple: false
+      options:
+        - I work for the provider
+        - I am a customer
+        - I have no relationship - I am proposing them as a third party
+    validations:
+      required: true
