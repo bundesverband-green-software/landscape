@@ -42,7 +42,7 @@ body:
     id: description
     attributes:
       label: Description
-      description: Short description of what the provider offers
+      description: Short description of which AI service the provider offers
     validations:
       required: true
 
@@ -50,7 +50,7 @@ body:
     id: urls
     attributes:
       label: URLs
-      description: URLs to the home page, sustainability/ESG page, status page, docs, public reports, etc.
+      description: URLs to the home page, sustainability/ESG page, status page, docs, public reports, etc. serving as means for verification
     validations:
       required: true
 
@@ -63,7 +63,7 @@ body:
   - type: dropdown
     id: categories_service
     attributes:
-      label: "Which services does the provider offer? (multiple can be selected)"
+      label: "Which services does the provider offer? (multiple options can be selected)"
       multiple: true
       options:
         - AI Inference API / Model Serving
