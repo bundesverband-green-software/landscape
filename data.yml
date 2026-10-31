@@ -101,11 +101,12 @@ categories:
 
           - item:
             name: Tailpipe
-            description: Tailpipe is a proprietary service that estimates your organization's carbon emissions from cloud computing. It uses billing and usage data from your cloud service provider (CSP), combines it with other data from the CSP and other third parties (like Boavizta). It also provides recommendations for cost-effective carbon reduction methods.
+            description: Tailpipe is a proprietary service that estimates an organization's carbon emissions from cloud computing and AI usage. It combines cloud billing and usage data with third-party data (such as Boavizta) and, for AI, meters tokens and model metadata through an API proxy or SDK to estimate per-token energy and emissions. It also provides recommendations for cost-effective carbon reduction.
             homepage_url: https://tailpipe.ai/
             logo: tailpipe.svg
             second_path:
               - "Optimization / Cloud Infrastructure"
+              - "Artificial Intelligence / AI Inference"
             extra:
               documentation_url: https://tailpipe.ai/methodology/
 
@@ -816,12 +817,15 @@ categories:
 
           - item:
             name: Antarctica
-            description: Antarctica is a real time observability platform for monitoring the carbon emissions of your on-premise and cloud infrastructure, IT hardware assets and websites. It can also provide optimization recommendations.
+            description: Antarctica is a real time observability platform for monitoring the carbon emissions of your on-premise and cloud infrastructure, IT hardware assets and websites. Its One-Token Model API attributes energy and carbon to individual AI inference requests at token level. It can also provide optimization recommendations.
             homepage_url: https://antarctica.io/solution
             logo: antarctica.svg
             second_path:
               - "Optimization / Cloud Infrastructure"
-              -  "Infrastructure & Cluster Level / Public Cloud"
+              - "Infrastructure & Cluster Level / Public Cloud"
+              - "Artificial Intelligence / AI Inference"
+            extra:
+              documentation_url: https://antarctica.io/research/one-token-model
 
       - name: Modeling
         items:
