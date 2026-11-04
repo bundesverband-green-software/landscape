@@ -955,7 +955,6 @@ categories:
             homepage_url: https://github.com/tdurieux/EnergiBridge
             repo_url: https://github.com/tdurieux/EnergiBridge
             logo: unofficial/energibridge.svg
-            project: "archived"
             extra:
               documentation_url: https://arxiv.org/abs/2312.13897
 
