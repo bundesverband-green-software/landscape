@@ -59,6 +59,17 @@ Serve:
 landscape2 serve --landscape-dir build
 ```
 
+## Badges
+
+If you have been added to the Green Software Landscape you can show your effort of building a great tool by
+linking to the landscape with a badge.
+
+It looks like this:
+
+Find all badge links with hosting on GitHub here: [Badges List](./BADGES.md)
+
+If you prefer shields.io, please find all links to Shields.io here: [Shields.io Badges list](./BADGES_SHIELDS_IO.md)
+
 ## Credits
 
 Existing tool lists that we have taken inspiration from when creating and updating this tool landscape:
