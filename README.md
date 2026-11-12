@@ -64,7 +64,7 @@ landscape2 serve --landscape-dir build
 If you have been added to the Green Software Landscape you can show your effort of building a great tool by
 linking to the landscape with a badge.
 
-It looks like this:
+It looks like this: [![Badge](./badges/public-cloud.svg)](https://landscape.bundesverband-green-software.de/)
 
 Find all badge links with hosting on GitHub here: [Badges List](./BADGES.md)
 
