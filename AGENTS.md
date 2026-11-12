@@ -10,6 +10,7 @@ Tool landscape of the Bundesverband Green Software (<https://landscape.bundesver
 | `settings.yml` | Site config: colors, `groups:` (which categories count as measurement vs optimization), featured items, header/footer links. |
 | `guide.yml`    | In-site guide text, mixed German and English.                                               |
 | `logos/`       | Tool logos, see below.                                                                      |
+| `badges/`      | Category badges, one per subcategory; `BADGES.md` and `BADGES_SHIELDS_IO.md` link them, see below. |
 
 `build/` and `cache/` are generated from these. `.github/workflows/deploy.yaml` builds and deploys to GitHub Pages on push to `main`.
 
@@ -49,6 +50,17 @@ Gotcha: a new top-level category also needs a `groups:` entry in `settings.yml`,
 - `logos/unofficial/` — generated text-only placeholder
 
 Filenames are lowercase kebab-case, initials and punctuation included (`CO2.js.svg` → `co2-js.svg`).
+
+## Badges
+
+`badges/` holds one shields.io-style SVG per **subcategory name**, linked from `BADGES.md` (repo-relative paths) and `BADGES_SHIELDS_IO.md` (equivalent shields.io URLs). Both lists follow the order of `data.yml`.
+
+- Filename is the same lowercase kebab-case slug as a logo, derived from the subcategory name alone: `Bare-Metal & Host Level` → `bare-metal-host-level.svg`.
+- The slug drops the parent category, so a name used twice shares one file: `Kubernetes` exists under Infrastructure & Cluster Level and under Optimization, and `badges/kubernetes.svg` serves both, listed once.
+- Top-level categories have no badge.
+- A new subcategory needs a badge file plus one line in each list; a renamed one needs the file renamed and its line edited in both.
+
+The SVGs are static copies of a sibling, each with the label `Green Software Landscape` and a right section sized to its own text. Nothing generates them and landscape2 does not check them, so a tree change leaves them silently stale. After any change to the subcategory names, verify by hand that every subcategory in `data.yml` has a file in `badges/` and a line in both lists, and that a copied badge has its `<title>`, `aria-label` and right-section widths rewritten.
 
 ## Validate before finishing any YAML change
 
