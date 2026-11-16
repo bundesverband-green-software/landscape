@@ -66,9 +66,7 @@ jobs:
           $(cat link-check.txt)
           \`\`\`
 
-          Only **broken** (404/410/other 4xx, DNS failure, redirect loop)
-          findings fail the check. Entries under _suspect_ and _bot challenge_
-          are reported for context, not as failures.
+          Only **broken** (404/410/other 4xx, DNS failure, redirect loop) findings fail the check. Entries under _suspect_ and _bot challenge_ are reported for context, not as failures.
 
           _Updated by the [link-check workflow](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})._
           EOF
