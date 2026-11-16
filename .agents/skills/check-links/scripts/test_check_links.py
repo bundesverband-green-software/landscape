@@ -46,6 +46,16 @@ def test_redirect_ignore_reason():
         (("http://example.test/a", "https://example.test/a"), None),
         (("https://example.test/go/docs", "https://example.test/docs"), None),
         (("https://example.test/old", "https://other.test/new"), None),
+        (("https://doi.org/10.1002/advs.202100707",
+          "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202100707"),
+         "persistent identifier"),
+        (("https://www.doi.org/10.1007/978-3-030-45237-7_8",
+          "https://link.springer.com/chapter/10.1007/978-3-030-45237-7_8"),
+         "persistent identifier"),
+        (("https://dx.doi.org/10.1/x", "https://other.test/x"), "persistent identifier"),
+        (("https://hdl.handle.net/1234/5678", "https://other.test/5678"),
+         "persistent identifier"),
+        (("https://example.test/doi.org/10.1/x", "https://other.test/x"), None),
     ]
     for args, expected in cases:
         got = cl.redirect_ignore_reason(*args)

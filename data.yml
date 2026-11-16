@@ -966,7 +966,7 @@ categories:
             logo: unofficial/cpu-energy-meter.svg
             project: "archived"
             extra:
-              documentation_url: https://link.springer.com/10.1007/978-3-030-45237-7_8
+              documentation_url: https://doi.org/10.1007/978-3-030-45237-7_8
 
       - name: Process Metrics Exporter
         items:
