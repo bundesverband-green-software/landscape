@@ -64,4 +64,5 @@ Local build and serve: see `## Local usage` in `README.md`.
 
 - `description` fields and docs are English; `guide.yml` mixes German and English — match the file you edit.
 - New tools must meet the prerequisites in `README.md`, section `Propose a new tool` — check them before an entry goes in, not after.
-- PRs use `.github/pull_request_template.md`; it asks how the tool's methodology is documented.
+- The PR template fits a new-tool PR only. Any other PR (link fix, logo, data fix) takes a short body.
+- A PR that an issue reports ends with `Closes #<issue>` on its own last line, so the merge closes the issue.
