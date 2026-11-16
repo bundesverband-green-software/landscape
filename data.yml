@@ -206,14 +206,14 @@ categories:
           - item:
             name: CEEMS
             description: CEEMS (Compute Energy & Emissions Monitoring Stack) is a complete monitoring solution that provides energy and equivalent emissions besides performance, I/O and network metrics of SLURM (HPC), Openstack (VM) and Kubernetes (Container) workloads.
-            homepage_url: https://ceems-dev.github.io/ceems/
+            homepage_url: https://ceems.dev/
             repo_url: https://github.com/ceems-dev/ceems
             logo: ceems.svg
             second_path:
               - "Infrastructure & Cluster Level / Kubernetes"
               - "Full-Stack Application / Monitoring & Tracing"
             extra:
-              documentation_url: https://ceems-dev.github.io/ceems/docs/advanced/power-consumption/
+              documentation_url: https://ceems.dev/docs/advanced/power-consumption/
 
           - item:
             name: Dynatrace Cost & Carbon Optimization
@@ -633,10 +633,10 @@ categories:
             name: Token & CO2 Dashboard
             description: Collects the token consumption of AI coding agents across a company and displays it alongside an estimate of the associated carbon emissions and API cost, even for subscription models. Data is collected anonymously via plugins on self-hosted infrastructure and can be analysed by provider, model, time, and token type.
             homepage_url: https://tokendashboard.neuland-bfi.de/
-            repo_url: https://github.com/neuland/tokendashboard-backend
+            repo_url: https://github.com/neuland/tokendashboard
             logo: token-co2-dashboard.svg
             extra:
-              documentation_url: https://github.com/neuland/tokendashboard-backend/blob/main/docs/co2-methodology.md
+              documentation_url: https://github.com/neuland/tokendashboard/blob/main/backend/docs/co2-methodology.md
             second_path:
               - "Data Aggregation / Organizational Level"
             project: "in-active-use-by-members"
@@ -753,7 +753,7 @@ categories:
           - item:
             name: ResilioDB
             description: ResilioDB breaks down the electronic components of a device like RAM or CPU, in order to assess the environmental impacts of any possible configuration.
-            homepage_url: https://resilio-solutions.com/en/services/database
+            homepage_url: https://resilio-solutions.com/en/products/database
             logo: resilio-database.svg
 
           - item:
@@ -808,7 +808,7 @@ categories:
           - item:
             name: Resilio Tech
             description: Resilio Tech is a solution for assessing the environmental footprint of your digital products and services, whether it is an information system, website, or satellite.
-            homepage_url: https://resilio-solutions.com/en/services/tech
+            homepage_url: https://resilio-solutions.com/en/products/tech
             logo: resilio-tech.svg
 
           - item:
@@ -966,7 +966,7 @@ categories:
             logo: unofficial/cpu-energy-meter.svg
             project: "archived"
             extra:
-              documentation_url: https://doi.org/10.1007/978-3-030-45237-7_8
+              documentation_url: https://link.springer.com/10.1007/978-3-030-45237-7_8
 
       - name: Process Metrics Exporter
         items:
