@@ -51,6 +51,7 @@ landscape2 validate data --data-file data.yml
 - **cosmetic** — same scheme, and the target differs only by a trailing slash or a `www.`. This is notation, not a move. An `http://` -> `https://` redirect is *not* cosmetic and is written.
 - **locale** — one side has a leading language segment the other lacks (`/solution` ↔ `/en/solution`). These flip direction over time, so writing either end bakes in a wrong URL. Only known locale codes count (`en`, `de`, `pt-BR`, …), so `/go/docs` and `/ai/docs` are treated as real paths.
 - **downgrade** — the target is `http://` while the source is `https://`. Never written.
+- **persistent identifier** — a DOI (`doi.org/…`) or other resolver (`hdl.handle.net/…`). Its job is to point at wherever the publisher hosts the page today, and that target moves: Wiley rehomes its platform, and Springer answers `/chapter/…` with a 303 to `idp.springer.com/authorize?response_type=cookie`. Writing that traversal bakes in a URL that churns, and behind a bot wall it still cannot be verified. A `doi.org` URL stays as it is.
 
 Anything else counts as a real move and is written.
 

@@ -6,7 +6,8 @@ Buckets, decided in classify():
 - ok        2xx, no redirect.
 - redirect  2xx after redirect(s). The final URL is written back to data.yml
             (--write) unless writing it would bake in a wrong URL: a notation
-            change, an added locale prefix or an https->http downgrade (see
+            change, an added locale prefix, an https->http downgrade, or a
+            persistent identifier resolving to today's publisher page (see
             redirect_ignore_reason()). An http:// link that redirects to
             https:// is upgraded this way.
 - broken    404/410/other 4xx, NXDOMAIN, redirect loop. FAILS the check.
@@ -53,6 +54,9 @@ LOCALES = frozenset(
     ("de", "en", "es", "fr", "it", "ja", "ko", "nl", "pl", "pt", "ru", "sv",
      "tr", "zh")
 )
+# Persistent identifier resolvers. Their target is wherever the publisher hosts
+# the page today, so it moves without the identifier changing.
+RESOLVERS = frozenset(("doi.org", "dx.doi.org", "hdl.handle.net"))
 
 # One session per worker thread; a browser-ish UA avoids 403s from strict sites.
 _local = threading.local()
@@ -168,9 +172,18 @@ def _strip_locale(segments: list[str]):
     return segments, False
 
 
+def _host(parts) -> str:
+    return parts.hostname.removeprefix("www.") if parts.hostname else ""
+
+
 def redirect_ignore_reason(old: str, new: str):
     """Why a redirect must not be written to data.yml, or None to write it."""
     a, b = urlsplit(old), urlsplit(new)
+    # A DOI or handle exists to point at today's publisher page: Wiley rehomes
+    # its platform, Springer answers /chapter/... with a 303 to an idp cookie
+    # bounce, and behind a bot wall the target cannot be verified either.
+    if _host(a) in RESOLVERS:
+        return "persistent identifier"
     if a.scheme == "https" and b.scheme == "http":
         return "downgrade"
     # Same scheme only: an http->https upgrade is a fix, not notation.
@@ -246,8 +259,7 @@ def report(buckets, writable, ignored, owners):
             print(f"  {old}\n    -> {new}" + (f"   [{who(old)}]" if who(old) else ""))
 
     if ignored:
-        print(f"\nRedirects ignored ({len(ignored)}) "
-              f"[notation, locale prefix or downgrade, not written]:")
+        print(f"\nRedirects ignored ({len(ignored)}) [not written by design]:")
         for old, new, reason in ignored:
             print(f"  ({reason})  {old}\n    -> {new}")
 
