@@ -87,7 +87,7 @@ Requirement: for each output metric, the methodology documentation must describe
 | 75 | Resilio Tech | Data Aggregation/Organizational Level | I | LCA software using ResilioDB; product pages describe features but not the calculation approach per metric, data sources, or assumptions. |
 | 76 | Verdikt | Data Aggregation/Organizational Level | I | Lists GHG Protocol, ADEME Bilan Carbone (accredited), ISO 14040 and CSRD/ESRS, but does not describe how the metrics are calculated, the data sources, or the assumptions. |
 | 77 | Aguaro | Data Aggregation/Organizational Level | I | Applies "prewired environmental profiles" and emission factors (incl. AI/GPU models), but does not describe the calculation approach, data sources, or assumptions. |
-| 78 | Antarctica | Data Aggregation/Organizational Level | V | https://antarctica.io/research/one-token-model "Overview of the Methodology" with the energy formula (server + GPUs × utilisation × latency × PUE) and carbon = energy × grid intensity |
+| 78 | Antarctica | Data Aggregation/Organizational Level | I | https://antarctica.io/research/one-token-model documents AI inference (energy formula, PUE, grid intensity); the cloud and on-prem infrastructure metrics have no published calculation approach |
 | 79 | Impact Framework | Data Aggregation/Modeling | R | https://if.greensoftware.foundation/intro/ existing intro; design-philosophy/major-concepts |
 | 80 | Carbon Footprint Modeling Tool | Data Aggregation/Modeling | R | README/model docs |
 | 81 | e-footprint model | Data Aggregation/Modeling | V | https://boavizta.github.io/e-footprint/methodology/ |
@@ -154,7 +154,7 @@ _Open discussion: should the prerequisite be relaxed so that a methodology accre
 - 22 Cloud Project Carbon Emission Simulator by OxygenIT
 - 71 OxygenIT
 
-### I — insufficient information (12)
+### I — insufficient information (13)
 
 - 2 Azure Carbon Optimization
 - 6 Li10 for AWS
@@ -166,5 +166,6 @@ _Open discussion: should the prerequisite be relaxed so that a methodology accre
 - 75 Resilio Tech
 - 76 Verdikt
 - 77 Aguaro
+- 78 Antarctica
 - 102 Klimatest
 - 113 EcoInfra
