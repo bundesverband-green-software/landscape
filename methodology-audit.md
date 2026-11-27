@@ -6,17 +6,19 @@ Total tools: 134, all audited (InfluxData Telegraf was removed from the landscap
 
 Verdicts: **V**=explicit methodology page found | **R**=methodology info in README/docs/paper/sensor | **P**=methodology not public (on request only) | **I**=insufficient information (partial, unclear, or nothing found; needs team decision) | **N**=generic tool, no metric methodology
 
+Requirement: for each output metric, the methodology documentation must describe the measurement or calculation approach, including data sources, key formulas and assumptions. Complete formulas are not required, but the basic method must be clear.
+
 | # | Tool | Cat | Verdict | Proposed/notes |
 |---|------|-----|---------|----------------|
 | 0 | Cloud Carbon Footprint | Infrastructure & Cluster Level/Public Cloud | V | https://www.cloudcarbonfootprint.org/docs/methodology |
 | 1 | AWS Sustainability Console | Infrastructure & Cluster Level/Public Cloud | V | https://docs.aws.amazon.com/sustainability/latest/userguide/methodology.html existing link points to view-emissions, not methodology |
-| 2 | Azure Carbon Optimization | Infrastructure & Cluster Level/Public Cloud | I | Emissions dashboard built from Azure billing/subscription data; the linked page shows usage, not the calculation (factors, boundaries, embodied emissions). |
+| 2 | Azure Carbon Optimization | Infrastructure & Cluster Level/Public Cloud | I | Reports emissions from Azure billing/subscription data, but the linked page shows results only: no calculation approach, data sources, or assumptions. |
 | 3 | Google Carbon Footprint | Infrastructure & Cluster Level/Public Cloud | V | https://docs.cloud.google.com/carbon-footprint/docs/methodology |
 | 4 | Scaleway Environmental Footprint Calculator | Infrastructure & Cluster Level/Public Cloud | V | https://www.scaleway.com/en/docs/environmental-footprint/additional-content/environmental-footprint-calculator/ |
 | 5 | OVHcloud Environmental Impact Tracker | Infrastructure & Cluster Level/Public Cloud | V | existing methodology PDF |
-| 6 | Li10 for AWS | Infrastructure & Cluster Level/Public Cloud | I | Website says it uses AWS Billing data, the GSF SCI methodology, and the Cloud Carbon Footprint library, but not whether embodied carbon, location-based intensity, or PUE are included. |
+| 6 | Li10 for AWS | Infrastructure & Cluster Level/Public Cloud | I | Names its inputs (AWS Billing data, GSF SCI, Cloud Carbon Footprint library) but does not describe the calculation approach or which assumptions it includes (embodied carbon, location-based intensity, PUE). |
 | 7 | Boavizta Cloud-Scanner for AWS | Infrastructure & Cluster Level/Public Cloud | V | https://boavizta.github.io/cloud-scanner/explanations/methodology.html existing link is docs root |
-| 8 | Green Cost Explorer for AWS | Infrastructure & Cluster Level/Public Cloud | I | README splits AWS spend into "green" and "grey" regions using AWS's sustainable-region list; cost-based classification, no emissions calculation. |
+| 8 | Green Cost Explorer for AWS | Infrastructure & Cluster Level/Public Cloud | I | README describes a cost-based green/grey split (AWS sustainable-region list), not a calculation approach for an emissions metric; no data sources or assumptions are given. |
 | 9 | Tailpipe | Infrastructure & Cluster Level/Public Cloud | V | https://tailpipe.ai/methodology |
 | 10 | Cloud Assess | Infrastructure & Cluster Level/Public Cloud | R | https://github.com/kleis-technology/cloud-assess#how-does-it-work LCA models / PCR; methodology in README + trusted_library |
 | 11 | SPRUCE | Infrastructure & Cluster Level/Public Cloud | V | existing methodology.md |
@@ -26,9 +28,9 @@ Verdicts: **V**=explicit methodology page found | **R**=methodology info in READ
 | 16 | Scaphandre | Infrastructure & Cluster Level/Bare-Metal & Host Level | V | https://hubblo-org.github.io/scaphandre-documentation/index.html methodology spread across several docs pages |
 | 17 | CEEMS | Infrastructure & Cluster Level/Bare-Metal & Host Level | V | https://ceems.dev/docs/advanced/power-consumption/ |
 | 18 | Dynatrace Cost & Carbon Optimization | Infrastructure & Cluster Level/Bare-Metal & Host Level | R | existing Dynatrace docs; claims SDIA-certified methodology |
-| 12 | CO2 Scope® (by EasyVirt) | Infrastructure & Cluster Level/Bare-Metal & Host Level | I | Versioned user guide exists, but without any methodology information on how it calculates energy consumption and CO2 emissions. |
+| 12 | CO2 Scope® (by EasyVirt) | Infrastructure & Cluster Level/Bare-Metal & Host Level | I | User guide documents the UI and outputs, but not how energy consumption and CO2 emissions are calculated (approach, data sources, assumptions). |
 | 20 | Datavizta | Infrastructure & Cluster Level/Planning & Calculation | R | https://doc.api.boavizta.org/ Datavizta exposes Boavizta data/methods (API docs) |
-| 21 | EasyVirt Eclyo | Infrastructure & Cluster Level/Planning & Calculation | I | Simulator compares VM prices and carbon emissions across AWS, GCP and Azure; no public methodology or emission factors. |
+| 21 | EasyVirt Eclyo | Infrastructure & Cluster Level/Planning & Calculation | I | Compares VM prices and carbon emissions across AWS, GCP and Azure, but publishes no calculation approach, data sources, or assumptions. |
 | 22 | Cloud Project Carbon Emission Simulator by OxygenIT | Infrastructure & Cluster Level/Planning & Calculation | P | methodology only available on request (not public) |
 | 23 | Green Algorithms Calculator | Infrastructure & Cluster Level/Planning & Calculation | R | methodology in publication referenced by README |
 | 24 | Data Center Water Consumption Calculator | Infrastructure & Cluster Level/Planning & Calculation | R | existing link is a methodology article |
@@ -55,7 +57,7 @@ Verdicts: **V**=explicit methodology page found | **R**=methodology info in READ
 | 45 | perun | Code/Code Level Energy Measurement | R | README: samples usage stats from hardware |
 | 46 | Coppers | Code/Code Level Energy Measurement | R | README; Intel RAPL based |
 | 47 | Creedengo | Code/Static Code Analysis | N | static-analysis rules; no metric methodology required |
-| 48 | CAST | Code/Static Code Analysis | I | Partly a static-analysis tool like Creedengo (no methodology needed), but it also computes energy efficiency and carbon footprint; no public calculation details for those. |
+| 48 | CAST | Code/Static Code Analysis | I | Static-analysis rules need no methodology; for the energy-efficiency and carbon-footprint metrics it also reports, no calculation approach or data sources are published. |
 | 49 | ec0lint | Code/Static Code Analysis | R | README describes rules; no methodology |
 | 50 | aDoctor | Code/Static Code Analysis | R | archived; methodology in paper referenced by README |
 | 51 | Eco CI | Code/CI Pipeline | V | https://docs.green-coding.io/docs/prologue/philosophy-methodology/ |
@@ -81,10 +83,10 @@ Verdicts: **V**=explicit methodology page found | **R**=methodology info in READ
 | 71 | OxygenIT | Databases/IT Emission Inventory | P | methodology only available on request (not public) |
 | 72 | CarbonDB | Data Aggregation/Organizational Level | R | https://docs.green-coding.io/docs/carbondb/overview/ green-coding product docs |
 | 73 | fruggr | Data Aggregation/Organizational Level | V | https://www.fruggr.io/en/how-does-fruggr-assess-the-environmental-impacts-of-digital-services/ blog article describing the method |
-| 74 | Sopht | Data Aggregation/Organizational Level | I | FAQ (sopht.com/faq) has some information but not enough. AI relies on the open-source EcoLogits, which is fine. For cloud it uses cost and usage reports plus monitoring endpoints such as CloudWatch, but does not say which factors enter the carbon calculation: location-based grid intensity? Embodied emissions? PUE? |
-| 75 | Resilio Tech | Data Aggregation/Organizational Level | I | LCA software for digital services and IT equipment, using ResilioDB; product pages describe features but publish no calculation method, factors, or boundaries. |
-| 76 | Verdikt | Data Aggregation/Organizational Level | I | Platform overview lists GHG Protocol, ADEME Bilan Carbone (accredited), ISO 14040 and CSRD/ESRS, but publishes no factors, boundaries, or formulas behind the numbers. |
-| 77 | Aguaro | Data Aggregation/Organizational Level | I | Collects data from ServiceNow, cloud providers and other sources and applies "prewired environmental profiles" and emission factors (incl. AI/GPU models), but publishes no factors, boundaries, or calculation details. |
+| 74 | Sopht | Data Aggregation/Organizational Level | I | AI relies on the documented EcoLogits. For cloud it names data sources (cost and usage reports, CloudWatch) but not the calculation approach or assumptions (location-based grid intensity, embodied emissions, PUE). |
+| 75 | Resilio Tech | Data Aggregation/Organizational Level | I | LCA software using ResilioDB; product pages describe features but not the calculation approach per metric, data sources, or assumptions. |
+| 76 | Verdikt | Data Aggregation/Organizational Level | I | Lists GHG Protocol, ADEME Bilan Carbone (accredited), ISO 14040 and CSRD/ESRS, but does not describe how the metrics are calculated, the data sources, or the assumptions. |
+| 77 | Aguaro | Data Aggregation/Organizational Level | I | Applies "prewired environmental profiles" and emission factors (incl. AI/GPU models), but does not describe the calculation approach, data sources, or assumptions. |
 | 78 | Antarctica | Data Aggregation/Organizational Level | V | https://antarctica.io/research/one-token-model "Overview of the Methodology" with the energy formula (server + GPUs × utilisation × latency × PUE) and carbon = energy × grid intensity |
 | 79 | Impact Framework | Data Aggregation/Modeling | R | https://if.greensoftware.foundation/intro/ existing intro; design-philosophy/major-concepts |
 | 80 | Carbon Footprint Modeling Tool | Data Aggregation/Modeling | R | README/model docs |
@@ -109,7 +111,7 @@ Verdicts: **V**=explicit methodology page found | **R**=methodology info in READ
 | 99 | Ecograder | Website/Website Carbon Estimation | V | https://ecograder.com/how-it-works |
 | 100 | EcoIndex | Website/Website Carbon Estimation | V | https://www.ecoindex.fr/en/how-it-works/ analysis methodology |
 | 101 | Kastor | Website/Website Carbon Estimation | R | Fork of Lighthouse; README/site: CO2 from CO2.js based on the Sustainable Web Design Model, >0.9 g/visit too high, <0.5 g ideal |
-| 102 | Klimatest | Website/Website Carbon Estimation | I | States a "Digital Carbon Rating" from A+ to F compared with the global average, but publishes no calculation, factors, or boundaries. |
+| 102 | Klimatest | Website/Website Carbon Estimation | I | States an A+–F "Digital Carbon Rating" relative to the global average, but not how the footprint is calculated, the data sources, or the assumptions. |
 | 103 | Website Carbon Meter | Website/Website Carbon Estimation | R | README 'how it works'; CO2.js based |
 | 104 | WebNRG | Website/Website Energy Measurement | V | https://website-tester.green-coding.io/methodology.html explicit methodology page (rendering energy, A+–F labels) |
 | 105 | GreenIT-Analysis | Website/Website Analysis | N | browser-extension best-practice/recommendation tool; no metric methodology required |
@@ -119,8 +121,8 @@ Verdicts: **V**=explicit methodology page found | **R**=methodology info in READ
 | 109 | IBM Turbonomic | Optimization/Cloud Infrastructure | N | generic resource-optimisation software; no metric methodology required |
 | 110 | Greenpixie GPX | Infrastructure & Cluster Level/Public Cloud | V | https://greenpixie.com/docs/methodology cloud + AI methodology docs; renamed from "Greenpixie GPX Data" |
 | 111 | IBM Txture | Optimization/Cloud Infrastructure | R | https://www.ibm.com/docs/en/txture?topic=proposals-carbon-footprint-estimate IBM carbon footprint estimate docs |
-| 112 | Cycloid | Optimization/Cloud Infrastructure | I | https://www.cycloid.io/blog/cloud-carbon-footprint-a-greenops-finops-approach-to-cloud-waste/ Blog describes a bottom-up, Cloud Carbon Footprint-based method (resource usage × energy conversion × PUE × grid intensity), but publishes no factors, boundaries, or full calculation. |
-| 113 | EcoInfra | Optimization/Cloud Infrastructure | I | Predicts emissions from Terraform/IaC with an "AI" model; no public model, emission factors, or accuracy details. |
+| 112 | Cycloid | Optimization/Cloud Infrastructure | I | https://www.cycloid.io/blog/cloud-carbon-footprint-a-greenops-finops-approach-to-cloud-waste/ Blog describes the general approach (bottom-up resource usage × energy conversion × PUE × grid intensity, based on Cloud Carbon Footprint), but not the data sources or assumptions behind the factors. |
+| 113 | EcoInfra | Optimization/Cloud Infrastructure | I | Predicts emissions from Terraform/IaC with an "AI" model; no calculation approach, data sources, or assumptions are published. |
 | 114 | Elastic Universal Profiling | Optimization/Application Profiling | N | profiler; existing docs |
 | 115 | KEDA | Optimization/Kubernetes | N | autoscaler, no metric methodology |
 | 116 | Goldilocks | Optimization/Kubernetes | N | resource requests, no metric methodology |
