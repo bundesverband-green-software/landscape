@@ -6,7 +6,7 @@ Total tools: 134, all audited (InfluxData Telegraf was removed from the landscap
 
 Verdicts: **V**=explicit methodology page found | **R**=methodology info in README/docs/paper/sensor | **P**=methodology not public (on request only) | **I**=insufficient information (partial, unclear, or nothing found; needs team decision) | **N**=generic tool, no metric methodology
 
-Requirement: for each output metric, the methodology documentation must describe the measurement or calculation approach, including data sources, key formulas and assumptions. Complete formulas are not required, but the basic method must be clear.
+Requirement: for each output metric, the methodology documentation must describe the measurement or calculation approach, including data sources, key formulas and assumptions. Complete formulas are not required, but the basic method must be clear. A link counts only when the page itself describes that approach; naming a standard or a library is not enough.
 
 | # | Tool | Cat | Verdict | Proposed/notes |
 |---|------|-----|---------|----------------|
@@ -16,7 +16,7 @@ Requirement: for each output metric, the methodology documentation must describe
 | 3 | Google Carbon Footprint | Infrastructure & Cluster Level/Public Cloud | V | https://docs.cloud.google.com/carbon-footprint/docs/methodology |
 | 4 | Scaleway Environmental Footprint Calculator | Infrastructure & Cluster Level/Public Cloud | V | https://www.scaleway.com/en/docs/environmental-footprint/additional-content/environmental-footprint-calculator/ |
 | 5 | OVHcloud Environmental Impact Tracker | Infrastructure & Cluster Level/Public Cloud | V | existing methodology PDF |
-| 6 | Li10 for AWS | Infrastructure & Cluster Level/Public Cloud | I | Names its inputs (AWS Billing data, GSF SCI, Cloud Carbon Footprint library) but does not describe the calculation approach or which assumptions it includes (embodied carbon, location-based intensity, PUE). |
+| 6 | Li10 for AWS | Infrastructure & Cluster Level/Public Cloud | I | Lists its inputs (AWS Billing data, GSF SCI, Cloud Carbon Footprint library) but not how they produce the emissions number. |
 | 7 | Boavizta Cloud-Scanner for AWS | Infrastructure & Cluster Level/Public Cloud | V | https://boavizta.github.io/cloud-scanner/explanations/methodology.html existing link is docs root |
 | 8 | Green Cost Explorer for AWS | Infrastructure & Cluster Level/Public Cloud | I | README describes a cost-based green/grey split (AWS sustainable-region list), not a calculation approach for an emissions metric; no data sources or assumptions are given. |
 | 9 | Tailpipe | Infrastructure & Cluster Level/Public Cloud | V | https://tailpipe.ai/methodology |
@@ -121,7 +121,7 @@ Requirement: for each output metric, the methodology documentation must describe
 | 109 | IBM Turbonomic | Optimization/Cloud Infrastructure | N | generic resource-optimisation software; no metric methodology required |
 | 110 | Greenpixie GPX | Infrastructure & Cluster Level/Public Cloud | V | https://greenpixie.com/docs/methodology cloud + AI methodology docs; renamed from "Greenpixie GPX Data" |
 | 111 | IBM Txture | Optimization/Cloud Infrastructure | R | https://www.ibm.com/docs/en/txture?topic=proposals-carbon-footprint-estimate IBM carbon footprint estimate docs |
-| 112 | Cycloid | Optimization/Cloud Infrastructure | R | https://www.cycloid.io/blog/cloud-carbon-footprint-a-greenops-finops-approach-to-cloud-waste/ Blog describes the general approach (bottom-up resource usage × energy conversion × PUE × grid intensity) and cites Cloud Carbon Footprint for the data sources and assumptions |
+| 112 | Cycloid | Optimization/Cloud Infrastructure | R | https://www.cycloid.io/blog/cloud-carbon-footprint-a-greenops-finops-approach-to-cloud-waste/ Blog describes the calculation chain (bottom-up resource usage × energy conversion × PUE × grid intensity) and builds on Cloud Carbon Footprint |
 | 113 | EcoInfra | Optimization/Cloud Infrastructure | I | Predicts emissions from Terraform/IaC with an "AI" model; no calculation approach, data sources, or assumptions are published. |
 | 114 | Elastic Universal Profiling | Optimization/Application Profiling | N | profiler; existing docs |
 | 115 | KEDA | Optimization/Kubernetes | N | autoscaler, no metric methodology |
