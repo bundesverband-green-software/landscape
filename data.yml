@@ -277,6 +277,8 @@ categories:
             homepage_url: https://hardware-checker.green-coding.io/
             logo: unofficial/hardware-replacement-calculator.svg
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://www.green-coding.io/blog/when-to-replace-a-machine/
 
           - item:
             name: Technology Carbon Estimator
@@ -327,6 +329,8 @@ categories:
             logo: cardamon.svg
             second_path:
               - "Website / Website Carbon Estimation"
+            extra:
+              documentation_url: https://github.com/Root-Branch/cardamon-web-model
 
       - name: Monitoring & Tracing
         items:
@@ -395,6 +399,8 @@ categories:
             homepage_url: https://www.noureddine.org/research/powdroid
             repo_url: https://github.com/powdroid-project/powdroid
             logo: powdroid.png
+            extra:
+              documentation_url: https://hal.science/hal-03380605v1
 
           - item:
             name: Android Runner
@@ -607,6 +613,8 @@ categories:
             description: This project aims to show how much asking an GPT uses in resources.
             homepage_url: https://www.green-coding.ai/
             logo: organization/green-coding.webp
+            extra:
+              documentation_url: https://www.green-coding.io/blog/green-coding-ai/
 
           - item:
             name: EcoLogits
@@ -755,6 +763,8 @@ categories:
             description: ResilioDB breaks down the electronic components of a device like RAM or CPU, in order to assess the environmental impacts of any possible configuration.
             homepage_url: https://resilio-solutions.com/en/products/database
             logo: resilio-database.svg
+            extra:
+              documentation_url: https://hotcarbon.org/assets/2026/paper-88.pdf
 
           - item:
             name: Base Empreinte
@@ -1059,6 +1069,8 @@ categories:
             second_path:
               - "Website / Website Analysis"
             project: "in-active-use-by-members"
+            extra:
+              documentation_url: https://ecograder.com/how-it-works
 
           - item:
             name: EcoIndex
