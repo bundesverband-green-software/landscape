@@ -121,7 +121,7 @@ Requirement: for each output metric, the methodology documentation must describe
 | 109 | IBM Turbonomic | Optimization/Cloud Infrastructure | N | generic resource-optimisation software; no metric methodology required |
 | 110 | Greenpixie GPX | Infrastructure & Cluster Level/Public Cloud | V | https://greenpixie.com/docs/methodology cloud + AI methodology docs; renamed from "Greenpixie GPX Data" |
 | 111 | IBM Txture | Optimization/Cloud Infrastructure | R | https://www.ibm.com/docs/en/txture?topic=proposals-carbon-footprint-estimate IBM carbon footprint estimate docs |
-| 112 | Cycloid | Optimization/Cloud Infrastructure | I | https://www.cycloid.io/blog/cloud-carbon-footprint-a-greenops-finops-approach-to-cloud-waste/ Blog describes the general approach (bottom-up resource usage × energy conversion × PUE × grid intensity, based on Cloud Carbon Footprint), but not the data sources or assumptions behind the factors. |
+| 112 | Cycloid | Optimization/Cloud Infrastructure | R | https://www.cycloid.io/blog/cloud-carbon-footprint-a-greenops-finops-approach-to-cloud-waste/ Blog describes the general approach (bottom-up resource usage × energy conversion × PUE × grid intensity) and cites Cloud Carbon Footprint for the data sources and assumptions |
 | 113 | EcoInfra | Optimization/Cloud Infrastructure | I | Predicts emissions from Terraform/IaC with an "AI" model; no calculation approach, data sources, or assumptions are published. |
 | 114 | Elastic Universal Profiling | Optimization/Application Profiling | N | profiler; existing docs |
 | 115 | KEDA | Optimization/Kubernetes | N | autoscaler, no metric methodology |
@@ -154,7 +154,7 @@ _Open discussion: should the prerequisite be relaxed so that a methodology accre
 - 22 Cloud Project Carbon Emission Simulator by OxygenIT
 - 71 OxygenIT
 
-### I — insufficient information (13)
+### I — insufficient information (12)
 
 - 2 Azure Carbon Optimization
 - 6 Li10 for AWS
@@ -167,5 +167,4 @@ _Open discussion: should the prerequisite be relaxed so that a methodology accre
 - 76 Verdikt
 - 77 Aguaro
 - 102 Klimatest
-- 112 Cycloid
 - 113 EcoInfra
