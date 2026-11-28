@@ -1,6 +1,6 @@
 # AGENTS.md — Green Software Landscape
 
-Tool landscape of the Bundesverband Green Software (<https://landscape.bundesverband-green-software.de>). No application code: the CNCF [landscape2](https://github.com/cncf/landscape2) generates the site from three YAML files and `logos/`. Per-task procedures — adding a tool, fixing a logo, checking links — live in `.agents/skills/*/SKILL.md`.
+Tool landscape of the Bundesverband Green Software (<https://landscape.bundesverband-green-software.de>). No application code: the CNCF [landscape2](https://github.com/cncf/landscape2) generates the site from three YAML files and `logos/`. Per-task procedures — adding a tool, fixing a logo, checking links, checking the GSF awesome list — live in `.agents/skills/*/SKILL.md`.
 
 ## Source of truth
 

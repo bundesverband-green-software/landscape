@@ -6,11 +6,7 @@ The list has 87 entries under Tooling. 41 of them are already in the landscape, 
 
 Facts behind the judgements come from the repositories themselves: latest push, archive flag, licence, stars. Age claims are therefore dated, not estimated.
 
-## Method
-
-- Set difference both ways, matched on name and on homepage/repo URL.
-- "Fit" applies this repo's prerequisites (see `README.md`, section `Propose a new tool`): green software relation, publicly available and functional, user documentation, and a methodology that explains how each metric is computed.
-- A tool that is unmaintained, that is a method rather than a tool, or that duplicates an existing entry is judged "No" — the landscape lists tools, and a dead or method-only link makes the landscape worse, not better.
+To produce a new snapshot, run the skill `.agents/skills/check-awesome-list/SKILL.md`; it carries the procedure and the judgement categories, this file carries the result.
 
 ## Listed there, missing here
 
