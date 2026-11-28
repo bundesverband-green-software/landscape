@@ -78,17 +78,19 @@ To produce a new snapshot, run the skill `.agents/skills/check-awesome-list/SKIL
 | CAST Highlight | CAST (`castsoftware.com/highlight`) |
 | Customer Carbon Footprint Tool | AWS Sustainability Console (the tool's successor) |
 | OVHcloud Carbon Calculator | OVHcloud Environmental Impact Tracker (the list links the same tool's PDF) |
+| oaklean.io | oaklean (the list links the `.io` marketing domain) |
+| CO2Scope | CO2 Scope® (by EasyVirt) |
 | Carbon Aware Computing — Tools and Free Forecast Data | Carbon-Aware-Computing.com |
 | Creedengo (formerly ecoCode) | Creedengo |
 | PowDroid | PowDroid (the list links the GitHub repo, the landscape the project page) |
 
 Also new in the list this year and already covered here: `claude-carbon`, `Compute Gardener Scheduler`, `webNRG`.
 
-## In this landscape, not in the list (89)
+## In this landscape, not in the list (93)
 
-No judgement needed — these are the entries the list lacks.
+No judgement needed — these are the entries the list lacks, the five mapping rows above excluded.
 
-- Infrastructure & Cluster Level / Public Cloud: AWS Sustainability Console, Scaleway Environmental Footprint Calculator, OVHcloud Environmental Impact Tracker, Li10 for AWS, Boavizta Cloud-Scanner for AWS, Tailpipe, Greenpixie GPX, Cloud Assess, SPRUCE, Carbon Measurement Engine (Carmen)
+- Infrastructure & Cluster Level / Public Cloud: Scaleway Environmental Footprint Calculator, Li10 for AWS, Boavizta Cloud-Scanner for AWS, Tailpipe, Greenpixie GPX, Cloud Assess, SPRUCE, Carbon Measurement Engine (Carmen)
 - Infrastructure & Cluster Level / Kubernetes: KEIT
 - Infrastructure & Cluster Level / Bare-Metal & Host Level: Dynatrace Cost & Carbon Optimization
 - Infrastructure & Cluster Level / Planning & Calculation: Datavizta, EasyVirt Eclyo, Cloud Project Carbon Emission Simulator by OxygenIT, Green Algorithms Calculator, Data Center Water Consumption Calculator, Hardware Replacement Calculator, Technology Carbon Estimator
@@ -96,9 +98,9 @@ No judgement needed — these are the entries the list lacks.
 - Desktop & Mobile: Power Hog, Watt Wiser, Android Power Profiler, Greenspector Studio, Android Runner
 - Code: jPowerMonitor, DotNet-Counters, PyRAPL, perun, Coppers, aDoctor
 - Artificial Intelligence: AI Power Meter, ML CO2 Impact, Green Algorithms Calculator (AI), Green Coding AI, EcoLogits, Token & CO2 Dashboard, CLEER, AI Energy Score, LLM-Perf Leaderboard
-- Databases: Energy-Charts, ENTSO-E Transparency Platform, Carbon-Intensity UK, BoaviztAPI, Climatiq, ResilioDB, Base Empreinte, OxygenIT
+- Databases: Energy-Charts, ENTSO-E Transparency Platform, Carbon-Intensity UK, Electricity Maps, WattTime, BoaviztAPI, Climatiq, ResilioDB, Base Empreinte, OxygenIT
 - Data Aggregation: CarbonDB, Sopht, Resilio Tech, Verdikt, Aguaro, Antarctica, Impact Framework, Carbon Footprint Modeling Tool, e-footprint model
-- Device & Process Level: Powerstat, Turbostat, NVIDIA SMI, Intel PCM, CPU Energy Meter, procpower, powerletrics, Energy Monitoring Tool, EnergAt
-- Website: Klimatest, Website Carbon Meter, Safari Web Inspector
+- Device & Process Level: Powerstat, Perf, Turbostat, NVIDIA SMI, Intel PCM, Cloud Energy, EnergiBridge, CPU Energy Meter, procpower, powerletrics, Energy Monitoring Tool, EnergAt
+- Website: Klimatest, Website Carbon Meter, Safari Web Inspector, Firefox Power Profiler
 - Measurement Utilities / Automation: Experiment Runner
 - Optimization: IBM Turbonomic, IBM Txture, Cycloid, EcoInfra, Elastic Universal Profiling, KEDA, Goldilocks, Karpenter, DailyClean, Carbon Aware KEDA Operator, CLEVER, GoKubeDownscaler, grid-intensity-go, Camunda Carbon Reductor, Grid-aware Websites, VSCarbon, Pruna AI

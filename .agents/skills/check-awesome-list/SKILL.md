@@ -58,7 +58,7 @@ Completion: every list-only entry carries a year, and every entry dated to the r
 
 ## Step 4 — eyeball the pairs
 
-The script matches on normalized name (lowercase, non-alphanumerics dropped) and on URL, in both directions, because the list renames tools, links a repo where we link a project page, and lists a successor under the old name. Read the unmatched names by eye for exactly those cases. A shared name is not proof of the same tool: `creedengo-ios` is a separate artefact from `Creedengo`, `ShiftPress Website Carbon Calculator` from `Website Carbon Calculator`.
+The script matches on normalized name (lowercase, non-alphanumerics dropped) and on URL, in both directions, because the list renames tools, links a repo where we link a project page, and lists a successor under the old name. Read the unmatched names by eye for exactly those cases, and expect both directions of error. A shared name is not proof of the same tool: `creedengo-ios` is a separate artefact from `Creedengo`, `ShiftPress Website Carbon Calculator` from `Website Carbon Calculator`. And an exact-match miss is not proof of absence: `oaklean.io` is our `oaklean`, `CO2Scope` our `CO2 Scope® (by EasyVirt)`, `CAST Highlight` our `CAST`, `Customer Carbon Footprint Tool` our `AWS Sustainability Console`, `OVHcloud Carbon Calculator` our `OVHcloud Environmental Impact Tracker` — five pairs no name or URL rule catches, so every run has to find them again.
 
 Completion: every name in the list-only block is either a candidate for Step 5 or pinned to a landscape entry in a "in both, under a different name" row.
 
@@ -92,7 +92,7 @@ Completion: every candidate has `yes | partial | no` and a reason a maintainer c
 
 Rewrite `docs/awesome-green-software-gap.md`: a header line with the compared commit (`git -C ags rev-parse --short HEAD`), the readme's last commit date (`git -C ags log -1 --format=%ad --date=short -- readme.md`) and the run date; then the candidate tables ordered yes → partial → no, columns Name · In list since · What it is · URLs · Proposed category · Fit, one sentence on what the tool computes and from which data; then the "in both, under a different name" mapping; then the reverse appendix of our entries the list lacks, refreshed from `data.yml` and grouped by subcategory.
 
-The header's counts are the script's, kept consistent: entries = matched + list-only, and a name moved into the mapping table moves one from list-only to matched. Do not re-count by hand.
+The header's counts are the script's, kept consistent: entries = matched + list-only, a name moved into the mapping table moves one from list-only to matched, and the appendix is the script's landscape-only block **minus** the landscape side of every mapping row — the script reports those pairs as two unmatched names, so copying its block wholesale double-counts them.
 
 Proposed categories resolve against the tree as it stands and obey `add-tool` Step 2's limit: one primary plus `second_path`, every path existing in `data.yml`.
 
