@@ -74,7 +74,7 @@ Completion: each candidate carries a dated last push, a licence, a follow-checke
 
 ## Step 6 — judge
 
-Fit means the four prerequisites in `README.md`, section `Propose a new tool` — green software relation, public and functional, user docs, methodology docs. A candidate that fails still gets a row and its reason: admitting it stays the maintainer's call.
+Fit means the four prerequisites in `README.md`, section `Propose a new tool` — green software relation, public and functional, user docs, methodology docs. Methodology is owed only by a tool that computes a metric: a scheduler, linter or rule pack that outputs no number owes user documentation and the green relation, and is judged on those plus its status instead. A candidate that fails still gets a row and its reason: admitting it stays the maintainer's call.
 
 Reasons that recur:
 
@@ -84,7 +84,8 @@ Reasons that recur:
 - **superseded**: the listed entry is the successor, so propose that one instead.
 - **one calculator too many**: another website carbon estimator with nothing to distinguish it from the seven we list.
 - **outside IT**: home energy rebates, battery-storage sizing.
-- **no published method**: calibration kept server-side, an SEO audit with a green pitch.
+- **no published method**: calibration kept server-side, an SEO audit with a green pitch. Only for a tool whose output is a number.
+- **doubtful status**: the project labels itself experimental, which is below the beta the prerequisites ask for.
 
 Completion: every candidate has `yes | partial | no` and a reason a maintainer can verify against the named source.
 
