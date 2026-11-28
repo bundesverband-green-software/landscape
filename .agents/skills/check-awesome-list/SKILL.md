@@ -1,13 +1,13 @@
 ---
 name: check-awesome-list
-description: Diff the GSF awesome-green-software list against data.yml and judge which of its tools are missing here, with proposed categories and dated maintenance facts. Use for a periodic gap check, a "what did the awesome list add this year" question, or refreshing docs/awesome-green-software-gap.md.
+description: Diff the GSF awesome-green-software list against data.yml, judge which of its tools are missing here, and rewrite docs/awesome-green-software-gap.md. Use for a periodic gap check or a "what did the awesome list add this year" question.
 ---
 
 # Check the awesome list against the landscape
 
 Source: <https://github.com/Green-Software-Foundation/awesome-green-software>, a single `readme.md`. Output: `docs/awesome-green-software-gap.md`, the dated snapshot of the diff and its judgements, rewritten in place each run.
 
-The list orders tools by what they measure, not by our tree, so it is a source of candidates rather than a merge target — and its prose about maintenance and about what a tool is has been wrong before (it claimed Carbonifer >3 years dead and Carbonara >5; the commits say 2024-07-13 and 2023-03-10). Every claim gets checked against the repository.
+The list orders tools by what they measure, not by our tree, so it is a source of candidates rather than a merge target — and its prose has been wrong before, calling Carbonifer and Carbonara years dead when both had commits in 2024 and 2023. **The repository is the source of truth, the readme's prose is a hint.** Every claim gets checked against the commits.
 
 ## Step 1 — clone with full history
 
@@ -15,41 +15,52 @@ The list orders tools by what they measure, not by our tree, so it is a source o
 git clone https://github.com/Green-Software-Foundation/awesome-green-software.git ags
 ```
 
-Full clone, not `--filter=blob:none`: the `-S` searches in Step 3 read every historical `readme.md`, which on a partial clone means one network fetch per commit. The repo is ~13 MB.
+Clone outside this repo: the clone is a working copy for the run, not part of the landscape. Full clone, not `--filter=blob:none`: the `-S` searches in Step 3 read every historical `readme.md`, which on a partial clone means one network fetch per commit. It is ~30 MB.
 
-Completion: `git -C ags log --oneline | head -1` prints a commit and the clone holds `readme.md`.
+Completion: `ags/readme.md` exists and `git -C ags log --oneline | head -1` prints a commit.
 
-## Step 2 — extract both sides
+## Step 2 — diff both sides
 
-**Their side.** Under `## Tooling`, entries are `- [name](url) - description`, and the `### ` heading above one is its list category. Note the kind badge at the end of the line — `co` marks a commercial product or vendor page, `tool` something you can run.
+```sh
+uv run --with pyyaml python \
+  .agents/skills/check-awesome-list/scripts/diff_list.py ags
+```
 
-**Our side.** Parse `data.yml` with PyYAML: `categories[].subcategories[].items[]`. Each entry is a mapping whose fields sit *beside* the null `item:` key, so read `it.get('name')`, not `it['item']['name']` (the latter raises `'NoneType' object is not subscriptable`).
+Prints the counts, the matched pairs (`their name => our path`, flagged `[renamed]` where the names differ), the list-only entries as `name · list category · kind · url`, and the landscape-only entries grouped by subcategory.
 
-Completion: both sides are lists of `{name, url, description, category}` with counts matching `grep -c '^- \[' readme.md` under `## Tooling`.
+The readme's shape, for reading around the script: under `## Tooling`, an entry is `- [name](url) - description`; the `### ` heading above it is the list's own category, which says nothing about ours; a trailing `![co]` badge marks a commercial product or vendor page, `![tool]` something you can run.
+
+Completion: the script's `list:` count equals the `- [` count under `## Tooling`:
+
+```sh
+awk '/^## Tooling/{f=1;next} /^## /{f=0} f' ags/readme.md | grep -c '^- \['
+```
+
+A whole-file `grep -c '^- \[' readme.md` counts the Organizations, Courses, Articles, Books and Research sections too, so it never matches.
 
 ## Step 3 — date every entry
 
 Earliest year the URL appeared, and the same for the name:
 
 ```sh
-git log -S'<string>' --format=%ad --date=format:%Y -- readme.md | tail -1
+git -C ags log -S'<string>' --format=%ad --date=format:%Y -- readme.md | tail -1
 ```
 
-Pitfall: a mass reformat on 2026-08-04 rewrote URLs across the file, so `-S '<url>'` reports 2026 for tools listed since 2021 (`powercfg`, `codecarbon.io`, `Eco-CI`, `PowerAPI`, `WeDeex`). Take the earlier of the URL year and the name year; when both land on the reformat year, compare against the readme at the last commit before 1 January of it:
+Take the earlier of the two years. Pitfall: commit `b0fe7c5` (2026-08-04, `Added new reformating`) rewrote names and URLs across the file — `http` to `https`, added trailing slashes, `docs.microsoft.com` to `learn.microsoft.com`, `Eco-CI Continuous Integration Energy Estimation` to `Eco-CI` — so both searches can report 2026 for a tool listed since 2021. When both land on that year, date the entry against the readme from before it:
 
 ```sh
-sha=$(git log --until=<YEAR>-01-01 -1 --format=%h -- readme.md) && git show $sha:readme.md
+sha=$(git -C ags log --until=<YEAR>-01-01 -1 --format=%h -- readme.md) && git -C ags show $sha:readme.md
 ```
 
-Completion: every entry has a year, and every year equal to the reformat year has passed the pre-year comparison.
+An entry present there is older, so its year comes from that readme; an entry absent from it entered in the reformat year.
 
-## Step 4 — diff both directions
+Completion: every list-only entry carries a year, and every entry dated to the reformat year is either absent from the pre-reformat readme or names a source that confirms the year.
 
-Normalize for matching — lowercase, strip `[^a-z0-9]` — and match on name, homepage URL and repo URL. Both directions, because the list renames tools, links repos where we link a project page, and lists the successor of a tool under its old name: ecoCode→Creedengo, ebb-ai→Tidegap, Customer Carbon Footprint Tool→AWS Sustainability Console, OVHcloud Carbon Calculator→our Environmental Impact Tracker, CAST Highlight→our CAST, PowDroid (repo vs. project page).
+## Step 4 — eyeball the pairs
 
-Then read the unmatched names by eye, because the automaton pairs things that are not the same tool: `creedengo-ios` matches `Creedengo`, `ShiftPress Website Carbon Calculator` matches `Website Carbon Calculator`.
+The script matches on normalized name (lowercase, non-alphanumerics dropped) and on URL, in both directions, because the list renames tools, links a repo where we link a project page, and lists a successor under the old name. Read the unmatched names by eye for exactly those cases. A shared name is not proof of the same tool: `creedengo-ios` is a separate artefact from `Creedengo`, `ShiftPress Website Carbon Calculator` from `Website Carbon Calculator`.
 
-Completion: each of their tooling entries sits in "already here" or "candidate", every candidate eyeballed.
+Completion: every name in the list-only block is either a candidate for Step 5 or pinned to a landscape entry in a "in both, under a different name" row.
 
 ## Step 5 — measure each candidate
 
@@ -63,28 +74,32 @@ Completion: each candidate carries a dated last push, a licence, a follow-checke
 
 ## Step 6 — judge
 
-Fit means `README.md`'s prerequisites (green software relation, public and functional, user docs, methodology docs); `add-tool` holds how to test them. A candidate that fails still gets a row and its reason — admitting it stays the maintainer's call.
+Fit means the four prerequisites in `README.md`, section `Propose a new tool` — green software relation, public and functional, user docs, methodology docs. A candidate that fails still gets a row and its reason: admitting it stays the maintainer's call.
 
 Reasons that recur:
 
-- **unmaintained**: no upstream commit for about two years, or archived. Name the date, not an age — Carbonifer 2024-07-13, Carbonara 2023-03-10, turbostress 2021-03, ipmitool archived 2023-02, the cloudyspells PowerShell modules 2023.
-- **method, not tool**: coefficients, guidance, a dataset with no calculator — Cloud Jewels, Well-Architected Framework.
-- **API of a listed entry**: belongs in that entry's `extra.documentation_url`, not as a second item (Azure Carbon Service REST API).
-- **superseded**: the listed entry is the successor, so propose that one instead (carbon-budget-action → `sci-disclose`).
-- **one calculator too many**: another website carbon estimator, with nothing to distinguish it from the seven we list.
+- **unmaintained**: no upstream commit for about two years, or archived. Name the date, not an age.
+- **method, not tool**: coefficients, guidance or a dataset with no calculator.
+- **API of a listed entry**: belongs in that entry's `extra.documentation_url`, not as a second item.
+- **superseded**: the listed entry is the successor, so propose that one instead.
+- **one calculator too many**: another website carbon estimator with nothing to distinguish it from the seven we list.
 - **outside IT**: home energy rebates, battery-storage sizing.
-- **no published method**: calibration kept server-side (AXIOMAX), an SEO audit with a green pitch (SEOCheck-AI).
+- **no published method**: calibration kept server-side, an SEO audit with a green pitch.
 
 Completion: every candidate has `yes | partial | no` and a reason a maintainer can verify against the named source.
 
 ## Step 7 — write the snapshot
 
-Rewrite `docs/awesome-green-software-gap.md`: a header line with the compared commit (`git -C ags rev-parse --short HEAD`), the list's date and the run date; then the candidate tables ordered yes → partial → no, columns Name · In list since · What it is · URLs · Proposed category · Fit; then the "in both, under a different name" mapping; then the reverse appendix of our entries the list lacks, refreshed from `data.yml` and grouped by subcategory.
+Rewrite `docs/awesome-green-software-gap.md`: a header line with the compared commit (`git -C ags rev-parse --short HEAD`), the readme's last commit date (`git -C ags log -1 --format=%ad --date=short -- readme.md`) and the run date; then the candidate tables ordered yes → partial → no, columns Name · In list since · What it is · URLs · Proposed category · Fit, one sentence on what the tool computes and from which data; then the "in both, under a different name" mapping; then the reverse appendix of our entries the list lacks, refreshed from `data.yml` and grouped by subcategory.
+
+The header's counts are the script's, kept consistent: entries = matched + list-only, and a name moved into the mapping table moves one from list-only to matched. Do not re-count by hand.
 
 Proposed categories resolve against the tree as it stands and obey `add-tool` Step 2's limit: one primary plus `second_path`, every path existing in `data.yml`.
 
-Completion: `docs/awesome-green-software-gap.md` opens with the current commit and date, and every candidate from Steps 5–6 appears once.
+Completion: `docs/awesome-green-software-gap.md` opens with the current commit, date and counts that add up, and every candidate from Steps 5–6 appears once.
 
-## Step 8 — report the list's own errors
+## Step 8 — report
 
-A URL that redirects, a repo renamed, an entry still priced as alive: say so in the reply, so it can be fixed upstream.
+End the run with the list's own errors for upstream — a URL that redirects, a repo renamed, an entry still described as alive — each with the correct value, alongside the candidate verdicts.
+
+Completion: the reply names the snapshot path, every candidate verdict, every upstream error.
