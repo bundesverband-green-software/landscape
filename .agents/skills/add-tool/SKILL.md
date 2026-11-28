@@ -52,7 +52,7 @@ A tool appears in **at most 2 categories in total** (primary plus its `second_pa
 - does not exist in the tree (the template drifts from the tree — flag it so the template can be fixed too)
 - is ambiguous and cannot be resolved from context
 - names a top-level category without a subcategory
-- looks wrong for the tool described (e.g. a measurement tool proposed only under an optimization category)
+- looks wrong for the tool described (e.g. a measurement tool proposed only under an optimization category, or a tool that measures nothing proposed under a measurement subcategory, whose entries all measure)
 
 ## Step 3 — build the item
 

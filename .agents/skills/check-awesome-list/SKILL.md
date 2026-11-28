@@ -95,7 +95,7 @@ Rewrite `docs/awesome-green-software-gap.md`: a header line with the compared co
 
 The header's counts are the script's, kept consistent: entries = matched + list-only, a name moved into the mapping table moves one from list-only to matched, and the appendix is the script's landscape-only block **minus** the landscape side of every mapping row — the script reports those pairs as two unmatched names, so copying its block wholesale double-counts them.
 
-Proposed categories resolve against the tree as it stands and obey `add-tool` Step 2's limit: one primary plus `second_path`, every path existing in `data.yml`.
+Proposed categories resolve against the tree as it stands and obey `add-tool` Step 2's limit: one primary plus `second_path`, every path existing in `data.yml`. A `second_path` must also be a subcategory that already holds that kind of tool: `AI Inference` and `Mobile Application` hold measurement tools only, so a scheduler, a factor dataset or a rule pack stays in its primary category.
 
 Completion: `docs/awesome-green-software-gap.md` opens with the current commit, date and counts that add up, and every candidate from Steps 5–6 appears once.
 
